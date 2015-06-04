@@ -1156,9 +1156,9 @@
                             <param id="0" name="Instance variable">onHit</param>
                             <param id="1" name="Value">&quot;destroy&quot;</param>
                         </action>
-                        <action id="-10" name="Set value" sid="4521967248678122" type="PlayerProjectile">
-                            <param id="0" name="Instance variable">PierceAMT</param>
-                            <param id="1" name="Value">1</param>
+                        <action id="-10" name="Set value" sid="288481498455169" type="PlayerProjectile">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">2</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -1174,10 +1174,6 @@
                                 <action id="-10" name="Set value" sid="1959843992411218" type="PlayerProjectile">
                                     <param id="0" name="Instance variable">PierceAMT</param>
                                     <param id="1" name="Value">5</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="288481498455169" type="PlayerProjectile">
-                                    <param id="0" name="Instance variable">Damage</param>
-                                    <param id="1" name="Value">2</param>
                                 </action>
                                 <action behavior="Movement" id="2" name="Set speed" sid="2598630456591406" type="PlayerProjectile">
                                     <param id="0" name="Which">1</param>
@@ -1233,9 +1229,9 @@
                             <param id="0" name="Instance variable">onHit</param>
                             <param id="1" name="Value">&quot;destroy&quot;</param>
                         </action>
-                        <action id="-10" name="Set value" sid="1349493803824823" type="PlayerProjectile">
-                            <param id="0" name="Instance variable">PierceAMT</param>
-                            <param id="1" name="Value">1</param>
+                        <action id="-10" name="Set value" sid="7879039907368191" type="PlayerProjectile">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">2</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -1251,10 +1247,6 @@
                                 <action id="-10" name="Set value" sid="1879682313187641" type="PlayerProjectile">
                                     <param id="0" name="Instance variable">PierceAMT</param>
                                     <param id="1" name="Value">5</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="7879039907368191" type="PlayerProjectile">
-                                    <param id="0" name="Instance variable">Damage</param>
-                                    <param id="1" name="Value">2</param>
                                 </action>
                                 <action behavior="Movement" id="2" name="Set speed" sid="5570319208141865" type="PlayerProjectile">
                                     <param id="0" name="Which">2</param>
@@ -1310,9 +1302,9 @@
                             <param id="0" name="Instance variable">onHit</param>
                             <param id="1" name="Value">&quot;destroy&quot;</param>
                         </action>
-                        <action id="-10" name="Set value" sid="2657596994923836" type="PlayerProjectile">
-                            <param id="0" name="Instance variable">PierceAMT</param>
-                            <param id="1" name="Value">1</param>
+                        <action id="-10" name="Set value" sid="3094277795552703" type="PlayerProjectile">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">2</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -1328,10 +1320,6 @@
                                 <action id="-10" name="Set value" sid="1532565306300266" type="PlayerProjectile">
                                     <param id="0" name="Instance variable">PierceAMT</param>
                                     <param id="1" name="Value">5</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="3094277795552703" type="PlayerProjectile">
-                                    <param id="0" name="Instance variable">Damage</param>
-                                    <param id="1" name="Value">2</param>
                                 </action>
                                 <action behavior="Movement" id="2" name="Set speed" sid="3472270898739577" type="PlayerProjectile">
                                     <param id="0" name="Which">2</param>
@@ -1387,9 +1375,9 @@
                             <param id="0" name="Instance variable">onHit</param>
                             <param id="1" name="Value">&quot;destroy&quot;</param>
                         </action>
-                        <action id="-10" name="Set value" sid="4706446317795834" type="PlayerProjectile">
-                            <param id="0" name="Instance variable">PierceAMT</param>
-                            <param id="1" name="Value">1</param>
+                        <action id="-10" name="Set value" sid="5260558518185933" type="PlayerProjectile">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">2</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -1405,10 +1393,6 @@
                                 <action id="-10" name="Set value" sid="2206763943283799" type="PlayerProjectile">
                                     <param id="0" name="Instance variable">PierceAMT</param>
                                     <param id="1" name="Value">5</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="5260558518185933" type="PlayerProjectile">
-                                    <param id="0" name="Instance variable">Damage</param>
-                                    <param id="1" name="Value">2</param>
                                 </action>
                                 <action behavior="Movement" id="2" name="Set speed" sid="5093951290161436" type="PlayerProjectile">
                                     <param id="0" name="Which">1</param>
@@ -1540,9 +1524,9 @@
                             <param id="0" name="Instance variable">onHit</param>
                             <param id="1" name="Value">&quot;boomerang&quot;</param>
                         </action>
-                        <action id="-10" name="Set value" sid="8804978578816088" type="PlayerProjectile">
-                            <param id="0" name="Instance variable">PierceAMT</param>
-                            <param id="1" name="Value">99</param>
+                        <action id="-10" name="Set value" sid="5794251706215622" type="PlayerProjectile">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">2</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1592,9 +1576,9 @@
                             <param id="0" name="Instance variable">onHit</param>
                             <param id="1" name="Value">&quot;boomerang&quot;</param>
                         </action>
-                        <action id="-10" name="Set value" sid="5065928620162943" type="PlayerProjectile">
-                            <param id="0" name="Instance variable">PierceAMT</param>
-                            <param id="1" name="Value">99</param>
+                        <action id="-10" name="Set value" sid="1065762763668627" type="PlayerProjectile">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">2</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1644,9 +1628,9 @@
                             <param id="0" name="Instance variable">onHit</param>
                             <param id="1" name="Value">&quot;boomerang&quot;</param>
                         </action>
-                        <action id="-10" name="Set value" sid="4154611834698858" type="PlayerProjectile">
-                            <param id="0" name="Instance variable">PierceAMT</param>
-                            <param id="1" name="Value">99</param>
+                        <action id="-10" name="Set value" sid="2468968051415406" type="PlayerProjectile">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">2</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1696,9 +1680,9 @@
                             <param id="0" name="Instance variable">onHit</param>
                             <param id="1" name="Value">&quot;boomerang&quot;</param>
                         </action>
-                        <action id="-10" name="Set value" sid="6902518765639993" type="PlayerProjectile">
-                            <param id="0" name="Instance variable">PierceAMT</param>
-                            <param id="1" name="Value">99</param>
+                        <action id="-10" name="Set value" sid="1618860424916086" type="PlayerProjectile">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">2</param>
                         </action>
                     </actions>
                 </event-block>
