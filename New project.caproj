@@ -2687,7 +2687,7 @@
                         <effect id="setcolor" />
                     </effect-type>
                 </effects>
-                <texture original-source="C:\Users\chris\Desktop\SpriteFont_CelticBitty-Modern_Regular_(8)_[0,0,0]_14x13.png" />
+                <texture original-source="C:\Users\chris\Desktop\SpriteFont_MingLiU_Regular_(12)_[0,0,0]_10x14.png" />
             </object-type>
             <object-type global="1" name="ItemDesc" sid="4828113227630351">
                 <plugin id="Dictionary" />

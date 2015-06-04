@@ -872,6 +872,11 @@
                                             <param id="1" name="Comparison">1</param>
                                             <param id="2" name="Value">&quot;&quot;</param>
                                         </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="3464384000228432" type="Input">
+                                            <param id="0" name="Instance variable">Button2</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;&quot;</param>
+                                        </condition>
                                     </conditions>
                                     <actions />
                                     <sub-events>
@@ -906,6 +911,11 @@
                                         <condition id="-7" name="Compare instance variable" sid="1923833171578885" type="Input">
                                             <param id="0" name="Instance variable">Button2</param>
                                             <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="4195695569949363" type="Input">
+                                            <param id="0" name="Instance variable">Button1</param>
+                                            <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;&quot;</param>
                                         </condition>
                                     </conditions>

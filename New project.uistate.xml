@@ -12,18 +12,19 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout order="0">Main</layout>
         <layout order="1">Template</layout>
-        <layout order="2">Demo</layout>
+        <layout active="1" order="2">Demo</layout>
         <event-sheet order="3">Main</event-sheet>
         <event-sheet order="4">Musix</event-sheet>
         <event-sheet order="5">Enemys</event-sheet>
         <event-sheet order="6">Spawnable Effects</event-sheet>
         <event-sheet order="7">Player</event-sheet>
-        <event-sheet active="1" order="8">Item Functions</event-sheet>
+        <event-sheet order="8">Item Functions</event-sheet>
         <event-sheet order="9">Camara</event-sheet>
         <event-sheet order="10">Traps</event-sheet>
         <event-sheet order="11">Spawner</event-sheet>
         <event-sheet order="12">Interactive</event-sheet>
         <event-sheet order="13">Z Ordering</event-sheet>
+        <event-sheet order="14">Input</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -51,7 +52,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
-        <folder expanded="1" path="object-folder/PLAYER/" />
+        <folder expanded="0" path="object-folder/PLAYER/" />
         <folder expanded="0" path="object-folder/ENEMY/" />
         <folder expanded="0" path="object-folder/LEVEL/" />
         <folder expanded="0" path="object-folder/LEVEL/TileMaps/" />
@@ -62,7 +63,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/CAMERA/" />
         <folder expanded="0" path="object-folder/TextBox/" />
         <folder expanded="0" path="object-folder/Inputs/" />
-        <folder expanded="0" path="object-folder/Inventory/" />
+        <folder expanded="1" path="object-folder/Inventory/" />
         <folder expanded="0" path="object-folder/XML/" />
         <folder expanded="0" path="object-folder/NPC/" />
         <folder expanded="0" path="object-folder/Particles/" />

@@ -75,10 +75,15 @@
                                             <param id="0" name="Gamepad">0</param>
                                             <param id="1" name="Button index">6</param>
                                         </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="1339450311879963" type="Input">
+                                        <condition disabled="1" id="-7" name="Compare instance variable" sid="1339450311879963" type="Input">
                                             <param id="0" name="Instance variable">Button1</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Pressed&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="6308399953891795" type="Input">
+                                            <param id="0" name="Instance variable">Button2</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -98,6 +103,11 @@
                                             <param id="0" name="Instance variable">Button2</param>
                                             <param id="1" name="Comparison">1</param>
                                             <param id="2" name="Value">&quot;Holding&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="4227870081794767" type="Input">
+                                            <param id="0" name="Instance variable">Button2</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -156,10 +166,15 @@
                                             <param id="0" name="Gamepad">0</param>
                                             <param id="1" name="Button index">7</param>
                                         </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="5084989500907586" type="Input">
+                                        <condition disabled="1" id="-7" name="Compare instance variable" sid="5084989500907586" type="Input">
                                             <param id="0" name="Instance variable">Button2</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Pressed&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="379103073482157" type="Input">
+                                            <param id="0" name="Instance variable">Button1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -179,6 +194,11 @@
                                             <param id="0" name="Instance variable">Button1</param>
                                             <param id="1" name="Comparison">1</param>
                                             <param id="2" name="Value">&quot;Holding&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="6359574837245348" type="Input">
+                                            <param id="0" name="Instance variable">Button1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -224,6 +244,11 @@
                                             <param id="0" name="Instance variable">Button2</param>
                                             <param id="1" name="Comparison">1</param>
                                             <param id="2" name="Value">&quot;Holding&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="5200555034879148" type="Input">
+                                            <param id="0" name="Instance variable">Button2</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -304,10 +329,15 @@
                                         <condition id="2" name="Key is down" sid="4499128580709973" type="Keyboard">
                                             <param id="0" name="Key">90 (Z)</param>
                                         </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="5652620479616093" type="Input">
+                                        <condition disabled="1" id="-7" name="Compare instance variable" sid="5652620479616093" type="Input">
                                             <param id="0" name="Instance variable">Button1</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Pressed&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="1703757532488638" type="Input">
+                                            <param id="0" name="Instance variable">Button2</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -333,6 +363,11 @@
                                             <param id="0" name="Instance variable">Button1</param>
                                             <param id="1" name="Comparison">1</param>
                                             <param id="2" name="Value">&quot;Holding&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="8684536093091941" type="Input">
+                                            <param id="0" name="Instance variable">Button1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
@@ -413,10 +448,15 @@
                                         <condition id="2" name="Key is down" sid="1077349176604122" type="Keyboard">
                                             <param id="0" name="Key">88 (X)</param>
                                         </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="5166250414372712" type="Input">
+                                        <condition disabled="1" id="-7" name="Compare instance variable" sid="5166250414372712" type="Input">
                                             <param id="0" name="Instance variable">Button2</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">&quot;Pressed&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="6204859521416843" type="Input">
+                                            <param id="0" name="Instance variable">Button1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>

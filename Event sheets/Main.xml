@@ -106,6 +106,14 @@
                 <action id="6" name="Set speed" sid="1817521017151781" type="Sprite3">
                     <param id="0" name="Speed">random(1,2)</param>
                 </action>
+                <action id="-10" name="Set value" sid="7612296065096062" type="Input">
+                    <param id="0" name="Instance variable">Button1</param>
+                    <param id="1" name="Value">&quot;&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="3535792507187605" type="Input">
+                    <param id="0" name="Instance variable">Button2</param>
+                    <param id="1" name="Value">&quot;&quot;</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="2423298807149933">
