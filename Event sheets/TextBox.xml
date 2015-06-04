@@ -1,0 +1,291 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>TextBox</name>
+    <events>
+        <variable constant="0" name="TextBoxActive" sid="7546086684123224" static="0" type="number">0</variable>
+        <event-block sid="4802003645009701">
+            <conditions>
+                <condition id="0" name="On function" sid="265245138633926" type="Function">
+                    <param id="0" name="Name">&quot;ShowTextBox&quot;</param>
+                </condition>
+                <condition id="-9" inverted="1" name="Is visible" sid="7427733712456946" type="TextBox" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="4777694874160128" type="System">
+                    <param id="0" name="Group name">&quot;TextBox Logic&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="9553241010558513" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="1331120900694232" type="System">
+                    <param id="0" name="Variable">TextBoxActive</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="9027069174513791">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="5403315586174456" type="System">
+                            <param id="0" name="First value">lowercase(tokenat(Function.Param(0),0,TextBox.ParamaterDelimiter))</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;bottom&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="7323108516180505" type="TextBox">
+                            <param id="0" name="Y">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1350886640766786">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="4535637090560202" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="3902235313976691" type="TextBox">
+                            <param id="0" name="Y">12</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7931584995962677">
+                    <conditions />
+                    <actions>
+                        <action id="-10" name="Set value" sid="9446186382841145" type="TextBox">
+                            <param id="0" name="Instance variable">Text</param>
+                            <param id="1" name="Value">Function.Call(&quot;GetVariableByName&quot;, GETTEXT, tokenat(Function.Param(0),1,TextBox.ParamaterDelimiter), &quot;Data&quot;)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="3273336149880004" type="TextBoxText">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="8022779361926783" type="TextBox">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="3881771810919472" type="TextBoxText">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="180013991860279" type="TextBox">
+                            <param id="0" name="Instance variable">NumberOfChars</param>
+                            <param id="1" name="Value">len(TextBox.Text)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5731441313947622" type="TextBox">
+                            <param id="0" name="Instance variable">CharsPerPage</param>
+                            <param id="1" name="Value">TextBoxText.Width/(16*TextBoxText.CharacterScale)*(TextBoxText.Height/(16*TextBoxText.CharacterScale))-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="4735936766168199">
+            <conditions>
+                <condition id="0" name="On function" sid="2228259061465625" type="Function">
+                    <param id="0" name="Name">&quot;HideTextBox&quot;</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="453521689003204" type="TextBox" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="6344160916301226" type="System">
+                    <param id="0" name="Group name">&quot;TextBox Logic&quot;</param>
+                    <param id="1" name="State">0</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="3459539198684191" type="System">
+                    <param id="0" name="Time scale">1.0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="8489594680091262" type="TextBox">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="226070974513475" type="TextBoxText">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="3355431890383553" type="TextBox">
+                    <param id="0" name="Instance variable">Text</param>
+                    <param id="1" name="Value">&quot;&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="4346665637565009" type="TextBox">
+                    <param id="0" name="Instance variable">NumberOfChars</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="3254606514753953" type="TextBox">
+                    <param id="0" name="Instance variable">FilePos</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-10" name="Set value" sid="9198471111175664" type="TextBox">
+                    <param id="0" name="Instance variable">PagePos</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Set text" sid="470567317735391" type="TextBoxText">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="8286731356884437" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="-9" name="Set value" sid="1203619906315874" type="System">
+                    <param id="0" name="Variable">TextBoxActive</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" inactive="1" sid="1971498408542362" title="TextBox Logic">
+            <sub-events>
+                <event-block sid="9486414476080938">
+                    <conditions>
+                        <condition id="0" name="On function" sid="6205152621358201" type="Function">
+                            <param id="0" name="Name">&quot;Next&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="1956191585542674" type="TextBox">
+                            <param id="0" name="Instance variable">PagePos</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">TextBox.CharsPerPage</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Append text" sid="2949506161911808" type="TextBoxText">
+                            <param id="0" name="Text">mid(TextBox.Text,TextBox.FilePos, 1)</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="4943062996754249" type="TextBox">
+                            <param id="0" name="Instance variable">FilePos</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="7705194718142716" type="TextBox">
+                            <param id="0" name="Instance variable">PagePos</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5781365232984212">
+                    <conditions>
+                        <condition id="-9" name="Is visible" sid="9806630830565" type="TextBox" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8562067510187879">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="8583144895819402" type="System">
+                                    <param id="0" name="First value">TextBox.FilePos</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">TextBox.NumberOfChars</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="3620204750570849">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="5340446298679226" type="Input">
+                                            <param id="0" name="Instance variable">Button1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Pressed&quot;</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="8091521581548894" type="Input">
+                                            <param id="0" name="Instance variable">Button2</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Pressed&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="3596296892609909" type="Function">
+                                            <param id="0" name="Name">&quot;HideTextBox&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="2771346205857478">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="6627833897178601" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="8017623865617719">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="8460976746170399" type="TextBox">
+                                            <param id="0" name="Instance variable">PagePos</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">TextBox.CharsPerPage</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="7525271156692535" type="Function">
+                                            <param id="0" name="Name">&quot;Next&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="3440766391425715">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="3455462707090613" type="TextBox">
+                                                    <param id="0" name="Instance variable">PagePos</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Value">TextBox.CharsPerPage</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block any="1" sid="5589387610975577">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="1640727556190687" type="Input">
+                                                            <param id="0" name="Instance variable">Button1</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;Holding&quot;</param>
+                                                        </condition>
+                                                        <condition id="-7" name="Compare instance variable" sid="2925220927438273" type="Input">
+                                                            <param id="0" name="Instance variable">Button2</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;Holding&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="0" name="Call function" sid="2940822850657712" type="Function">
+                                                            <param id="0" name="Name">&quot;Next&quot;</param>
+                                                            <param id="1" name="Parameter {n}"></param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="8150221192698324" type="Function">
+                                                            <param id="0" name="Name">&quot;Next&quot;</param>
+                                                            <param id="1" name="Parameter {n}"></param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="9077597184881946">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="1840019818470524" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block any="1" sid="4137597790550268">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="1058154913864674" type="Input">
+                                                    <param id="0" name="Instance variable">Button1</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Pressed&quot;</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="2098029880684988" type="Input">
+                                                    <param id="0" name="Instance variable">Button2</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Pressed&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="8338592064182963" type="TextBoxText">
+                                                    <param id="0" name="Text">&quot;&quot;</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="791998633498268" type="TextBox">
+                                                    <param id="0" name="Instance variable">PagePos</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

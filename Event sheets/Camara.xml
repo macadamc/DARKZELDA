@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Camara</name>
+    <events>
+        <event-group description="" sid="2400617855604039" title="Camera">
+            <sub-events>
+                <event-block sid="9321662628044191">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="1972740969709895" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="6669536727293962" type="Camera">
+                            <param id="0" name="X">lerp(self.X,ScrolltoX,LerpSDP)</param>
+                            <param id="1" name="Y">lerp(self.Y,ScrolltoY,LerpSDP)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="3947082271129628">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="5407981912861503" type="BASE">
+                                    <param id="0" name="Object">CameraZone</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="408003742020112">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="9703100798475846" type="System">
+                                            <param id="0" name="First value">CameraZone.UID</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">CurZone</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="3884123475956727" type="System">
+                                            <param id="0" name="Variable">CurZone</param>
+                                            <param id="1" name="Value">CameraZone.UID</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="7496540355773972" type="System">
+                                            <param id="0" name="Variable">ZoneLoaded</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="7065217526765337" type="System">
+                                            <param id="0" name="Variable">LerpSDP</param>
+                                            <param id="1" name="Value">0.1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="4597651927902163" type="HAS_LIGHT">
+                                            <param id="0" name="Instance variable">HasLight</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="9307715005323098">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="413482355120731" type="CameraZone">
+                                                    <param id="0" name="Instance variable">dark</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-18" name="Set layer opacity" sid="9802855089313834" type="System">
+                                                    <param id="0" name="Layer">&quot;LIGHTCOLOR&quot;</param>
+                                                    <param id="1" name="Opacity">100</param>
+                                                </action>
+                                                <action id="-18" name="Set layer opacity" sid="85978344359179" type="System">
+                                                    <param id="0" name="Layer">&quot;LIGHTING&quot;</param>
+                                                    <param id="1" name="Opacity">100</param>
+                                                </action>
+                                                <action id="-18" name="Set layer opacity" sid="8394995726340261" type="System">
+                                                    <param id="0" name="Layer">&quot;SHADOW&quot;</param>
+                                                    <param id="1" name="Opacity">50</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="4767723673425153">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="6931183034806317" type="CameraZone">
+                                                    <param id="0" name="Instance variable">light</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-18" name="Set layer opacity" sid="3181912013529754" type="System">
+                                                    <param id="0" name="Layer">&quot;LIGHTCOLOR&quot;</param>
+                                                    <param id="1" name="Opacity">0</param>
+                                                </action>
+                                                <action id="-18" name="Set layer opacity" sid="3745946709644735" type="System">
+                                                    <param id="0" name="Layer">&quot;LIGHTING&quot;</param>
+                                                    <param id="1" name="Opacity">0</param>
+                                                </action>
+                                                <action id="-18" name="Set layer opacity" sid="5419195403854637" type="System">
+                                                    <param id="0" name="Layer">&quot;SHADOW&quot;</param>
+                                                    <param id="1" name="Opacity">75</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="7694557404633803">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4731054456278344" type="CameraZone">
+                                                    <param id="0" name="Instance variable">light</param>
+                                                </condition>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3582127297302785" type="CameraZone">
+                                                    <param id="0" name="Instance variable">dark</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="3533811640321852">
+                                                    <conditions>
+                                                        <condition id="-14" name="Compare variable" sid="7894713219191462" type="System">
+                                                            <param id="0" name="Variable">isDay</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-18" name="Set layer opacity" sid="5000995721063644" type="System">
+                                                            <param id="0" name="Layer">&quot;LIGHTCOLOR&quot;</param>
+                                                            <param id="1" name="Opacity">0</param>
+                                                        </action>
+                                                        <action id="-18" name="Set layer opacity" sid="2576242618678713" type="System">
+                                                            <param id="0" name="Layer">&quot;LIGHTING&quot;</param>
+                                                            <param id="1" name="Opacity">0</param>
+                                                        </action>
+                                                        <action id="-18" name="Set layer opacity" sid="8384940546140863" type="System">
+                                                            <param id="0" name="Layer">&quot;SHADOW&quot;</param>
+                                                            <param id="1" name="Opacity">75</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="5018241775910344">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="8326630354612961" type="System" />
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-18" name="Set layer opacity" sid="4368638963829225" type="System">
+                                                            <param id="0" name="Layer">&quot;LIGHTCOLOR&quot;</param>
+                                                            <param id="1" name="Opacity">100</param>
+                                                        </action>
+                                                        <action id="-18" name="Set layer opacity" sid="2213447103944451" type="System">
+                                                            <param id="0" name="Layer">&quot;LIGHTING&quot;</param>
+                                                            <param id="1" name="Opacity">100</param>
+                                                        </action>
+                                                        <action id="-18" name="Set layer opacity" sid="2461672062049165" type="System">
+                                                            <param id="0" name="Layer">&quot;SHADOW&quot;</param>
+                                                            <param id="1" name="Opacity">50</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="3535387562853547">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="8830888908019325" type="System">
+                                            <param id="0" name="First value">CameraZone.Music</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">MusicPlaying</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="6" name="Stop" sid="2642359632645037" type="Audio">
+                                            <param id="0" name="Tag">MusicPlaying</param>
+                                        </action>
+                                        <action id="7" name="Play (by name)" sid="7284438750728583" type="Audio">
+                                            <param id="0" name="Folder">1</param>
+                                            <param id="1" name="Audio file name">CameraZone.Music</param>
+                                            <param id="3" name="Loop">1</param>
+                                            <param id="4" name="Volume">MusicLevel-5</param>
+                                            <param id="2" name="Tag (optional)">CameraZone.Music</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="3493695614958799" type="System">
+                                            <param id="0" name="Variable">MusicPlaying</param>
+                                            <param id="1" name="Value">CameraZone.Music</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="2566351999424612">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="3264424826481038" type="CameraZone">
+                                    <param id="0" name="Unique ID">CurZone</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7025276333785408" type="System">
+                                    <param id="0" name="Variable">ScrolltoX</param>
+                                    <param id="1" name="Value">clamp(BASE.X,CameraZone.X+(OriginalWindowWidth/2),CameraZone.X+CameraZone.Width-(OriginalWindowWidth/2))</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="3853493096151621" type="System">
+                                    <param id="0" name="Variable">ScrolltoY</param>
+                                    <param id="1" name="Value">clamp(BASE.Y,CameraZone.Y+(OriginalWindowHeight/2),CameraZone.Y+CameraZone.Height-(OriginalWindowHeight/2))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5965660903095454">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6731706706604426" type="System">
+                                    <param id="0" name="Variable">LerpSDP</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">0.1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7209374760714139" type="System">
+                                    <param id="0" name="Variable">LerpSDP</param>
+                                    <param id="1" name="Value">lerp(LerpSDP,0.1,0.1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1630978874973229">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4317389743668339" type="Function">
+                            <param id="0" name="Name">&quot;ScrolltoPlayer&quot;</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="5939623654300472" type="BASE">
+                            <param id="0" name="Object">CameraZone</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="9556436152590913" type="System">
+                            <param id="0" name="Variable">ScrolltoX</param>
+                            <param id="1" name="Value">clamp(BASE.X,CameraZone.X+(OriginalWindowWidth/2),CameraZone.X+CameraZone.Width-(OriginalWindowWidth/2))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6190547364073202" type="System">
+                            <param id="0" name="Variable">ScrolltoY</param>
+                            <param id="1" name="Value">clamp(BASE.Y,CameraZone.Y+(OriginalWindowHeight/2),CameraZone.Y+CameraZone.Height-(OriginalWindowHeight/2))</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="8616597772811314" type="Camera">
+                            <param id="0" name="X">ScrolltoX</param>
+                            <param id="1" name="Y">ScrolltoY</param>
+                        </action>
+                        <action id="-8" name="Scroll to object" sid="9045385039194371" type="System">
+                            <param id="0" name="Object">Camera</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

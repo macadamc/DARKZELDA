@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Xml</name>
+    <events>
+        <variable constant="1" name="gettext" sid="9601619269522091" static="0" type="number">213</variable>
+        <event-group description="" sid="2921322940579669" title="XML">
+            <sub-events>
+                <event-block sid="4256346525286321">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="998430089245553" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Request project file" sid="7737180776786486" type="AJAX">
+                            <param id="0" name="Tag">&quot;Texts&quot;</param>
+                            <param id="1" name="File">Texts.xml</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="4132162917918456" type="AJAX">
+                            <param id="0" name="Tag">&quot;Triggers&quot;</param>
+                            <param id="1" name="File">TriggerZoneFunctions.xml</param>
+                        </action>
+                        <action id="1" name="Request project file" sid="5900871960003595" type="AJAX">
+                            <param id="0" name="Tag">&quot;Npc&quot;</param>
+                            <param id="1" name="File">Npc.xml</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2052383108132868">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="165408926112258" type="AJAX">
+                            <param id="0" name="Tag">&quot;Texts&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Load" sid="1243849409435509" type="TextData">
+                            <param id="0" name="XML">AJAX.LastData</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="175546639151532" type="TextData">
+                            <param id="0" name="Instance variable">Loaded</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3807712379064798">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="4968121774825831" type="AJAX">
+                            <param id="0" name="Tag">&quot;Triggers&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Load" sid="5761254427967458" type="TriggerZoneData">
+                            <param id="0" name="XML">AJAX.LastData</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="9540911467320597" type="TriggerZoneData">
+                            <param id="0" name="Instance variable">Loaded</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8894582373963802">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="3280488404183945" type="AJAX">
+                            <param id="0" name="Tag">&quot;Npc&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Load" sid="6087427878689365" type="NpcXML">
+                            <param id="0" name="XML">AJAX.LastData</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="8641928499231274" type="NpcXML">
+                            <param id="0" name="Instance variable">Loaded</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1007199891705024">
+                    <conditions />
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="Load" sid="667483101331278" static="0" type="number">1</variable>
+                        <event-block sid="1057273169959763">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="3997231511498514" type="System">
+                                    <param id="0" name="Object">NpcXML</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1998260666532502" type="NpcXML">
+                                    <param id="0" name="Instance variable">Loaded</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="210302343862901" type="System">
+                                    <param id="0" name="Variable">Load</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1122081930198795">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7756336579866956" type="System">
+                                    <param id="0" name="Variable">Load</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="9390165054505242" type="System">
+                                    <param id="0" name="Group name">&quot;XML&quot;</param>
+                                    <param id="1" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>To get a variable from any Xml File you can call &quot;GetVariableByName&quot;&#x0D;&#x0A;&#x0D;&#x0A;params:&#x0D;&#x0A;&#x09;Xml Objects UID&#x0D;&#x0A;&#x09;Name Of the Object your Trying to get the Variable from.&#x0D;&#x0A;&#x09;The Name of The Variable your trying to get the Data from.&#x0D;&#x0A;&#x0D;&#x0A;i made helper Global vars for the uids for each diffrent xml Object</comment>
+        <event-block sid="4906705750243356">
+            <conditions>
+                <condition id="0" name="On function" sid="5465954361158995" type="Function">
+                    <param id="0" name="Name">&quot;GetVariableByName&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="7297328769576384" type="XmlData">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="760535164663726" type="Function">
+                    <param id="0" name="Value">XmlData.StringValue(&quot;//xml/Object[@Name=&apos;&quot;&amp;Function.Param(1)&amp;&quot;&apos;]/@&quot;&amp;Function.Param(2))</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="5843654678772477">
+            <conditions>
+                <condition id="0" name="On function" sid="8600696098826544" type="Function">
+                    <param id="0" name="Name">&quot;ComplexTrigger&quot;</param>
+                </condition>
+                <condition id="0" name="For each node" sid="5448117850641818" type="TriggerZoneData">
+                    <param id="0" name="XPath">&quot;//xml/Object[@Name=&apos;&quot;&amp;Function.Param(0)&amp;&quot;&apos;]/Function&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Push" sid="4507065819363695" type="Array">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Value">TriggerZoneData.StringValue(&quot;@Name&quot;)&amp;&quot; &quot;&amp;TriggerZoneData.StringValue(&quot;@Params&quot;)</param>
+                    <param id="2" name="Axis">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="2761523358943087">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="9496779214865946" type="System">
+                            <param id="0" name="First value">TriggerZoneData.StringValue(&quot;@Conditions&quot;)</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Second value">&quot;&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="Flag" sid="8418026365482613" static="0" type="number">1</variable>
+                        <event-block sid="918851846058664">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="8473752231043774" type="System">
+                                    <param id="0" name="Count">tokencount(TriggerZoneData.StringValue(&quot;@Conditions&quot;), &quot; &quot;)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4072915118071816">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="7242861815681511" type="System">
+                                            <param id="0" name="First value">left(tokenat(TriggerZoneData.StringValue(&quot;@Conditions&quot;), loopindex, &quot; &quot;), 1)</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">&quot;!&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="7309131209821642">
+                                            <conditions>
+                                                <condition id="3" name="Has key" sid="6303721255754326" type="GameStats">
+                                                    <param id="0" name="Key">mid(tokenat(TriggerZoneData.StringValue(&quot;@Conditions&quot;), loopindex, &quot; &quot;), 1, len(tokenat(TriggerZoneData.StringValue(&quot;@Conditions&quot;), loopindex, &quot; &quot;)))</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="405801682200038" type="System">
+                                                    <param id="0" name="Variable">Flag</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="4984933744359751">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="2258254920558736" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="1888775010669593">
+                                            <conditions>
+                                                <condition id="3" inverted="1" name="Has key" sid="2378428372507067" type="GameStats">
+                                                    <param id="0" name="Key">tokenat(TriggerZoneData.StringValue(&quot;@Conditions&quot;), loopindex, &quot; &quot;)</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-9" name="Set value" sid="7911946660468036" type="System">
+                                                    <param id="0" name="Variable">Flag</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="3384531475645661">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="7829521498339387" type="System">
+                                    <param id="0" name="First value">Flag</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3206055698087964">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="9499811328623716" type="System">
+                                            <param id="0" name="First value">TriggerZoneData.StringValue(&quot;@Params&quot;)</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">&quot;&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="5373343497528747" type="Function">
+                                            <param id="0" name="Name">TriggerZoneData.StringValue(&quot;@Name&quot;)</param>
+                                            <param id="1" name="Parameter {n}">TriggerZoneData.StringValue(&quot;@Params&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="59440486824833">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="8546753252041386" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="9972046853605674" type="Function">
+                                            <param id="0" name="Name">TriggerZoneData.StringValue(&quot;@Name&quot;)</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="8315121625554306">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="8349842186339252" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7005910631275907">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="5241060504466994" type="System">
+                                    <param id="0" name="First value">TriggerZoneData.StringValue(&quot;@Params&quot;)</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Second value">&quot;&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="8977382979205323" type="Function">
+                                    <param id="0" name="Name">TriggerZoneData.StringValue(&quot;@Name&quot;)</param>
+                                    <param id="1" name="Parameter {n}">TriggerZoneData.StringValue(&quot;@Params&quot;)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7318358170257619">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="9834084008229127" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="7568226292459313" type="Function">
+                                    <param id="0" name="Name">TriggerZoneData.StringValue(&quot;@Name&quot;)</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

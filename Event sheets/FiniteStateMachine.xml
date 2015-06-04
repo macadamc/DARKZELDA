@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>FiniteStateMachine</name>
+    <events>
+        <include>GhostStates</include>
+        <include>NpcStates</include>
+        <comment>Call The Currect State for All NPC&apos;s and the ghosts light color</comment>
+        <event-block sid="319932826086733">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="3780608807425373" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="304080842521562">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="9335834033358119" type="System">
+                            <param id="0" name="Object">NPC</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="1296652870271648" type="FSM">
+                            <param id="0" name="Unique ID">NPC.FSM_UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="2453726258624832" type="Function">
+                            <param id="0" name="Name">FSM.Back</param>
+                            <param id="1" name="Parameter {n}">NPC.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3841663481596747">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4382217896435733" type="Ghost">
+                            <param id="0" name="Instance variable">R</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">Ghost.TR</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="6219242056021317" type="Ghost">
+                            <param id="0" name="Instance variable">R</param>
+                            <param id="1" name="Value">lerp(Ghost.R,Ghost.TR, 0.01)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2367688580918681">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="9005663602089742" type="Ghost">
+                            <param id="0" name="Instance variable">G</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">Ghost.TG</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="6371306578113359" type="Ghost">
+                            <param id="0" name="Instance variable">G</param>
+                            <param id="1" name="Value">lerp(Ghost.G,Ghost.TG, 0.01)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7156965747245002">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6375274070465197" type="Ghost">
+                            <param id="0" name="Instance variable">B</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">Ghost.TB</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="6559014081857665" type="Ghost">
+                            <param id="0" name="Instance variable">B</param>
+                            <param id="1" name="Value">lerp(Ghost.B,Ghost.TB, 0.01)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Set Some Ghost Vars</comment>
+        <comment>a function that sets the set a new state and cleans up the last state of an npc&#x0D;&#x0A;PARAMS &#x0D;&#x0A;&#x09;NPCUID StateAndParamSeperatedBySpaces</comment>
+        <event-block sid="8790188517908962">
+            <conditions>
+                <condition id="0" name="On function" sid="2981934897166969" type="Function">
+                    <param id="0" name="Name">&quot;SetState&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="9277962699646106" type="NPC">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="2479294274400504" type="NPCData">
+                    <param id="0" name="Unique ID">NPC.DataUID</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="2629954420283804" type="FSM">
+                    <param id="0" name="Unique ID">NPC.FSM_UID</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <comment>If the NPCs Current State Has The RemoveOnSetState key then we must remove the current state before we change to the next state. this is useful for states like wander that dont need to be remembered by the NPC.</comment>
+                <event-block sid="4861400348655814">
+                    <conditions>
+                        <condition id="3" name="Has key" sid="6240764904845022" type="NPCData">
+                            <param id="0" name="Key">&quot;RemoveOnSetState&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="9886372464285999" type="Function">
+                            <param id="0" name="Name">&quot;PopState&quot;</param>
+                            <param id="1" name="Parameter {n}">NPC.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>If the Npc Had at least one state save its variables to the dictionary to be reloaded when we return to its state.</comment>
+                <event-block sid="6560578012625959">
+                    <conditions>
+                        <condition id="6" inverted="1" name="Is empty" sid="9284233473234396" type="FSM" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="2454471027743114" type="NPCData">
+                            <param id="0" name="Key">&quot;Data&quot;&amp;FSM.Width</param>
+                            <param id="1" name="Value">NPCData.AsJSON</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>This is used by the triggerzones as its collision data for Complex triggers. so states can test against conditions of triggerzones that triggered the state.</comment>
+                <event-block sid="4415519844116591">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="813446098399631" type="Function">
+                            <param id="0" name="Index">2</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="9291566873461001" type="NPCData">
+                            <param id="0" name="Key">&quot;FID&quot;</param>
+                            <param id="1" name="Value">Function.Param(2)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>If the State Has Parameters the we need to add them to the NPCs Dictionary. but this function olny adds the FUNCTIONNAMEParams key with the params. its up to each state to actualy break this string down to useable info</comment>
+                <event-block sid="9546951363930462">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="8144568923418562" type="System">
+                            <param id="0" name="First value">tokencount(Function.Param(1), &quot; &quot;)</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Push" sid="3530552577445387" type="FSM">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">tokenat(Function.Param(1),0, &quot; &quot;)</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                        <action id="0" name="Add key" sid="6043132738485355" type="NPCData">
+                            <param id="0" name="Key">tokenat(Function.Param(1),0,&quot; &quot;)&amp;&quot;Params&quot;</param>
+                            <param id="1" name="Value">right(Function.Param(1),len(Function.Param(1))-len(tokenat(Function.Param(1),0, &quot; &quot;))-1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5394714325938345">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="32881418291257" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Push" sid="7983325861582103" type="FSM">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Value">Function.Param(1)</param>
+                            <param id="2" name="Axis">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>if the npc was moving before the state change we have to 0 out its speed or it will drift forever.</comment>
+                <event-block sid="5284627456251589">
+                    <conditions>
+                        <condition behavior="NpcMovement" id="0" name="Is moving" sid="4215694795684284" type="NPC" />
+                    </conditions>
+                    <actions>
+                        <action behavior="NpcMovement" id="0" name="Stop" sid="3430383851301377" type="NPC" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>This Function Reverts the Npc To its last State. Olny Param is the NPCUID</comment>
+        <event-block sid="874961181958268">
+            <conditions>
+                <condition id="0" name="On function" sid="7385865184100021" type="Function">
+                    <param id="0" name="Name">&quot;PopState&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="6337218611591609" type="NPC">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="5404373122075673" type="NPCData">
+                    <param id="0" name="Unique ID">NPC.DataUID</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="6606757493059452" type="FSM">
+                    <param id="0" name="Unique ID">NPC.FSM_UID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="6" name="Pop" sid="1370669372715039" type="FSM">
+                    <param id="0" name="Where">0</param>
+                    <param id="1" name="Axis">0</param>
+                </action>
+                <action id="4" name="Load" sid="6651594881239265" type="NPCData">
+                    <param id="0" name="JSON">NPCData.Get(&quot;Data&quot;&amp;FSM.Width)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9899582278210489">
+            <conditions>
+                <condition id="0" name="On function" sid="3880831807211688" type="Function">
+                    <param id="0" name="Name">&quot;StartState&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="1506458093939084" type="NPC">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="6970701818937636" type="NPCData">
+                    <param id="0" name="Unique ID">NPC.DataUID</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="833156513044556" type="FSM">
+                    <param id="0" name="Unique ID">NPC.FSM_UID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set size" sid="563594594331797" type="FSM">
+                    <param id="0" name="Width">1</param>
+                    <param id="1" name="Height">1</param>
+                    <param id="2" name="Depth">1</param>
+                </action>
+                <action id="4" name="Load" sid="7428936990996434" type="NPCData">
+                    <param id="0" name="JSON">NPCData.Get(&quot;Data&quot;&amp;FSM.Width)</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

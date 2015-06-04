@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Npc</name>
+    <events>
+        <event-block sid="4324506002209757">
+            <conditions>
+                <condition id="-18" name="On created" sid="8193690276268232" type="NPC" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="1513694024931322" type="NPC">
+                    <param id="0" name="Obstacle">ObstacleTilemap</param>
+                </action>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="8366588383538456" type="NPC">
+                    <param id="0" name="Obstacle">Tilemap</param>
+                </action>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="7674294875611568" type="NPC">
+                    <param id="0" name="Obstacle">Solid</param>
+                </action>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="2830932643147926" type="NPC">
+                    <param id="0" name="Obstacle">Unlockable</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="5661066488264783">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5361675390838302" type="NPC">
+                            <param id="0" name="Instance variable">FSM_UID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="7236742399088656" type="System">
+                            <param id="0" name="Object to create">FSM</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="98440069713373" type="NPC">
+                            <param id="0" name="Instance variable">FSM_UID</param>
+                            <param id="1" name="Value">FSM.UID</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="6447953198945212">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="2014909401163716" type="NPC">
+                                    <param id="0" name="Instance variable">StartState</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">&quot;&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Push" sid="4881456982564702" type="FSM">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">NPC.StartState</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2257176269270611">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5805120144123821" type="NPC">
+                            <param id="0" name="Instance variable">DataUID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="1942906493404702" type="System">
+                            <param id="0" name="Object to create">NPCData</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">0</param>
+                            <param id="3" name="Y">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7058725838004368" type="NPC">
+                            <param id="0" name="Instance variable">DataUID</param>
+                            <param id="1" name="Value">NPCData.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3060130409053194">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="8768829869201456" type="NPC" />
+                <condition id="-14" name="Pick by unique ID" sid="1585644531693518" type="NPCData">
+                    <param id="0" name="Unique ID">NPC.DataUID</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="1519142104709042" type="FSM">
+                    <param id="0" name="Unique ID">NPC.FSM_UID</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="2673324560983586" type="TriggerZone">
+                    <param id="0" name="Unique ID">NPC.TriggerUID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="1392829926427606" type="NPCData" />
+                <action id="-9" name="Destroy" sid="3276400142906693" type="FSM" />
+            </actions>
+            <sub-events>
+                <event-block sid="2181817085344558">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="1224645949681864" type="NPC">
+                            <param id="0" name="Instance variable">TriggerUID</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="6830133586104065" type="TriggerZone" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="6463054522514902" title="Npc Pathfinding">
+            <sub-events>
+                <event-block sid="4763641466742872">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="949063090782564" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="9604918675623832" type="NpcBase" />
+                        <action behavior="Pathfinding" disabled="1" id="5" name="Add obstacle" sid="3193576582434336" type="NPC">
+                            <param id="0" name="Obstacle">ObstacleTilemap</param>
+                        </action>
+                        <action behavior="Pathfinding" disabled="1" id="5" name="Add obstacle" sid="3104069739978273" type="NPC">
+                            <param id="0" name="Obstacle">Tilemap</param>
+                        </action>
+                        <action behavior="Pathfinding" disabled="1" id="5" name="Add obstacle" sid="8851632433962376" type="NPC">
+                            <param id="0" name="Obstacle">Solid</param>
+                        </action>
+                        <action behavior="Pathfinding" disabled="1" id="5" name="Add obstacle" sid="4156627087795843" type="NPC">
+                            <param id="0" name="Obstacle">Unlockable</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5902824442759178">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="0" name="On path found" sid="2957863467136349" type="NPC" />
+                        <condition id="-14" name="Pick by unique ID" sid="2799076079233756" type="NPCData">
+                            <param id="0" name="Unique ID">NPC.DataUID</param>
+                        </condition>
+                        <condition id="0" name="Compare value" sid="108529899173116" type="NPCData">
+                            <param id="0" name="Key">&quot;hasPathfindingPath&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set key" sid="8133445134260268" type="NPCData">
+                            <param id="0" name="Key">&quot;hasPathfindingPath&quot;</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="3747731002997041">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="5204224838348618" type="System">
+                                    <param id="0" name="Count">NPC.Pathfinding.NodeCount</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="267903088444128">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="9997564677429944" type="System">
+                                            <param id="0" name="First value">loopindex</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="1" name="Set key" sid="4454930490026244" type="NPCData">
+                                            <param id="0" name="Key">&quot;pathfindingPath&quot;</param>
+                                            <param id="1" name="Value">NPCData.Get(&quot;pathfindingPath&quot;)&amp;&quot; &quot;&amp;NPC.Pathfinding.NodeXAt(loopindex)&amp;&quot;,&quot;&amp;NPC.Pathfinding.NodeYAt(loopindex)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4950955188616242">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="9642167516607696" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="6896982923953987" type="NPCData">
+                                            <param id="0" name="Key">&quot;pathfindingPath&quot;</param>
+                                            <param id="1" name="Value">NPC.Pathfinding.NodeXAt(loopindex)&amp;&quot;,&quot;&amp;NPC.Pathfinding.NodeYAt(loopindex)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1658248268815932">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="1" name="On failed to find path" sid="8723958319926682" type="NPC" />
+                        <condition id="-14" name="Pick by unique ID" sid="5293935198648631" type="NPCData">
+                            <param id="0" name="Unique ID">NPC.DataUID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set key" sid="5073278645432508" type="NPCData">
+                            <param id="0" name="Key">&quot;hasPathfindingPath&quot;</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>Set up the ghosts lighting variables and make it target the player</comment>
+        <event-block sid="4808831148015154">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="1540756372823234" type="System" />
+                <condition id="-14" inverted="1" name="Pick by unique ID" sid="3583302784994584" type="NPCData">
+                    <param id="0" name="Unique ID">Ghost.DataUID</param>
+                </condition>
+                <condition id="-14" inverted="1" name="Pick by unique ID" sid="9798936807927605" type="FSM">
+                    <param id="0" name="Unique ID">Ghost.FSM_UID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="9237755724013139" type="NPCData" />
+                <action id="-9" name="Destroy" sid="8385282478421919" type="FSM" />
+                <action id="-9" name="Destroy" sid="6272407811984971" type="Sprite9" />
+                <action id="-10" name="Set value" sid="4476713515686867" type="Ghost">
+                    <param id="0" name="Instance variable">SR</param>
+                    <param id="1" name="Value">Ghost.R</param>
+                </action>
+                <action id="-10" name="Set value" sid="404439347812593" type="Ghost">
+                    <param id="0" name="Instance variable">TR</param>
+                    <param id="1" name="Value">Ghost.R</param>
+                </action>
+                <action id="-10" name="Set value" sid="9254655654481418" type="Ghost">
+                    <param id="0" name="Instance variable">SG</param>
+                    <param id="1" name="Value">Ghost.G</param>
+                </action>
+                <action id="-10" name="Set value" sid="4155007713354153" type="Ghost">
+                    <param id="0" name="Instance variable">TG</param>
+                    <param id="1" name="Value">Ghost.G</param>
+                </action>
+                <action id="-10" name="Set value" sid="7608732886321899" type="Ghost">
+                    <param id="0" name="Instance variable">SB</param>
+                    <param id="1" name="Value">Ghost.B</param>
+                </action>
+                <action id="-10" name="Set value" sid="5320223218816148" type="Ghost">
+                    <param id="0" name="Instance variable">TB</param>
+                    <param id="1" name="Value">Ghost.B</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="593960310440939">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="4552166019224462" type="System" />
+                <condition id="-14" name="Pick by unique ID" sid="8222421797993281" type="NPCData">
+                    <param id="0" name="Unique ID">Ghost.DataUID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="2099791096525945" type="NPCData">
+                    <param id="0" name="Key">&quot;Target&quot;</param>
+                    <param id="1" name="Value">BASE.UID</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

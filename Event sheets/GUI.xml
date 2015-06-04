@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GUI</name>
+    <events>
+        <event-block sid="4106564641723706">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="6901612664698437" type="System" />
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="6402306473070111" type="MAXHPGUI">
+                    <param id="0" name="Width">GameStats.Get(&quot;MaxHP&quot;)*8</param>
+                </action>
+                <action id="-5" name="Set width" sid="5625108736774983" type="HPGUI">
+                    <param id="0" name="Width">GameStats.Get(&quot;CurHP&quot;)*8</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="8166092901220623">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="8333805829986342" type="SpriteFont">
+                            <param id="0" name="Instance variable">Function</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;HP&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="7057796745100923" type="SpriteFont">
+                            <param id="0" name="Text">GameStats.Get(&quot;CurHP&quot;)&amp;&quot; / &quot;&amp;GameStats.Get(&quot;MaxHP&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5484307084280826">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="8021542870865803" type="SpriteFont">
+                            <param id="0" name="Instance variable">Function</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;ARROWS&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="8953443802611838" type="SpriteFont">
+                            <param id="0" name="Text">GameStats.Get(&quot;ARROWS&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1883568078945592">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2200086456547902" type="SpriteFont">
+                            <param id="0" name="Instance variable">Function</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;BOMBS&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="7700984268172615" type="SpriteFont">
+                            <param id="0" name="Text">GameStats.Get(&quot;BOMBS&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

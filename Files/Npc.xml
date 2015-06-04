@@ -1,0 +1,10 @@
+<xml>
+	<Object Name="NpcTestState">
+		<Sprite Name= "man"></Sprite>
+		<NpcState Name= "Npc_RandomWalk"></NpcState>
+		<Function Name= "ShowTextBox"
+			Params="bottom;Test"
+			Conditions= "!GhostPath">
+		</Function>
+	</Object>
+</xml>

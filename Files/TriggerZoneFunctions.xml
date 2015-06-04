@@ -1,0 +1,41 @@
+<xml>
+	<Object Name="Template">
+		<Function Name="SomeFunction"
+			Params="Optional Params seperated ba a space"
+			Conditions="!Optional Flags Seperated By A Space"></Function>
+		<Function Name="SomeFuctionWithNoParamsConditions"></Function>
+	</Object>
+	<Object Name="TestTrigger">
+		<Function 
+			Name="GhostRGB"
+			Params="12 0 12"></Function>
+		<Function
+			Name="SetGhostState"
+			Params="WaitAtPOI 288 289"></Function>
+	</Object>
+	<Object Name="ShowKey1">
+		<Function
+			Name="SetGhostState"
+			Params="NpcTest 214 255"
+			Conditions="!Has_Key_214"></Function>
+		<Function
+			Name="SetGhostState"
+			Params="NpcTest 28 255"
+			Conditions="Has_Key_214 !Unlockable_28"></Function>
+	</Object>
+	<Object Name="GhostStateTest">
+		<GhostState Name= "Wait"
+			Target= "6"
+			SomeKey="Some String Value. this is just extra data."
+			RemoveOnSetState="this is used when you want this state to get overwriten by the next state added with SetGhostState">
+		</GhostState>
+	</Object>
+	<Object Name= "TestGhostPath">
+		<GhostState Name="MoveAlongPath"
+			Conditions="!GhostPath"
+			Path="293 294 295 296 297 298"
+			Zones="399 400 401"
+			Target="6">
+		</GhostState>
+	</Object>
+</xml>

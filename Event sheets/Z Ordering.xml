@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Z Ordering</name>
+    <events>
+        <event-group description="" sid="2539411090981193" title="ZOrdering">
+            <sub-events>
+                <event-block sid="4778364325650748">
+                    <conditions>
+                        <condition id="-24" name="For Each (ordered)" sid="7014792862348875" type="System">
+                            <param id="0" name="Object">ZORDERING</param>
+                            <param id="1" name="Expression">ZORDERING.ImagePointY(1)</param>
+                            <param id="2" name="Order">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-24" name="Move to top" sid="6417477344935773" type="ZORDERING" />
+                    </actions>
+                </event-block>
+                <event-block sid="1081567774536975">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="1254631971845731" type="Enemies">
+                            <param id="0" name="Instance variable">Flying</param>
+                        </condition>
+                        <condition id="-24" name="For Each (ordered)" sid="2327004254352669" type="System">
+                            <param id="0" name="Object">ZORDERING</param>
+                            <param id="1" name="Expression">ZORDERING.ImagePointY(1)</param>
+                            <param id="2" name="Order">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-24" name="Move to top" sid="3824120694201226" type="Enemies" />
+                    </actions>
+                </event-block>
+                <event-block sid="5001975050019995">
+                    <conditions />
+                    <actions>
+                        <action id="-24" name="Move to top" sid="3180948243694953" type="Particles" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

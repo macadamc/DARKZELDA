@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Transitions</name>
+    <events>
+        <variable constant="0" name="fadeeffect" sid="3530672365678706" static="0" type="text"></variable>
+        <variable constant="0" name="fadespeed" sid="4022446593269227" static="0" type="number">0</variable>
+        <event-block sid="4872935875293135">
+            <conditions>
+                <condition id="0" name="On function" sid="2038280451934395" type="Function">
+                    <param id="0" name="Name">&quot;fade&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="8005594068054238" type="System">
+                    <param id="0" name="Variable">fadespeed</param>
+                    <param id="1" name="Value">Function.Param(1)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="4509303231397955">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="8689856315113471" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;in&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="2776856105018969" type="System">
+                            <param id="0" name="Variable">fadeeffect</param>
+                            <param id="1" name="Value">&quot;in&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7378503906256522">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="6178666448578292" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;out&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="4001239293351906" type="System">
+                            <param id="0" name="Variable">fadeeffect</param>
+                            <param id="1" name="Value">&quot;out&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="2228808978686716">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="2874092698578097" type="System">
+                    <param id="0" name="Variable">fadeeffect</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;in&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-18" name="Set layer opacity" sid="4758749719892666" type="System">
+                    <param id="0" name="Layer">&quot;TRANSITION&quot;</param>
+                    <param id="1" name="Opacity">clamp(LayerOpacity(&quot;TRANSITION&quot;)-(dt*fadespeed),0,100)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9014070232953393">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="8690844184066654" type="System">
+                    <param id="0" name="Variable">fadeeffect</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;out&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-18" name="Set layer opacity" sid="2847563526086386" type="System">
+                    <param id="0" name="Layer">&quot;TRANSITION&quot;</param>
+                    <param id="1" name="Opacity">clamp(LayerOpacity(&quot;TRANSITION&quot;)+(dt*fadespeed),0,100)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2621317207183331">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="6144573198900404" type="System">
+                    <param id="0" name="Variable">fadeeffect</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;out&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="1259905052153122">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="1100009288508862" type="System">
+                            <param id="0" name="First value">LayerOpacity(&quot;TRANSITION&quot;)</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-42" name="Signal" sid="4694301694085602" type="System">
+                            <param id="0" name="Tag">&quot;transition&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="179457946726707" type="System">
+                            <param id="0" name="Variable">fadeeffect</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="4959945231918421" type="System">
+                            <param id="0" name="Variable">fadespeed</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8651752081954285">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="2528049114944152" type="System">
+                    <param id="0" name="Variable">fadeeffect</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;in&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="1534299720466438">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="5689729561496459" type="System">
+                            <param id="0" name="First value">LayerOpacity(&quot;TRANSITION&quot;)</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-42" name="Signal" sid="5609640045326121" type="System">
+                            <param id="0" name="Tag">&quot;transition&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="9285901020937902" type="System">
+                            <param id="0" name="Variable">fadeeffect</param>
+                            <param id="1" name="Value">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="2633598925398221" type="System">
+                            <param id="0" name="Variable">fadespeed</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

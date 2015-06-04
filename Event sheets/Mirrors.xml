@@ -1,0 +1,835 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Mirrors</name>
+    <events>
+        <event-group description="" inactive="1" sid="7170822589747524" title="Mirror/BeamLogic">
+            <sub-events>
+                <event-block sid="874949356269585">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="8184576600984251" type="SourceBeam" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6724861242768763">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5268630763354482" type="BeamSource">
+                                    <param id="0" name="Instance variable">Dir</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Right&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="1755553845664094" type="SourceBeam">
+                                    <param id="0" name="Angle">180</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="3373677646501519" type="BeamSource">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3409741777282719">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="6023639119051676" type="BeamSource">
+                                    <param id="0" name="Instance variable">Dir</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Down&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="6782815567814062" type="SourceBeam">
+                                    <param id="0" name="Angle">270</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="5508463140879092" type="BeamSource">
+                                    <param id="0" name="Angle">90</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6508602493749018">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1052791302206628" type="BeamSource">
+                                    <param id="0" name="Instance variable">Dir</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Left&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="8190883073113192" type="SourceBeam">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="4776888923524404" type="BeamSource">
+                                    <param id="0" name="Angle">180</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1268787609187346">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="2466982350224171" type="BeamSource">
+                                    <param id="0" name="Instance variable">Dir</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Up&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="8954066635477994" type="SourceBeam">
+                                    <param id="0" name="Angle">90</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="8783812976218538" type="BeamSource">
+                                    <param id="0" name="Angle">270</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2649728492693972">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="9613144794066728" type="BeamSource" />
+                        <condition id="-11" name="For Each" sid="2545980677098562" type="System">
+                            <param id="0" name="Object">BeamSource</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8759724286954124">
+                            <conditions>
+                                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="4185030032071576" type="BeamSource">
+                                    <param id="0" name="Object">Mirror</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-5" name="Set width" sid="7517348409906928" type="SourceBeam">
+                                    <param id="0" name="Width">0</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="9091140665276656" type="SourceBeam">
+                                    <param id="0" name="Width">distance(BeamSource.X,BeamSource.Y, Mirror.X,Mirror.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3210693356602562">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="8759080281317236" type="System" />
+                                <condition id="1" name="Is overlapping another object" sid="9703464241225398" type="SourceBeam">
+                                    <param id="0" name="Object">Mirror</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-5" name="Set width" sid="5892960649295346" type="SourceBeam">
+                                    <param id="0" name="Width">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="2862026985072941" type="Function">
+                                    <param id="0" name="Name">&quot;RemoveBeam&quot;</param>
+                                    <param id="1" name="Parameter {n}">Mirror.BeamUID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3080600846701495">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="2512789573110826" type="SourceBeam">
+                            <param id="0" name="Object">Mirror</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="5682721703108292" type="Mirror">
+                            <param id="0" name="Instance variable">BeamUID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7650565826851791">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="8955761486133908" type="Mirror">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="9149874707343788">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="630271113555519" type="System">
+                                            <param id="0" name="First value">SourceBeam.Angle</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="9611817775115239" type="Mirror">
+                                            <param id="0" name="Instance variable">BeamUID</param>
+                                            <param id="1" name="Value">Function.Call(&quot;CreateBeam&quot;, Mirror.UID, &quot;Down&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2958587690144909">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="7802684242958223" type="System" />
+                                        <condition id="-8" name="Compare two values" sid="7931067046740443" type="System">
+                                            <param id="0" name="First value">SourceBeam.Angle</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">90</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="1625947254919446" type="Mirror">
+                                            <param id="0" name="Instance variable">BeamUID</param>
+                                            <param id="1" name="Value">Function.Call(&quot;CreateBeam&quot;, Mirror.UID, &quot;Right&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="1253711143105624">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="8737676568386642" type="Mirror">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="7281847499055593">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="8387920844367755" type="System">
+                                            <param id="0" name="First value">SourceBeam.Angle</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="3258867475867373" type="Function">
+                                            <param id="0" name="Name">&quot;CreateBeam&quot;</param>
+                                            <param id="1" name="Parameter {n}">Mirror.UID{###}&quot;Up&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2820875717938118">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="5566196171681556" type="System" />
+                                        <condition id="-8" name="Compare two values" sid="902791087610413" type="System">
+                                            <param id="0" name="First value">SourceBeam.Angle</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">270</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="1826797950769493" type="Function">
+                                            <param id="0" name="Name">&quot;CreateBeam&quot;</param>
+                                            <param id="1" name="Parameter {n}">Mirror.UID{###}&quot;Right&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="5303699727885227">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="4988536867800308" type="Mirror">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">2</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3986771009073006">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="4251220451558569" type="System">
+                                            <param id="0" name="First value">SourceBeam.Angle</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">180</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="224022441404843" type="Mirror">
+                                            <param id="0" name="Instance variable">BeamUID</param>
+                                            <param id="1" name="Value">Function.Call(&quot;CreateBeam&quot;, Mirror.UID, &quot;Up&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7715572032800866">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="6253470747060408" type="System" />
+                                        <condition id="-8" name="Compare two values" sid="817262840245497" type="System">
+                                            <param id="0" name="First value">SourceBeam.Angle</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">270</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="1072950632687175" type="Mirror">
+                                            <param id="0" name="Instance variable">BeamUID</param>
+                                            <param id="1" name="Value">Function.Call(&quot;CreateBeam&quot;, Mirror.UID, &quot;Left&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="2965172627707936">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="7018871796364031" type="Mirror">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">3</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="5255804851512848">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="2385990590535056" type="System">
+                                            <param id="0" name="First value">SourceBeam.Angle</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">180</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="8297714082371684" type="Mirror">
+                                            <param id="0" name="Instance variable">BeamUID</param>
+                                            <param id="1" name="Value">Function.Call(&quot;CreateBeam&quot;, Mirror.UID, &quot;Down&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="62528792231028">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="9631926761810615" type="System" />
+                                        <condition id="-8" name="Compare two values" sid="7394967821650384" type="System">
+                                            <param id="0" name="First value">SourceBeam.Angle</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">90</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="5152732476965112" type="Mirror">
+                                            <param id="0" name="Instance variable">BeamUID</param>
+                                            <param id="1" name="Value">Function.Call(&quot;CreateBeam&quot;, Mirror.UID, &quot;Left&quot;)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4935410362784302">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="3921799063035748" type="MirrorBeam">
+                            <param id="0" name="Object">Mirror</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="7891610937610651" type="Mirror">
+                            <param id="0" name="Instance variable">BeamUID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">-1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8069006778088533">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="6328684127162403" type="Mirror">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3558204835578254">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="4849140873538192" type="System">
+                                            <param id="0" name="First value">MirrorBeam.Angle</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">180</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="8244425401805978" type="Function">
+                                            <param id="0" name="Name">&quot;CreateBeam&quot;</param>
+                                            <param id="1" name="Parameter {n}">Mirror.UID{###}&quot;Down&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4889341830754737">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="6278695029579194" type="System" />
+                                        <condition id="-8" name="Compare two values" sid="4633025583938516" type="System">
+                                            <param id="0" name="First value">MirrorBeam.Angle</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">90</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="2131734277458927" type="Function">
+                                            <param id="0" name="Name">&quot;CreateBeam&quot;</param>
+                                            <param id="1" name="Parameter {n}">Mirror.UID{###}&quot;Right&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="5853551769724603">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="3988530412565833" type="Mirror">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="967485199296367">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="6110770564872747" type="System">
+                                            <param id="0" name="First value">MirrorBeam.Angle</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="5119895968940369" type="Function">
+                                            <param id="0" name="Name">&quot;CreateBeam&quot;</param>
+                                            <param id="1" name="Parameter {n}">Mirror.UID{###}&quot;Up&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1010109899019592">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="3423115985507737" type="System" />
+                                        <condition id="-8" name="Compare two values" sid="2934646373657104" type="System">
+                                            <param id="0" name="First value">MirrorBeam.Angle</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">270</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="3544568901898887" type="Function">
+                                            <param id="0" name="Name">&quot;CreateBeam&quot;</param>
+                                            <param id="1" name="Parameter {n}">Mirror.UID{###}&quot;Right&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="3693224066993898">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="7324345936796601" type="Mirror">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">2</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="9862993519649241">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="4802466483013974" type="System">
+                                            <param id="0" name="First value">MirrorBeam.Angle</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">180</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="6145223525570746" type="Function">
+                                            <param id="0" name="Name">&quot;CreateBeam&quot;</param>
+                                            <param id="1" name="Parameter {n}">Mirror.UID{###}&quot;Up&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6699550033787034">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="4173738462901486" type="System" />
+                                        <condition id="-8" name="Compare two values" sid="8133961608309488" type="System">
+                                            <param id="0" name="First value">MirrorBeam.Angle</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">270</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="1892801271203508" type="Function">
+                                            <param id="0" name="Name">&quot;CreateBeam&quot;</param>
+                                            <param id="1" name="Parameter {n}">Mirror.UID{###}&quot;Left&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="7390958937365693">
+                            <conditions>
+                                <condition id="3" name="Compare frame" sid="5313327500865656" type="Mirror">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">3</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="7032124253491594">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="1686019590565877" type="System">
+                                            <param id="0" name="First value">MirrorBeam.Angle</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">180</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="9397970799872316" type="Function">
+                                            <param id="0" name="Name">&quot;CreateBeam&quot;</param>
+                                            <param id="1" name="Parameter {n}">Mirror.UID{###}&quot;Down&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2116918341706713">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="7251247464395974" type="System" />
+                                        <condition id="-8" name="Compare two values" sid="567057074806675" type="System">
+                                            <param id="0" name="First value">MirrorBeam.Angle</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">90</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Call function" sid="9456868981441666" type="Function">
+                                            <param id="0" name="Name">&quot;CreateBeam&quot;</param>
+                                            <param id="1" name="Parameter {n}">Mirror.UID{###}&quot;Left&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2538697187289373">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4583056501668521" type="Function">
+                            <param id="0" name="Name">&quot;CreateBeam&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <variable constant="0" name="BeamUID" sid="6706842390281072" static="0" type="number">0</variable>
+                        <event-block sid="7337012878834169">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="7070219634014128" type="Mirror">
+                                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="1049749985524555" type="System">
+                                    <param id="0" name="Object to create">MirrorBeam</param>
+                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                    <param id="2" name="X">Mirror.X</param>
+                                    <param id="3" name="Y">Mirror.Y</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="5440006632211325" type="System">
+                                    <param id="0" name="Variable">BeamUID</param>
+                                    <param id="1" name="Value">MirrorBeam.UID</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="5327097128620513" type="Mirror">
+                                    <param id="0" name="Instance variable">BeamUID</param>
+                                    <param id="1" name="Value">MirrorBeam.UID</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="3353679166872799">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="8552068520369749" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Up&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="1595579406557215" type="MirrorBeam">
+                                            <param id="0" name="Angle">90</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="7766584260479779" type="Function">
+                                            <param id="0" name="Name">&quot;DrawBeam&quot;</param>
+                                            <param id="1" name="Parameter {n}">MirrorBeam.UID{###}&quot;Up&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1464861616821274">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="8868646359036664" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="3244154784086303" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Down&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="2157449660167362" type="MirrorBeam">
+                                            <param id="0" name="Angle">270</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="8240171713003424" type="Function">
+                                            <param id="0" name="Name">&quot;DrawBeam&quot;</param>
+                                            <param id="1" name="Parameter {n}">MirrorBeam.UID{###}&quot;Down&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6383542480750065">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="7386268928688529" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="2678976571810153" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Left&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="8920922301965826" type="MirrorBeam">
+                                            <param id="0" name="Angle">0</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="2986946085451472" type="Function">
+                                            <param id="0" name="Name">&quot;DrawBeam&quot;</param>
+                                            <param id="1" name="Parameter {n}">MirrorBeam.UID{###}&quot;Left&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7990296372237708">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="6772276567799544" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="2460824738930923" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Right&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="9578027636898377" type="MirrorBeam">
+                                            <param id="0" name="Angle">180</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="2937377115607402" type="Function">
+                                            <param id="0" name="Name">&quot;DrawBeam&quot;</param>
+                                            <param id="1" name="Parameter {n}">MirrorBeam.UID{###}&quot;Right&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="6733035206421094">
+                            <conditions />
+                            <actions>
+                                <action id="1" name="Set return value" sid="7184300546194552" type="Function">
+                                    <param id="0" name="Value">BeamUID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9488564062779406">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8024087481365602" type="Function">
+                            <param id="0" name="Name">&quot;DrawBeam&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="4386540493348439" type="MirrorBeam">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1431208447652552">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="403680350440896" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Up&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="2174851926457049" type="BeamRunner">
+                                    <param id="0" name="X">MirrorBeam.X</param>
+                                    <param id="1" name="Y">MirrorBeam.Y-8</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="141882252633519">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="789862493291393" type="System" />
+                                <condition id="1" name="Compare parameter" sid="5863052740474537" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Down&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="3882794926711586" type="BeamRunner">
+                                    <param id="0" name="X">MirrorBeam.X</param>
+                                    <param id="1" name="Y">MirrorBeam.Y+8</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1608404061661598">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="815230694790487" type="System" />
+                                <condition id="1" name="Compare parameter" sid="6734977520070646" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Left&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="541138040019318" type="BeamRunner">
+                                    <param id="0" name="X">MirrorBeam.X-8</param>
+                                    <param id="1" name="Y">MirrorBeam.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6853600594329385">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="4090674782464018" type="System" />
+                                <condition id="1" name="Compare parameter" sid="1938375653328669" type="Function">
+                                    <param id="0" name="Index">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Right&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="1450065583463814" type="BeamRunner">
+                                    <param id="0" name="X">MirrorBeam.X+8</param>
+                                    <param id="1" name="Y">MirrorBeam.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <variable constant="0" name="Collided" sid="31429836545104" static="0" type="number">0</variable>
+                        <event-block sid="6645317135510641">
+                            <conditions>
+                                <condition id="-23" name="While" sid="3325248113591622" type="System" />
+                                <condition id="-8" name="Compare two values" sid="1378031369375681" type="System">
+                                    <param id="0" name="First value">Collided</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3087909769594732">
+                                    <conditions>
+                                        <condition id="1" name="Compare parameter" sid="5672562158922358" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Up&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Set Y" sid="5897895800009988" type="BeamRunner">
+                                            <param id="0" name="Y">BeamRunner.Y-4</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8718291782414408">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="8737861498077158" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="3949464983912949" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Down&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Set Y" sid="7385985065593508" type="BeamRunner">
+                                            <param id="0" name="Y">BeamRunner.Y+4</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4250082313690967">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="3334819116218265" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="177372977773513" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Left&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="205558912685072" type="BeamRunner">
+                                            <param id="0" name="X">BeamRunner.X-4</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9499701262406421">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="8602182115526011" type="System" />
+                                        <condition id="1" name="Compare parameter" sid="5164208677740312" type="Function">
+                                            <param id="0" name="Index">1</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Right&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-1" name="Set X" sid="1948418247424539" type="BeamRunner">
+                                            <param id="0" name="X">BeamRunner.X+4</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="1090816965326795">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="3454983461254381" type="BeamRunner">
+                                            <param id="0" name="Object">Mirror</param>
+                                        </condition>
+                                        <condition id="1" name="Is overlapping another object" sid="1800767446576204" type="BeamRunner">
+                                            <param id="0" name="Object">ObstacleTilemap</param>
+                                        </condition>
+                                        <condition id="1" name="Is overlapping another object" sid="9574780246844239" type="BeamRunner">
+                                            <param id="0" name="Object">Rock</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-5" name="Set width" sid="1276236098893744" type="MirrorBeam">
+                                            <param id="0" name="Width">distance(MirrorBeam.X,MirrorBeam.Y,BeamRunner.X,BeamRunner.Y)+4</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="2211616666319128" type="System">
+                                            <param id="0" name="Variable">Collided</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5702985986575322">
+                    <conditions>
+                        <condition id="0" name="On function" sid="8045114848473698" type="Function">
+                            <param id="0" name="Name">&quot;RemoveBeam&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Pick by unique ID" sid="4499876774837616" type="MirrorBeam">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="6314618377119522" type="MirrorBeam">
+                            <param id="0" name="Object">Mirror</param>
+                        </condition>
+                        <condition id="-11" name="For Each" sid="2270218206345984" type="System">
+                            <param id="0" name="Object">Mirror</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8551171849023801">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3620732618970653" type="Mirror">
+                                    <param id="0" name="Instance variable">BeamUID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Function.Param(0)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="2631649788299187" type="MirrorBeam" />
+                                <action id="-10" name="Set value" sid="4844741242680985" type="Mirror">
+                                    <param id="0" name="Instance variable">BeamUID</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9684172409918894">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="7514633715558044" type="System" />
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="-16" name="Wait" sid="9768744952898822" type="System">
+                                    <param id="0" name="Seconds">0.1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="6139143724627669" type="Function">
+                                    <param id="0" name="Name">&quot;RemoveBeam&quot;</param>
+                                    <param id="1" name="Parameter {n}">Mirror.BeamUID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,1065 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Player</name>
+    <events>
+        <event-group description="" sid="8712854156304718" title="Player">
+            <sub-events>
+                <event-group description="" sid="3931052107261758" title="GettingHurt">
+                    <sub-events>
+                        <event-block sid="1351658325213872">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="4546133333791646" type="BASE">
+                                    <param id="0" name="Object">Enemies</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="5987847614108686" type="Enemies">
+                                    <param id="0" name="Instance variable">Damage</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6476108895040624" type="BASE">
+                                    <param id="0" name="Instance variable">Hurt</param>
+                                </condition>
+                                <condition id="0" name="Compare value" sid="3882019896781413" type="GameStats">
+                                    <param id="0" name="Key">&quot;CurHP&quot;</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="5810621070179113" type="Function">
+                                    <param id="0" name="Name">&quot;Hurt_Player&quot;</param>
+                                    <param id="1" name="Parameter {n}">Enemies.Damage{###}Enemies.KnockbackAmount{###}angle(enemies.X,enemies.Y,base.X,base.Y)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="9417527191537294">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="7039010551621998" type="Enemies">
+                                            <param id="0" name="Instance variable">Projectile</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="3706511978301877" type="Enemies" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="7304622519992358">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="6850857885920087" type="BASE">
+                                    <param id="0" name="Object">SpikeTrap</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="6594917623227488" type="SpikeTrap">
+                                    <param id="0" name="Animation">&quot;Up&quot;</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8176004194094329" type="BASE">
+                                    <param id="0" name="Instance variable">Hurt</param>
+                                </condition>
+                                <condition id="0" name="Compare value" sid="7342051453800722" type="GameStats">
+                                    <param id="0" name="Key">&quot;CurHP&quot;</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="2567020440168967" type="Function">
+                                    <param id="0" name="Name">&quot;Hurt_Player&quot;</param>
+                                    <param id="1" name="Parameter {n}">1{###}32{###}angle(SpikeTrap.X,SpikeTrap.Y,base.X,base.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="479356092734397">
+                            <conditions>
+                                <condition id="0" name="On function" sid="9837337876942361" type="Function">
+                                    <param id="0" name="Name">&quot;Hurt_Player&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Knockback" id="2" name="Set speed" sid="7325574232425356" type="BASE">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="Speed">function.Param(1)</param>
+                                </action>
+                                <action behavior="Knockback" id="6" name="Set angle of motion" sid="7938825964382066" type="BASE">
+                                    <param id="0" name="Angle">function.Param(2)</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="23932921984607" type="BASE">
+                                    <param id="0" name="Instance variable">Hurt</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="7823832243761833" type="ARMS">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="1300996146446449" type="BODY">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="5262935771234486" type="Function">
+                                    <param id="0" name="Name">&quot;bloodhit&quot;</param>
+                                    <param id="1" name="Parameter {n}">BASE.UID{###}BASE.ImagePointX(1){###}BASE.ImagePointY(1){###}0{###}180{###}6</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="9226006475367208">
+                                    <conditions>
+                                        <condition id="0" name="Compare value" sid="7957792965619039" type="GameStats">
+                                            <param id="0" name="Key">&quot;CurHP&quot;</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="1441327646899596" type="System">
+                                            <param id="0" name="Object to create">HeartParticle</param>
+                                            <param id="1" name="Layer">&quot;GUI&quot;</param>
+                                            <param id="2" name="X">(HPGUI.X+HPGUI.Width)-4</param>
+                                            <param id="3" name="Y">HPGUI.Y+4</param>
+                                        </action>
+                                        <action id="1" name="Set key" sid="5266039995810576" type="GameStats">
+                                            <param id="0" name="Key">&quot;CurHP&quot;</param>
+                                            <param id="1" name="Value">GameStats.Get(&quot;CurHP&quot;)-(Function.Param(0))</param>
+                                        </action>
+                                        <action behavior="ScrollTo" id="0" name="Shake" sid="7661791039597037" type="Camera">
+                                            <param id="0" name="Magnitude">4</param>
+                                            <param id="1" name="Duration">0.4</param>
+                                            <param id="2" name="Mode">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="8455412783887966">
+                            <conditions>
+                                <condition behavior="Flash" id="1" name="On flash ended" sid="9827570061442336" type="BODY" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="2697793953028707" type="BASE">
+                                    <param id="0" name="Instance variable">Hurt</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2842182731278205">
+                            <conditions>
+                                <condition id="0" name="Compare value" sid="5329056164871409" type="GameStats">
+                                    <param id="0" name="Key">&quot;CurHP&quot;</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="4588902572577745" type="ARMS">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="3539258484577749">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="6836804250018287" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="8214362111556305" type="BODY">
+                                            <param id="0" name="Animation">&quot;Die&quot;&amp;BODY.AnimationName</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="442916737781929" title="Movement">
+                    <sub-events>
+                        <event-block sid="8711682803796464">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="6475138544893998" type="System" />
+                                <condition id="-14" name="Compare variable" sid="7512523698316045" type="System">
+                                    <param id="0" name="Variable">Pause</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-9" inverted="1" name="Is visible" sid="6131334238708877" type="TextBox" />
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="8448443751822118" type="Indicator">
+                                    <param id="0" name="Object">BASE</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="8897131099053166" type="BODY">
+                                    <param id="0" name="Object">BASE</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="2301227317905252" type="ARMS">
+                                    <param id="0" name="Object">BODY</param>
+                                    <param id="1" name="Image point (optional)">2</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="371594061402481" type="PLAYERSHADOW">
+                                    <param id="0" name="Object">BASE</param>
+                                    <param id="1" name="Image point (optional)">&quot;shadow&quot;</param>
+                                </action>
+                                <action id="-29" name="Move to object" sid="3910234091643572" type="BODY">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Object">BASE</param>
+                                </action>
+                                <action id="-29" name="Move to object" sid="5855484934921627" type="ARMS">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Object">BODY</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="6467707918680385">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="4640383486506402" type="System">
+                                            <param id="0" name="Variable">Quality</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;low&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="5197161933183446" type="BODY">
+                                            <param id="0" name="Angle">0</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="1101613288477253" type="ARMS">
+                                            <param id="0" name="Angle">BODY.Angle</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2925133226687316">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="9538717398854479" type="System">
+                                            <param id="0" name="Variable">Quality</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;high&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-8" name="Set angle" sid="4973436167959392" type="BODY">
+                                            <param id="0" name="Angle">0+(BASE.8Direction.VectorX/7)</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="7404299308554222" type="ARMS">
+                                            <param id="0" name="Angle">BODY.Angle</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2863577550234691">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6205203771813764" type="BASE">
+                                            <param id="0" name="Instance variable">attacking</param>
+                                        </condition>
+                                        <condition id="0" name="Compare value" sid="691481108181919" type="GameStats">
+                                            <param id="0" name="Key">&quot;CurHP&quot;</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="6" name="Set speed" sid="3206471930723397" type="BODY">
+                                            <param id="0" name="Speed">BASE.8Direction.Speed/10</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="5983352330287079" type="Melee_Hitbox" />
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="6880145467659882">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="653930319310319" type="BASE">
+                                                    <param id="0" name="Instance variable">holding</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="6" name="Set speed" sid="2921068755354739" type="ARMS">
+                                                    <param id="0" name="Speed">BODY.AnimationSpeed</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="3385912384282886" type="ARMS">
+                                                    <param id="0" name="Frame number">BODY.AnimationFrame</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="2320790867198962">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="4834650822252334" type="System">
+                                                    <param id="0" name="Variable">fadeeffect</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="1006517132132829">
+                                                    <conditions>
+                                                        <condition id="0" name="Compare value" sid="110693074800159" type="Input">
+                                                            <param id="0" name="Key">&quot;Type&quot;</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">&quot;controler&quot;</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block any="1" sid="4461509764727949">
+                                                            <conditions>
+                                                                <condition id="0" name="Compare value" sid="8966991451959525" type="Input">
+                                                                    <param id="0" name="Key">&quot;Left X&quot;</param>
+                                                                    <param id="1" name="Comparison">1</param>
+                                                                    <param id="2" name="Value">0</param>
+                                                                </condition>
+                                                                <condition id="0" name="Compare value" sid="8272070793731606" type="Input">
+                                                                    <param id="0" name="Key">&quot;Left Y&quot;</param>
+                                                                    <param id="1" name="Comparison">1</param>
+                                                                    <param id="2" name="Value">0</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-22" name="Set angle toward position" sid="1535415310320532" type="Indicator">
+                                                                    <param id="0" name="X">self.X+Input.Get(&quot;Left X&quot;)</param>
+                                                                    <param id="1" name="Y">self.y+Input.Get(&quot;Left Y&quot;)</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block any="1" sid="934357347738014">
+                                                            <conditions>
+                                                                <condition id="0" name="Compare value" sid="4808437787560581" type="Input">
+                                                                    <param id="0" name="Key">&quot;Right X&quot;</param>
+                                                                    <param id="1" name="Comparison">1</param>
+                                                                    <param id="2" name="Value">0</param>
+                                                                </condition>
+                                                                <condition id="0" name="Compare value" sid="5759585479796646" type="Input">
+                                                                    <param id="0" name="Key">&quot;Right Y&quot;</param>
+                                                                    <param id="1" name="Comparison">1</param>
+                                                                    <param id="2" name="Value">0</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-22" name="Set angle toward position" sid="6520521091111876" type="Indicator">
+                                                                    <param id="0" name="X">self.X+Input.Get(&quot;Right X&quot;)</param>
+                                                                    <param id="1" name="Y">self.y+Input.Get(&quot;Right Y&quot;)</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                                <event-block sid="3412831181375993">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="6151778116595291" type="System" />
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="6568877066542416">
+                                                            <conditions>
+                                                                <condition id="2" name="Key is down" sid="457225138693326" type="Keyboard">
+                                                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="9455953587631573" type="Keyboard">
+                                                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="5506099679324766" type="Keyboard">
+                                                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="2972255320397504" type="Keyboard">
+                                                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="6276003312718349" type="Keyboard">
+                                                                    <param id="0" name="Key">67 (C)</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-8" name="Set angle" sid="6139700020607074" type="Indicator">
+                                                                    <param id="0" name="Angle">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="9066811238024331">
+                                                            <conditions>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="362686586224781" type="Keyboard">
+                                                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" name="Key is down" sid="8303226342194937" type="Keyboard">
+                                                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="4682455566317834" type="Keyboard">
+                                                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="9083197743188657" type="Keyboard">
+                                                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="806276417126751" type="Keyboard">
+                                                                    <param id="0" name="Key">67 (C)</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-8" name="Set angle" sid="7393555974489983" type="Indicator">
+                                                                    <param id="0" name="Angle">180</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="2842220196687706">
+                                                            <conditions>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="2814140747156939" type="Keyboard">
+                                                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="8403750644624009" type="Keyboard">
+                                                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" name="Key is down" sid="3766659969369482" type="Keyboard">
+                                                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="6785106682546849" type="Keyboard">
+                                                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="2501269046690041" type="Keyboard">
+                                                                    <param id="0" name="Key">67 (C)</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-8" name="Set angle" sid="6284789317475841" type="Indicator">
+                                                                    <param id="0" name="Angle">270</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="3799197658162744">
+                                                            <conditions>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="7961617278077551" type="Keyboard">
+                                                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="2091751220111124" type="Keyboard">
+                                                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="8310806452553649" type="Keyboard">
+                                                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" name="Key is down" sid="8401126525564645" type="Keyboard">
+                                                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="4069927299875035" type="Keyboard">
+                                                                    <param id="0" name="Key">67 (C)</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-8" name="Set angle" sid="7003327619250598" type="Indicator">
+                                                                    <param id="0" name="Angle">90</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="4298600798558137">
+                                                            <conditions>
+                                                                <condition id="0" name="On key pressed" sid="458400765262529" type="Keyboard">
+                                                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="115643107223901" type="Keyboard">
+                                                                    <param id="0" name="Key">67 (C)</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-8" name="Set angle" sid="579044112576629" type="Indicator">
+                                                                    <param id="0" name="Angle">0</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="871058545959021">
+                                                            <conditions>
+                                                                <condition id="0" name="On key pressed" sid="6397361475712867" type="Keyboard">
+                                                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="2170364543945355" type="Keyboard">
+                                                                    <param id="0" name="Key">67 (C)</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-8" name="Set angle" sid="221592631678261" type="Indicator">
+                                                                    <param id="0" name="Angle">180</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="4144801299417343">
+                                                            <conditions>
+                                                                <condition id="0" name="On key pressed" sid="3092088662970962" type="Keyboard">
+                                                                    <param id="0" name="Key">40 (Down arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="5301856783703657" type="Keyboard">
+                                                                    <param id="0" name="Key">67 (C)</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-8" name="Set angle" sid="9570972674888554" type="Indicator">
+                                                                    <param id="0" name="Angle">90</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="3146275305067143">
+                                                            <conditions>
+                                                                <condition id="0" name="On key pressed" sid="7336862692216655" type="Keyboard">
+                                                                    <param id="0" name="Key">38 (Up arrow)</param>
+                                                                </condition>
+                                                                <condition id="2" inverted="1" name="Key is down" sid="7308874814740277" type="Keyboard">
+                                                                    <param id="0" name="Key">67 (C)</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-8" name="Set angle" sid="4529493843251742" type="Indicator">
+                                                                    <param id="0" name="Angle">270</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="5061191907804659">
+                                            <conditions>
+                                                <condition id="-11" name="Is within angle" sid="1069060298820068" type="Indicator">
+                                                    <param id="0" name="Within">45</param>
+                                                    <param id="1" name="Angle">90</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="4843398597800226" type="BODY">
+                                                    <param id="0" name="Animation">&quot;Down&quot;</param>
+                                                    <param id="1" name="From">0</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="8519000513590805" type="ARMS">
+                                                    <param id="0" name="Animation">&quot;Down&quot;</param>
+                                                    <param id="1" name="From">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="8653906503471489">
+                                            <conditions>
+                                                <condition id="-11" name="Is within angle" sid="9383171681101626" type="Indicator">
+                                                    <param id="0" name="Within">45</param>
+                                                    <param id="1" name="Angle">270</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="8557157060225474" type="BODY">
+                                                    <param id="0" name="Animation">&quot;Up&quot;</param>
+                                                    <param id="1" name="From">0</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="8916697738105696" type="ARMS">
+                                                    <param id="0" name="Animation">&quot;Up&quot;</param>
+                                                    <param id="1" name="From">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="6562629154902748">
+                                            <conditions>
+                                                <condition id="-11" name="Is within angle" sid="6190900809044084" type="Indicator">
+                                                    <param id="0" name="Within">45</param>
+                                                    <param id="1" name="Angle">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="346860251383354" type="BODY">
+                                                    <param id="0" name="Animation">&quot;Right&quot;</param>
+                                                    <param id="1" name="From">0</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="106023562651772" type="ARMS">
+                                                    <param id="0" name="Animation">&quot;Right&quot;</param>
+                                                    <param id="1" name="From">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="5417189583993475">
+                                            <conditions>
+                                                <condition id="-11" name="Is within angle" sid="9984323431623625" type="Indicator">
+                                                    <param id="0" name="Within">45</param>
+                                                    <param id="1" name="Angle">180</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="1642885527109074" type="BODY">
+                                                    <param id="0" name="Animation">&quot;Left&quot;</param>
+                                                    <param id="1" name="From">0</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="8936776085323459" type="ARMS">
+                                                    <param id="0" name="Animation">&quot;Left&quot;</param>
+                                                    <param id="1" name="From">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="2859176460169673">
+                                            <conditions>
+                                                <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="9499019471611611" type="BASE" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="6" name="Set speed" sid="9070973926839447" type="BODY">
+                                                    <param id="0" name="Speed">0</param>
+                                                </action>
+                                                <action id="6" name="Set speed" sid="2224471888494554" type="ARMS">
+                                                    <param id="0" name="Speed">0</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="2691540319539935" type="ARMS">
+                                                    <param id="0" name="Frame number">1</param>
+                                                </action>
+                                                <action id="5" name="Set frame" sid="4591235899063899" type="BODY">
+                                                    <param id="0" name="Frame number">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="9134633687356144">
+                                            <conditions />
+                                            <actions>
+                                                <action behavior="8Direction" id="4" name="Set max speed" sid="4676557220410425" type="BASE">
+                                                    <param id="0" name="Max Speed">self.MaxSpd</param>
+                                                </action>
+                                                <action behavior="8Direction" id="6" name="Set deceleration" sid="1864394356798229" type="BASE">
+                                                    <param id="0" name="Deceleration">self.Decel</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="4199177245239605">
+                                                    <conditions>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8677676721898893" type="BASE">
+                                                            <param id="0" name="Instance variable">Hurt</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-15" name="Set visible" sid="6909800739429775" type="ARMS">
+                                                            <param id="0" name="Visibility">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="6749069804433205">
+                                    <conditions>
+                                        <condition id="2" inverted="1" name="Is playing" sid="3320318315561303" type="BASE">
+                                            <param id="0" name="Animation">&quot;RollDown&quot;</param>
+                                        </condition>
+                                        <condition id="2" inverted="1" name="Is playing" sid="1225310989708084" type="BASE">
+                                            <param id="0" name="Animation">&quot;RollLeft&quot;</param>
+                                        </condition>
+                                        <condition id="2" inverted="1" name="Is playing" sid="1713863016719149" type="BASE">
+                                            <param id="0" name="Animation">&quot;RollUp&quot;</param>
+                                        </condition>
+                                        <condition id="2" inverted="1" name="Is playing" sid="2880503161364712" type="BASE">
+                                            <param id="0" name="Animation">&quot;RollRight&quot;</param>
+                                        </condition>
+                                        <condition behavior="Knockback" id="1" name="Compare speed" sid="2498934510624634" type="BASE">
+                                            <param id="0" name="Which">0</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Speed">8</param>
+                                        </condition>
+                                        <condition id="0" name="Compare value" sid="4558672734957384" type="GameStats">
+                                            <param id="0" name="Key">&quot;CurHP&quot;</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="7442683155328455" type="System">
+                                            <param id="0" name="Variable">fadeeffect</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="9" name="Set vector X" sid="1410100464547159" type="BASE">
+                                            <param id="0" name="Vector X">BASE.8Direction.VectorX+(dt*Input.Get(&quot;Left X&quot;)*20)</param>
+                                        </action>
+                                        <action behavior="8Direction" id="10" name="Set vector Y" sid="4172884288631778" type="BASE">
+                                            <param id="0" name="Vector Y">BASE.8Direction.VectorY+(dt*Input.Get(&quot;Left Y&quot;)*20)</param>
+                                        </action>
+                                        <action behavior="8Direction" id="3" name="Set speed" sid="7951771309484382" type="BASE">
+                                            <param id="0" name="Speed">clamp(self.8Direction.Speed,0,self.8Direction.MaxSpeed)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block any="1" sid="5552921814900457">
+                            <conditions>
+                                <condition id="2" name="Is playing" sid="6403873458985419" type="BODY">
+                                    <param id="0" name="Animation">&quot;RollDown&quot;</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="3213620401486433" type="BODY">
+                                    <param id="0" name="Animation">&quot;RollLeft&quot;</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="6049345175799626" type="BODY">
+                                    <param id="0" name="Animation">&quot;RollUp&quot;</param>
+                                </condition>
+                                <condition id="2" name="Is playing" sid="6894932154112053" type="BODY">
+                                    <param id="0" name="Animation">&quot;RollRight&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="3" name="Set speed" sid="7643572168451955" type="BASE">
+                                    <param id="0" name="Speed">BASE.8Direction.Speed-(dt*BASE.8Direction.Deceleration)</param>
+                                </action>
+                                <action behavior="8Direction" id="9" name="Set vector X" sid="401304666168398" type="BASE">
+                                    <param id="0" name="Vector X">BASE.8Direction.VectorX+(dt*Input.Get(&quot;Left X&quot;)/4)</param>
+                                </action>
+                                <action behavior="8Direction" id="10" name="Set vector Y" sid="1061705064372517" type="BASE">
+                                    <param id="0" name="Vector Y">BASE.8Direction.VectorY+(dt*Input.Get(&quot;Left Y&quot;)/4)</param>
+                                </action>
+                                <action behavior="8Direction" id="3" name="Set speed" sid="6315285155449605" type="BASE">
+                                    <param id="0" name="Speed">clamp(self.8Direction.Speed,0,self.8Direction.MaxSpeed)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block any="1" sid="9379590404469766">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="2793228977309685" type="BASE">
+                                            <param id="0" name="Object">ObstacleTilemap</param>
+                                        </condition>
+                                        <condition id="0" name="On collision with another object" sid="4966078307542989" type="BASE">
+                                            <param id="0" name="Object">Solid</param>
+                                        </condition>
+                                        <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="1059196657947798" type="BASE" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="3" name="Set speed" sid="4029860069361609" type="BASE">
+                                            <param id="0" name="Speed">0</param>
+                                        </action>
+                                        <action behavior="8Direction" id="9" name="Set vector X" sid="6707078585229678" type="BASE">
+                                            <param id="0" name="Vector X">0</param>
+                                        </action>
+                                        <action behavior="8Direction" id="10" name="Set vector Y" sid="9536619039772145" type="BASE">
+                                            <param id="0" name="Vector Y">0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="1314032288821491" type="BASE">
+                                            <param id="0" name="Instance variable">attacking</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="8235169240122939">
+                            <conditions>
+                                <condition behavior="Knockback" id="1" name="Compare speed" sid="3379649777057469" type="BASE">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Speed">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Knockback" id="2" name="Set speed" sid="9344611750435806" type="BASE">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="Speed">self.Knockback.Speed-(dt*(self.Decel/4))</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="8660353024604717">
+                                    <conditions>
+                                        <condition behavior="Knockback" id="1" name="Compare speed" sid="2822940433472052" type="BASE">
+                                            <param id="0" name="Which">0</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Speed">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Knockback" id="2" name="Set speed" sid="1014001446475437" type="BASE">
+                                            <param id="0" name="Which">0</param>
+                                            <param id="1" name="Speed">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="5646547362717087">
+                            <conditions>
+                                <condition behavior="Knockback" id="3" name="On horizontal step" sid="2406929794834987" type="BASE" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="5767214028404129">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="5400949773188993" type="BASE">
+                                            <param id="0" name="Object">ObstacleTilemap</param>
+                                        </condition>
+                                        <condition id="1" name="Is overlapping another object" sid="2167157322038503" type="BASE">
+                                            <param id="0" name="Object">Solid</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Knockback" id="9" name="Stop stepping" sid="7919232183160123" type="BASE">
+                                            <param id="0" name="Position">0</param>
+                                        </action>
+                                        <action behavior="Knockback" id="2" name="Set speed" sid="9085562363317201" type="BASE">
+                                            <param id="0" name="Which">1</param>
+                                            <param id="1" name="Speed">(self.Knockback.dx)*-1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="8572694795215689">
+                            <conditions>
+                                <condition behavior="Knockback" id="4" name="On vertical step" sid="305091381364671" type="BASE" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="5523404424852097">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="2753059118417158" type="BASE">
+                                            <param id="0" name="Object">ObstacleTilemap</param>
+                                        </condition>
+                                        <condition id="1" name="Is overlapping another object" sid="2067002491138823" type="BASE">
+                                            <param id="0" name="Object">Solid</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Knockback" id="2" name="Set speed" sid="8662024461902905" type="BASE">
+                                            <param id="0" name="Which">2</param>
+                                            <param id="1" name="Speed">(self.Knockback.dy)*-1</param>
+                                        </action>
+                                        <action behavior="Knockback" id="9" name="Stop stepping" sid="5587760247492083" type="BASE">
+                                            <param id="0" name="Position">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="6447770477649497" title="Attacking">
+                    <sub-events>
+                        <event-block sid="4553539429127503">
+                            <conditions />
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="6112258256487596" type="Melee_Hitbox">
+                                    <param id="0" name="Object">ARMS</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="6503291644467049" type="Melee_Hitbox">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7674368771356679">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1046199000886606" type="BASE">
+                                    <param id="0" name="Instance variable">AttackTimer</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="3413335083875103" type="BASE">
+                                    <param id="0" name="Instance variable">AttackTimer</param>
+                                    <param id="1" name="Value">dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="124611545208474">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="1010062187718931" type="BASE">
+                                    <param id="0" name="Object">TriggerZone</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="3910970254657484" type="System">
+                                    <param id="0" name="First value">find(TriggerZone.TriggeredBy, &quot;Buttons&quot;)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
+                        <event-block sid="8739076744730789">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="9695236002795407" type="System">
+                                    <param id="0" name="Variable">TextBoxActive</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="7933978694982564">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="8884223296123364" type="Input">
+                                            <param id="0" name="Instance variable">Button1</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="7646738147498115">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1629694473826358" type="BASE">
+                                                    <param id="0" name="Instance variable">attacking</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="670377580412718" type="BASE">
+                                                    <param id="0" name="Instance variable">AttackTimer</param>
+                                                    <param id="1" name="Comparison">3</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="4603775469817013" type="System">
+                                                    <param id="0" name="Variable">Pause</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                                <condition id="-9" inverted="1" name="Is visible" sid="5321888104881586" type="TextBox" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="9505265714622845" type="Function">
+                                                    <param id="0" name="Name">Input.Button1&amp;&quot;_&quot;&amp;GameStats.Get(&quot;Item1&quot;)</param>
+                                                    <param id="1" name="Parameter {n}">BODY.AnimationName</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="3776432020980248">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="1923833171578885" type="Input">
+                                            <param id="0" name="Instance variable">Button2</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">&quot;&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="724143675488892">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9658495792198131" type="BASE">
+                                                    <param id="0" name="Instance variable">attacking</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="6608108548047529" type="BASE">
+                                                    <param id="0" name="Instance variable">AttackTimer</param>
+                                                    <param id="1" name="Comparison">3</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                                <condition id="-14" name="Compare variable" sid="1942910603457759" type="System">
+                                                    <param id="0" name="Variable">Pause</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                                <condition id="-9" inverted="1" name="Is visible" sid="4261530216832591" type="TextBox" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="4640292714058279" type="Function">
+                                                    <param id="0" name="Name">Input.Button2&amp;&quot;_&quot;&amp;GameStats.Get(&quot;Item2&quot;)</param>
+                                                    <param id="1" name="Parameter {n}">BODY.AnimationName</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block any="1" sid="9294521160334717">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="4723474004004746" type="ARMS">
+                                    <param id="0" name="Animation">&quot;SwordDown&quot;</param>
+                                </condition>
+                                <condition id="4" name="On finished" sid="7909179940471782" type="ARMS">
+                                    <param id="0" name="Animation">&quot;SwordLeft&quot;</param>
+                                </condition>
+                                <condition id="4" name="On finished" sid="1349145713790668" type="ARMS">
+                                    <param id="0" name="Animation">&quot;SwordRight&quot;</param>
+                                </condition>
+                                <condition id="4" name="On finished" sid="2492869999375665" type="ARMS">
+                                    <param id="0" name="Animation">&quot;SwordUp&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="3367112514751464" type="BASE">
+                                    <param id="0" name="Instance variable">attacking</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="9754592550731069" type="Melee_Hitbox" />
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="7012493828330294">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="5187956280259547" type="ARMS">
+                                    <param id="0" name="Animation">&quot;BowLeft&quot;</param>
+                                </condition>
+                                <condition id="4" name="On finished" sid="4053673074280324" type="ARMS">
+                                    <param id="0" name="Animation">&quot;BowRight&quot;</param>
+                                </condition>
+                                <condition id="4" name="On finished" sid="4249333314683459" type="ARMS">
+                                    <param id="0" name="Animation">&quot;BowUp&quot;</param>
+                                </condition>
+                                <condition id="4" name="On finished" sid="3518541487821432" type="ARMS">
+                                    <param id="0" name="Animation">&quot;BowDown&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="5572570783424212" type="BASE">
+                                    <param id="0" name="Instance variable">attacking</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7973253786409705">
+                            <conditions>
+                                <condition id="5" name="On any finished" sid="8255605827878982" type="ARMS" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="3831834622147614" type="BASE">
+                                    <param id="0" name="Instance variable">attacking</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="9477808937167935">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="220958014439035" type="BODY">
+                                    <param id="0" name="Animation">&quot;RollRight&quot;</param>
+                                </condition>
+                                <condition id="4" name="On finished" sid="4141141463786356" type="BODY">
+                                    <param id="0" name="Animation">&quot;RollLeft&quot;</param>
+                                </condition>
+                                <condition id="4" name="On finished" sid="7457725930619095" type="BODY">
+                                    <param id="0" name="Animation">&quot;RollDown&quot;</param>
+                                </condition>
+                                <condition id="4" name="On finished" sid="7665737396010513" type="BODY">
+                                    <param id="0" name="Animation">&quot;RollUp&quot;</param>
+                                </condition>
+                                <condition id="4" name="On finished" sid="7611064107331865" type="BODY">
+                                    <param id="0" name="Animation">&quot;RollUp&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="7956986612701678" type="BASE">
+                                    <param id="0" name="Instance variable">attacking</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="5488841704331261">
+                    <conditions>
+                        <condition id="0" name="Compare value" sid="5819977789651575" type="GameStats">
+                            <param id="0" name="Key">&quot;CurHP&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Move to layer" sid="1201883714793859" type="BASE">
+                            <param id="0" name="Layer">&quot;DEATH2&quot;</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="7639636653238573" type="Ghost">
+                            <param id="0" name="Layer">&quot;DEATH2&quot;</param>
+                        </action>
+                        <action id="-18" name="Set layer opacity" sid="3467182594087657" type="System">
+                            <param id="0" name="Layer">&quot;DEATH&quot;</param>
+                            <param id="1" name="Opacity">clamp(LayerOpacity(&quot;DEATH&quot;)+(dt*75),0,75)</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="2198250166226854" type="Enemies">
+                            <param id="0" name="Opacity">self.Opacity-(dt*100)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="7002342064764435">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="5482868463043473" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="7881889755362644" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="5101533113582103" type="Enemies" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

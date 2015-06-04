@@ -1,0 +1,6 @@
+-Moving DOWN RIGHT with keyboard makes jittery movement
+-Moving DOWN LEFT causes characters animations to stop
+	(Probably need to redo how the angles are set for player indicator)
+	(or redo how the animations are assigned)
+
+- if you save the game while the door is closed and open the door then load the game agin the door wont trigger i think is had something to do with the trigger zones. not sure tho.

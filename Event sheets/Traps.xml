@@ -1,0 +1,862 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Traps</name>
+    <events>
+        <event-group description="" sid="8629667444287655" title="Traps">
+            <sub-events>
+                <event-block sid="8029757770823326">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="2459627329402739" type="System" />
+                        <condition id="1" name="Is overlapping another object" sid="5862218981629558" type="Zone">
+                            <param id="0" name="Object">CameraZone</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="3524115898208158" type="Zone">
+                            <param id="0" name="Instance variable">Zone1</param>
+                            <param id="1" name="Value">CameraZone.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9960838359772203">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="9886633911152288" type="BASE">
+                            <param id="0" name="Object">SpikeTrap</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="8424690091365202" type="SpikeTrap">
+                            <param id="0" name="Animation">&quot;Down&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="2167373093212354" type="SpikeTrap">
+                            <param id="0" name="Instance variable">ActivateType</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Collision&quot;</param>
+                        </condition>
+                        <condition id="0" name="Compare value" sid="7134140139428977" type="GameStats">
+                            <param id="0" name="Key">&quot;CurHP&quot;</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="811530034640391" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="412658780749286" type="SpikeTrap">
+                            <param id="0" name="Animation">&quot;Up&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="723272380209718" type="Camera">
+                            <param id="0" name="Magnitude">1</param>
+                            <param id="1" name="Duration">0.2</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="3064003054981919">
+                            <conditions>
+                                <condition id="5" inverted="1" name="Is tag playing" sid="2782191924981529" type="Audio">
+                                    <param id="0" name="Tag">&quot;Spiketrap&quot;&amp;SpikeTrap.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="25" name="Play at object" sid="3207551820722372" type="Audio">
+                                    <param id="0" name="Audio file">knifeSlice</param>
+                                    <param id="1" name="Loop">0</param>
+                                    <param id="2" name="Volume">random(-25,-20)+SoundFxLevel</param>
+                                    <param id="3" name="Object">SpikeTrap</param>
+                                    <param id="4" name="Inner angle">360</param>
+                                    <param id="5" name="Outer angle">360</param>
+                                    <param id="6" name="Outer gain">0</param>
+                                    <param id="7" name="Tag (optional)">&quot;Spiketrap&quot;&amp;SpikeTrap.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3204828117746034">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="2467394668096831" type="Enemies">
+                            <param id="0" name="Object">SpikeTrap</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="9542586190273642" type="Enemies">
+                            <param id="0" name="Instance variable">MovementType</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">&quot;Flying&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="6624618746398596" type="Enemies">
+                            <param id="0" name="Instance variable">MovementType</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">&quot;Flying2&quot;</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9660062457114019" type="Enemies">
+                            <param id="0" name="Instance variable">Projectile</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="5004622038134064" type="SpikeTrap">
+                            <param id="0" name="Animation">&quot;Down&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="8828782564357976" type="SpikeTrap">
+                            <param id="0" name="Instance variable">ActivateType</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Collision&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="3790426821472962" type="System">
+                            <param id="0" name="Seconds">0.2</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="4321932772145327" type="SpikeTrap">
+                            <param id="0" name="Animation">&quot;Up&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="9557268675709792">
+                            <conditions>
+                                <condition id="5" inverted="1" name="Is tag playing" sid="1860080948886501" type="Audio">
+                                    <param id="0" name="Tag">&quot;Spiketrap&quot;&amp;SpikeTrap.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="25" name="Play at object" sid="1713211954049297" type="Audio">
+                                    <param id="0" name="Audio file">knifeSlice</param>
+                                    <param id="1" name="Loop">0</param>
+                                    <param id="2" name="Volume">random(-25,-20)+SoundFxLevel</param>
+                                    <param id="3" name="Object">SpikeTrap</param>
+                                    <param id="4" name="Inner angle">360</param>
+                                    <param id="5" name="Outer angle">360</param>
+                                    <param id="6" name="Outer gain">0</param>
+                                    <param id="7" name="Tag (optional)">&quot;Spiketrap&quot;&amp;SpikeTrap.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5298389092343682">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="9872749679544554" type="SpikeTrap">
+                            <param id="0" name="Instance variable">Zone1</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">CurZone</param>
+                        </condition>
+                        <condition id="0" name="Compare value" sid="5641204048995971" type="GameStats">
+                            <param id="0" name="Key">&quot;CurHP&quot;</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7043444766701256">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="2317716256793156" type="SpikeTrap">
+                                    <param id="0" name="Instance variable">ActivateType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Timer&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="7311508912218443" type="SpikeTrap">
+                                    <param id="0" name="Instance variable">CurTime</param>
+                                    <param id="1" name="Value">dt</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="3796362124240792">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="7758546531426843" type="SpikeTrap">
+                                            <param id="0" name="Instance variable">CurTime</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="5008374662520129" type="SpikeTrap">
+                                            <param id="0" name="Animation">&quot;Up&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="9359397869484422" type="SpikeTrap">
+                                            <param id="0" name="Instance variable">CurTime</param>
+                                            <param id="1" name="Value">SpikeTrap.SetTimeto</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="5586523737441507">
+                                            <conditions>
+                                                <condition id="5" inverted="1" name="Is tag playing" sid="1817771581259234" type="Audio">
+                                                    <param id="0" name="Tag">&quot;Spiketrap&quot;&amp;SpikeTrap.UID</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="25" name="Play at object" sid="2450747806399474" type="Audio">
+                                                    <param id="0" name="Audio file">knifeSlice</param>
+                                                    <param id="1" name="Loop">0</param>
+                                                    <param id="2" name="Volume">random(-25,-20)+SoundFxLevel</param>
+                                                    <param id="3" name="Object">SpikeTrap</param>
+                                                    <param id="4" name="Inner angle">360</param>
+                                                    <param id="5" name="Outer angle">360</param>
+                                                    <param id="6" name="Outer gain">0</param>
+                                                    <param id="7" name="Tag (optional)">&quot;Spiketrap&quot;&amp;SpikeTrap.UID</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3719196893482739">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3729214809025073" type="ProjectileTrap">
+                            <param id="0" name="Instance variable">Zone1</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">CurZone</param>
+                        </condition>
+                        <condition id="-11" name="For Each" sid="8823856206026705" type="System">
+                            <param id="0" name="Object">ProjectileTrap</param>
+                        </condition>
+                        <condition id="0" name="Compare value" sid="1707745739520941" type="GameStats">
+                            <param id="0" name="Key">&quot;CurHP&quot;</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="5500453299114335" type="ProjectileTrap">
+                            <param id="0" name="Instance variable">CurTime</param>
+                            <param id="1" name="Value">dt</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="8016911647135767">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="2975622775778303" type="ProjectileTrap">
+                                    <param id="0" name="Instance variable">ActivateType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Timer&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="7330076668206991">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="7799064415162605" type="ProjectileTrap">
+                                            <param id="0" name="Instance variable">CurTime</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="2684110231031663">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="2841810397118977" type="ProjectileTrap">
+                                                    <param id="0" name="Instance variable">ShootDir</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;ver&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="3564026668537829" type="ProjectileTrap">
+                                                    <param id="0" name="Instance variable">CurTime</param>
+                                                    <param id="1" name="Value">ProjectileTrap.SetTimeto</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="8927646622596969" type="ProjectileTrap">
+                                                    <param id="0" name="Object">EnemyProjectile</param>
+                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                    <param id="2" name="Image point">3</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="8239453512798096" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">Zone1</param>
+                                                    <param id="1" name="Value">ProjectileTrap.Zone1</param>
+                                                </action>
+                                                <action behavior="Movement" id="2" name="Set speed" sid="8544045381335051" type="EnemyProjectile">
+                                                    <param id="0" name="Which">0</param>
+                                                    <param id="1" name="Speed">150</param>
+                                                </action>
+                                                <action behavior="Movement" id="6" name="Set angle of motion" sid="1937591516169133" type="EnemyProjectile">
+                                                    <param id="0" name="Angle">90</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="8680264939918572" type="EnemyProjectile">
+                                                    <param id="0" name="Animation">&quot;down&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="747296019658614" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">Shadow</param>
+                                                    <param id="1" name="Value">&quot;SmallVer&quot;</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="443255438098667" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">enemyuid</param>
+                                                    <param id="1" name="Value">ProjectileTrap.UID</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="1849216192059842" type="ProjectileTrap">
+                                                    <param id="0" name="Object">EnemyProjectile</param>
+                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                    <param id="2" name="Image point">5</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="4110894817755486" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">Zone1</param>
+                                                    <param id="1" name="Value">ProjectileTrap.Zone1</param>
+                                                </action>
+                                                <action behavior="Movement" id="2" name="Set speed" sid="96613539938729" type="EnemyProjectile">
+                                                    <param id="0" name="Which">0</param>
+                                                    <param id="1" name="Speed">150</param>
+                                                </action>
+                                                <action behavior="Movement" id="6" name="Set angle of motion" sid="4168472455917402" type="EnemyProjectile">
+                                                    <param id="0" name="Angle">270</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="5776659894973395" type="EnemyProjectile">
+                                                    <param id="0" name="Animation">&quot;up&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="1966794940532098" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">Shadow</param>
+                                                    <param id="1" name="Value">&quot;SmallVer&quot;</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="5158357710268626" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">enemyuid</param>
+                                                    <param id="1" name="Value">ProjectileTrap.UID</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="8111298104065919">
+                                                    <conditions>
+                                                        <condition id="5" inverted="1" name="Is tag playing" sid="7570581733453842" type="Audio">
+                                                            <param id="0" name="Tag">&quot;Spiketrap&quot;&amp;ProjectileTrap.UID</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="25" name="Play at object" sid="5815232530654159" type="Audio">
+                                                            <param id="0" name="Audio file">knifeSlice</param>
+                                                            <param id="1" name="Loop">0</param>
+                                                            <param id="2" name="Volume">random(-25,-20)+SoundFxLevel</param>
+                                                            <param id="3" name="Object">ProjectileTrap</param>
+                                                            <param id="4" name="Inner angle">360</param>
+                                                            <param id="5" name="Outer angle">360</param>
+                                                            <param id="6" name="Outer gain">0</param>
+                                                            <param id="7" name="Tag (optional)">&quot;Spiketrap&quot;&amp;ProjectileTrap.UID</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="9743293823548543">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="3255611585854915" type="ProjectileTrap">
+                                                    <param id="0" name="Instance variable">ShootDir</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;hor&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="9848676118331019" type="ProjectileTrap">
+                                                    <param id="0" name="Instance variable">CurTime</param>
+                                                    <param id="1" name="Value">ProjectileTrap.SetTimeto</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="6661088840410946" type="ProjectileTrap">
+                                                    <param id="0" name="Object">EnemyProjectile</param>
+                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                    <param id="2" name="Image point">2</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="9883420160675711" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">Zone1</param>
+                                                    <param id="1" name="Value">ProjectileTrap.Zone1</param>
+                                                </action>
+                                                <action behavior="Movement" id="2" name="Set speed" sid="7311819167767856" type="EnemyProjectile">
+                                                    <param id="0" name="Which">0</param>
+                                                    <param id="1" name="Speed">150</param>
+                                                </action>
+                                                <action behavior="Movement" id="6" name="Set angle of motion" sid="9942348425830935" type="EnemyProjectile">
+                                                    <param id="0" name="Angle">0</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="6442470524931875" type="EnemyProjectile">
+                                                    <param id="0" name="Animation">&quot;right&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="5429806094111354" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">Shadow</param>
+                                                    <param id="1" name="Value">&quot;SmallHor&quot;</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="7043048711305796" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">enemyuid</param>
+                                                    <param id="1" name="Value">ProjectileTrap.UID</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="7806788951787657" type="ProjectileTrap">
+                                                    <param id="0" name="Object">EnemyProjectile</param>
+                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                    <param id="2" name="Image point">4</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="7701183354098042" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">Zone1</param>
+                                                    <param id="1" name="Value">ProjectileTrap.Zone1</param>
+                                                </action>
+                                                <action behavior="Movement" id="2" name="Set speed" sid="5297197413088694" type="EnemyProjectile">
+                                                    <param id="0" name="Which">0</param>
+                                                    <param id="1" name="Speed">150</param>
+                                                </action>
+                                                <action behavior="Movement" id="6" name="Set angle of motion" sid="9249172137086682" type="EnemyProjectile">
+                                                    <param id="0" name="Angle">180</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="3949966459017242" type="EnemyProjectile">
+                                                    <param id="0" name="Animation">&quot;left&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="225491576338287" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">Shadow</param>
+                                                    <param id="1" name="Value">&quot;SmallHor&quot;</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="1575377593630911" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">enemyuid</param>
+                                                    <param id="1" name="Value">ProjectileTrap.UID</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="1486893918904559">
+                                                    <conditions>
+                                                        <condition id="5" inverted="1" name="Is tag playing" sid="1064372211432922" type="Audio">
+                                                            <param id="0" name="Tag">&quot;Spiketrap&quot;&amp;ProjectileTrap.UID</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="25" name="Play at object" sid="7524691743411844" type="Audio">
+                                                            <param id="0" name="Audio file">knifeSlice</param>
+                                                            <param id="1" name="Loop">0</param>
+                                                            <param id="2" name="Volume">random(-25,-20)+SoundFxLevel</param>
+                                                            <param id="3" name="Object">ProjectileTrap</param>
+                                                            <param id="4" name="Inner angle">360</param>
+                                                            <param id="5" name="Outer angle">360</param>
+                                                            <param id="6" name="Outer gain">0</param>
+                                                            <param id="7" name="Tag (optional)">&quot;Spiketrap&quot;&amp;ProjectileTrap.UID</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="7591745810658555">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="2720875923411783" type="ProjectileTrap">
+                                                    <param id="0" name="Instance variable">ShootDir</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;right&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="619692282100047" type="ProjectileTrap">
+                                                    <param id="0" name="Instance variable">CurTime</param>
+                                                    <param id="1" name="Value">ProjectileTrap.SetTimeto</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="4064919433176389" type="ProjectileTrap">
+                                                    <param id="0" name="Object">EnemyProjectile</param>
+                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                    <param id="2" name="Image point">2</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="6470591158772722" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">Zone1</param>
+                                                    <param id="1" name="Value">ProjectileTrap.Zone1</param>
+                                                </action>
+                                                <action behavior="Movement" id="2" name="Set speed" sid="1082563697487667" type="EnemyProjectile">
+                                                    <param id="0" name="Which">0</param>
+                                                    <param id="1" name="Speed">150</param>
+                                                </action>
+                                                <action behavior="Movement" id="6" name="Set angle of motion" sid="345070254040603" type="EnemyProjectile">
+                                                    <param id="0" name="Angle">0</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="289656032601559" type="EnemyProjectile">
+                                                    <param id="0" name="Animation">&quot;right&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="4800616317205108" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">Shadow</param>
+                                                    <param id="1" name="Value">&quot;SmallHor&quot;</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="113307204637115" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">enemyuid</param>
+                                                    <param id="1" name="Value">ProjectileTrap.UID</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="1933885758180071">
+                                                    <conditions>
+                                                        <condition id="5" inverted="1" name="Is tag playing" sid="5786154693303695" type="Audio">
+                                                            <param id="0" name="Tag">&quot;Spiketrap&quot;&amp;ProjectileTrap.UID</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="25" name="Play at object" sid="8678508588165283" type="Audio">
+                                                            <param id="0" name="Audio file">knifeSlice</param>
+                                                            <param id="1" name="Loop">0</param>
+                                                            <param id="2" name="Volume">random(-25,-20)+SoundFxLevel</param>
+                                                            <param id="3" name="Object">ProjectileTrap</param>
+                                                            <param id="4" name="Inner angle">360</param>
+                                                            <param id="5" name="Outer angle">360</param>
+                                                            <param id="6" name="Outer gain">0</param>
+                                                            <param id="7" name="Tag (optional)">&quot;Spiketrap&quot;&amp;ProjectileTrap.UID</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="2614512395232975">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="2174659052694303" type="ProjectileTrap">
+                                                    <param id="0" name="Instance variable">ShootDir</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;left&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="7354865871704808" type="ProjectileTrap">
+                                                    <param id="0" name="Instance variable">CurTime</param>
+                                                    <param id="1" name="Value">ProjectileTrap.SetTimeto</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="1049456879178707" type="ProjectileTrap">
+                                                    <param id="0" name="Object">EnemyProjectile</param>
+                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                    <param id="2" name="Image point">4</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="3370970972315056" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">Zone1</param>
+                                                    <param id="1" name="Value">ProjectileTrap.Zone1</param>
+                                                </action>
+                                                <action behavior="Movement" id="2" name="Set speed" sid="1969582885903578" type="EnemyProjectile">
+                                                    <param id="0" name="Which">0</param>
+                                                    <param id="1" name="Speed">150</param>
+                                                </action>
+                                                <action behavior="Movement" id="6" name="Set angle of motion" sid="9790660494958071" type="EnemyProjectile">
+                                                    <param id="0" name="Angle">180</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="833913129026497" type="EnemyProjectile">
+                                                    <param id="0" name="Animation">&quot;left&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="1341320976156411" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">Shadow</param>
+                                                    <param id="1" name="Value">&quot;SmallHor&quot;</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="7737581530200933" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">enemyuid</param>
+                                                    <param id="1" name="Value">ProjectileTrap.UID</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="7866551753554695">
+                                                    <conditions>
+                                                        <condition id="5" inverted="1" name="Is tag playing" sid="4804731448064352" type="Audio">
+                                                            <param id="0" name="Tag">&quot;Spiketrap&quot;&amp;ProjectileTrap.UID</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="25" name="Play at object" sid="9582430088040734" type="Audio">
+                                                            <param id="0" name="Audio file">knifeSlice</param>
+                                                            <param id="1" name="Loop">0</param>
+                                                            <param id="2" name="Volume">random(-25,-20)+SoundFxLevel</param>
+                                                            <param id="3" name="Object">ProjectileTrap</param>
+                                                            <param id="4" name="Inner angle">360</param>
+                                                            <param id="5" name="Outer angle">360</param>
+                                                            <param id="6" name="Outer gain">0</param>
+                                                            <param id="7" name="Tag (optional)">&quot;Spiketrap&quot;&amp;ProjectileTrap.UID</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="5227735126075658">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="7274964259422593" type="ProjectileTrap">
+                                                    <param id="0" name="Instance variable">ShootDir</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;down&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="1798115176146623" type="ProjectileTrap">
+                                                    <param id="0" name="Instance variable">CurTime</param>
+                                                    <param id="1" name="Value">ProjectileTrap.SetTimeto</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="663291568251574" type="ProjectileTrap">
+                                                    <param id="0" name="Object">EnemyProjectile</param>
+                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                    <param id="2" name="Image point">3</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="1074704767643123" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">Zone1</param>
+                                                    <param id="1" name="Value">ProjectileTrap.Zone1</param>
+                                                </action>
+                                                <action behavior="Movement" id="2" name="Set speed" sid="7681223932584833" type="EnemyProjectile">
+                                                    <param id="0" name="Which">0</param>
+                                                    <param id="1" name="Speed">150</param>
+                                                </action>
+                                                <action behavior="Movement" id="6" name="Set angle of motion" sid="9173735258421423" type="EnemyProjectile">
+                                                    <param id="0" name="Angle">90</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="4481541495576219" type="EnemyProjectile">
+                                                    <param id="0" name="Animation">&quot;down&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="2835605325770508" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">Shadow</param>
+                                                    <param id="1" name="Value">&quot;SmallVer&quot;</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="3162532364689028" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">enemyuid</param>
+                                                    <param id="1" name="Value">ProjectileTrap.UID</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="268558623565844">
+                                                    <conditions>
+                                                        <condition id="5" inverted="1" name="Is tag playing" sid="4399497904291624" type="Audio">
+                                                            <param id="0" name="Tag">&quot;Spiketrap&quot;&amp;ProjectileTrap.UID</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="25" name="Play at object" sid="8562203973397889" type="Audio">
+                                                            <param id="0" name="Audio file">knifeSlice</param>
+                                                            <param id="1" name="Loop">0</param>
+                                                            <param id="2" name="Volume">random(-25,-20)+SoundFxLevel</param>
+                                                            <param id="3" name="Object">ProjectileTrap</param>
+                                                            <param id="4" name="Inner angle">360</param>
+                                                            <param id="5" name="Outer angle">360</param>
+                                                            <param id="6" name="Outer gain">0</param>
+                                                            <param id="7" name="Tag (optional)">&quot;Spiketrap&quot;&amp;ProjectileTrap.UID</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="4777850240024585">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="414211067400476" type="ProjectileTrap">
+                                                    <param id="0" name="Instance variable">ShootDir</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;up&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="3463168320809297" type="ProjectileTrap">
+                                                    <param id="0" name="Instance variable">CurTime</param>
+                                                    <param id="1" name="Value">ProjectileTrap.SetTimeto</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="9641852463146152" type="ProjectileTrap">
+                                                    <param id="0" name="Object">EnemyProjectile</param>
+                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                    <param id="2" name="Image point">5</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="8499549257061415" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">Zone1</param>
+                                                    <param id="1" name="Value">ProjectileTrap.Zone1</param>
+                                                </action>
+                                                <action behavior="Movement" id="2" name="Set speed" sid="3867763324475352" type="EnemyProjectile">
+                                                    <param id="0" name="Which">0</param>
+                                                    <param id="1" name="Speed">150</param>
+                                                </action>
+                                                <action behavior="Movement" id="6" name="Set angle of motion" sid="1508882730580547" type="EnemyProjectile">
+                                                    <param id="0" name="Angle">270</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="1224462426238712" type="EnemyProjectile">
+                                                    <param id="0" name="Animation">&quot;up&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="8273701243342847" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">Shadow</param>
+                                                    <param id="1" name="Value">&quot;SmallVer&quot;</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="7439328600064003" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">enemyuid</param>
+                                                    <param id="1" name="Value">ProjectileTrap.UID</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="6503361471753605">
+                                                    <conditions>
+                                                        <condition id="5" inverted="1" name="Is tag playing" sid="3742469226235961" type="Audio">
+                                                            <param id="0" name="Tag">&quot;Spiketrap&quot;&amp;ProjectileTrap.UID</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="25" name="Play at object" sid="9514347876270414" type="Audio">
+                                                            <param id="0" name="Audio file">knifeSlice</param>
+                                                            <param id="1" name="Loop">0</param>
+                                                            <param id="2" name="Volume">random(-25,-20)+SoundFxLevel</param>
+                                                            <param id="3" name="Object">ProjectileTrap</param>
+                                                            <param id="4" name="Inner angle">360</param>
+                                                            <param id="5" name="Outer angle">360</param>
+                                                            <param id="6" name="Outer gain">0</param>
+                                                            <param id="7" name="Tag (optional)">&quot;Spiketrap&quot;&amp;ProjectileTrap.UID</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="6547618182549446">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="2377986771111795" type="ProjectileTrap">
+                                                    <param id="0" name="Instance variable">ShootDir</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;all&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="9339738501115934" type="ProjectileTrap">
+                                                    <param id="0" name="Instance variable">CurTime</param>
+                                                    <param id="1" name="Value">ProjectileTrap.SetTimeto</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="459360970642864" type="ProjectileTrap">
+                                                    <param id="0" name="Object">EnemyProjectile</param>
+                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                    <param id="2" name="Image point">2</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="7398413705863704" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">Zone1</param>
+                                                    <param id="1" name="Value">ProjectileTrap.Zone1</param>
+                                                </action>
+                                                <action behavior="Movement" id="2" name="Set speed" sid="3044609028330772" type="EnemyProjectile">
+                                                    <param id="0" name="Which">0</param>
+                                                    <param id="1" name="Speed">150</param>
+                                                </action>
+                                                <action behavior="Movement" id="6" name="Set angle of motion" sid="2955753739883606" type="EnemyProjectile">
+                                                    <param id="0" name="Angle">0</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="1342901637005925" type="EnemyProjectile">
+                                                    <param id="0" name="Animation">&quot;right&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="8214953472086169" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">Shadow</param>
+                                                    <param id="1" name="Value">&quot;SmallHor&quot;</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="3996318674983285" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">enemyuid</param>
+                                                    <param id="1" name="Value">ProjectileTrap.UID</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="115267707540753" type="ProjectileTrap">
+                                                    <param id="0" name="Object">EnemyProjectile</param>
+                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                    <param id="2" name="Image point">3</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="3890509891438611" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">Zone1</param>
+                                                    <param id="1" name="Value">ProjectileTrap.Zone1</param>
+                                                </action>
+                                                <action behavior="Movement" id="2" name="Set speed" sid="6672696318821762" type="EnemyProjectile">
+                                                    <param id="0" name="Which">0</param>
+                                                    <param id="1" name="Speed">150</param>
+                                                </action>
+                                                <action behavior="Movement" id="6" name="Set angle of motion" sid="7828896912654012" type="EnemyProjectile">
+                                                    <param id="0" name="Angle">90</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="1442776043207488" type="EnemyProjectile">
+                                                    <param id="0" name="Animation">&quot;down&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="4249099990452757" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">Shadow</param>
+                                                    <param id="1" name="Value">&quot;SmallVer&quot;</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="1889259388831005" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">enemyuid</param>
+                                                    <param id="1" name="Value">ProjectileTrap.UID</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="1190289052771385" type="ProjectileTrap">
+                                                    <param id="0" name="Object">EnemyProjectile</param>
+                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                    <param id="2" name="Image point">4</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="4714800848200189" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">Zone1</param>
+                                                    <param id="1" name="Value">ProjectileTrap.Zone1</param>
+                                                </action>
+                                                <action behavior="Movement" id="2" name="Set speed" sid="337130685874256" type="EnemyProjectile">
+                                                    <param id="0" name="Which">0</param>
+                                                    <param id="1" name="Speed">150</param>
+                                                </action>
+                                                <action behavior="Movement" id="6" name="Set angle of motion" sid="1996358350461823" type="EnemyProjectile">
+                                                    <param id="0" name="Angle">180</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="972045347418659" type="EnemyProjectile">
+                                                    <param id="0" name="Animation">&quot;left&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="8745683456645537" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">Shadow</param>
+                                                    <param id="1" name="Value">&quot;SmallHor&quot;</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="1273789815821289" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">enemyuid</param>
+                                                    <param id="1" name="Value">ProjectileTrap.UID</param>
+                                                </action>
+                                                <action id="0" name="Spawn another object" sid="9538619084319221" type="ProjectileTrap">
+                                                    <param id="0" name="Object">EnemyProjectile</param>
+                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                    <param id="2" name="Image point">5</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="6650159892405666" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">Zone1</param>
+                                                    <param id="1" name="Value">ProjectileTrap.Zone1</param>
+                                                </action>
+                                                <action behavior="Movement" id="2" name="Set speed" sid="9514057244513569" type="EnemyProjectile">
+                                                    <param id="0" name="Which">0</param>
+                                                    <param id="1" name="Speed">150</param>
+                                                </action>
+                                                <action behavior="Movement" id="6" name="Set angle of motion" sid="7200493053907796" type="EnemyProjectile">
+                                                    <param id="0" name="Angle">270</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="2750487760465671" type="EnemyProjectile">
+                                                    <param id="0" name="Animation">&quot;up&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="8929301861975155" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">Shadow</param>
+                                                    <param id="1" name="Value">&quot;SmallVer&quot;</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="3211703988135927" type="EnemyProjectile">
+                                                    <param id="0" name="Instance variable">enemyuid</param>
+                                                    <param id="1" name="Value">ProjectileTrap.UID</param>
+                                                </action>
+                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="6480058200666266">
+                                                    <conditions>
+                                                        <condition id="5" inverted="1" name="Is tag playing" sid="443781970608295" type="Audio">
+                                                            <param id="0" name="Tag">&quot;Spiketrap&quot;&amp;ProjectileTrap.UID</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="25" name="Play at object" sid="6148419603169642" type="Audio">
+                                                            <param id="0" name="Audio file">knifeSlice</param>
+                                                            <param id="1" name="Loop">0</param>
+                                                            <param id="2" name="Volume">random(-25,-20)+SoundFxLevel</param>
+                                                            <param id="3" name="Object">ProjectileTrap</param>
+                                                            <param id="4" name="Inner angle">360</param>
+                                                            <param id="5" name="Outer angle">360</param>
+                                                            <param id="6" name="Outer gain">0</param>
+                                                            <param id="7" name="Tag (optional)">&quot;Spiketrap&quot;&amp;ProjectileTrap.UID</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6340721136367924">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="3131945075483015" type="SpikeTrap">
+                            <param id="0" name="Animation">&quot;Up&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="7328289113337688" type="SpikeTrap">
+                            <param id="0" name="Animation">&quot;Down&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

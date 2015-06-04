@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Spawnable Effects</name>
+    <events>
+        <event-block sid="2970226520150897">
+            <conditions>
+                <condition id="0" name="On function" sid="1636035963604972" type="Function">
+                    <param id="0" name="Name">&quot;Explosion&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="6247418337348533">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="7673044077475691" type="Function">
+                            <param id="0" name="Index">2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Explode&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="24" name="Play at position" sid="9513027586806835" type="Audio">
+                            <param id="0" name="Audio file">DM-CGS-49</param>
+                            <param id="1" name="Loop">0</param>
+                            <param id="2" name="Volume">random(-15,-5)+SoundFxLevel</param>
+                            <param id="3" name="X">Function.Param(0)</param>
+                            <param id="4" name="Y">Function.Param(1)</param>
+                            <param id="5" name="Angle">360</param>
+                            <param id="6" name="Inner angle">0</param>
+                            <param id="7" name="Outer angle">360</param>
+                            <param id="8" name="Outer gain">360</param>
+                            <param id="9" name="Tag (optional)">&quot;Explode&quot;</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="2467968037375451" type="System">
+                            <param id="0" name="Object to create">ExplodeSmoke_Particle</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="X">Function.Param(0)</param>
+                            <param id="3" name="Y">Function.Param(1)</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="4784248485196705" type="System">
+                            <param id="0" name="Object to create">Explosion</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="X">Function.Param(0)</param>
+                            <param id="3" name="Y">Function.Param(1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3742659238548734">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="3472645961901742" type="Function">
+                            <param id="0" name="Index">2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;EnemySummon&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="9106115421736083" type="System">
+                            <param id="0" name="Object to create">ExplodeSmoke_Particle</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="X">Function.Param(0)</param>
+                            <param id="3" name="Y">Function.Param(1)</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="6923104841277266" type="System">
+                            <param id="0" name="Object to create">Explosion</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="X">Function.Param(0)</param>
+                            <param id="3" name="Y">Function.Param(1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9445149475533104">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="2101812712514352" type="Function">
+                            <param id="0" name="Index">2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Enemy&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="24" name="Play at position" sid="7965235704846555" type="Audio">
+                            <param id="0" name="Audio file">DM-CGS-49</param>
+                            <param id="1" name="Loop">0</param>
+                            <param id="2" name="Volume">random(-15,-5)+SoundFxLevel</param>
+                            <param id="3" name="X">Function.Param(0)</param>
+                            <param id="4" name="Y">Function.Param(1)</param>
+                            <param id="5" name="Angle">360</param>
+                            <param id="6" name="Inner angle">0</param>
+                            <param id="7" name="Outer angle">360</param>
+                            <param id="8" name="Outer gain">360</param>
+                            <param id="9" name="Tag (optional)">&quot;Explode&quot;</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="5597759960369716" type="System">
+                            <param id="0" name="Object to create">Explosion</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="X">Function.Param(0)</param>
+                            <param id="3" name="Y">Function.Param(1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2590157496400496">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="9351143346962934" type="Function">
+                            <param id="0" name="Index">2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Bush&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="1328396945543548" type="System">
+                            <param id="0" name="Object to create">Bush_Particle</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="X">Function.Param(0)</param>
+                            <param id="3" name="Y">Function.Param(1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="3289443053678433">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="4931204107301808" type="Function">
+                            <param id="0" name="Index">2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Grass&quot;</param>
+                        </condition>
+                        <condition id="1" name="Compare parameter" sid="2574732075413778" type="Function">
+                            <param id="0" name="Index">2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Flowers&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="1737711891666671" type="System">
+                            <param id="0" name="Object to create">Grass_Particle</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="X">Function.Param(0)</param>
+                            <param id="3" name="Y">Function.Param(1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1159951203935172">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="8476483528488377" type="Function">
+                            <param id="0" name="Index">2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Pot&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="24" name="Play at position" sid="1393335078481429" type="Audio">
+                            <param id="0" name="Audio file">DM-CGS-49</param>
+                            <param id="1" name="Loop">0</param>
+                            <param id="2" name="Volume">random(-15,-5)+SoundFxLevel</param>
+                            <param id="3" name="X">Function.Param(0)</param>
+                            <param id="4" name="Y">Function.Param(1)</param>
+                            <param id="5" name="Angle">360</param>
+                            <param id="6" name="Inner angle">0</param>
+                            <param id="7" name="Outer angle">360</param>
+                            <param id="8" name="Outer gain">360</param>
+                            <param id="9" name="Tag (optional)">&quot;Explode&quot;</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="1894707259739316" type="System">
+                            <param id="0" name="Object to create">ExplodeSmoke_Particle</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="X">Function.Param(0)</param>
+                            <param id="3" name="Y">Function.Param(1)</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="2843439052407628" type="System">
+                            <param id="0" name="Object to create">Explosion</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="X">Function.Param(0)</param>
+                            <param id="3" name="Y">Function.Param(1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9680932309797213">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="7754146060938226" type="Function">
+                            <param id="0" name="Index">2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;BigPot&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="24" name="Play at position" sid="6030995776838693" type="Audio">
+                            <param id="0" name="Audio file">DM-CGS-49</param>
+                            <param id="1" name="Loop">0</param>
+                            <param id="2" name="Volume">random(-15,-5)+SoundFxLevel</param>
+                            <param id="3" name="X">Function.Param(0)</param>
+                            <param id="4" name="Y">Function.Param(1)</param>
+                            <param id="5" name="Angle">360</param>
+                            <param id="6" name="Inner angle">0</param>
+                            <param id="7" name="Outer angle">360</param>
+                            <param id="8" name="Outer gain">360</param>
+                            <param id="9" name="Tag (optional)">&quot;Explode&quot;</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="5541646127998597" type="System">
+                            <param id="0" name="Object to create">ExplodeSmoke_Particle</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="X">Function.Param(0)</param>
+                            <param id="3" name="Y">Function.Param(1)</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="3974767391103125" type="System">
+                            <param id="0" name="Object to create">Explosion</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="X">Function.Param(0)</param>
+                            <param id="3" name="Y">Function.Param(1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2218828179835329">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="7915965667531338" type="Function">
+                            <param id="0" name="Index">2</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;FireExplode&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="24" name="Play at position" sid="2951591459559348" type="Audio">
+                            <param id="0" name="Audio file">DM-CGS-49</param>
+                            <param id="1" name="Loop">0</param>
+                            <param id="2" name="Volume">random(-15,-5)+SoundFxLevel</param>
+                            <param id="3" name="X">Function.Param(0)</param>
+                            <param id="4" name="Y">Function.Param(1)</param>
+                            <param id="5" name="Angle">360</param>
+                            <param id="6" name="Inner angle">0</param>
+                            <param id="7" name="Outer angle">360</param>
+                            <param id="8" name="Outer gain">360</param>
+                            <param id="9" name="Tag (optional)">&quot;Explode&quot;</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="3940474139181714" type="System">
+                            <param id="0" name="Object to create">ExplodeSmoke_Particle</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="X">Function.Param(0)</param>
+                            <param id="3" name="Y">Function.Param(1)</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="3769646343318615" type="System">
+                            <param id="0" name="Object to create">Explosion</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="X">Function.Param(0)</param>
+                            <param id="3" name="Y">Function.Param(1)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="3223300488695469">
+                            <conditions>
+                                <condition id="-12" name="Repeat" sid="2691774459905502" type="System">
+                                    <param id="0" name="Count">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="8941826222191375" type="System">
+                                    <param id="0" name="Object to create">EnemyProjectile</param>
+                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                    <param id="2" name="X">Function.Param(0)</param>
+                                    <param id="3" name="Y">Function.Param(1)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="4662411404599312" type="EnemyProjectile">
+                                    <param id="0" name="Instance variable">Zone1</param>
+                                    <param id="1" name="Value">CurZone</param>
+                                </action>
+                                <action behavior="Movement" id="2" name="Set speed" sid="1836625613020926" type="EnemyProjectile">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="Speed">random(8,64)</param>
+                                </action>
+                                <action behavior="Movement" id="6" name="Set angle of motion" sid="8063996178524071" type="EnemyProjectile">
+                                    <param id="0" name="Angle">random(360)</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="376106561470868" type="EnemyProjectile">
+                                    <param id="0" name="Animation">&quot;Firepar&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="5262085844969395" type="EnemyProjectile">
+                                    <param id="0" name="Instance variable">Shadow</param>
+                                    <param id="1" name="Value">&quot;SmallVer&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="2695376327741902" type="EnemyProjectile">
+                                    <param id="0" name="Instance variable">ParticleType</param>
+                                    <param id="1" name="Value">&quot;Fire&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="4875142557598829" type="EnemyProjectile">
+                                    <param id="0" name="Instance variable">enemyuid</param>
+                                    <param id="1" name="Value">-1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="8530384697621639" type="EnemyProjectile">
+                                    <param id="0" name="Instance variable">drawlight</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="9314414576149681" type="EnemyProjectile">
+                                    <param id="0" name="Instance variable">Explode</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="2442330983521428" type="EnemyProjectile">
+                                    <param id="0" name="Instance variable">Flying</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="7069742293289215" type="System">
+                                    <param id="0" name="Seconds">0.4</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="1487260111821258" type="EnemyProjectile" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6805798978395871">
+            <conditions>
+                <condition id="5" name="On any finished" sid="4199854302139962" type="Explosion" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="8145556719275412" type="Explosion" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

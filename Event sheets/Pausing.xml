@@ -1,0 +1,564 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Pausing</name>
+    <events>
+        <event-group description="" sid="7728332732277878" title="Pausing">
+            <sub-events>
+                <event-block sid="9361919348700281">
+                    <conditions>
+                        <condition id="0" name="Compare value" sid="1856404143460328" type="Input">
+                            <param id="0" name="Key">&quot;Start&quot;</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-9" inverted="1" name="Is visible" sid="9734771848591731" type="TextBox" />
+                        <condition id="-4" name="Trigger once while true" sid="2842848777760993" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="8828500469091416" type="System">
+                            <param id="0" name="Variable">Pause</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2312184554390575">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8670191532835604" type="System">
+                            <param id="0" name="Variable">Pause</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="6050746016225064" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="4644458603045714" type="Function">
+                            <param id="0" name="Name">&quot;INV&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="9149085139203217" type="Indicator">
+                            <param id="0" name="Object">BASE</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="4833152128703558" type="BODY">
+                            <param id="0" name="Object">BASE</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="34536213755694" type="ARMS">
+                            <param id="0" name="Object">BASE</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                        <action id="-4" name="Set position to another object" sid="4155470281699143" type="PLAYERSHADOW">
+                            <param id="0" name="Object">BASE</param>
+                            <param id="1" name="Image point (optional)">&quot;shadow&quot;</param>
+                        </action>
+                        <action id="-29" name="Move to object" sid="2824263508762551" type="BODY">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Object">BASE</param>
+                        </action>
+                        <action id="-29" name="Move to object" sid="9025635206901224" type="ARMS">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Object">BODY</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="9824018051151381" type="System">
+                            <param id="0" name="Time scale">0</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="3759132203574052" type="System">
+                            <param id="0" name="Group name">&quot;Game&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="9887715866806307" type="System">
+                            <param id="0" name="Layer">&quot;PAUSE&quot;</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-14" name="Set object time scale" sid="8232545125556513" type="System">
+                            <param id="0" name="Object">Sprite</param>
+                            <param id="1" name="Time scale">1.0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3110564691357265">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1857380686170166" type="System">
+                            <param id="0" name="Variable">Pause</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="654539542469169" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="2711342405868264" type="System">
+                            <param id="0" name="Variable">Pause</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="3006590999364263" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="5294060163594667" type="System">
+                            <param id="0" name="Group name">&quot;Game&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                        <action id="-4" name="Set layer visible" sid="1094366227276495" type="System">
+                            <param id="0" name="Layer">&quot;PAUSE&quot;</param>
+                            <param id="1" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" sid="1855909957611705" title="INV">
+                    <sub-events>
+                        <event-block sid="6913680464022123">
+                            <conditions>
+                                <condition id="0" name="On function" sid="6409486054761665" type="Function">
+                                    <param id="0" name="Name">&quot;INV&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="8945318529548809" type="System">
+                                    <param id="0" name="Variable">MenuMoved</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="339445745374158">
+                                    <conditions>
+                                        <condition id="3" name="For each element" sid="5296346255717908" type="INV">
+                                            <param id="0" name="Axes">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="3343993900375629">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="2540504279364838" type="INV_Slot">
+                                                    <param id="0" name="Instance variable">Function</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;INV&quot;</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="8544768014521275" type="INV_Slot">
+                                                    <param id="0" name="Instance variable">SlotNUM</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">INV.CurX</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="6700219308406069" type="INV_Slot">
+                                                    <param id="0" name="Instance variable">Item</param>
+                                                    <param id="1" name="Value">INV.CurValue</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="9168079491671949" type="INV_Slot">
+                                                    <param id="0" name="Animation">INV_Slot.Item</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="4905420769564177">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="4570217420761569" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="5768991993812129" type="ItemDesc">
+                                    <param id="0" name="Key">&quot;Sword&quot;</param>
+                                    <param id="1" name="Value">&quot;A sword made out of deer antlers. It was your fathers.&quot;</param>
+                                </action>
+                                <action id="0" name="Add key" sid="899903988633842" type="ItemDesc">
+                                    <param id="0" name="Key">&quot;DashShoes&quot;</param>
+                                    <param id="1" name="Value">&quot;Special shoes that somehow let the wearer dash around quickly. Use to get breif invulnerability and move quickly!&quot;</param>
+                                </action>
+                                <action id="0" name="Add key" sid="307719951129419" type="ItemDesc">
+                                    <param id="0" name="Key">&quot;Bow&quot;</param>
+                                    <param id="1" name="Value">&quot;A finely crafted bow. It is engraved with symbols.&quot;</param>
+                                </action>
+                                <action id="0" name="Add key" sid="5348772373142332" type="ItemDesc">
+                                    <param id="0" name="Key">&quot;Boomerang&quot;</param>
+                                    <param id="1" name="Value">&quot;This boomerang has a razor sharp egde, There is a handle to hold it by.&quot;</param>
+                                </action>
+                                <action id="0" name="Add key" sid="271316030604252" type="ItemDesc">
+                                    <param id="0" name="Key">&quot;FireCracker&quot;</param>
+                                    <param id="1" name="Value">&quot;A small firework. Who knows if it still works...&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5503859324552874">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="9681991743831713" type="System">
+                                    <param id="0" name="Variable">Pause</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="1195278329957803">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="864059498306476" type="Sprite">
+                                            <param id="0" name="Object">INV_Slot</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="3672969228456457" type="Sprite">
+                                            <param id="0" name="Instance variable">Selected</param>
+                                            <param id="1" name="Value">INV_Slot.Item</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9648186007483039">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="9386755777986834" type="SpriteFont">
+                                            <param id="0" name="Instance variable">Function</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;ItemDesc&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="2612499537246158">
+                                            <conditions>
+                                                <condition id="3" name="Has key" sid="9953472537818044" type="ItemDesc">
+                                                    <param id="0" name="Key">Sprite.Selected</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="2601732702322979" type="SpriteFont">
+                                                    <param id="0" name="Text">ItemDesc.Get(Sprite.Selected)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="2614218884272452">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="5547828745860916" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Set text" sid="9097076042344893" type="SpriteFont">
+                                                    <param id="0" name="Text">&quot;This slot is empty.&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="1294057500775056">
+                                    <conditions>
+                                        <condition id="0" name="Compare value" sid="8360148527765724" type="Input">
+                                            <param id="0" name="Key">&quot;Left X&quot;</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">50</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="4094344486227867">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="5667898502944716" type="System">
+                                                    <param id="0" name="Variable">MenuMoved</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-11" name="Add to" sid="2326294671006607" type="Sprite">
+                                                    <param id="0" name="Instance variable">MenuX</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="9464439306042428" type="System">
+                                                    <param id="0" name="Variable">MenuMoved</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="9399762607703033">
+                                    <conditions>
+                                        <condition id="0" name="Compare value" sid="1896007396212909" type="Input">
+                                            <param id="0" name="Key">&quot;Left X&quot;</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">-50</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="7799172460338227">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="1272212986104325" type="System">
+                                                    <param id="0" name="Variable">MenuMoved</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-12" name="Subtract from" sid="883635054435306" type="Sprite">
+                                                    <param id="0" name="Instance variable">MenuX</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="1755382527436333" type="System">
+                                                    <param id="0" name="Variable">MenuMoved</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="2098804126265315">
+                                    <conditions>
+                                        <condition id="0" name="Compare value" sid="5156038458358892" type="Input">
+                                            <param id="0" name="Key">&quot;Left Y&quot;</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">-50</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="3844766091385942">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="1567195400162643" type="System">
+                                                    <param id="0" name="Variable">MenuMoved</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-12" name="Subtract from" sid="9117064131726225" type="Sprite">
+                                                    <param id="0" name="Instance variable">MenuY</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="8653123643259732" type="System">
+                                                    <param id="0" name="Variable">MenuMoved</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="3309484129097324">
+                                    <conditions>
+                                        <condition id="0" name="Compare value" sid="2186582803840671" type="Input">
+                                            <param id="0" name="Key">&quot;Left Y&quot;</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">50</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="8383247625085072">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="4674406923459756" type="System">
+                                                    <param id="0" name="Variable">MenuMoved</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-11" name="Add to" sid="625070447158449" type="Sprite">
+                                                    <param id="0" name="Instance variable">MenuY</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-9" name="Set value" sid="6392886573427779" type="System">
+                                                    <param id="0" name="Variable">MenuMoved</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="4625700626129628">
+                                    <conditions>
+                                        <condition id="0" name="Compare value" sid="7953039673215675" type="Input">
+                                            <param id="0" name="Key">&quot;Button 1&quot;</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="772103576513657" type="GameStats">
+                                            <param id="0" name="Key">&quot;Item1&quot;</param>
+                                            <param id="1" name="Value">Sprite.Selected</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5308543289179979">
+                                    <conditions>
+                                        <condition id="0" name="Compare value" sid="1188206273179576" type="Input">
+                                            <param id="0" name="Key">&quot;Button 2&quot;</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="4456238793935827" type="GameStats">
+                                            <param id="0" name="Key">&quot;Item2&quot;</param>
+                                            <param id="1" name="Value">Sprite.Selected</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8172672867974788">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="7134097151632617" type="INV_Slot">
+                                            <param id="0" name="Instance variable">Function</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Item1&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="2308583203698541" type="INV_Slot">
+                                            <param id="0" name="Instance variable">Item</param>
+                                            <param id="1" name="Value">GameStats.Get(&quot;Item1&quot;)</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="5191379380589524" type="INV_Slot">
+                                            <param id="0" name="Animation">GameStats.Get(&quot;Item1&quot;)</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="2745874426626339">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="7226231908665228" type="INV_Slot">
+                                                    <param id="0" name="Instance variable">Item</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="3131652031263732" type="INV_Slot">
+                                                    <param id="0" name="Animation">&quot;none&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="3832075897083088">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="2580893764208774" type="INV_Slot">
+                                            <param id="0" name="Instance variable">Function</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;Item2&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="2272867509476375" type="INV_Slot">
+                                            <param id="0" name="Instance variable">Item</param>
+                                            <param id="1" name="Value">GameStats.Get(&quot;Item2&quot;)</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="9874183232818247" type="INV_Slot">
+                                            <param id="0" name="Animation">GameStats.Get(&quot;Item2&quot;)</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="8042113344755098">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="8825332710766765" type="INV_Slot">
+                                                    <param id="0" name="Instance variable">Item</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="5202293029149139" type="INV_Slot">
+                                                    <param id="0" name="Animation">&quot;none&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="704719101632862">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="2286771452196676" type="Sprite">
+                                            <param id="0" name="Instance variable">MenuX</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="4189869973019055" type="Sprite">
+                                            <param id="0" name="Instance variable">MenuX</param>
+                                            <param id="1" name="Value">self.MaxX</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8867756367691584">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="1761237294707483" type="Sprite">
+                                            <param id="0" name="Instance variable">MenuY</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="9873747356676031" type="Sprite">
+                                            <param id="0" name="Instance variable">MenuY</param>
+                                            <param id="1" name="Value">self.MaxY</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6603404287263696">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="5620276765824096" type="Sprite">
+                                            <param id="0" name="Instance variable">MenuX</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">self.MaxX</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="4208041159525876" type="Sprite">
+                                            <param id="0" name="Instance variable">MenuX</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="679473254482089">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="6538516141317364" type="Sprite">
+                                            <param id="0" name="Instance variable">MenuY</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">self.MaxY</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="5358588217662671" type="Sprite">
+                                            <param id="0" name="Instance variable">MenuY</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="379730187234168">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="3133883644261973" type="Sprite">
+                                            <param id="0" name="X">self.StartX+(self.MenuX*24)</param>
+                                            <param id="1" name="Y">self.StartY+(self.MenuY*24)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="793742724759183">
+                                    <conditions>
+                                        <condition id="0" name="Compare value" sid="5539418118410622" type="Input">
+                                            <param id="0" name="Key">&quot;Left X&quot;</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                        <condition id="0" name="Compare value" sid="4031762687148247" type="Input">
+                                            <param id="0" name="Key">&quot;Left Y&quot;</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="5425475610911676" type="System">
+                                            <param id="0" name="Variable">MenuMoved</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

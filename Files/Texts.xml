@@ -1,0 +1,14 @@
+<xml>
+	<Object
+		Name="Test"
+		Data="Heres Some Text Loaded From Xml."></Object>
+	<Object
+		Name="LongTest"
+		Data="mary had a little lamb, little lamb, little lamb. Mary had a little lamb whos fleece was white as snow. everywhere that mary went, mary went, mary went. everywhere mary went the lamb was sure to go..... YUP"></Object>
+  <Object 
+    Name="Saved"
+    Data="Game Data Saved"></Object>
+  <Object 
+    Name="Loaded"
+    Data="Game Data Loaded"></Object>
+</xml>

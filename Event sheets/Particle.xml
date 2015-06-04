@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Particle</name>
+    <events>
+        <event-block sid="2946532257563959">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="9603267343978733" type="Particles" />
+                <condition id="-33" name="Pick by comparison" sid="5634961142396997" type="System">
+                    <param id="0" name="Object">HAS_PARTICLE</param>
+                    <param id="1" name="Expression">HAS_PARTICLE.ParticleUID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">Particles.UID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="7466138021633296" type="HAS_PARTICLE">
+                    <param id="0" name="Instance variable">HasParticle</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4741057589462014">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="959338426413883" type="HAS_PARTICLE" />
+                <condition id="-33" name="Pick by comparison" sid="6744910554687161" type="System">
+                    <param id="0" name="Object">Particles</param>
+                    <param id="1" name="Expression">Particles.UID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">HAS_PARTICLE.ParticleUID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="672367879004968" type="System">
+                    <param id="0" name="Seconds">0.25</param>
+                </action>
+                <action id="-9" name="Destroy" sid="4362803255491704" type="Particles" />
+            </actions>
+        </event-block>
+        <event-block sid="2199321510698222">
+            <conditions>
+                <condition id="-11" name="For Each" sid="8716039370611906" type="System">
+                    <param id="0" name="Object">HAS_PARTICLE</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="4194163425811265">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1516363571720796" type="HAS_PARTICLE">
+                            <param id="0" name="Instance variable">HasParticle</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1710278867474411">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="7023071478370667" type="HAS_PARTICLE">
+                                    <param id="0" name="Instance variable">ParticleType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Ghost&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="9663306152757088" type="HAS_PARTICLE">
+                                    <param id="0" name="Object">GHOST_PARTICLE</param>
+                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="9083771862319666" type="GHOST_PARTICLE">
+                                    <param id="0" name="Instance variable">Zone</param>
+                                    <param id="1" name="Value">CurZone</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="4294359363648843" type="GHOST_PARTICLE">
+                                    <param id="0" name="Instance variable">FollowUID</param>
+                                    <param id="1" name="Value">HAS_PARTICLE.UID</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="9996506327804883" type="HAS_PARTICLE">
+                                    <param id="0" name="Instance variable">ParticleUID</param>
+                                    <param id="1" name="Value">GHOST_PARTICLE.UID</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="151824978288166" type="HAS_PARTICLE">
+                                    <param id="0" name="Instance variable">HasParticle</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4370031158252233">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8664193313190246" type="HAS_PARTICLE">
+                                    <param id="0" name="Instance variable">ParticleType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Fire&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="2564697142225462" type="HAS_PARTICLE">
+                                    <param id="0" name="Object">FIRE_PARTICLE</param>
+                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="8381189535926953" type="FIRE_PARTICLE">
+                                    <param id="0" name="Instance variable">Zone</param>
+                                    <param id="1" name="Value">CurZone</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="4956117950750153" type="FIRE_PARTICLE">
+                                    <param id="0" name="Instance variable">FollowUID</param>
+                                    <param id="1" name="Value">HAS_PARTICLE.UID</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="691146846669547" type="HAS_PARTICLE">
+                                    <param id="0" name="Instance variable">ParticleUID</param>
+                                    <param id="1" name="Value">FIRE_PARTICLE.UID</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="4058393544107585" type="HAS_PARTICLE">
+                                    <param id="0" name="Instance variable">HasParticle</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8097220985328077">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="446698182315626" type="HAS_PARTICLE">
+                                    <param id="0" name="Instance variable">ParticleType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Smoke&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="8216507774746464" type="HAS_PARTICLE">
+                                    <param id="0" name="Object">SMOKE_PARTICLE</param>
+                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="1712910577082023" type="SMOKE_PARTICLE">
+                                    <param id="0" name="Instance variable">Zone</param>
+                                    <param id="1" name="Value">CurZone</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="87046086712515" type="SMOKE_PARTICLE">
+                                    <param id="0" name="Instance variable">FollowUID</param>
+                                    <param id="1" name="Value">HAS_PARTICLE.UID</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="8253258910385011" type="HAS_PARTICLE">
+                                    <param id="0" name="Instance variable">ParticleUID</param>
+                                    <param id="1" name="Value">SMOKE_PARTICLE.UID</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="7243700991842085" type="HAS_PARTICLE">
+                                    <param id="0" name="Instance variable">HasParticle</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2826225213674632">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3901375205362154" type="HAS_PARTICLE">
+                                    <param id="0" name="Instance variable">ParticleType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Poison&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="2690246246886171" type="HAS_PARTICLE">
+                                    <param id="0" name="Object">POISON_PARTICLE</param>
+                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="8778251566832196" type="POISON_PARTICLE">
+                                    <param id="0" name="Instance variable">Zone</param>
+                                    <param id="1" name="Value">CurZone</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="8799588100960015" type="POISON_PARTICLE">
+                                    <param id="0" name="Instance variable">FollowUID</param>
+                                    <param id="1" name="Value">HAS_PARTICLE.UID</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="7650902114319618" type="HAS_PARTICLE">
+                                    <param id="0" name="Instance variable">ParticleUID</param>
+                                    <param id="1" name="Value">POISON_PARTICLE.UID</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="999813768594028" type="HAS_PARTICLE">
+                                    <param id="0" name="Instance variable">HasParticle</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5991628488819849">
+                    <conditions />
+                    <actions />
+                </event-block>
+                <event-block sid="3026525968304341">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="3683401957221291" type="System">
+                            <param id="0" name="Object">Particles</param>
+                            <param id="1" name="Expression">Particles.UID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">HAS_PARTICLE.ParticleUID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="7071383501545857" type="Particles">
+                            <param id="0" name="Object">HAS_PARTICLE</param>
+                            <param id="1" name="Image point (optional)">&quot;par&quot;</param>
+                        </action>
+                        <action id="-29" name="Move to object" sid="5437188492632324" type="Particles">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Object">HAS_PARTICLE</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

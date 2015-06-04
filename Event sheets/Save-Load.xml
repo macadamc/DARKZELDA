@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Save-Load</name>
+    <events>
+        <event-block sid="7244420915128453">
+            <conditions>
+                <condition id="0" name="On function" sid="8609238660796472" type="Function">
+                    <param id="0" name="Name">&quot;Save&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="9576427548422095">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="1644283466043862" type="System">
+                            <param id="0" name="Object">Unlockable</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="9355233074142444" type="DoorData">
+                            <param id="0" name="Key">str(Unlockable.UID)</param>
+                            <param id="1" name="Value">Unlockable.AnimationFrame</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3443901066719605">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Set local value" sid="619576038761291" type="WebStorage">
+                            <param id="0" name="Key">&quot;GameStats&quot;</param>
+                            <param id="1" name="Value">GameStats.AsJSON</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="2704313589805158" type="WebStorage">
+                            <param id="0" name="Key">&quot;DoorData&quot;</param>
+                            <param id="1" name="Value">DoorData.AsJSON</param>
+                        </action>
+                        <action id="0" name="Set local value" sid="4774137457556723" type="WebStorage">
+                            <param id="0" name="Key">&quot;Inv&quot;</param>
+                            <param id="1" name="Value">INV.AsJSON</param>
+                        </action>
+                        <action id="0" name="Call function" sid="5424758661180969" type="Function">
+                            <param id="0" name="Name">&quot;ShowTextBox&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Bottom;Saved&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="1870111293253995">
+            <conditions>
+                <condition id="0" name="On function" sid="235712528405518" type="Function">
+                    <param id="0" name="Name">&quot;Load&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Load" sid="4461861110362659" type="GameStats">
+                    <param id="0" name="JSON">WebStorage.LocalValue(&quot;GameStats&quot;)</param>
+                </action>
+                <action id="4" name="Load" sid="6879328531372563" type="DoorData">
+                    <param id="0" name="JSON">WebStorage.LocalValue(&quot;DoorData&quot;)</param>
+                </action>
+                <action id="11" name="Load" sid="2791177220296697" type="INV">
+                    <param id="0" name="JSON">WebStorage.LocalValue(&quot;Inv&quot;)</param>
+                </action>
+                <action id="-9" name="Destroy" sid="3185648966123017" type="Enemies" />
+                <action id="-9" name="Destroy" sid="840761906914766" type="Interactive" />
+                <action id="-9" name="Destroy" sid="8965329597578656" type="Light" />
+                <action id="-13" name="Set boolean" sid="5304914615997167" type="Spawners">
+                    <param id="0" name="Instance variable">Loaded</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="669962997016956" type="Spawners">
+                    <param id="0" name="Instance variable">Triggered</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="6" name="Set speed" sid="7960854672868303" type="Unlockable">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="3288845394416201" type="TriggerZone">
+                    <param id="0" name="Instance variable">Triggered</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="8170618398776244" type="Particles" />
+                <action id="-13" name="Set boolean" sid="8707972452116644" type="HAS_LIGHT">
+                    <param id="0" name="Instance variable">HasLight</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="7549063220158943" type="HAS_PARTICLE">
+                    <param id="0" name="Instance variable">HasParticle</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="5899092299905249" type="System">
+                    <param id="0" name="Variable">ZoneLoaded</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Call function" sid="43015504743504" type="Function">
+                    <param id="0" name="Name">&quot;ShowTextBox&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Bottom;Loaded&quot;</param>
+                </action>
+                <action id="3" name="Clear" sid="6491008976351273" type="TempData" />
+            </actions>
+            <sub-events>
+                <event-block sid="3332786982997561">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="9700624029509709" type="System">
+                            <param id="0" name="Object">Unlockable</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="4770791063606929" type="Unlockable">
+                            <param id="0" name="Frame number">DoorData.Get(str(Unlockable.UID))</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="2451505839960554">
+            <conditions>
+                <condition id="0" name="On function" sid="3878257003930862" type="Function">
+                    <param id="0" name="Name">&quot;ResetSave&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Remove local value" sid="4780779405639786" type="WebStorage">
+                    <param id="0" name="Key">&quot;GameStats&quot;</param>
+                </action>
+                <action id="2" name="Remove local value" sid="6820822219509507" type="WebStorage">
+                    <param id="0" name="Key">&quot;DoorData&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

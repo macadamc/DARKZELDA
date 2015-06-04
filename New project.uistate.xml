@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="0">Main</layout>
+        <layout order="1">Template</layout>
+        <layout order="2">Demo</layout>
+        <event-sheet order="3">Main</event-sheet>
+        <event-sheet order="4">Musix</event-sheet>
+        <event-sheet order="5">Enemys</event-sheet>
+        <event-sheet order="6">Spawnable Effects</event-sheet>
+        <event-sheet order="7">Player</event-sheet>
+        <event-sheet active="1" order="8">Item Functions</event-sheet>
+        <event-sheet order="9">Camara</event-sheet>
+        <event-sheet order="10">Traps</event-sheet>
+        <event-sheet order="11">Spawner</event-sheet>
+        <event-sheet order="12">Interactive</event-sheet>
+        <event-sheet order="13">Z Ordering</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="0">
+        <family expanded="0" name="Traps" />
+        <family expanded="0" name="Enemies" />
+        <family expanded="0" name="Interactive" />
+        <family expanded="0" name="Spawners" />
+        <family expanded="0" name="ZORDERING" />
+        <family expanded="0" name="DRAWSHADOW" />
+        <family expanded="0" name="Zone" />
+        <family expanded="0" name="Solid" />
+        <family expanded="0" name="XmlData" />
+        <family expanded="0" name="NPC" />
+        <family expanded="0" name="Unlockable" />
+        <family expanded="0" name="Particles" />
+        <family expanded="0" name="HAS_LIGHT" />
+        <family expanded="1" name="HAS_PARTICLE" />
+        <family expanded="0" name="PointsOfIntrest" />
+        <family expanded="0" name="CanBleed" />
+    </families-expanded>
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/PLAYER/" />
+        <folder expanded="0" path="object-folder/ENEMY/" />
+        <folder expanded="0" path="object-folder/LEVEL/" />
+        <folder expanded="0" path="object-folder/LEVEL/TileMaps/" />
+        <folder expanded="1" path="object-folder/LEVEL/CreatedAtRuntime/" />
+        <folder expanded="0" path="object-folder/LEVEL/PlaceableInEditor/" />
+        <folder expanded="0" path="object-folder/LEVEL/PlaceableInEditor/Traps/" />
+        <folder expanded="0" path="object-folder/SPAWNER/" />
+        <folder expanded="0" path="object-folder/CAMERA/" />
+        <folder expanded="0" path="object-folder/TextBox/" />
+        <folder expanded="0" path="object-folder/Inputs/" />
+        <folder expanded="0" path="object-folder/Inventory/" />
+        <folder expanded="0" path="object-folder/XML/" />
+        <folder expanded="0" path="object-folder/NPC/" />
+        <folder expanded="0" path="object-folder/Particles/" />
+        <folder expanded="0" path="object-folder/Lights/" />
+        <folder expanded="0" path="object-folder/TitleScreen/" />
+        <folder expanded="0" path="layout-folder/" />
+        <folder expanded="0" path="event-folder/" />
+        <folder expanded="0" path="event-folder/NPC States/" />
+        <folder expanded="0" path="file-folder/" />
+        <folder expanded="0" path="sound-folder/" />
+        <folder expanded="0" path="music-folder/" />
+        <folder expanded="0" path="file-folder/Icons/" />
+        <folder expanded="1" path="file-folder/XML/" />
+        <folder expanded="1" path="animation-folder/ARMS/" />
+        <folder expanded="1" path="animation-folder/BASE/" />
+        <folder expanded="1" path="animation-folder/BODY/" />
+        <folder expanded="1" path="animation-folder/Indicator/" />
+        <folder expanded="1" path="animation-folder/nothing/" />
+        <folder expanded="1" path="animation-folder/PLAYERSHADOW/" />
+        <folder expanded="1" path="animation-folder/Melee_Hitbox/" />
+        <folder expanded="1" path="animation-folder/PlayerProjectile/" />
+        <folder expanded="1" path="animation-folder/PlayerProjectile/FireCracker/" />
+        <folder expanded="1" path="animation-folder/PlayerProjectile/Arrow/" />
+        <folder expanded="1" path="animation-folder/PlayerProjectile/Boomerang/" />
+        <folder expanded="1" path="animation-folder/PlayerProjectile/SwordSlash/" />
+        <folder expanded="1" path="animation-folder/Bat/" />
+        <folder expanded="1" path="animation-folder/ENEMYSHADOW/" />
+        <folder expanded="1" path="animation-folder/EnemyProjectile/" />
+        <folder expanded="1" path="animation-folder/EnemyProjectile/arrow/" />
+        <folder expanded="1" path="animation-folder/Spider/" />
+        <folder expanded="1" path="animation-folder/Slime/" />
+        <folder expanded="1" path="animation-folder/Mage/" />
+        <folder expanded="1" path="animation-folder/Mage2/" />
+        <folder expanded="1" path="animation-folder/Mutant/" />
+        <folder expanded="1" path="animation-folder/Mutant2/" />
+        <folder expanded="1" path="animation-folder/Skeleton/" />
+        <folder expanded="1" path="animation-folder/Heart/" />
+        <folder expanded="1" path="animation-folder/Mutant4/" />
+        <folder expanded="1" path="animation-folder/Mutant5/" />
+        <folder expanded="1" path="animation-folder/Explosion/" />
+        <folder expanded="1" path="animation-folder/Breakable/" />
+        <folder expanded="1" path="animation-folder/Item_Pickup/" />
+        <folder expanded="1" path="animation-folder/Rock/" />
+        <folder expanded="1" path="animation-folder/SpiderWeb/" />
+        <folder expanded="1" path="animation-folder/Bird/" />
+        <folder expanded="1" path="animation-folder/Bunny/" />
+        <folder expanded="1" path="animation-folder/Foilage/" />
+        <folder expanded="1" path="animation-folder/SpikeTrap/" />
+        <folder expanded="1" path="animation-folder/ProjectileTrap/" />
+        <folder expanded="1" path="animation-folder/BarrierTrap/" />
+        <folder expanded="1" path="animation-folder/TriggerZone/" />
+        <folder expanded="1" path="animation-folder/Sign/" />
+        <folder expanded="1" path="animation-folder/Door/" />
+        <folder expanded="1" path="animation-folder/ENEMY_SPAWNER/" />
+        <folder expanded="1" path="animation-folder/ITEM_SPAWNER/" />
+        <folder expanded="1" path="animation-folder/OBJECT_SPAWNER/" />
+        <folder expanded="1" path="animation-folder/LIGHT_SPAWNER/" />
+        <folder expanded="1" path="animation-folder/PARTICLE_SPAWNER/" />
+        <folder expanded="1" path="animation-folder/Npc_Spawner/" />
+        <folder expanded="1" path="animation-folder/Camera/" />
+        <folder expanded="1" path="animation-folder/CameraZone/" />
+        <folder expanded="1" path="animation-folder/INV_Slot/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/Ghost/" />
+        <folder expanded="1" path="animation-folder/NpcBase/" />
+        <folder expanded="1" path="animation-folder/Light/" />
+        <folder expanded="1" path="animation-folder/LightColor/" />
+        <folder expanded="1" path="animation-folder/Sprite8/" />
+        <folder expanded="1" path="animation-folder/Sprite7/" />
+        <folder expanded="1" path="animation-folder/Sprite6/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/Mirror/" />
+        <folder expanded="1" path="animation-folder/MirrorBeam/" />
+        <folder expanded="1" path="animation-folder/BeamSource/" />
+        <folder expanded="1" path="animation-folder/SourceBeam/" />
+        <folder expanded="1" path="animation-folder/MirrorLOS/" />
+        <folder expanded="1" path="animation-folder/BeamRunner/" />
+        <folder expanded="1" path="animation-folder/GUI_ICON/" />
+        <folder expanded="1" path="animation-folder/Sprite3/" />
+        <folder expanded="1" path="animation-folder/POI/" />
+        <folder expanded="1" path="animation-folder/PathZone/" />
+        <folder expanded="1" path="animation-folder/Blood/" />
+        <folder expanded="1" path="animation-folder/Sprite4/" />
+        <folder expanded="1" path="animation-folder/Sprite4/Default/" />
+        <folder expanded="1" path="animation-folder/Sprite5/" />
+        <folder expanded="1" path="animation-folder/Sprite9/" />
+        <folder expanded="1" path="animation-folder/Sprite10/" />
+    </folders-expanded>
+</c2uistate>

@@ -1,0 +1,534 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Interactive</name>
+    <events>
+        <event-group description="" sid="2790915214581771" title="Interactive">
+            <sub-events>
+                <event-group description="" sid="3642008264424403" title="Pushable">
+                    <sub-events>
+                        <event-block sid="4791793431247857">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1633387621229438" type="Interactive">
+                                    <param id="0" name="Instance variable">Pushed</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="4774206714504602" type="Interactive">
+                                    <param id="0" name="Instance variable">Effect</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Push&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2960569442796638">
+                                    <conditions>
+                                        <condition id="9" name="Is overlapping at offset" sid="8338613226024251" type="Interactive">
+                                            <param id="0" name="Object">BASE</param>
+                                            <param id="1" name="Offset X">2</param>
+                                            <param id="2" name="Offset Y">0</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="1773986180113813" type="System">
+                                            <param id="0" name="First value">BASE.8Direction.VectorX</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="9" name="Set vector X" sid="9448140204939192" type="Interactive">
+                                            <param id="0" name="Vector X">-32</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="3531187421113737" type="Interactive">
+                                            <param id="0" name="Instance variable">Pushed</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="25" name="Play at object" sid="7221683582651813" type="Audio">
+                                            <param id="0" name="Audio file">Snare 003</param>
+                                            <param id="1" name="Loop">0</param>
+                                            <param id="2" name="Volume">random(-20,-15)</param>
+                                            <param id="3" name="Object">Interactive</param>
+                                            <param id="4" name="Inner angle">360</param>
+                                            <param id="5" name="Outer angle">360</param>
+                                            <param id="6" name="Outer gain">0</param>
+                                            <param id="7" name="Tag (optional)">&quot;Rock&quot;</param>
+                                        </action>
+                                        <action behavior="ScrollTo" id="0" name="Shake" sid="6793254228336993" type="Camera">
+                                            <param id="0" name="Magnitude">1</param>
+                                            <param id="1" name="Duration">0.75</param>
+                                            <param id="2" name="Mode">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5971460811784329">
+                                    <conditions>
+                                        <condition id="9" name="Is overlapping at offset" sid="3836725192045559" type="Interactive">
+                                            <param id="0" name="Object">BASE</param>
+                                            <param id="1" name="Offset X">-2</param>
+                                            <param id="2" name="Offset Y">0</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="854169168607786" type="System">
+                                            <param id="0" name="First value">BASE.8Direction.VectorX</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="9" name="Set vector X" sid="6282287912884343" type="Interactive">
+                                            <param id="0" name="Vector X">32</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="4141988882322217" type="Interactive">
+                                            <param id="0" name="Instance variable">Pushed</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="25" name="Play at object" sid="8319765941629906" type="Audio">
+                                            <param id="0" name="Audio file">Snare 003</param>
+                                            <param id="1" name="Loop">0</param>
+                                            <param id="2" name="Volume">random(-20,-15)</param>
+                                            <param id="3" name="Object">Interactive</param>
+                                            <param id="4" name="Inner angle">360</param>
+                                            <param id="5" name="Outer angle">360</param>
+                                            <param id="6" name="Outer gain">0</param>
+                                            <param id="7" name="Tag (optional)">&quot;Rock&quot;</param>
+                                        </action>
+                                        <action behavior="ScrollTo" id="0" name="Shake" sid="4093951243091173" type="Camera">
+                                            <param id="0" name="Magnitude">1</param>
+                                            <param id="1" name="Duration">0.75</param>
+                                            <param id="2" name="Mode">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6684098106154273">
+                                    <conditions>
+                                        <condition id="9" name="Is overlapping at offset" sid="4921048140624598" type="Interactive">
+                                            <param id="0" name="Object">BASE</param>
+                                            <param id="1" name="Offset X">0</param>
+                                            <param id="2" name="Offset Y">-2</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="815305863055824" type="System">
+                                            <param id="0" name="First value">BASE.8Direction.VectorY</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="10" name="Set vector Y" sid="4357083582921404" type="Interactive">
+                                            <param id="0" name="Vector Y">32</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="4227854192057894" type="Interactive">
+                                            <param id="0" name="Instance variable">Pushed</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="25" name="Play at object" sid="3796467183632126" type="Audio">
+                                            <param id="0" name="Audio file">Snare 003</param>
+                                            <param id="1" name="Loop">0</param>
+                                            <param id="2" name="Volume">random(-20,-15)</param>
+                                            <param id="3" name="Object">Interactive</param>
+                                            <param id="4" name="Inner angle">360</param>
+                                            <param id="5" name="Outer angle">360</param>
+                                            <param id="6" name="Outer gain">0</param>
+                                            <param id="7" name="Tag (optional)">&quot;Rock&quot;</param>
+                                        </action>
+                                        <action behavior="ScrollTo" id="0" name="Shake" sid="5788300772680466" type="Camera">
+                                            <param id="0" name="Magnitude">1</param>
+                                            <param id="1" name="Duration">0.75</param>
+                                            <param id="2" name="Mode">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8163425232453046">
+                                    <conditions>
+                                        <condition id="9" name="Is overlapping at offset" sid="7378104993839511" type="Interactive">
+                                            <param id="0" name="Object">BASE</param>
+                                            <param id="1" name="Offset X">0</param>
+                                            <param id="2" name="Offset Y">2</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="3963385523655026" type="System">
+                                            <param id="0" name="First value">BASE.8Direction.VectorY</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="10" name="Set vector Y" sid="2436827734266493" type="Interactive">
+                                            <param id="0" name="Vector Y">-32</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="1565439263848556" type="Interactive">
+                                            <param id="0" name="Instance variable">Pushed</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="25" name="Play at object" sid="2878365272138327" type="Audio">
+                                            <param id="0" name="Audio file">Snare 003</param>
+                                            <param id="1" name="Loop">0</param>
+                                            <param id="2" name="Volume">random(-20,-15)</param>
+                                            <param id="3" name="Object">Interactive</param>
+                                            <param id="4" name="Inner angle">360</param>
+                                            <param id="5" name="Outer angle">360</param>
+                                            <param id="6" name="Outer gain">0</param>
+                                            <param id="7" name="Tag (optional)">&quot;Rock&quot;</param>
+                                        </action>
+                                        <action behavior="ScrollTo" id="0" name="Shake" sid="1004307704698422" type="Camera">
+                                            <param id="0" name="Magnitude">1</param>
+                                            <param id="1" name="Duration">0.75</param>
+                                            <param id="2" name="Mode">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="8281087356452858">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="1441077701016933" type="System">
+                            <param id="0" name="Object">DRAWSHADOW</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7427097869260635">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3556749027914082" type="ENEMYSHADOW">
+                                    <param id="0" name="Instance variable">EnemyUID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">DRAWSHADOW.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="1232412936060902" type="ENEMYSHADOW">
+                                    <param id="0" name="Object">DRAWSHADOW</param>
+                                    <param id="1" name="Image point (optional)">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="9137194338889635" type="ENEMYSHADOW">
+                                    <param id="0" name="Animation">DRAWSHADOW.Shadow</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5849517294682516">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="2852738272218722" type="BASE">
+                            <param id="0" name="Object">Interactive</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9570183699314917" type="Interactive">
+                            <param id="0" name="Instance variable">Pushable</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7504529120119586">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="4211218095210498" type="Interactive">
+                                    <param id="0" name="Instance variable">Effect</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;Slow&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="8Direction" id="4" name="Set max speed" sid="849945362261723" type="BASE">
+                                    <param id="0" name="Max Speed">25</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="8793024000870131">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="5075524241673886" type="BASE">
+                            <param id="0" name="Object">Interactive</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1470120056899456">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="9843559370676919" type="Interactive">
+                                    <param id="0" name="Instance variable">Effect</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;lerpAngle&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-8" name="Set angle" sid="2095764863463419" type="Interactive">
+                                    <param id="0" name="Angle">anglelerp(self.Angle,(BASE.8Direction.VectorX/2),0.7)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="317789035970059">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1934024287624653" type="Interactive">
+                                    <param id="0" name="Instance variable">Effect</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;SmallKey&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set key" sid="6318757831393877" type="GameStats">
+                                    <param id="0" name="Key">&quot;keys&quot;</param>
+                                    <param id="1" name="Value">GameStats.Get(&quot;keys&quot;) + 1</param>
+                                </action>
+                                <action id="0" name="Add key" sid="8921796203565228" type="GameStats">
+                                    <param id="0" name="Key">&quot;Has_Key_&quot;&amp;str(Interactive.SpawnerID)</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="4721161247642757" type="Interactive" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="9333678413575292">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="6416826808479085" type="Interactive">
+                                    <param id="0" name="Instance variable">Pickup</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Push" sid="6805247000585228" type="INV">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">Interactive.Effect</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="0" name="Add key" sid="9728694085743205" type="GameStats">
+                                    <param id="0" name="Key">&quot;Has_&quot;&amp;Interactive.Effect</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="4765503668179263" type="Interactive" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6189601826979563">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="7550655781131812" type="Foilage" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="9169496839688093" type="Foilage">
+                            <param id="0" name="Frame number">int(random(self.AnimationFrameCount))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5569776677096699">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2837329771822281" type="Interactive">
+                            <param id="0" name="Instance variable">Effect</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;lerpAngle&quot;</param>
+                        </condition>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="6748963444577527" type="BASE">
+                            <param id="0" name="Object">Interactive</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="7384125733518807" type="Foilage">
+                            <param id="0" name="Instance variable">timer</param>
+                            <param id="1" name="Value">dt</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="7375715260208148" type="Foilage">
+                            <param id="0" name="Angle">anglelerp(self.angle,self.windVal,0.01)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="5945318255119288">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="7283470284050283" type="Foilage">
+                                    <param id="0" name="Instance variable">timer</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="822921188808723" type="Foilage">
+                                    <param id="0" name="Instance variable">windVal</param>
+                                    <param id="1" name="Value">random(-16,16)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="9103410006433767" type="Foilage">
+                                    <param id="0" name="Instance variable">timer</param>
+                                    <param id="1" name="Value">random(0.4,2)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="620533779653272">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="620356969031654" type="SpiderWeb" />
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Move to layer" sid="9427496321477704" type="SpiderWeb">
+                            <param id="0" name="Layer">&quot;BG&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1622278260338924">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="9884565148012184" type="Melee_Hitbox">
+                            <param id="0" name="Object">Breakable</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="6865959531962274" type="Breakable">
+                            <param id="0" name="Instance variable">canCut</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="5393182294003558" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="3882582525369006" type="TempData">
+                            <param id="0" name="Key">str(Breakable.SpawnerID)</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="7770900167948826" type="Function">
+                            <param id="0" name="Name">&quot;Explosion&quot;</param>
+                            <param id="1" name="Parameter {n}">Breakable.X{###}Breakable.Y{###}Breakable.AnimationName</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="6203221580586138" type="Breakable" />
+                        <action behavior="Knockback" id="2" name="Set speed" sid="253826732191085" type="BASE">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="Speed">32</param>
+                        </action>
+                        <action behavior="Knockback" id="6" name="Set angle of motion" sid="2170805894512697" type="BASE">
+                            <param id="0" name="Angle">angle(self.imagepointx(1),self.imagepointy(1),Breakable.imagepointx(1),Breakable.ImagePointY(1))-180</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9889964440358572">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="6136841308105926" type="PlayerProjectile">
+                            <param id="0" name="Object">Breakable</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="9572442810998846" type="Breakable">
+                            <param id="0" name="Instance variable">canCut</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="9302215632220667" type="TempData">
+                            <param id="0" name="Key">str(Breakable.SpawnerID)</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="780370984465557" type="Function">
+                            <param id="0" name="Name">&quot;Explosion&quot;</param>
+                            <param id="1" name="Parameter {n}">Breakable.X{###}Breakable.Y{###}Breakable.AnimationName</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="497720087405754" type="Breakable" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="3729530156016999">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="2150994997391273" type="PlayerProjectile">
+                                    <param id="0" name="Instance variable">PierceAMT</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="4224917137425465" type="PlayerProjectile">
+                                    <param id="0" name="Instance variable">hitTrigger</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4024353918762301">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3600788795676452" type="PlayerProjectile">
+                                    <param id="0" name="Instance variable">PierceAMT</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="5864236628309746" type="PlayerProjectile">
+                                    <param id="0" name="Instance variable">PierceAMT</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3568125390261565">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1813165855297074" type="PlayerProjectile">
+                                    <param id="0" name="Instance variable">onHit</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;boomerang&quot;</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1158279107546773" type="PlayerProjectile">
+                                    <param id="0" name="Instance variable">hitTrigger</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Movement" id="2" name="Set speed" sid="1276891481172994" type="PlayerProjectile">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="Speed">self.movement.Speed-32</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6241974018036653">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="4018712008039799" type="Melee_Hitbox">
+                            <param id="0" name="Object">Foilage</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="8639525700676572" type="Foilage">
+                            <param id="0" name="Instance variable">canCut</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="9789884974567837" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="3928592612240784" type="TempData">
+                            <param id="0" name="Key">str(Foilage.SpawnerID)</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="7375427861790604" type="Function">
+                            <param id="0" name="Name">&quot;Explosion&quot;</param>
+                            <param id="1" name="Parameter {n}">Foilage.X{###}Foilage.Y{###}Foilage.AnimationName</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="8296264338921393" type="Foilage" />
+                    </actions>
+                </event-block>
+                <event-block sid="1110475227726548">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="7600036076283227" type="PlayerProjectile">
+                            <param id="0" name="Object">Foilage</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="3986167036679895" type="Breakable">
+                            <param id="0" name="Instance variable">canCut</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="9864690754604495" type="TempData">
+                            <param id="0" name="Key">str(Foilage.SpawnerID)</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="6737885342558616" type="Function">
+                            <param id="0" name="Name">&quot;Explosion&quot;</param>
+                            <param id="1" name="Parameter {n}">Foilage.X{###}Foilage.Y{###}Foilage.AnimationName</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="574287080612757" type="Foilage" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="8106784215368">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="4338004820079618" type="PlayerProjectile">
+                                    <param id="0" name="Instance variable">onHit</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;boomerang&quot;</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9234243505745913" type="PlayerProjectile">
+                                    <param id="0" name="Instance variable">hitTrigger</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Movement" id="2" name="Set speed" sid="5967602871830038" type="PlayerProjectile">
+                                    <param id="0" name="Which">0</param>
+                                    <param id="1" name="Speed">self.movement.Speed-16</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

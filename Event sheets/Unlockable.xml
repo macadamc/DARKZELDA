@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Unlockable</name>
+    <events>
+        <event-block sid="7854625224565965">
+            <conditions>
+                <condition id="0" name="On function" sid="5724417231887644" type="Function">
+                    <param id="0" name="Name">&quot;OpenUnlockable&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="1360159130624539" type="Unlockable">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="1479541381751306">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="175339436240006" type="Unlockable">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8997210428449195">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="5207053364549665" type="System">
+                                    <param id="0" name="First value">Unlockable.AnimationFrameCount</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Set speed" sid="4325121932162137" type="Unlockable">
+                                    <param id="0" name="Speed">Unlockable.speed</param>
+                                </action>
+                                <action id="3" name="Start" sid="81823687717345" type="Unlockable">
+                                    <param id="0" name="From">0</param>
+                                </action>
+                                <action disabled="1" id="5" name="Push" sid="3654026062257418" type="Array">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">&quot;set anim spd to :&quot;&amp;Unlockable.speed</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6861187877755191">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="340950084902672" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="2871012159413229" type="Unlockable">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1427371303578372">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="8556697666793957" type="Unlockable">
+                                    <param id="0" name="Instance variable">NeedsGameData</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="8581538400126814" type="GameStats">
+                                    <param id="0" name="Key">&quot;Unlockable_&quot;&amp;Unlockable.UID</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6824646528756073">
+                            <conditions />
+                            <actions>
+                                <action disabled="1" id="5" name="Push" sid="1206746124914918" type="Array">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">&quot;On_Unlocked_&quot;&amp;Unlockable.On_Unlocked&amp;&quot; &quot;&amp;Function.Param(0)</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="2730391544268281" type="Function">
+                                    <param id="0" name="Name">&quot;On_Unlocked_&quot;&amp;Unlockable.On_Unlocked</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0){###}Unlockable.Params</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="9354835806705065" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5933459047795128">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="139093141140819" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="8985675757740218" type="Function">
+                            <param id="0" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="9985411963598799">
+            <conditions>
+                <condition id="0" name="On function" sid="4083038844202895" type="Function">
+                    <param id="0" name="Name">&quot;CloseUnlockable&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="2570352343485529" type="Unlockable">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="1569104713440724">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="3280299418662274" type="Unlockable">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">Unlockable.AnimationFrameCount-1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8183200460919922">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="3995238471189321" type="System">
+                                    <param id="0" name="First value">Unlockable.AnimationFrameCount</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Set speed" sid="9912021176130099" type="Unlockable">
+                                    <param id="0" name="Speed">Unlockable.speed*-1</param>
+                                </action>
+                                <action id="3" name="Start" sid="3800779539829854" type="Unlockable">
+                                    <param id="0" name="From">0</param>
+                                </action>
+                                <action disabled="1" id="5" name="Push" sid="4106056606752118" type="Array">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">&quot;set anim spd to :&quot;&amp;Unlockable.speed</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8566308095960275">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="5916416073006572" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="5" name="Set frame" sid="3196560123902779" type="Unlockable">
+                                    <param id="0" name="Frame number">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2075864042698505">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="5874596576825549" type="Unlockable">
+                                    <param id="0" name="Instance variable">NeedsGameData</param>
+                                </condition>
+                                <condition id="3" name="Has key" sid="3302439924092658" type="GameStats">
+                                    <param id="0" name="Key">&quot;Unlockable_&quot;&amp;Unlockable.UID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Delete key" sid="9610787209653014" type="GameStats">
+                                    <param id="0" name="Key">&quot;Unlockable_&quot;&amp;Unlockable.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1541181085035487">
+                            <conditions />
+                            <actions>
+                                <action disabled="1" id="5" name="Push" sid="2669652541612949" type="Array">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Value">&quot;On_Unlocked_&quot;&amp;Unlockable.On_Unlocked&amp;&quot; &quot;&amp;Function.Param(0)</param>
+                                    <param id="2" name="Axis">0</param>
+                                </action>
+                                <action disabled="1" id="0" name="Call function" sid="3029352781677113" type="Function">
+                                    <param id="0" name="Name">&quot;On_Unlocked_&quot;&amp;Unlockable.On_Unlocked</param>
+                                    <param id="1" name="Parameter {n}">Function.Param(0){###}Unlockable.Params</param>
+                                </action>
+                                <action id="1" name="Set return value" sid="8802354278176099" type="Function">
+                                    <param id="0" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5509414548977445">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="2048402647501449" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set return value" sid="1073909980013889" type="Function">
+                            <param id="0" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

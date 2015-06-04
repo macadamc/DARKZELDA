@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Blood</name>
+    <events>
+        <event-block sid="4651202831705647">
+            <conditions>
+                <condition behavior="CustomMovement" id="1" name="Compare speed" sid="7731050488100435" type="Blood">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Speed">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="2" name="Set speed" sid="3864586403141896" type="Blood">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="Speed">clamp(self.CustomMovement.Speed-(dt*100),0,100)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2629552314933069">
+            <conditions>
+                <condition behavior="CustomMovement" id="1" name="Compare speed" sid="9478528006714342" type="Blood">
+                    <param id="0" name="Which">0</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Speed">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="12" name="Set enabled" sid="8218098379440081" type="Blood">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="7416840266900339" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
+                <action id="-26" name="Move to layer" sid="8227775884782244" type="Blood">
+                    <param id="0" name="Layer">&quot;BG&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7355285913568946">
+            <conditions>
+                <condition id="0" name="On function" sid="8711481376427571" type="Function">
+                    <param id="0" name="Name">&quot;bloodtrail&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="6710353016247128" type="System">
+                    <param id="0" name="Object to create">Blood</param>
+                    <param id="1" name="Layer">&quot;BG&quot;</param>
+                    <param id="2" name="X">Function.Param(0)</param>
+                    <param id="3" name="Y">Function.Param(1)</param>
+                </action>
+                <action id="9" name="Set scale" sid="2905925175232117" type="Blood">
+                    <param id="0" name="Scale">random(0.3,0.6)</param>
+                </action>
+                <action id="-8" name="Set angle" sid="5782177291041265" type="Blood">
+                    <param id="0" name="Angle">random(360)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1466208358137312">
+            <conditions>
+                <condition id="0" name="On function" sid="8104802818990727" type="Function">
+                    <param id="0" name="Name">&quot;bloodhit&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="636113147040123">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="4669329251409882" type="CanBleed">
+                            <param id="0" name="Unique ID">Function.Param(0)</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="255506916561932" type="CanBleed">
+                            <param id="0" name="Instance variable">BloodOnHit</param>
+                        </condition>
+                        <condition id="-12" name="Repeat" sid="9797644740760818" type="System">
+                            <param id="0" name="Count">Function.Param(5)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="7523042828943133" type="System">
+                            <param id="0" name="Object to create">Blood</param>
+                            <param id="1" name="Layer">&quot;OBSTACLE&quot;</param>
+                            <param id="2" name="X">function.Param(1)</param>
+                            <param id="3" name="Y">function.Param(2)</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="1168205410183016" type="Blood">
+                            <param id="0" name="Scale">random(0.3,1)</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="6226844654351886" type="Blood">
+                            <param id="0" name="Angle">random(360)</param>
+                        </action>
+                        <action behavior="CustomMovement" id="2" name="Set speed" sid="9685646569447933" type="Blood">
+                            <param id="0" name="Which">0</param>
+                            <param id="1" name="Speed">random(40)</param>
+                        </action>
+                        <action behavior="CustomMovement" id="6" name="Set angle of motion" sid="6555144102743743" type="Blood">
+                            <param id="0" name="Angle">function.Param(3)+(-random(function.Param(4))+random(function.Param(4)))</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8599665972229556">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="2995069105103906" type="CanBleed">
+                    <param id="0" name="Instance variable">LeaveBloodTrail</param>
+                </condition>
+                <condition id="-11" name="For Each" sid="9360258172966882" type="System">
+                    <param id="0" name="Object">CanBleed</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="545892003631353" type="CanBleed">
+                    <param id="0" name="Instance variable">BloodTrailTimer</param>
+                    <param id="1" name="Value">dt</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="3974047195294699">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3920694929248037" type="CanBleed">
+                            <param id="0" name="Instance variable">BloodTrailTimer</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="3398989992800228" type="Function">
+                            <param id="0" name="Name">&quot;bloodtrail&quot;</param>
+                            <param id="1" name="Parameter {n}">CanBleed.ImagePointX(1){###}CanBleed.ImagePointY(1)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7591018750547842" type="CanBleed">
+                            <param id="0" name="Instance variable">BloodTrailTimer</param>
+                            <param id="1" name="Value">0.2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="5742929279848825">
+            <conditions>
+                <condition id="0" name="On function" sid="5412165968866937" type="Function">
+                    <param id="0" name="Name">&quot;HitCollide&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="2859208918030716">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="5851298151986114" type="CanBleed">
+                            <param id="0" name="Instance variable">BloodOnHit</param>
+                        </condition>
+                        <condition id="1" name="Compare parameter" sid="5670898148345487" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">CanBleed.UID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="1835884098852302" type="Function">
+                            <param id="0" name="Name">&quot;bloodtrail&quot;</param>
+                            <param id="1" name="Parameter {n}">CanBleed.ImagePointX(1){###}CanBleed.ImagePointY(1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
