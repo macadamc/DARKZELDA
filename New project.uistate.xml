@@ -12,13 +12,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <open-tabs>
         <layout order="0">Main</layout>
         <layout order="1">Template</layout>
-        <layout order="2">Demo</layout>
+        <layout active="1" order="2">Demo</layout>
         <event-sheet order="3">Main</event-sheet>
         <event-sheet order="4">Musix</event-sheet>
         <event-sheet order="5">Enemys</event-sheet>
         <event-sheet order="6">Spawnable Effects</event-sheet>
         <event-sheet order="7">Player</event-sheet>
-        <event-sheet active="1" order="8">Item Functions</event-sheet>
+        <event-sheet order="8">Item Functions</event-sheet>
         <event-sheet order="9">Camara</event-sheet>
         <event-sheet order="10">Traps</event-sheet>
         <event-sheet order="11">Spawner</event-sheet>
