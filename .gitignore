@@ -41,3 +41,8 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# C2
+*.uistate.xml
+*.capx.backup
+*.capx.backup1
