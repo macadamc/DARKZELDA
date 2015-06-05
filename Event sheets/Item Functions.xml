@@ -779,7 +779,7 @@
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="6" name="Set speed" sid="2442380822456473" type="ARMS">
-                            <param id="0" name="Speed">35</param>
+                            <param id="0" name="Speed">30</param>
                         </action>
                         <action id="-10" name="Set value" sid="1989234173755645" type="BASE">
                             <param id="0" name="Instance variable">AttackTimer</param>
