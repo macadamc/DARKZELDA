@@ -456,53 +456,35 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="8143797509493088">
+                        <event-block sid="9447587743522446">
                             <conditions>
-                                <condition id="0" name="Compare value" sid="9286103545823296" type="WeaponData">
+                                <condition id="0" name="Compare value" sid="7751910250568059" type="WeaponData">
                                     <param id="0" name="Key">&quot;Sword&quot;</param>
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Value">200</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Spawn another object" sid="9909009208311958" type="BASE">
-                                    <param id="0" name="Object">PlayerProjectile</param>
-                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="6838039649310643" type="PlayerProjectile">
-                                    <param id="0" name="Instance variable">Zone1</param>
-                                    <param id="1" name="Value">CurZone</param>
-                                </action>
-                                <action behavior="Movement" id="2" name="Set speed" sid="5066376158664252" type="PlayerProjectile">
-                                    <param id="0" name="Which">1</param>
-                                    <param id="1" name="Speed">250</param>
-                                </action>
-                                <action behavior="Movement" id="2" name="Set speed" sid="1111644994678251" type="PlayerProjectile">
-                                    <param id="0" name="Which">2</param>
-                                    <param id="1" name="Speed">BASE.8Direction.VectorY*2</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="7980269709144275" type="PlayerProjectile">
-                                    <param id="0" name="Animation">&quot;sword_right&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="4180101911339538" type="PlayerProjectile">
-                                    <param id="0" name="Instance variable">Shadow</param>
-                                    <param id="1" name="Value">&quot;SmallHor&quot;</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="4433548047181547" type="PlayerProjectile">
-                                    <param id="0" name="Instance variable">Knockback</param>
-                                    <param id="1" name="Value">48</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="8501128822852606" type="PlayerProjectile">
-                                    <param id="0" name="Instance variable">onHit</param>
-                                    <param id="1" name="Value">&quot;slash&quot;</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="7585947822425973" type="PlayerProjectile">
+                                <action id="-10" name="Set value" sid="6857220373883386" type="Melee_Hitbox">
                                     <param id="0" name="Instance variable">Damage</param>
-                                    <param id="1" name="Value">2</param>
+                                    <param id="1" name="Value">3</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="6398104553701891">
+                                    <conditions>
+                                        <condition behavior="8Direction" id="0" name="Is moving" sid="2817206461695164" type="BASE" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="4" name="Set max speed" sid="4586030743359436" type="BASE">
+                                            <param id="0" name="Max Speed">BASE.MaxSpd*1.8</param>
+                                        </action>
+                                        <action behavior="8Direction" id="3" name="Set speed" sid="7617251817765309" type="BASE">
+                                            <param id="0" name="Speed">BASE.MaxSpd*2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -537,53 +519,35 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="1926622394161416">
+                        <event-block sid="9601471304556129">
                             <conditions>
-                                <condition id="0" name="Compare value" sid="5227534223583375" type="WeaponData">
+                                <condition id="0" name="Compare value" sid="8879496474545668" type="WeaponData">
                                     <param id="0" name="Key">&quot;Sword&quot;</param>
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Value">200</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Spawn another object" sid="8492937481752376" type="BASE">
-                                    <param id="0" name="Object">PlayerProjectile</param>
-                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="4123008475061558" type="PlayerProjectile">
-                                    <param id="0" name="Instance variable">Zone1</param>
-                                    <param id="1" name="Value">CurZone</param>
-                                </action>
-                                <action behavior="Movement" id="2" name="Set speed" sid="9992112439342405" type="PlayerProjectile">
-                                    <param id="0" name="Which">1</param>
-                                    <param id="1" name="Speed">BASE.8Direction.VectorX*2</param>
-                                </action>
-                                <action behavior="Movement" id="2" name="Set speed" sid="9793078310096288" type="PlayerProjectile">
-                                    <param id="0" name="Which">2</param>
-                                    <param id="1" name="Speed">250</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="7062429484456726" type="PlayerProjectile">
-                                    <param id="0" name="Animation">&quot;sword_down&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="5528947045179601" type="PlayerProjectile">
-                                    <param id="0" name="Instance variable">Shadow</param>
-                                    <param id="1" name="Value">&quot;SmallHor&quot;</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="2298018287831911" type="PlayerProjectile">
-                                    <param id="0" name="Instance variable">Knockback</param>
-                                    <param id="1" name="Value">48</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="122231907816556" type="PlayerProjectile">
-                                    <param id="0" name="Instance variable">onHit</param>
-                                    <param id="1" name="Value">&quot;slash&quot;</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="7360772857470458" type="PlayerProjectile">
+                                <action id="-10" name="Set value" sid="1205153652830339" type="Melee_Hitbox">
                                     <param id="0" name="Instance variable">Damage</param>
-                                    <param id="1" name="Value">2</param>
+                                    <param id="1" name="Value">3</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="4437032485605492">
+                                    <conditions>
+                                        <condition behavior="8Direction" id="0" name="Is moving" sid="8778401525377584" type="BASE" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="4" name="Set max speed" sid="4573827824543" type="BASE">
+                                            <param id="0" name="Max Speed">BASE.MaxSpd*1.8</param>
+                                        </action>
+                                        <action behavior="8Direction" id="3" name="Set speed" sid="6399977553626466" type="BASE">
+                                            <param id="0" name="Speed">BASE.MaxSpd*2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -618,53 +582,35 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="5071729218860056">
+                        <event-block sid="9228005380566747">
                             <conditions>
-                                <condition id="0" name="Compare value" sid="8958092720773267" type="WeaponData">
+                                <condition id="0" name="Compare value" sid="3227168846934713" type="WeaponData">
                                     <param id="0" name="Key">&quot;Sword&quot;</param>
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Value">200</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Spawn another object" sid="9545040109661362" type="BASE">
-                                    <param id="0" name="Object">PlayerProjectile</param>
-                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="8325473133559172" type="PlayerProjectile">
-                                    <param id="0" name="Instance variable">Zone1</param>
-                                    <param id="1" name="Value">CurZone</param>
-                                </action>
-                                <action behavior="Movement" id="2" name="Set speed" sid="4713919054125321" type="PlayerProjectile">
-                                    <param id="0" name="Which">1</param>
-                                    <param id="1" name="Speed">BASE.8Direction.VectorX*2</param>
-                                </action>
-                                <action behavior="Movement" id="2" name="Set speed" sid="9031837908263382" type="PlayerProjectile">
-                                    <param id="0" name="Which">2</param>
-                                    <param id="1" name="Speed">-250</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="2800666302765442" type="PlayerProjectile">
-                                    <param id="0" name="Animation">&quot;sword_up&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="5004421958938868" type="PlayerProjectile">
-                                    <param id="0" name="Instance variable">Shadow</param>
-                                    <param id="1" name="Value">&quot;SmallHor&quot;</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="3547199634065979" type="PlayerProjectile">
-                                    <param id="0" name="Instance variable">Knockback</param>
-                                    <param id="1" name="Value">48</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="833944068890579" type="PlayerProjectile">
-                                    <param id="0" name="Instance variable">onHit</param>
-                                    <param id="1" name="Value">&quot;slash&quot;</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="8937613937073116" type="PlayerProjectile">
+                                <action id="-10" name="Set value" sid="8956713802580679" type="Melee_Hitbox">
                                     <param id="0" name="Instance variable">Damage</param>
-                                    <param id="1" name="Value">2</param>
+                                    <param id="1" name="Value">3</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="6238058375040963">
+                                    <conditions>
+                                        <condition behavior="8Direction" id="0" name="Is moving" sid="8856845614049584" type="BASE" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="4" name="Set max speed" sid="2872509513828906" type="BASE">
+                                            <param id="0" name="Max Speed">BASE.MaxSpd*1.8</param>
+                                        </action>
+                                        <action behavior="8Direction" id="3" name="Set speed" sid="9970992648681106" type="BASE">
+                                            <param id="0" name="Speed">BASE.MaxSpd*2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -699,53 +645,35 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="9845639323264032">
+                        <event-block sid="2948223557613318">
                             <conditions>
-                                <condition id="0" name="Compare value" sid="5520256034858139" type="WeaponData">
+                                <condition id="0" name="Compare value" sid="325255135816657" type="WeaponData">
                                     <param id="0" name="Key">&quot;Sword&quot;</param>
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Value">200</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Spawn another object" sid="2685300826668491" type="BASE">
-                                    <param id="0" name="Object">PlayerProjectile</param>
-                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="3242345223220365" type="PlayerProjectile">
-                                    <param id="0" name="Instance variable">Zone1</param>
-                                    <param id="1" name="Value">CurZone</param>
-                                </action>
-                                <action behavior="Movement" id="2" name="Set speed" sid="3360636266880234" type="PlayerProjectile">
-                                    <param id="0" name="Which">1</param>
-                                    <param id="1" name="Speed">-250</param>
-                                </action>
-                                <action behavior="Movement" id="2" name="Set speed" sid="9238542579080096" type="PlayerProjectile">
-                                    <param id="0" name="Which">2</param>
-                                    <param id="1" name="Speed">BASE.8Direction.VectorY*2</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="5634309619361511" type="PlayerProjectile">
-                                    <param id="0" name="Animation">&quot;sword_left&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="9927305699896009" type="PlayerProjectile">
-                                    <param id="0" name="Instance variable">Shadow</param>
-                                    <param id="1" name="Value">&quot;SmallHor&quot;</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="635493588498414" type="PlayerProjectile">
-                                    <param id="0" name="Instance variable">Knockback</param>
-                                    <param id="1" name="Value">48</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="7614648496627565" type="PlayerProjectile">
-                                    <param id="0" name="Instance variable">onHit</param>
-                                    <param id="1" name="Value">&quot;slash&quot;</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="7329202701282883" type="PlayerProjectile">
+                                <action id="-10" name="Set value" sid="3956227413600145" type="Melee_Hitbox">
                                     <param id="0" name="Instance variable">Damage</param>
-                                    <param id="1" name="Value">2</param>
+                                    <param id="1" name="Value">3</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="1861256129513336">
+                                    <conditions>
+                                        <condition behavior="8Direction" id="0" name="Is moving" sid="9177103696378968" type="BASE" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="4" name="Set max speed" sid="8666310974576143" type="BASE">
+                                            <param id="0" name="Max Speed">BASE.MaxSpd*1.8</param>
+                                        </action>
+                                        <action behavior="8Direction" id="3" name="Set speed" sid="3837487959909243" type="BASE">
+                                            <param id="0" name="Speed">BASE.MaxSpd*2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -779,7 +707,7 @@
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="6" name="Set speed" sid="2442380822456473" type="ARMS">
-                            <param id="0" name="Speed">30</param>
+                            <param id="0" name="Speed">20</param>
                         </action>
                         <action id="-10" name="Set value" sid="1989234173755645" type="BASE">
                             <param id="0" name="Instance variable">AttackTimer</param>
@@ -1349,7 +1277,7 @@
                         </action>
                         <action behavior="Movement" id="2" name="Set speed" sid="8011127409745372" type="PlayerProjectile">
                             <param id="0" name="Which">1</param>
-                            <param id="1" name="Speed">-300+(BASE.8Direction.VectorX/2)</param>
+                            <param id="1" name="Speed">-250+(BASE.8Direction.VectorX/2)</param>
                         </action>
                         <action behavior="Movement" id="2" name="Set speed" sid="6978531693596674" type="PlayerProjectile">
                             <param id="0" name="Which">2</param>
@@ -1396,7 +1324,7 @@
                                 </action>
                                 <action behavior="Movement" id="2" name="Set speed" sid="5093951290161436" type="PlayerProjectile">
                                     <param id="0" name="Which">1</param>
-                                    <param id="1" name="Speed">-250+(BASE.8Direction.VectorX/2)</param>
+                                    <param id="1" name="Speed">-300+(BASE.8Direction.VectorX/2)</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1502,7 +1430,7 @@
                         </action>
                         <action behavior="Movement" id="2" name="Set speed" sid="3742882673535341" type="PlayerProjectile">
                             <param id="0" name="Which">1</param>
-                            <param id="1" name="Speed">180+(BASE.8Direction.VectorX/2)</param>
+                            <param id="1" name="Speed">250+(BASE.8Direction.VectorX/2)</param>
                         </action>
                         <action behavior="Movement" id="2" name="Set speed" sid="2840206954095355" type="PlayerProjectile">
                             <param id="0" name="Which">2</param>
@@ -1554,7 +1482,7 @@
                         </action>
                         <action behavior="Movement" id="2" name="Set speed" sid="5323657014422589" type="PlayerProjectile">
                             <param id="0" name="Which">2</param>
-                            <param id="1" name="Speed">180+(BASE.8Direction.VectorY/2)</param>
+                            <param id="1" name="Speed">250+(BASE.8Direction.VectorY/2)</param>
                         </action>
                         <action id="-10" name="Set value" sid="4162968040028749" type="PlayerProjectile">
                             <param id="0" name="Instance variable">Zone1</param>
@@ -1606,7 +1534,7 @@
                         </action>
                         <action behavior="Movement" id="2" name="Set speed" sid="3080099343223698" type="PlayerProjectile">
                             <param id="0" name="Which">2</param>
-                            <param id="1" name="Speed">-180+(BASE.8Direction.VectorY/2)</param>
+                            <param id="1" name="Speed">-250+(BASE.8Direction.VectorY/2)</param>
                         </action>
                         <action id="-10" name="Set value" sid="7625141727191377" type="PlayerProjectile">
                             <param id="0" name="Instance variable">Zone1</param>
@@ -1654,7 +1582,7 @@
                         </action>
                         <action behavior="Movement" id="2" name="Set speed" sid="2096513680548585" type="PlayerProjectile">
                             <param id="0" name="Which">1</param>
-                            <param id="1" name="Speed">-180+(BASE.8Direction.VectorX/2)</param>
+                            <param id="1" name="Speed">-250+(BASE.8Direction.VectorX/2)</param>
                         </action>
                         <action behavior="Movement" id="2" name="Set speed" sid="7433830953323378" type="PlayerProjectile">
                             <param id="0" name="Which">2</param>

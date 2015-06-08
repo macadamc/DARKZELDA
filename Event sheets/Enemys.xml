@@ -2503,11 +2503,11 @@
                                                 </action>
                                                 <action behavior="Movement" id="2" name="Set speed" sid="9397297364993026" type="PlayerProjectile">
                                                     <param id="0" name="Which">0</param>
-                                                    <param id="1" name="Speed">self.Movement.Speed+(dt*250)</param>
+                                                    <param id="1" name="Speed">self.Movement.Speed+(dt*350)</param>
                                                 </action>
                                                 <action behavior="Movement" id="2" name="Set speed" sid="9063276813675446" type="PlayerProjectile">
                                                     <param id="0" name="Which">0</param>
-                                                    <param id="1" name="Speed">clamp(self.Movement.Speed,0,200)</param>
+                                                    <param id="1" name="Speed">clamp(self.Movement.Speed,0,300)</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -2535,11 +2535,11 @@
                                     <actions>
                                         <action behavior="Movement" id="2" name="Set speed" sid="1784068331090915" type="PlayerProjectile">
                                             <param id="0" name="Which">0</param>
-                                            <param id="1" name="Speed">self.Movement.Speed-(dt*150)</param>
+                                            <param id="1" name="Speed">self.Movement.Speed-(dt*250)</param>
                                         </action>
                                         <action behavior="Movement" id="2" name="Set speed" sid="9540332199085545" type="PlayerProjectile">
                                             <param id="0" name="Which">0</param>
-                                            <param id="1" name="Speed">clamp(self.Movement.Speed,0,200)</param>
+                                            <param id="1" name="Speed">clamp(self.Movement.Speed,0,300)</param>
                                         </action>
                                     </actions>
                                     <sub-events>

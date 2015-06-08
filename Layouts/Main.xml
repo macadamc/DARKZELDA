@@ -2413,7 +2413,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Deceleration>160</Deceleration>
+                        <Deceleration>80</Deceleration>
                         <MovementType>Flying</MovementType>
                         <Shadow>SmallHor</Shadow>
                         <HP>2</HP>
@@ -4254,7 +4254,7 @@
                         <x>120</x>
                         <y>76</y>
                         <z>0</z>
-                        <width>12</width>
+                        <width>16</width>
                         <height>20</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -4761,7 +4761,7 @@
                         <Deceleration>250</Deceleration>
                         <MovementType>Jump</MovementType>
                         <Shadow>Big</Shadow>
-                        <HP>4</HP>
+                        <HP>3</HP>
                         <Explode>true</Explode>
                         <Projectile>false</Projectile>
                         <hit>false</hit>
@@ -7004,7 +7004,7 @@
                         <Deceleration>160</Deceleration>
                         <MovementType>StayDistance</MovementType>
                         <Shadow>SmallHor</Shadow>
-                        <HP>4</HP>
+                        <HP>8</HP>
                         <Explode>true</Explode>
                         <Projectile>false</Projectile>
                         <hit>false</hit>
