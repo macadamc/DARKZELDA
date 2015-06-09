@@ -5680,6 +5680,8 @@
                         <ParticleType></ParticleType>
                         <HasParticle>false</HasParticle>
                         <ParticleUID>-1</ParticleUID>
+                        <sound></sound>
+                        <volume>0</volume>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">

@@ -11,4 +11,14 @@
   <Object 
     Name="Loaded"
     Data="Game Data Loaded"></Object>
+	
+	<Object 
+		Name="SwordPickup"
+		Data="You pickup a sword! Equip it in your inventory."></Object>
+	<Object 
+		Name="BowPickup"
+		Data="You pickup a bow! Equip it in your inventory."></Object>
+	<Object 
+		Name="BoomerangPickup"
+		Data="You pickup a boomerang! Equip it in your inventory."></Object>
 </xml>

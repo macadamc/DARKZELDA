@@ -3206,6 +3206,14 @@
             <plugin id="Particles" />
             <texture />
         </object-type>
+        <object-type name="PlaySound" sid="9867354228712252">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7928319462788429" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Traps" plugin-id="Sprite" sid="3722258314501285">
@@ -3529,6 +3537,16 @@
                 <instance-variable name="BloodTrailTimer" sid="7342353842490128" type="number" />
             </instance-variables>
         </family>
+        <family name="PLAY_SOUND" plugin-id="Sprite" sid="7793142552077981">
+            <members>
+                <member>Breakable</member>
+                <member>PlaySound</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="sound" sid="252654516954699" type="string" />
+                <instance-variable name="volume" sid="9947523674886638" type="number" />
+            </instance-variables>
+        </family>
     </families>
     <layout-folder>
         <layout>Main.xml</layout>
@@ -3556,7 +3574,7 @@
         <event-sheet>DoorsTeleporting.xml</event-sheet>
         <event-sheet>Camara.xml</event-sheet>
         <event-sheet>Spawner.xml</event-sheet>
-        <event-sheet>Musix.xml</event-sheet>
+        <event-sheet>SOUNDMUSIC.xml</event-sheet>
         <event-sheet>Input.xml</event-sheet>
         <event-sheet>Pausing.xml</event-sheet>
         <event-sheet>FiniteStateMachine.xml</event-sheet>

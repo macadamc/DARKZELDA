@@ -25,7 +25,7 @@
         <include>Npc</include>
         <include>Item Functions</include>
         <include>Spawnable Effects</include>
-        <include>Musix</include>
+        <include>SOUNDMUSIC</include>
         <include>Particle</include>
         <include>Light</include>
         <variable constant="0" name="MusicLevel" sid="3164353652461014" static="0" type="number">0</variable>

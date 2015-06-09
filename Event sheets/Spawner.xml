@@ -745,6 +745,14 @@
                                                                     <param id="0" name="Instance variable">ParticleType</param>
                                                                     <param id="1" name="Value">&quot;Fire&quot;</param>
                                                                 </action>
+                                                                <action id="-10" name="Set value" sid="5078270795173599" type="Breakable">
+                                                                    <param id="0" name="Instance variable">sound</param>
+                                                                    <param id="1" name="Value">&quot;fireburning&quot;</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="8073527256005444" type="Breakable">
+                                                                    <param id="0" name="Instance variable">volume</param>
+                                                                    <param id="1" name="Value">-20</param>
+                                                                </action>
                                                                 <action id="-13" name="Set boolean" sid="4845799457130169" type="OBJECT_SPAWNER">
                                                                     <param id="0" name="Instance variable">Loaded</param>
                                                                     <param id="1" name="Value">1</param>
@@ -784,6 +792,14 @@
                                                                 <action id="-10" name="Set value" sid="2017642344126669" type="Breakable">
                                                                     <param id="0" name="Instance variable">ParticleType</param>
                                                                     <param id="1" name="Value">&quot;Fire&quot;</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="4107227055157388" type="Breakable">
+                                                                    <param id="0" name="Instance variable">sound</param>
+                                                                    <param id="1" name="Value">&quot;fireburning&quot;</param>
+                                                                </action>
+                                                                <action id="-10" name="Set value" sid="3692485820540082" type="Breakable">
+                                                                    <param id="0" name="Instance variable">volume</param>
+                                                                    <param id="1" name="Value">-20</param>
                                                                 </action>
                                                                 <action id="-13" name="Set boolean" sid="7099207607588977" type="OBJECT_SPAWNER">
                                                                     <param id="0" name="Instance variable">Loaded</param>
