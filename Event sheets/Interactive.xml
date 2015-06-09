@@ -290,6 +290,10 @@
                                     <param id="0" name="Key">&quot;Has_&quot;&amp;Interactive.Effect</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="0" name="Call function" sid="9510537095399201" type="Function">
+                                    <param id="0" name="Name">&quot;ShowTextBox&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;bottom;&quot;&amp;Interactive.Effect&amp;&quot;Pickup&quot;</param>
+                                </action>
                                 <action id="-9" name="Destroy" sid="4765503668179263" type="Interactive" />
                             </actions>
                         </event-block>

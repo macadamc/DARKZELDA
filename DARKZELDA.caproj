@@ -8,7 +8,7 @@
     <author-website></author-website>
     <app-id>com.shadypixel.darkzelda</app-id>
     <unique-id>2qpiupr2gjili</unique-id>
-    <saved-with-version>20600</saved-with-version>
+    <saved-with-version>20700</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
@@ -2613,7 +2613,7 @@
                     <type>TextBox</type>
                     <type>TextBoxText</type>
                 </container>
-                <texture original-source="C:\Users\chris\Desktop\SpriteFont_CelticBitty-Modern_Regular_(8)_[0,0,0]_14x13.png" />
+                <texture original-source="C:\Users\chris\Desktop\test10x14.png" />
             </object-type>
         </object-folder>
         <object-folder name="Inputs">
