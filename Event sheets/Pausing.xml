@@ -164,10 +164,6 @@
                                     <param id="0" name="Key">&quot;Sword&quot;</param>
                                     <param id="1" name="Value">&quot;A sword made out of deer antlers. It was your fathers.&quot;</param>
                                 </action>
-                                <action id="0" name="Add key" sid="899903988633842" type="ItemDesc">
-                                    <param id="0" name="Key">&quot;DashShoes&quot;</param>
-                                    <param id="1" name="Value">&quot;Special shoes that somehow let the wearer dash around quickly. Use to get breif invulnerability and move quickly!&quot;</param>
-                                </action>
                                 <action id="0" name="Add key" sid="307719951129419" type="ItemDesc">
                                     <param id="0" name="Key">&quot;Bow&quot;</param>
                                     <param id="1" name="Value">&quot;A finely crafted bow. It is engraved with symbols.&quot;</param>
@@ -175,6 +171,14 @@
                                 <action id="0" name="Add key" sid="5348772373142332" type="ItemDesc">
                                     <param id="0" name="Key">&quot;Boomerang&quot;</param>
                                     <param id="1" name="Value">&quot;This boomerang has a razor sharp egde, There is a handle to hold it by.&quot;</param>
+                                </action>
+                                <action id="0" name="Add key" sid="454153911019438" type="ItemDesc">
+                                    <param id="0" name="Key">&quot;Shield&quot;</param>
+                                    <param id="1" name="Value">&quot;A wooden shield. Can be used to knock back enemies, and projectiles.&quot;</param>
+                                </action>
+                                <action id="0" name="Add key" sid="899903988633842" type="ItemDesc">
+                                    <param id="0" name="Key">&quot;DashShoes&quot;</param>
+                                    <param id="1" name="Value">&quot;Special shoes that somehow let the wearer dash around quickly. Use to get breif invulnerability and move quickly!&quot;</param>
                                 </action>
                                 <action id="0" name="Add key" sid="271316030604252" type="ItemDesc">
                                     <param id="0" name="Key">&quot;FireCracker&quot;</param>

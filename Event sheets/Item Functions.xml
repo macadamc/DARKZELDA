@@ -163,6 +163,7 @@
                 </action>
             </actions>
             <sub-events>
+                <variable constant="0" name="knockback" sid="5514577226960186" static="0" type="number">80</variable>
                 <event-block sid="7822335908355243">
                     <conditions>
                         <condition id="1" name="Compare parameter" sid="7278224614003335" type="Function">
@@ -181,12 +182,15 @@
                             <param id="1" name="Layer">&quot;OBJECT&quot;</param>
                             <param id="2" name="Image point">1</param>
                         </action>
+                        <action id="9" name="Set scale" sid="6756065540873005" type="Melee_Hitbox">
+                            <param id="0" name="Scale">0.5</param>
+                        </action>
                         <action id="-8" name="Set angle" sid="1417845518647622" type="Melee_Hitbox">
                             <param id="0" name="Angle">0</param>
                         </action>
-                        <action id="-10" name="Set value" sid="5890007743231892" type="Melee_Hitbox">
+                        <action id="-10" name="Set value" sid="293708185756238" type="Melee_Hitbox">
                             <param id="0" name="Instance variable">Knockback</param>
-                            <param id="1" name="Value">16</param>
+                            <param id="1" name="Value">knockback</param>
                         </action>
                         <action id="-10" name="Set value" sid="7427119200602883" type="Melee_Hitbox">
                             <param id="0" name="Instance variable">Damage</param>
@@ -216,12 +220,15 @@
                             <param id="1" name="Layer">&quot;OBJECT&quot;</param>
                             <param id="2" name="Image point">1</param>
                         </action>
+                        <action id="9" name="Set scale" sid="8120048105550513" type="Melee_Hitbox">
+                            <param id="0" name="Scale">0.5</param>
+                        </action>
                         <action id="-8" name="Set angle" sid="5390631819622771" type="Melee_Hitbox">
                             <param id="0" name="Angle">90</param>
                         </action>
-                        <action id="-10" name="Set value" sid="2238773188780609" type="Melee_Hitbox">
+                        <action id="-10" name="Set value" sid="6729150293676641" type="Melee_Hitbox">
                             <param id="0" name="Instance variable">Knockback</param>
-                            <param id="1" name="Value">16</param>
+                            <param id="1" name="Value">knockback</param>
                         </action>
                         <action id="-10" name="Set value" sid="3949326571375279" type="Melee_Hitbox">
                             <param id="0" name="Instance variable">Damage</param>
@@ -251,12 +258,15 @@
                             <param id="1" name="Layer">&quot;OBJECT&quot;</param>
                             <param id="2" name="Image point">1</param>
                         </action>
+                        <action id="9" name="Set scale" sid="3141528726374257" type="Melee_Hitbox">
+                            <param id="0" name="Scale">0.5</param>
+                        </action>
                         <action id="-8" name="Set angle" sid="9573705349831955" type="Melee_Hitbox">
                             <param id="0" name="Angle">270</param>
                         </action>
-                        <action id="-10" name="Set value" sid="9030900974828115" type="Melee_Hitbox">
+                        <action id="-10" name="Set value" sid="1381480192434578" type="Melee_Hitbox">
                             <param id="0" name="Instance variable">Knockback</param>
-                            <param id="1" name="Value">16</param>
+                            <param id="1" name="Value">knockback</param>
                         </action>
                         <action id="-10" name="Set value" sid="216165861279214" type="Melee_Hitbox">
                             <param id="0" name="Instance variable">Damage</param>
@@ -286,12 +296,15 @@
                             <param id="1" name="Layer">&quot;OBJECT&quot;</param>
                             <param id="2" name="Image point">1</param>
                         </action>
+                        <action id="9" name="Set scale" sid="8564586046786393" type="Melee_Hitbox">
+                            <param id="0" name="Scale">0.5</param>
+                        </action>
                         <action id="-8" name="Set angle" sid="5276850850765945" type="Melee_Hitbox">
                             <param id="0" name="Angle">180</param>
                         </action>
-                        <action id="-10" name="Set value" sid="7878505232555915" type="Melee_Hitbox">
+                        <action id="-10" name="Set value" sid="6703988642600527" type="Melee_Hitbox">
                             <param id="0" name="Instance variable">Knockback</param>
-                            <param id="1" name="Value">16</param>
+                            <param id="1" name="Value">knockback</param>
                         </action>
                         <action id="-10" name="Set value" sid="4283850451024592" type="Melee_Hitbox">
                             <param id="0" name="Instance variable">Damage</param>
@@ -425,6 +438,7 @@
                 </action>
             </actions>
             <sub-events>
+                <variable constant="0" name="speedmod" sid="1345452562681849" static="0" type="number">2.5</variable>
                 <event-block sid="8640889705487349">
                     <conditions>
                         <condition id="1" name="Compare parameter" sid="6596224272817533" type="Function">
@@ -477,10 +491,10 @@
                                     </conditions>
                                     <actions>
                                         <action behavior="8Direction" id="4" name="Set max speed" sid="4586030743359436" type="BASE">
-                                            <param id="0" name="Max Speed">BASE.MaxSpd*1.8</param>
+                                            <param id="0" name="Max Speed">BASE.MaxSpd*speedmod</param>
                                         </action>
                                         <action behavior="8Direction" id="3" name="Set speed" sid="7617251817765309" type="BASE">
-                                            <param id="0" name="Speed">BASE.MaxSpd*2</param>
+                                            <param id="0" name="Speed">BASE.MaxSpd*speedmod</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -539,11 +553,11 @@
                                         <condition behavior="8Direction" id="0" name="Is moving" sid="8778401525377584" type="BASE" />
                                     </conditions>
                                     <actions>
-                                        <action behavior="8Direction" id="4" name="Set max speed" sid="4573827824543" type="BASE">
-                                            <param id="0" name="Max Speed">BASE.MaxSpd*1.8</param>
+                                        <action behavior="8Direction" id="4" name="Set max speed" sid="6447077957419073" type="BASE">
+                                            <param id="0" name="Max Speed">BASE.MaxSpd*speedmod</param>
                                         </action>
-                                        <action behavior="8Direction" id="3" name="Set speed" sid="6399977553626466" type="BASE">
-                                            <param id="0" name="Speed">BASE.MaxSpd*2</param>
+                                        <action behavior="8Direction" id="3" name="Set speed" sid="2023612171462781" type="BASE">
+                                            <param id="0" name="Speed">BASE.MaxSpd*speedmod</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -602,11 +616,11 @@
                                         <condition behavior="8Direction" id="0" name="Is moving" sid="8856845614049584" type="BASE" />
                                     </conditions>
                                     <actions>
-                                        <action behavior="8Direction" id="4" name="Set max speed" sid="2872509513828906" type="BASE">
-                                            <param id="0" name="Max Speed">BASE.MaxSpd*1.8</param>
+                                        <action behavior="8Direction" id="4" name="Set max speed" sid="6345532944036281" type="BASE">
+                                            <param id="0" name="Max Speed">BASE.MaxSpd*speedmod</param>
                                         </action>
-                                        <action behavior="8Direction" id="3" name="Set speed" sid="9970992648681106" type="BASE">
-                                            <param id="0" name="Speed">BASE.MaxSpd*2</param>
+                                        <action behavior="8Direction" id="3" name="Set speed" sid="2999826144445571" type="BASE">
+                                            <param id="0" name="Speed">BASE.MaxSpd*speedmod</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -665,11 +679,11 @@
                                         <condition behavior="8Direction" id="0" name="Is moving" sid="9177103696378968" type="BASE" />
                                     </conditions>
                                     <actions>
-                                        <action behavior="8Direction" id="4" name="Set max speed" sid="8666310974576143" type="BASE">
-                                            <param id="0" name="Max Speed">BASE.MaxSpd*1.8</param>
+                                        <action behavior="8Direction" id="4" name="Set max speed" sid="5966767173727919" type="BASE">
+                                            <param id="0" name="Max Speed">BASE.MaxSpd*speedmod</param>
                                         </action>
-                                        <action behavior="8Direction" id="3" name="Set speed" sid="3837487959909243" type="BASE">
-                                            <param id="0" name="Speed">BASE.MaxSpd*2</param>
+                                        <action behavior="8Direction" id="3" name="Set speed" sid="1090324582653574" type="BASE">
+                                            <param id="0" name="Speed">BASE.MaxSpd*speedmod</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -707,7 +721,7 @@
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="6" name="Set speed" sid="2442380822456473" type="ARMS">
-                            <param id="0" name="Speed">20</param>
+                            <param id="0" name="Speed">35</param>
                         </action>
                         <action id="-10" name="Set value" sid="1989234173755645" type="BASE">
                             <param id="0" name="Instance variable">AttackTimer</param>
@@ -736,6 +750,8 @@
                 </action>
             </actions>
             <sub-events>
+                <variable constant="0" name="knockback" sid="2182048283018429" static="0" type="number">112</variable>
+                <variable constant="0" name="scale" sid="7200829327988247" static="0" type="number">0.85</variable>
                 <event-block sid="6037475033159032">
                     <conditions>
                         <condition id="1" name="Compare parameter" sid="5782588177580338" type="Function">
@@ -759,11 +775,14 @@
                         </action>
                         <action id="-10" name="Set value" sid="9812400571217281" type="Melee_Hitbox">
                             <param id="0" name="Instance variable">Knockback</param>
-                            <param id="1" name="Value">112</param>
+                            <param id="1" name="Value">knockback</param>
                         </action>
                         <action id="-10" name="Set value" sid="4367919240260509" type="Melee_Hitbox">
                             <param id="0" name="Instance variable">Damage</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="8942986910406097" type="Melee_Hitbox">
+                            <param id="0" name="Scale">scale</param>
                         </action>
                     </actions>
                 </event-block>
@@ -788,13 +807,16 @@
                         <action id="-8" name="Set angle" sid="9790721518689945" type="Melee_Hitbox">
                             <param id="0" name="Angle">90</param>
                         </action>
-                        <action id="-10" name="Set value" sid="5561453913282192" type="Melee_Hitbox">
-                            <param id="0" name="Instance variable">Knockback</param>
-                            <param id="1" name="Value">112</param>
-                        </action>
                         <action id="-10" name="Set value" sid="584008993293196" type="Melee_Hitbox">
                             <param id="0" name="Instance variable">Damage</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3290387123909069" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Knockback</param>
+                            <param id="1" name="Value">knockback</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="772870321554562" type="Melee_Hitbox">
+                            <param id="0" name="Scale">scale</param>
                         </action>
                     </actions>
                 </event-block>
@@ -819,13 +841,16 @@
                         <action id="-8" name="Set angle" sid="3307849110290792" type="Melee_Hitbox">
                             <param id="0" name="Angle">270</param>
                         </action>
-                        <action id="-10" name="Set value" sid="2853438561791618" type="Melee_Hitbox">
-                            <param id="0" name="Instance variable">Knockback</param>
-                            <param id="1" name="Value">112</param>
-                        </action>
                         <action id="-10" name="Set value" sid="4120024712468008" type="Melee_Hitbox">
                             <param id="0" name="Instance variable">Damage</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="6018635679147134" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Knockback</param>
+                            <param id="1" name="Value">knockback</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="6202180822646479" type="Melee_Hitbox">
+                            <param id="0" name="Scale">scale</param>
                         </action>
                     </actions>
                 </event-block>
@@ -850,13 +875,16 @@
                         <action id="-8" name="Set angle" sid="7683829056427878" type="Melee_Hitbox">
                             <param id="0" name="Angle">180</param>
                         </action>
-                        <action id="-10" name="Set value" sid="6932867322868524" type="Melee_Hitbox">
-                            <param id="0" name="Instance variable">Knockback</param>
-                            <param id="1" name="Value">112</param>
-                        </action>
                         <action id="-10" name="Set value" sid="1738805548557577" type="Melee_Hitbox">
                             <param id="0" name="Instance variable">Damage</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4875675491172665" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Knockback</param>
+                            <param id="1" name="Value">knockback</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="7927986671090792" type="Melee_Hitbox">
+                            <param id="0" name="Scale">scale</param>
                         </action>
                     </actions>
                 </event-block>
@@ -894,7 +922,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="300658347611883" type="BASE">
                             <param id="0" name="Instance variable">AttackTimer</param>
-                            <param id="1" name="Value">0.5</param>
+                            <param id="1" name="Value">0.2</param>
                         </action>
                     </actions>
                 </event-block>

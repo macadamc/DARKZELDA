@@ -392,9 +392,9 @@
                         <action behavior="Knockback" id="6" name="Set angle of motion" sid="2170805894512697" type="BASE">
                             <param id="0" name="Angle">angle(self.imagepointx(1),self.imagepointy(1),Breakable.imagepointx(1),Breakable.ImagePointY(1))-180</param>
                         </action>
-                        <action behavior="ScrollTo" id="0" name="Shake" sid="5757938189307797" type="Camera">
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="6191422907033217" type="Camera">
                             <param id="0" name="Magnitude">2</param>
-                            <param id="1" name="Duration">0.2</param>
+                            <param id="1" name="Duration">0.3</param>
                             <param id="2" name="Mode">0</param>
                         </action>
                     </actions>
