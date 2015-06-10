@@ -4357,6 +4357,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -4387,6 +4388,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -4417,6 +4419,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -4534,6 +4537,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -4564,6 +4568,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -4594,6 +4599,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -4624,6 +4630,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -4654,6 +4661,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -4843,6 +4851,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -5037,6 +5046,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -5105,6 +5115,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -5135,6 +5146,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -5247,6 +5259,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -5302,6 +5315,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -5332,6 +5346,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -5362,6 +5377,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -5392,6 +5408,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -5561,6 +5578,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -5591,6 +5609,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -5730,6 +5749,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -5760,6 +5780,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -5790,6 +5811,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -5820,6 +5842,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -5850,6 +5873,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -5880,6 +5904,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -5910,6 +5935,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -5940,6 +5966,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -5970,6 +5997,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -6000,6 +6028,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -6030,6 +6059,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -6060,6 +6090,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -6090,6 +6121,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -6120,6 +6152,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -6150,6 +6183,7 @@
                         <DontSpawnIF>Has_Sword</DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -6180,6 +6214,7 @@
                         <DontSpawnIF>Has_Bow</DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -6210,6 +6245,7 @@
                         <DontSpawnIF>Has_DashShoes</DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -6281,6 +6317,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -6390,6 +6427,7 @@
                         <DontSpawnIF>Has_FireCracker</DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -6420,6 +6458,7 @@
                         <DontSpawnIF>Has_Key_214</DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -6450,6 +6489,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -6480,6 +6520,7 @@
                         <DontSpawnIF>Has_Shield</DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -6807,6 +6848,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                         <SetANG>270</SetANG>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -6838,6 +6880,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                         <SetANG>270</SetANG>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -6869,6 +6912,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                         <Size>200</Size>
                         <R>5</R>
                         <G>5</G>
@@ -6904,6 +6948,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                         <SetANG>270</SetANG>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -6935,6 +6980,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                         <Size>200</Size>
                         <R>5</R>
                         <G>5</G>
@@ -7167,6 +7213,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -7276,6 +7323,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -7306,6 +7354,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                         <SetANG>270</SetANG>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -7337,6 +7386,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                         <Size>100</Size>
                         <R>5</R>
                         <G>5</G>
@@ -7623,6 +7673,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -7746,6 +7797,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -7776,6 +7828,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -7806,6 +7859,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -7836,6 +7890,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -7923,6 +7978,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                         <NPC_Has_Triggerzone>true</NPC_Has_Triggerzone>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -7954,6 +8010,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -7984,6 +8041,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                         <NPC_Has_Triggerzone>true</NPC_Has_Triggerzone>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
@@ -8134,6 +8192,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -8243,6 +8302,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -8298,6 +8358,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -8328,6 +8389,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -8358,6 +8420,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -8388,6 +8451,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -8418,6 +8482,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -8448,6 +8513,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -8478,6 +8544,7 @@
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
+                        <TimeofDay>-1</TimeofDay>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -9627,7 +9694,7 @@
                         <y>100</y>
                         <z>0</z>
                         <width>248</width>
-                        <height>56</height>
+                        <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -9668,7 +9735,7 @@
                         <y>104</y>
                         <z>0</z>
                         <width>240</width>
-                        <height>48</height>
+                        <height>56</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
