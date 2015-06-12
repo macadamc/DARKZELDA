@@ -102,6 +102,19 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="2304929317098521">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="2461981590190868" type="Enemies">
+                                            <param id="0" name="Instance variable">isBoss</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Add key" sid="9640007167761724" type="GameStats">
+                                            <param id="0" name="Key">&quot;KilledBoss_&quot;&amp;Enemies.spawnerUID</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
                         <event-block sid="3252894070329234">

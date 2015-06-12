@@ -335,6 +335,7 @@
                         <ProjectileType></ProjectileType>
                         <spawnerUID>-1</spawnerUID>
                         <Phase></Phase>
+                        <isBoss>false</isBoss>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                         <LeaveBloodTrail>false</LeaveBloodTrail>
@@ -600,6 +601,7 @@
                         <ProjectileType></ProjectileType>
                         <spawnerUID>-1</spawnerUID>
                         <Phase></Phase>
+                        <isBoss>false</isBoss>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                         <LeaveBloodTrail>false</LeaveBloodTrail>
@@ -679,6 +681,7 @@
                         <ProjectileType></ProjectileType>
                         <spawnerUID>-1</spawnerUID>
                         <Phase></Phase>
+                        <isBoss>false</isBoss>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                         <HasLight>false</HasLight>
@@ -792,6 +795,7 @@
                         <ProjectileType></ProjectileType>
                         <spawnerUID>-1</spawnerUID>
                         <Phase></Phase>
+                        <isBoss>false</isBoss>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                         <LeaveBloodTrail>false</LeaveBloodTrail>
@@ -1021,6 +1025,7 @@
                         <ProjectileType></ProjectileType>
                         <spawnerUID>-1</spawnerUID>
                         <Phase></Phase>
+                        <isBoss>false</isBoss>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                         <LeaveBloodTrail>false</LeaveBloodTrail>
@@ -1297,6 +1302,7 @@
                         <ProjectileType>Fireball</ProjectileType>
                         <spawnerUID>-1</spawnerUID>
                         <Phase>Fireball</Phase>
+                        <isBoss>false</isBoss>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                         <LeaveBloodTrail>false</LeaveBloodTrail>
@@ -1376,6 +1382,7 @@
                         <ProjectileType>Ice</ProjectileType>
                         <spawnerUID>-1</spawnerUID>
                         <Phase></Phase>
+                        <isBoss>false</isBoss>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                         <LeaveBloodTrail>false</LeaveBloodTrail>
@@ -1455,6 +1462,7 @@
                         <ProjectileType></ProjectileType>
                         <spawnerUID>-1</spawnerUID>
                         <Phase>spit</Phase>
+                        <isBoss>false</isBoss>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                         <LeaveBloodTrail>false</LeaveBloodTrail>

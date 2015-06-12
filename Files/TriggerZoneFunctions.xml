@@ -38,4 +38,12 @@
 			Target="6">
 		</GhostState>
 	</Object>
+	<Object Name="KilledBoss">
+		<Function Name="OpenUnlockable"
+			Params="723"
+			Conditions="KilledBoss_566 BossBattle"></Function>
+		<Function Name="RemoveGameStat"
+			Params="BossBattle"
+			Conditions="KilledBoss_566 BossBattle"></Function>
+	</Object>
 </xml>

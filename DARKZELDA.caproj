@@ -2488,6 +2488,9 @@
         <object-folder name="SPAWNER">
             <object-type name="ENEMY_SPAWNER" sid="1222589453992186">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="BossSpawn" sid="1695576516072879" type="boolean" />
+                </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7282263611167773" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -3263,6 +3266,7 @@
                 <instance-variable name="ProjectileType" sid="5051754548617732" type="string" />
                 <instance-variable name="spawnerUID" sid="1359232653356904" type="number" />
                 <instance-variable name="Phase" sid="5453263384239798" type="string" />
+                <instance-variable name="isBoss" sid="9313676613449936" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Knockback" sid="5869555695933761">

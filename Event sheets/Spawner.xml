@@ -244,6 +244,20 @@
                                                                             <param id="1" name="Value">1</param>
                                                                         </action>
                                                                     </actions>
+                                                                    <sub-events>
+                                                                        <event-block sid="2630841240828558">
+                                                                            <conditions>
+                                                                                <condition id="-8" name="Is boolean instance variable set" sid="3482790289755528" type="ENEMY_SPAWNER">
+                                                                                    <param id="0" name="Instance variable">BossSpawn</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action id="-14" name="Toggle boolean" sid="6061062528409224" type="Mutant">
+                                                                                    <param id="0" name="Instance variable">isBoss</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                    </sub-events>
                                                                 </event-block>
                                                                 <event-block sid="3410984422122414">
                                                                     <conditions>
