@@ -43,6 +43,7 @@
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects>
+        <effect author="Scirra" id="grayscale">Grayscale</effect>
         <effect author="Scirra" id="setcolor">Set color</effect>
         <effect author="Scirra" id="tint">Tint</effect>
     </used-effects>
@@ -54,7 +55,7 @@
         <height>176</height>
     </window-size>
     <pixel-rounding>1</pixel-rounding>
-    <preview-effects>1</preview-effects>
+    <preview-effects>0</preview-effects>
     <first-layout>Demo</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
@@ -3644,6 +3645,8 @@
         <file name="stepstone_5.ogg" />
         <file name="fireburning.m4a" />
         <file name="fireburning.ogg" />
+        <file name="click3.m4a" />
+        <file name="click3.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="wind.m4a" />

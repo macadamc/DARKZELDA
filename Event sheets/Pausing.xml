@@ -75,6 +75,32 @@
                             <param id="0" name="Object">Sprite</param>
                             <param id="1" name="Time scale">1.0</param>
                         </action>
+                        <action id="-30" name="Set layer effect enabled" sid="480663873491778" type="System">
+                            <param id="0" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="1" name="Mode">1</param>
+                            <param id="2" name="Effect">&quot;Grayscale&quot;</param>
+                        </action>
+                        <action id="-30" name="Set layer effect enabled" sid="6595752766804239" type="System">
+                            <param id="0" name="Layer">&quot;OBSTACLE&quot;</param>
+                            <param id="1" name="Mode">1</param>
+                            <param id="2" name="Effect">&quot;Grayscale&quot;</param>
+                        </action>
+                        <action id="-30" name="Set layer effect enabled" sid="518403818792541" type="System">
+                            <param id="0" name="Layer">&quot;OBSTACLE2&quot;</param>
+                            <param id="1" name="Mode">1</param>
+                            <param id="2" name="Effect">&quot;Grayscale&quot;</param>
+                        </action>
+                        <action id="-30" name="Set layer effect enabled" sid="3824415422351071" type="System">
+                            <param id="0" name="Layer">&quot;BG&quot;</param>
+                            <param id="1" name="Mode">1</param>
+                            <param id="2" name="Effect">&quot;Grayscale&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="6272236259514211" type="Audio">
+                            <param id="0" name="Audio file">click3</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">SoundFxLevel</param>
+                            <param id="1" name="Tag (optional)">&quot;openinv&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="3110564691357265">
@@ -101,6 +127,32 @@
                         <action id="-4" name="Set layer visible" sid="1094366227276495" type="System">
                             <param id="0" name="Layer">&quot;PAUSE&quot;</param>
                             <param id="1" name="Visibility">0</param>
+                        </action>
+                        <action id="-30" name="Set layer effect enabled" sid="4788388361566905" type="System">
+                            <param id="0" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="1" name="Mode">0</param>
+                            <param id="2" name="Effect">&quot;Grayscale&quot;</param>
+                        </action>
+                        <action id="-30" name="Set layer effect enabled" sid="6592207653819707" type="System">
+                            <param id="0" name="Layer">&quot;OBSTACLE&quot;</param>
+                            <param id="1" name="Mode">0</param>
+                            <param id="2" name="Effect">&quot;Grayscale&quot;</param>
+                        </action>
+                        <action id="-30" name="Set layer effect enabled" sid="2355341510973206" type="System">
+                            <param id="0" name="Layer">&quot;OBSTACLE2&quot;</param>
+                            <param id="1" name="Mode">0</param>
+                            <param id="2" name="Effect">&quot;Grayscale&quot;</param>
+                        </action>
+                        <action id="-30" name="Set layer effect enabled" sid="4403405600511372" type="System">
+                            <param id="0" name="Layer">&quot;BG&quot;</param>
+                            <param id="1" name="Mode">0</param>
+                            <param id="2" name="Effect">&quot;Grayscale&quot;</param>
+                        </action>
+                        <action id="0" name="Play" sid="4114502086359837" type="Audio">
+                            <param id="0" name="Audio file">click3</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">SoundFxLevel</param>
+                            <param id="1" name="Tag (optional)">&quot;closeinv&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -270,6 +322,12 @@
                                                     <param id="0" name="Variable">MenuMoved</param>
                                                     <param id="1" name="Value">1</param>
                                                 </action>
+                                                <action id="0" name="Play" sid="5407806295135312" type="Audio">
+                                                    <param id="0" name="Audio file">click3</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">SoundFxLevel</param>
+                                                    <param id="1" name="Tag (optional)">&quot;move&quot;</param>
+                                                </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
@@ -300,6 +358,12 @@
                                                 <action id="-9" name="Set value" sid="1755382527436333" type="System">
                                                     <param id="0" name="Variable">MenuMoved</param>
                                                     <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="0" name="Play" sid="3857268126003034" type="Audio">
+                                                    <param id="0" name="Audio file">click3</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">SoundFxLevel</param>
+                                                    <param id="1" name="Tag (optional)">&quot;move&quot;</param>
                                                 </action>
                                             </actions>
                                         </event-block>
@@ -332,6 +396,12 @@
                                                     <param id="0" name="Variable">MenuMoved</param>
                                                     <param id="1" name="Value">1</param>
                                                 </action>
+                                                <action id="0" name="Play" sid="2624240991277057" type="Audio">
+                                                    <param id="0" name="Audio file">click3</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">SoundFxLevel</param>
+                                                    <param id="1" name="Tag (optional)">&quot;move&quot;</param>
+                                                </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
@@ -363,6 +433,12 @@
                                                     <param id="0" name="Variable">MenuMoved</param>
                                                     <param id="1" name="Value">1</param>
                                                 </action>
+                                                <action id="0" name="Play" sid="3145297763936449" type="Audio">
+                                                    <param id="0" name="Audio file">click3</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">SoundFxLevel</param>
+                                                    <param id="1" name="Tag (optional)">&quot;move&quot;</param>
+                                                </action>
                                             </actions>
                                         </event-block>
                                     </sub-events>
@@ -374,11 +450,18 @@
                                             <param id="1" name="Comparison">4</param>
                                             <param id="2" name="Value">0</param>
                                         </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="5998456706371666" type="System" />
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Add key" sid="772103576513657" type="GameStats">
                                             <param id="0" name="Key">&quot;Item1&quot;</param>
                                             <param id="1" name="Value">Sprite.Selected</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="4531686988323111" type="Audio">
+                                            <param id="0" name="Audio file">click3</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">SoundFxLevel</param>
+                                            <param id="1" name="Tag (optional)">&quot;move&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -389,11 +472,18 @@
                                             <param id="1" name="Comparison">4</param>
                                             <param id="2" name="Value">0</param>
                                         </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="9327706016545009" type="System" />
                                     </conditions>
                                     <actions>
                                         <action id="0" name="Add key" sid="4456238793935827" type="GameStats">
                                             <param id="0" name="Key">&quot;Item2&quot;</param>
                                             <param id="1" name="Value">Sprite.Selected</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="3660277671917269" type="Audio">
+                                            <param id="0" name="Audio file">click3</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">SoundFxLevel</param>
+                                            <param id="1" name="Tag (optional)">&quot;move&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>

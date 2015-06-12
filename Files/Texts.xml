@@ -21,4 +21,7 @@
 	<Object 
 		Name="BoomerangPickup"
 		Data="You pickup a boomerang! Equip it in your inventory."></Object>
+	<Object 
+		Name="ShieldPickup"
+		Data="You pickup a shield! Equip it in your inventory."></Object>
 </xml>

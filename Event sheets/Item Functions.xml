@@ -438,7 +438,7 @@
                 </action>
             </actions>
             <sub-events>
-                <variable constant="0" name="speedmod" sid="1345452562681849" static="0" type="number">2.5</variable>
+                <variable constant="0" name="speedmod" sid="1345452562681849" static="0" type="number">2.2</variable>
                 <event-block sid="8640889705487349">
                     <conditions>
                         <condition id="1" name="Compare parameter" sid="6596224272817533" type="Function">
@@ -922,7 +922,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="300658347611883" type="BASE">
                             <param id="0" name="Instance variable">AttackTimer</param>
-                            <param id="1" name="Value">0.2</param>
+                            <param id="1" name="Value">0.1</param>
                         </action>
                     </actions>
                 </event-block>

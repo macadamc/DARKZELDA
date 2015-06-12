@@ -1794,8 +1794,112 @@
                                                             <sub-events>
                                                                 <variable constant="0" name="summonX" sid="2497006389940722" static="0" type="number">0</variable>
                                                                 <variable constant="0" name="summonY" sid="3877048891604707" static="0" type="number">0</variable>
+                                                                <event-block sid="66758334645699">
+                                                                    <conditions>
+                                                                        <condition behavior="LineOfSight" id="1" name="Has LOS to position" sid="2566343987979776" type="Enemies">
+                                                                            <param id="0" name="X">BASE.X</param>
+                                                                            <param id="1" name="Y">BASE.Y</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-9" name="Set value" sid="7133743830838441" type="System">
+                                                                            <param id="0" name="Variable">summonX</param>
+                                                                            <param id="1" name="Value">base.x+random(-32,32)</param>
+                                                                        </action>
+                                                                        <action id="-9" name="Set value" sid="5730998349129952" type="System">
+                                                                            <param id="0" name="Variable">summonY</param>
+                                                                            <param id="1" name="Value">base.y+random(-32,32)</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                    <sub-events>
+                                                                        <event-block sid="975112171260272">
+                                                                            <conditions>
+                                                                                <condition behavior="LineOfSight" id="1" name="Has LOS to position" sid="6698364782751966" type="Enemies">
+                                                                                    <param id="0" name="X">summonX</param>
+                                                                                    <param id="1" name="Y">summonY</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action id="-10" name="Set value" sid="6247198321999234" type="Enemies">
+                                                                                    <param id="0" name="Instance variable">Timer</param>
+                                                                                    <param id="1" name="Value">random(2,4)</param>
+                                                                                </action>
+                                                                                <action id="4" name="Set animation" sid="8679319504430411" type="Enemies">
+                                                                                    <param id="0" name="Animation">&quot;Attack&quot;</param>
+                                                                                    <param id="1" name="From">1</param>
+                                                                                </action>
+                                                                                <action id="-16" name="Wait" sid="2884025374010741" type="System">
+                                                                                    <param id="0" name="Seconds">0.3</param>
+                                                                                </action>
+                                                                                <action id="-3" name="Create object" sid="8499806905344322" type="System">
+                                                                                    <param id="0" name="Object to create">Mutant2</param>
+                                                                                    <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                                                    <param id="2" name="X">summonX</param>
+                                                                                    <param id="3" name="Y">summonY</param>
+                                                                                </action>
+                                                                                <action behavior="Flash" id="0" name="Flash" sid="7331263954340711" type="Mutant2">
+                                                                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                                                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                                                                    <param id="2" name="Duration">0.5</param>
+                                                                                </action>
+                                                                                <action id="0" name="Call function" sid="8173791462853851" type="Function">
+                                                                                    <param id="0" name="Name">&quot;Explosion&quot;</param>
+                                                                                    <param id="1" name="Parameter {n}">summonX{###}summonY{###}&quot;EnemySummon&quot;</param>
+                                                                                </action>
+                                                                                <action behavior="Movement" id="10" name="Push out solid" sid="1866771508025165" type="Mutant2">
+                                                                                    <param id="0" name="Direction">1</param>
+                                                                                </action>
+                                                                                <action id="0" name="Spawn another object" sid="313830634610731" type="Mutant2">
+                                                                                    <param id="0" name="Object">Particles2</param>
+                                                                                    <param id="1" name="Layer">&quot;BG&quot;</param>
+                                                                                    <param id="2" name="Image point">1</param>
+                                                                                </action>
+                                                                                <action id="0" name="Spawn another object" sid="7934905301906083" type="Enemies">
+                                                                                    <param id="0" name="Object">Particles2</param>
+                                                                                    <param id="1" name="Layer">&quot;BG&quot;</param>
+                                                                                    <param id="2" name="Image point">1</param>
+                                                                                </action>
+                                                                                <action id="-10" name="Set value" sid="5927246522313636" type="Mutant2">
+                                                                                    <param id="0" name="Instance variable">Zone1</param>
+                                                                                    <param id="1" name="Value">CurZone</param>
+                                                                                </action>
+                                                                                <action behavior="LineOfSight" id="2" name="Add obstacle" sid="9069823085058702" type="Mutant2">
+                                                                                    <param id="0" name="Obstacle">ObstacleTilemap</param>
+                                                                                </action>
+                                                                                <action behavior="LineOfSight" id="2" name="Add obstacle" sid="205790564138934" type="Mutant2">
+                                                                                    <param id="0" name="Obstacle">Rock</param>
+                                                                                </action>
+                                                                                <action id="-10" name="Set value" sid="7899013527330441" type="Mutant2">
+                                                                                    <param id="0" name="Instance variable">spawnerUID</param>
+                                                                                    <param id="1" name="Value">-1</param>
+                                                                                </action>
+                                                                                <action id="-10" name="Set value" sid="6669307088093468" type="Enemies">
+                                                                                    <param id="0" name="Instance variable">Phase</param>
+                                                                                    <param id="1" name="Value">choose(&quot;Fireball&quot;,&quot;SummonCrawler&quot;)</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                        <event-block sid="6562532918093892">
+                                                                            <conditions>
+                                                                                <condition id="-22" name="Else" sid="7372408475108805" type="System" />
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action id="-9" name="Set value" sid="33757842444527" type="System">
+                                                                                    <param id="0" name="Variable">summonX</param>
+                                                                                    <param id="1" name="Value">base.x+random(-32,32)</param>
+                                                                                </action>
+                                                                                <action id="-9" name="Set value" sid="906485596363966" type="System">
+                                                                                    <param id="0" name="Variable">summonY</param>
+                                                                                    <param id="1" name="Value">base.y+random(-32,32)</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                    </sub-events>
+                                                                </event-block>
                                                                 <event-block sid="3894762351327248">
-                                                                    <conditions />
+                                                                    <conditions>
+                                                                        <condition id="-22" name="Else" sid="3589140510701199" type="System" />
+                                                                    </conditions>
                                                                     <actions>
                                                                         <action id="-9" name="Set value" sid="9792655848783739" type="System">
                                                                             <param id="0" name="Variable">summonX</param>
@@ -1831,6 +1935,11 @@
                                                                                     <param id="1" name="Layer">&quot;OBJECT&quot;</param>
                                                                                     <param id="2" name="X">summonX</param>
                                                                                     <param id="3" name="Y">summonY</param>
+                                                                                </action>
+                                                                                <action behavior="Flash" id="0" name="Flash" sid="6896228884666738" type="Mutant2">
+                                                                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                                                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                                                                    <param id="2" name="Duration">0.5</param>
                                                                                 </action>
                                                                                 <action id="0" name="Call function" sid="6584577399430203" type="Function">
                                                                                     <param id="0" name="Name">&quot;Explosion&quot;</param>
@@ -1874,13 +1983,13 @@
                                                                                 <condition id="-22" name="Else" sid="3690876827197384" type="System" />
                                                                             </conditions>
                                                                             <actions>
-                                                                                <action id="-9" name="Set value" sid="3836062810521258" type="System">
+                                                                                <action id="-9" name="Set value" sid="8140708253511917" type="System">
                                                                                     <param id="0" name="Variable">summonX</param>
-                                                                                    <param id="1" name="Value">Enemies.x+random(-32,32)</param>
+                                                                                    <param id="1" name="Value">Enemies.x+random(-64,64)</param>
                                                                                 </action>
-                                                                                <action id="-9" name="Set value" sid="2814892811792916" type="System">
+                                                                                <action id="-9" name="Set value" sid="4494839582178597" type="System">
                                                                                     <param id="0" name="Variable">summonY</param>
-                                                                                    <param id="1" name="Value">Enemies.Y+random(-32,32)</param>
+                                                                                    <param id="1" name="Value">Enemies.Y+random(-64,64)</param>
                                                                                 </action>
                                                                             </actions>
                                                                         </event-block>
@@ -2616,7 +2725,7 @@
                                 </action>
                                 <action behavior="Knockback" id="2" name="Set speed" sid="5038441787485481" type="BASE">
                                     <param id="0" name="Which">0</param>
-                                    <param id="1" name="Speed">48</param>
+                                    <param id="1" name="Speed">32+(Enemies.Movement.Speed/2)</param>
                                 </action>
                                 <action behavior="Knockback" id="6" name="Set angle of motion" sid="988672128086114" type="BASE">
                                     <param id="0" name="Angle">angle(self.imagepointx(1),self.imagepointy(1),enemies.imagepointx(1),enemies.ImagePointY(1))-180</param>
@@ -2693,10 +2802,6 @@
                                         </action>
                                         <action behavior="Knockback" id="6" name="Set angle of motion" sid="7075886359028259" type="Enemies">
                                             <param id="0" name="Angle">(angle(self.X,self.y,BASE.X,BASE.y)-180)+random(-4,4)</param>
-                                        </action>
-                                        <action behavior="Movement" id="2" name="Set speed" sid="2352430707799649" type="Enemies">
-                                            <param id="0" name="Which">0</param>
-                                            <param id="1" name="Speed">self.Movement.Speed/1.5</param>
                                         </action>
                                         <action id="-9" name="Destroy" sid="1563904110803115" type="Melee_Hitbox" />
                                     </actions>
@@ -2965,7 +3070,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="2877209387044848" type="Function">
+                                <action disabled="1" id="0" name="Call function" sid="2877209387044848" type="Function">
                                     <param id="0" name="Name">&quot;bloodhit&quot;</param>
                                     <param id="1" name="Parameter {n}">Function.Param(0){###}Function.Param(1){###}Function.Param(2){###}Function.Param(3){###}Function.Param(4){###}Function.Param(5)</param>
                                 </action>
@@ -2973,7 +3078,7 @@
                                     <param id="0" name="Time scale">0.2</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="4380499454929479" type="System">
-                                    <param id="0" name="Seconds">0.015</param>
+                                    <param id="0" name="Seconds">0.02</param>
                                 </action>
                                 <action id="-13" name="Set time scale" sid="6271595648381605" type="System">
                                     <param id="0" name="Time scale">1</param>
