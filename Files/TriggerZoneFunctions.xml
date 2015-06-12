@@ -1,5 +1,6 @@
 <xml>
 	<Object Name="Template">
+		<Comment>Heres a spot you can write about the triggerzone functions.</Comment>
 		<Function Name="SomeFunction"
 			Params="Optional Params seperated ba a space"
 			Conditions="!Optional Flags Seperated By A Space"></Function>
@@ -39,6 +40,7 @@
 		</GhostState>
 	</Object>
 	<Object Name="KilledBoss">
+		<Comment>after we kill the boss the first time we need to unlock the door and end the Battle by removing BossBattle from the Gamestats.</Comment>
 		<Function Name="OpenUnlockable"
 			Params="723"
 			Conditions="KilledBoss_566 BossBattle"></Function>

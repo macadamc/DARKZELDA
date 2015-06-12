@@ -7267,7 +7267,7 @@
                         <Deceleration>500</Deceleration>
                         <MovementType>Walk</MovementType>
                         <Shadow>Giant</Shadow>
-                        <HP>20</HP>
+                        <HP>1</HP>
                         <Explode>true</Explode>
                         <Projectile>false</Projectile>
                         <hit>false</hit>
