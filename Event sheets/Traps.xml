@@ -8,6 +8,9 @@
                 <event-block sid="8029757770823326">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="2459627329402739" type="System" />
+                        <condition id="-11" name="For Each" sid="7272138006283473" type="System">
+                            <param id="0" name="Object">Zone</param>
+                        </condition>
                         <condition id="1" name="Is overlapping another object" sid="5862218981629558" type="Zone">
                             <param id="0" name="Object">CameraZone</param>
                         </condition>

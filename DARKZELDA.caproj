@@ -526,10 +526,10 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="shadow" x="0.5" y="0.916667" />
                             <collision-poly>
-                                <point x="0.75" y="1" />
-                                <point x="0.25" y="1" />
-                                <point x="0.25" y="0.416667" />
-                                <point x="0.75" y="0.416667" />
+                                <point x="0.666667" y="1" />
+                                <point x="0.333333" y="1" />
+                                <point x="0.333333" y="0.416667" />
+                                <point x="0.666667" y="0.416667" />
                             </collision-poly>
                         </frame>
                     </animation>
