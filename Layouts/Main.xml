@@ -7961,8 +7961,8 @@
                     <behavior-instances>
                         <behavior-instance type="NpcMovement">
                             <properties>
-                                <stepping-mode>Horizontal then vertical</stepping-mode>
-                                <pixels-per-step>1</pixels-per-step>
+                                <stepping-mode>Linear</stepping-mode>
+                                <pixels-per-step>4</pixels-per-step>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -7977,7 +7977,7 @@
                                 <rotate-speed>0</rotate-speed>
                                 <rotate-object>No</rotate-object>
                                 <diagonals>Disabled</diagonals>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>

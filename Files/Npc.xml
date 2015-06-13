@@ -1,7 +1,8 @@
 <xml>
 	<Object Name="NpcTestState">
 		<Sprite Name= "man"></Sprite>
-		<NpcState Name= "Npc_RandomWalk"></NpcState>
+		<NpcState Name= "Npc_RandomWalk"
+			Bounds= "572"></NpcState>
 		<Function Name= "ShowTextBox"
 			Params="bottom;Test"
 			Conditions= "!GhostPath">

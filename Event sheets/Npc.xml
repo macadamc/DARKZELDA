@@ -8,16 +8,16 @@
                 <condition id="-18" name="On created" sid="8193690276268232" type="NPC" />
             </conditions>
             <actions>
-                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="1513694024931322" type="NPC">
+                <action behavior="Pathfinding" disabled="1" id="5" name="Add obstacle" sid="1513694024931322" type="NPC">
                     <param id="0" name="Obstacle">ObstacleTilemap</param>
                 </action>
-                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="8366588383538456" type="NPC">
+                <action behavior="Pathfinding" disabled="1" id="5" name="Add obstacle" sid="8366588383538456" type="NPC">
                     <param id="0" name="Obstacle">Tilemap</param>
                 </action>
-                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="7674294875611568" type="NPC">
+                <action behavior="Pathfinding" disabled="1" id="5" name="Add obstacle" sid="7674294875611568" type="NPC">
                     <param id="0" name="Obstacle">Solid</param>
                 </action>
-                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="2830932643147926" type="NPC">
+                <action behavior="Pathfinding" disabled="1" id="5" name="Add obstacle" sid="2830932643147926" type="NPC">
                     <param id="0" name="Obstacle">Unlockable</param>
                 </action>
             </actions>
@@ -116,7 +116,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-group description="" sid="6463054522514902" title="Npc Pathfinding">
+        <event-group description="" disabled="1" sid="6463054522514902" title="Npc Pathfinding">
             <sub-events>
                 <event-block sid="4763641466742872">
                     <conditions>

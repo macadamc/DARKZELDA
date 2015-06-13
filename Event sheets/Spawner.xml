@@ -1349,6 +1349,9 @@
                                                                 <condition id="-8" name="Is boolean instance variable set" sid="6035556002970801" type="Npc_Spawner">
                                                                     <param id="0" name="Instance variable">NPC_Has_Triggerzone</param>
                                                                 </condition>
+                                                                <condition id="-14" name="Pick by unique ID" sid="579361972390418" type="NPCData">
+                                                                    <param id="0" name="Unique ID">NpcBase.DataUID</param>
+                                                                </condition>
                                                             </conditions>
                                                             <actions>
                                                                 <action id="-3" name="Create object" sid="4807867847884882" type="System">
@@ -1433,6 +1436,7 @@
                                                                                     </conditions>
                                                                                     <actions />
                                                                                     <sub-events>
+                                                                                        <comment>..</comment>
                                                                                         <event-block sid="1176191612661814">
                                                                                             <conditions>
                                                                                                 <condition id="-8" name="Compare two values" sid="4974157272828744" type="System">

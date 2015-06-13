@@ -174,7 +174,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="1214827864364285">
+        <event-block disabled="1" sid="1214827864364285">
             <conditions>
                 <condition id="0" name="On function" sid="3239977503555886" type="Function">
                     <param id="0" name="Name">&quot;Npc_Move1&quot;</param>
@@ -466,7 +466,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="5987078465959126">
+        <event-block disabled="1" sid="5987078465959126">
             <conditions>
                 <condition id="0" name="On function" sid="6564671941010253" type="Function">
                     <param id="0" name="Name">&quot;Npc_RandomWalk&quot;</param>
@@ -483,7 +483,7 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="7059938272094139">
+                <event-block disabled="1" sid="7059938272094139">
                     <conditions>
                         <condition id="3" inverted="1" name="Has key" sid="972631647405931" type="NPCData">
                             <param id="0" name="Key">&quot;StateConstructor&quot;</param>
@@ -509,7 +509,7 @@
                     </actions>
                 </event-block>
                 <comment>we ad the ranom x and y in this event beacuse we delete them later in this state so next tick it finds a new random position.</comment>
-                <event-block sid="6810581966355864">
+                <event-block disabled="1" sid="6810581966355864">
                     <conditions>
                         <condition id="3" inverted="1" name="Has key" sid="5800137367260807" type="NPCData">
                             <param id="0" name="Key">&quot;walkToX&quot;</param>
@@ -530,7 +530,7 @@
                     </actions>
                 </event-block>
                 <comment>Has No Path</comment>
-                <event-block sid="3277864495060578">
+                <event-block disabled="1" sid="3277864495060578">
                     <conditions>
                         <condition id="0" name="Compare value" sid="8955033701664706" type="NPCData">
                             <param id="0" name="Key">&quot;hasPathfindingPath&quot;</param>
@@ -541,7 +541,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="4312430502141125">
+                        <event-block disabled="1" sid="4312430502141125">
                             <conditions>
                                 <condition id="3" name="Has key" sid="7623281967704721" type="NPCData">
                                     <param id="0" name="Key">&quot;walkToX&quot;</param>
@@ -564,7 +564,7 @@
                     </sub-events>
                 </event-block>
                 <comment>Has Found Path</comment>
-                <event-block sid="9848888358304456">
+                <event-block disabled="1" sid="9848888358304456">
                     <conditions>
                         <condition id="-22" name="Else" sid="751265350852076" type="System" />
                         <condition id="0" name="Compare value" sid="449121067335696" type="NPCData">
@@ -576,7 +576,7 @@
                     <actions />
                     <sub-events>
                         <comment>if the npc is at the current node in the path then incement the cNode</comment>
-                        <event-block sid="2408469186931555">
+                        <event-block disabled="1" sid="2408469186931555">
                             <conditions>
                                 <condition id="-21" name="Is between values" sid="2766901953616258" type="System">
                                     <param id="0" name="Value">NPC.X</param>
@@ -597,7 +597,7 @@
                             </actions>
                         </event-block>
                         <comment>if the Npc has Arrived at its Destionation then we  basicly zero out its state and start again.</comment>
-                        <event-block sid="4269589562406942">
+                        <event-block disabled="1" sid="4269589562406942">
                             <conditions>
                                 <condition id="0" name="Compare value" sid="8793163989027458" type="NPCData">
                                     <param id="0" name="Key">&quot;cNode&quot;</param>
@@ -629,7 +629,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="8947106985687198">
+                        <event-block disabled="1" sid="8947106985687198">
                             <conditions />
                             <actions>
                                 <action id="0" name="Call function" sid="5478971688997011" type="Function">
@@ -641,7 +641,7 @@
                     </sub-events>
                 </event-block>
                 <comment>Is Looking for path</comment>
-                <event-block sid="3739727363554663">
+                <event-block disabled="1" sid="3739727363554663">
                     <conditions>
                         <condition id="-22" name="Else" sid="4402009473458145" type="System" />
                         <condition id="0" name="Compare value" sid="8713364436584617" type="NPCData">
@@ -652,7 +652,7 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="1517853211141973">
+                        <event-block disabled="1" sid="1517853211141973">
                             <conditions>
                                 <condition id="0" name="Compare value" sid="8053086679199056" type="NPCData">
                                     <param id="0" name="Key">&quot;Timeout&quot;</param>
@@ -667,7 +667,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="9486192211611104">
+                        <event-block disabled="1" sid="9486192211611104">
                             <conditions>
                                 <condition id="-22" name="Else" sid="1629678306599469" type="System" />
                             </conditions>
@@ -695,7 +695,7 @@
                     </sub-events>
                 </event-block>
                 <comment>Was looking for path and there isnt one</comment>
-                <event-block sid="4254875191638027">
+                <event-block disabled="1" sid="4254875191638027">
                     <conditions>
                         <condition id="-22" name="Else" sid="5642219214892835" type="System" />
                         <condition id="0" name="Compare value" sid="6188464178461738" type="NPCData">
@@ -722,6 +722,85 @@
                         </action>
                         <action id="2" name="Delete key" sid="6233400189573139" type="NPCData">
                             <param id="0" name="Key">&quot;walkToY&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="7581266998332089">
+            <conditions>
+                <condition id="0" name="On function" sid="1318879948645437" type="Function">
+                    <param id="0" name="Name">&quot;Npc_RandomWalk&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="5098427474880874" type="NPC">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="7011273314507722" type="NPCData">
+                    <param id="0" name="Unique ID">NPC.DataUID</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="4917367211993078" type="FSM">
+                    <param id="0" name="Unique ID">NPC.FSM_UID</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block disabled="1" sid="6751157035377788">
+                    <conditions>
+                        <condition id="3" inverted="1" name="Has key" sid="8265852890350702" type="NPCData">
+                            <param id="0" name="Key">&quot;StateConstructor&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="7894823532334613" type="NPCData">
+                            <param id="0" name="Key">&quot;StateConstructor&quot;</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>pick a random spot in a list of camrea zones. delimited by a space.</comment>
+                <event-block sid="8498886893192524">
+                    <conditions>
+                        <condition id="3" inverted="1" name="Has key" sid="6524262708487622" type="NPCData">
+                            <param id="0" name="Key">&quot;walkToX&quot;</param>
+                        </condition>
+                        <condition id="3" inverted="1" name="Has key" sid="8707239954407465" type="NPCData">
+                            <param id="0" name="Key">&quot;walkToY&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <comment>This event picks a random object from the Bounds attribute in the npcState and then finds a random spot in it and sets some values to move to</comment>
+                        <event-block sid="3504220349938657">
+                            <conditions>
+                                <condition id="3" name="Has key" sid="2904999199054925" type="NPCData">
+                                    <param id="0" name="Key">&quot;Bounds&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="3431943118018854" type="PathZone">
+                                    <param id="0" name="Unique ID">int(tokenat(NpcData.Get(&quot;Bounds&quot;),random(tokencount(NpcData.Get(&quot;Bounds&quot;),&quot; &quot;)-1),&quot; &quot;))</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="3804687873096314" type="NPCData">
+                                    <param id="0" name="Key">&quot;walkToX&quot;</param>
+                                    <param id="1" name="Value">int(random(PathZone.BBoxLeft, PathZone.BBoxRight))</param>
+                                </action>
+                                <action id="0" name="Add key" sid="757268940205025" type="NPCData">
+                                    <param id="0" name="Key">&quot;walkToY&quot;</param>
+                                    <param id="1" name="Value">int(random(PathZone.BBoxTop, PathZone.BBoxBottom))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>if we have a random target then we can try to move to it.</comment>
+                <event-block sid="1826300374561288">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="9402395454568926" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="9606818552388406" type="Function">
+                            <param id="0" name="Name">&quot;Npc_Move&quot;</param>
+                            <param id="1" name="Parameter {n}">NPCData.Get(&quot;moveToX&quot;){###}NPCData.Get(&quot;moveToY&quot;){###}NPC.UID</param>
                         </action>
                     </actions>
                 </event-block>
