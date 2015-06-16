@@ -1828,14 +1828,32 @@
                     <animation framecount="1" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="9893250363840864" speed="3">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Imagepoint 1" x="0.666667" y="0.833333" />
+                            <collision-poly>
+                                <point x="0" y="0.416667" />
+                                <point x="1" y="0.416667" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
                         </frame>
                     </animation>
                     <animation framecount="2" loop="1" name="Walking" pingpong="1" repeatcount="1" repeatto="0" sid="2385595171884493" speed="3">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Imagepoint 1" x="0.666667" y="0.833333" />
+                            <collision-poly>
+                                <point x="0" y="0.416667" />
+                                <point x="1" y="0.416667" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Imagepoint 1" x="0.666667" y="0.833333" />
+                            <collision-poly>
+                                <point x="0" y="0.416667" />
+                                <point x="1" y="0.416667" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
                         </frame>
                     </animation>
                 </animation-folder>
@@ -2557,6 +2575,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="PlaySound" sid="9867354228712252">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7928319462788429" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="CAMERA">
             <object-type name="Camera" sid="5967414008303214">
@@ -2578,6 +2604,7 @@
                     <instance-variable name="Music" sid="6381072622761613" type="string" />
                     <instance-variable name="dark" sid="585867146478486" type="boolean" />
                     <instance-variable name="light" sid="5591806614959326" type="boolean" />
+                    <instance-variable name="ZoneName" sid="4028206308915474" type="string" />
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3850948864208312" speed="5">
@@ -2721,6 +2748,23 @@
             <object-type global="1" name="ItemDesc" sid="4828113227630351">
                 <plugin id="Dictionary" />
             </object-type>
+            <object-type name="SpriteFont2" sid="906168354890072">
+                <plugin id="Spritefont2" />
+                <instance-variables>
+                    <instance-variable name="Function" sid="4495843063706063" type="string" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Fade" sid="7929138729131486">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <effects>
+                    <effect-type name="SetColor">
+                        <effect id="setcolor" />
+                    </effect-type>
+                </effects>
+                <texture original-source="C:\Users\chris\Desktop\SpriteFont_MingLiU_Regular_(12)_[0,0,0]_10x14.png" />
+            </object-type>
         </object-folder>
         <object-folder name="XML">
             <object-type global="1" name="TextData" sid="5789260471769958">
@@ -2797,6 +2841,26 @@
                 <texture />
             </object-type>
             <object-type name="POISON_PARTICLE" sid="9350082564782611">
+                <plugin id="Particles" />
+                <texture />
+            </object-type>
+            <object-type name="Pot_Particle" sid="8374265033031754">
+                <plugin id="Particles" />
+                <texture />
+            </object-type>
+            <object-type name="DustPar" sid="5629100099264935">
+                <plugin id="Particles" />
+                <texture />
+            </object-type>
+            <object-type name="ChargePar" sid="8230595874854953">
+                <plugin id="Particles" />
+                <texture />
+            </object-type>
+            <object-type name="HeartParticle" sid="2789661651493658">
+                <plugin id="Particles" />
+                <texture />
+            </object-type>
+            <object-type name="Particles2" sid="8646954763829572">
                 <plugin id="Particles" />
                 <texture />
             </object-type>
@@ -3011,20 +3075,12 @@
         <object-type global="1" name="TempData" sid="4941800187016818">
             <plugin id="Dictionary" />
         </object-type>
-        <object-type name="DustPar" sid="5629100099264935">
-            <plugin id="Particles" />
-            <texture />
-        </object-type>
         <object-type name="HPGUI" sid="3924425921982152">
             <plugin id="TiledBg" />
             <texture />
         </object-type>
         <object-type name="MAXHPGUI" sid="2327588202716233">
             <plugin id="TiledBg" />
-            <texture />
-        </object-type>
-        <object-type name="HeartParticle" sid="2789661651493658">
-            <plugin id="Particles" />
             <texture />
         </object-type>
         <object-type name="GUI_ICON" sid="3946468970191348">
@@ -3135,18 +3191,6 @@
                 </animation-folder>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite5" sid="7452753903819477">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5848779264686839" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Particles2" sid="8646954763829572">
-            <plugin id="Particles" />
-            <texture />
-        </object-type>
         <object-type name="Sprite9" sid="2798654224740543">
             <plugin id="Sprite" />
             <behaviors>
@@ -3202,18 +3246,6 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3950671914831849" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="DustPar2" sid="8230595874854953">
-            <plugin id="Particles" />
-            <texture />
-        </object-type>
-        <object-type name="PlaySound" sid="9867354228712252">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7928319462788429" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
@@ -3352,6 +3384,7 @@
                 <member>Skeleton</member>
                 <member>Slime</member>
                 <member>Spider</member>
+                <member>Sprite9</member>
             </members>
         </family>
         <family name="DRAWSHADOW" plugin-id="Sprite" sid="9297328645158486">

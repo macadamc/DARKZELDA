@@ -23,8 +23,8 @@
                             <param id="0" name="Instance variable">Flying</param>
                         </condition>
                         <condition id="-24" name="For Each (ordered)" sid="2327004254352669" type="System">
-                            <param id="0" name="Object">ZORDERING</param>
-                            <param id="1" name="Expression">ZORDERING.ImagePointY(1)</param>
+                            <param id="0" name="Object">Enemies</param>
+                            <param id="1" name="Expression">Enemies.ImagePointY(1)</param>
                             <param id="2" name="Order">0</param>
                         </condition>
                     </conditions>

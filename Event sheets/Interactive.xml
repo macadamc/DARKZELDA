@@ -174,6 +174,12 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
+                        <event-block sid="606392655847649">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="8885373707881276" type="System" />
+                            </conditions>
+                            <actions />
+                        </event-block>
                     </sub-events>
                 </event-group>
                 <event-block sid="8281087356452858">
@@ -271,11 +277,16 @@
                                     <param id="0" name="Key">&quot;Has_Key_&quot;&amp;str(Interactive.SpawnerID)</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
+                                <action id="0" name="Call function" sid="753872275206738" type="Function">
+                                    <param id="0" name="Name">&quot;ShowTextBox&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;bottom;&quot;&amp;Interactive.Effect&amp;&quot;Pickup&quot;</param>
+                                </action>
                                 <action id="-9" name="Destroy" sid="4721161247642757" type="Interactive" />
                             </actions>
                         </event-block>
-                        <event-block sid="9333678413575292">
+                        <event-block sid="118109324265255">
                             <conditions>
+                                <condition id="-22" name="Else" sid="8694543118245666" type="System" />
                                 <condition id="-8" name="Is boolean instance variable set" sid="6416826808479085" type="Interactive">
                                     <param id="0" name="Instance variable">Pickup</param>
                                 </condition>

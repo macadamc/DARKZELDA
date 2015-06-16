@@ -69,9 +69,13 @@
                             <param id="0" name="Instance variable">NumberOfChars</param>
                             <param id="1" name="Value">len(TextBox.Text)</param>
                         </action>
-                        <action id="-10" name="Set value" sid="5731441313947622" type="TextBox">
+                        <action disabled="1" id="-10" name="Set value" sid="5731441313947622" type="TextBox">
                             <param id="0" name="Instance variable">CharsPerPage</param>
-                            <param id="1" name="Value">(TextBoxText.Width/(14*TextBoxText.CharacterScale))*((TextBoxText.Height/(14*TextBoxText.CharacterScale)))-1</param>
+                            <param id="1" name="Value">(TextBoxText.Width/(14*TextBoxText.CharacterScale))*((TextBoxText.Height/(13*TextBoxText.CharacterScale)))-1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="2267988686374381" type="TextBox">
+                            <param id="0" name="Instance variable">CharsPerPage</param>
+                            <param id="1" name="Value">(TextBoxText.Width*TextBoxText.Height)/(15*14)</param>
                         </action>
                     </actions>
                 </event-block>

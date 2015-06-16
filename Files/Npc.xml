@@ -8,4 +8,14 @@
 			Conditions= "!GhostPath">
 		</Function>
 	</Object>
+	
+	<Object Name="Npc1">
+		<Sprite Name= "man"></Sprite>
+		<NpcState Name= "Npc_RandomWalk"
+			Bounds= "572"></NpcState>
+		<Function Name= "ShowTextBox"
+			Params="bottom;NPC1"
+			Conditions= "!GhostPath">
+		</Function>
+	</Object>
 </xml>

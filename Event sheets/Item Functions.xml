@@ -139,7 +139,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="7765886272797091" type="ARMS">
-                            <param id="0" name="Object">DustPar2</param>
+                            <param id="0" name="Object">ChargePar</param>
                             <param id="1" name="Layer">&quot;OBJECT&quot;</param>
                             <param id="2" name="Image point">1</param>
                         </action>
@@ -1032,7 +1032,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="4019026784080874" type="ARMS">
-                            <param id="0" name="Object">DustPar2</param>
+                            <param id="0" name="Object">ChargePar</param>
                             <param id="1" name="Layer">&quot;OBJECT&quot;</param>
                             <param id="2" name="Image point">1</param>
                         </action>

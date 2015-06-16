@@ -175,6 +175,31 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="4176733685094688">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="7779391780050313" type="System">
+                                            <param id="0" name="First value">camerazone.ZoneName</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Second value">ZoneName</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="9537504596899996" type="SpriteFont2" />
+                                        <action id="-3" name="Create object" sid="8268313191569613" type="System">
+                                            <param id="0" name="Object to create">SpriteFont2</param>
+                                            <param id="1" name="Layer">&quot;ZONENAME&quot;</param>
+                                            <param id="2" name="X">160</param>
+                                            <param id="3" name="Y">64</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="7512050274313206" type="SpriteFont2">
+                                            <param id="0" name="Text">CameraZone.ZoneName</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="1332538182598103" type="System">
+                                            <param id="0" name="Variable">ZoneName</param>
+                                            <param id="1" name="Value">CameraZone.ZoneName</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                             </sub-events>
                         </event-block>
                         <event-block sid="2566351999424612">

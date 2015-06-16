@@ -39,7 +39,8 @@
         <variable constant="0" name="ScrolltoX" sid="4387079001928423" static="0" type="number">0</variable>
         <variable constant="0" name="ScrolltoY" sid="5820235018737976" static="0" type="number">0</variable>
         <variable constant="0" name="CurZone" sid="5523916427160463" static="0" type="number">-1</variable>
-        <variable constant="0" name="isDay" sid="9750121491080792" static="0" type="number">1</variable>
+        <variable constant="0" name="isDay" sid="9750121491080792" static="0" type="number">0</variable>
+        <variable constant="0" name="ZoneName" sid="3320793891618986" static="0" type="text"></variable>
         <event-block sid="2712545167009221">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="7724518492129189" type="System" />

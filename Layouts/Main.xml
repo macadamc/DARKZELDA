@@ -7941,7 +7941,7 @@
                 </instance>
                 <instance type="NpcBase" uid="403">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -7961,7 +7961,7 @@
                     <behavior-instances>
                         <behavior-instance type="NpcMovement">
                             <properties>
-                                <stepping-mode>Linear</stepping-mode>
+                                <stepping-mode>Horizontal then vertical</stepping-mode>
                                 <pixels-per-step>4</pixels-per-step>
                                 <initial-state>Enabled</initial-state>
                             </properties>
@@ -8663,6 +8663,7 @@
                         <Music>wind</Music>
                         <dark>false</dark>
                         <light>false</light>
+                        <ZoneName></ZoneName>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -8690,6 +8691,7 @@
                         <Music>dungeon1</Music>
                         <dark>false</dark>
                         <light>false</light>
+                        <ZoneName></ZoneName>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -8717,6 +8719,7 @@
                         <Music>dungeon1</Music>
                         <dark>false</dark>
                         <light>false</light>
+                        <ZoneName></ZoneName>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -8744,6 +8747,7 @@
                         <Music>dungeon1</Music>
                         <dark>false</dark>
                         <light>false</light>
+                        <ZoneName></ZoneName>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -8822,6 +8826,7 @@
                         <Music>dungeon1</Music>
                         <dark>false</dark>
                         <light>false</light>
+                        <ZoneName></ZoneName>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -8849,6 +8854,7 @@
                         <Music>dungeon1</Music>
                         <dark>false</dark>
                         <light>false</light>
+                        <ZoneName></ZoneName>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -8876,6 +8882,7 @@
                         <Music>dungeon1</Music>
                         <dark>false</dark>
                         <light>false</light>
+                        <ZoneName></ZoneName>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -8903,6 +8910,7 @@
                         <Music>dungeon1</Music>
                         <dark>false</dark>
                         <light>false</light>
+                        <ZoneName></ZoneName>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -8974,6 +8982,78 @@
                         <z>0</z>
                         <width>400</width>
                         <height>400</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="ZONENAME" sid="5842134050906422">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>0</x>
+                <y>0</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>1</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="SpriteFont2" uid="840">
+                    <properties>
+                        <character-width>14</character-width>
+                        <character-height>13</character-height>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
+                        <text>Text</text>
+                        <scale>1</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>-2</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <Function></Function>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>Yes</active-at-start>
+                                <fade-in-time>2</fade-in-time>
+                                <wait-time>2</wait-time>
+                                <fade-out-time>2</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="SetColor">
+                            <parameters>
+                                <blue>1</blue>
+                                <green>1</green>
+                                <red>1</red>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-148</x>
+                        <y>-40</y>
+                        <z>0</z>
+                        <width>300</width>
+                        <height>96</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -9131,10 +9211,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>100</x>
-                        <y>8</y>
+                        <y>12</y>
                         <z>0</z>
-                        <width>120</width>
-                        <height>12</height>
+                        <width>128</width>
+                        <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -9665,8 +9745,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>8</x>
-                        <y>16</y>
+                        <x>4</x>
+                        <y>-16</y>
                         <z>0</z>
                         <width>200</width>
                         <height>30</height>

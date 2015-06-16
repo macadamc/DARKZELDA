@@ -24,4 +24,12 @@
 	<Object 
 		Name="ShieldPickup"
 		Data="You pickup a shield! Equip it in your inventory."></Object>
+		
+	<Object 
+		Name="SmallKeyPickup"
+		Data="A small key. Use it to open locked doors that you may find."></Object>
+		
+	<Object 
+		Name="NPC1"
+		Data="People have seen strange things going on in that cave up ahead.. I wouldn't go in there if I was you."></Object>
 </xml>

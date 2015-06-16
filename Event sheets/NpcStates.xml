@@ -54,12 +54,12 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="NpcMovement" id="6" name="Set angle of motion" sid="2670535533511121" type="NPC">
-                            <param id="0" name="Angle">angle(NPC.X, NPC.Y, Function.Param(0), Function.Param(1))</param>
-                        </action>
                         <action behavior="NpcMovement" id="2" name="Set speed" sid="6668156756832313" type="NPC">
                             <param id="0" name="Which">0</param>
-                            <param id="1" name="Speed">8</param>
+                            <param id="1" name="Speed">clamp((distance(self.X,self.Y,Function.Param(0), Function.Param(1))),0,6)</param>
+                        </action>
+                        <action behavior="NpcMovement" id="6" name="Set angle of motion" sid="2670535533511121" type="NPC">
+                            <param id="0" name="Angle">angle(NPC.X, NPC.Y, Function.Param(0), Function.Param(1))</param>
                         </action>
                     </actions>
                 </event-block>
@@ -788,6 +788,15 @@
                                     <param id="0" name="Key">&quot;walkToY&quot;</param>
                                     <param id="1" name="Value">int(random(PathZone.BBoxTop, PathZone.BBoxBottom))</param>
                                 </action>
+                                <action id="-16" name="Wait" sid="3260740591953545" type="System">
+                                    <param id="0" name="Seconds">random(2,6)</param>
+                                </action>
+                                <action id="2" name="Delete key" sid="5194435620943599" type="NPCData">
+                                    <param id="0" name="Key">&quot;walkToX&quot;</param>
+                                </action>
+                                <action id="2" name="Delete key" sid="9865090352237474" type="NPCData">
+                                    <param id="0" name="Key">&quot;walkToY&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -800,7 +809,7 @@
                     <actions>
                         <action id="0" name="Call function" sid="9606818552388406" type="Function">
                             <param id="0" name="Name">&quot;Npc_Move&quot;</param>
-                            <param id="1" name="Parameter {n}">NPCData.Get(&quot;moveToX&quot;){###}NPCData.Get(&quot;moveToY&quot;){###}NPC.UID</param>
+                            <param id="1" name="Parameter {n}">NPCData.Get(&quot;walkToX&quot;){###}NPCData.Get(&quot;walkToY&quot;){###}NPC.UID</param>
                         </action>
                     </actions>
                 </event-block>
