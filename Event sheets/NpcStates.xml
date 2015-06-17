@@ -820,9 +820,6 @@
                 <event-block sid="6420539968257238">
                     <conditions>
                         <condition behavior="Pathfinding" id="5" name="On arrived" sid="2262432558795798" type="NPC" />
-                        <condition id="-11" name="For Each" sid="7998781079365191" type="System">
-                            <param id="0" name="Object">NPC</param>
-                        </condition>
                     </conditions>
                     <actions>
                         <action id="-16" name="Wait" sid="2944936756172569" type="System">
@@ -858,6 +855,19 @@
                     </conditions>
                     <actions>
                         <action behavior="Pathfinding" id="1" name="Move along path" sid="3721628701264464" type="NPC" />
+                    </actions>
+                </event-block>
+                <event-block sid="7517956442780479">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="8476688801063963" type="NPC">
+                            <param id="0" name="Instance variable">HasSprite</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="5749270052499785" type="Sprite9">
+                            <param id="0" name="Animation">NPC.SpriteName</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="6379156983382026">
@@ -934,34 +944,9 @@
                                 <event-block sid="3556499906088691">
                                     <conditions />
                                     <actions>
-                                        <action behavior="Pathfinding" id="0" name="Find path" sid="9213442787217203" type="NpcBase">
+                                        <action behavior="Pathfinding" id="0" name="Find path" sid="9213442787217203" type="NPC">
                                             <param id="0" name="X">function.Param(0)</param>
                                             <param id="1" name="Y">function.Param(1)</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="7517956442780479">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="8476688801063963" type="NPC">
-                                    <param id="0" name="Instance variable">HasSprite</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="7986175626947105">
-                                    <conditions>
-                                        <condition id="-14" name="Compare variable" sid="9051298399239868" type="System">
-                                            <param id="0" name="Variable">Animate</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">1</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="4" name="Set animation" sid="5749270052499785" type="Sprite9">
-                                            <param id="0" name="Animation">NPC.SpriteName&amp;&quot;_Idle&quot;</param>
-                                            <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1025,7 +1010,8 @@
                         <event-block sid="8839165206281633">
                             <conditions>
                                 <condition id="-22" name="Else" sid="8312084285862589" type="System" />
-                                <condition id="-4" name="Trigger once while true" sid="5706256794134767" type="System" />
+                                <condition behavior="Pathfinding" id="4" inverted="1" name="Is moving along path" sid="4279438694706556" type="NPC" />
+                                <condition behavior="Pathfinding" id="3" inverted="1" name="Is calculating path" sid="9064929116895195" type="NPC" />
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="4302931094368951" type="Function">

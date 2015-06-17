@@ -19,7 +19,7 @@
 		</Function>
 	</Object>
 	<Object Name="Npc2">
-		<Sprite Name= "oldman"></Sprite>
+		<Sprite Name= "oldMan"></Sprite>
 		<NpcState Name= "Npc_RandomWalk"
 			Bounds= "667"></NpcState>
 		<Function Name= "ShowTextBox"
