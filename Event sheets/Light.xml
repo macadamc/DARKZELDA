@@ -33,12 +33,20 @@
                             <param id="0" name="Instance variable">Zone1</param>
                             <param id="1" name="Value">CurZone</param>
                         </action>
+                        <action id="-7" name="Set size" sid="3592839963800329" type="Light">
+                            <param id="0" name="Width">HAS_LIGHT.LightSize</param>
+                            <param id="1" name="Height">HAS_LIGHT.LightSize</param>
+                        </action>
                         <action id="-26" name="Move to layer" sid="2107470688150349" type="LightColor">
                             <param id="0" name="Layer">&quot;LIGHTCOLOR&quot;</param>
                         </action>
                         <action id="-10" name="Set value" sid="2975006418731574" type="LightColor">
                             <param id="0" name="Instance variable">Zone1</param>
                             <param id="1" name="Value">CurZone</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="9470320996497524" type="LightColor">
+                            <param id="0" name="Width">HAS_LIGHT.LightSize</param>
+                            <param id="1" name="Height">HAS_LIGHT.LightSize</param>
                         </action>
                         <action id="-10" name="Set value" sid="4307999532295762" type="HAS_LIGHT">
                             <param id="0" name="Instance variable">LightUID</param>
@@ -47,6 +55,14 @@
                         <action id="-13" name="Set boolean" sid="601824291076417" type="HAS_LIGHT">
                             <param id="0" name="Instance variable">HasLight</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5728977756078224" type="Light">
+                            <param id="0" name="Instance variable">size</param>
+                            <param id="1" name="Value">HAS_LIGHT.LightSize</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="219151223017819" type="Light">
+                            <param id="0" name="Instance variable">cursize</param>
+                            <param id="1" name="Value">HAS_LIGHT.LightSize</param>
                         </action>
                     </actions>
                 </event-block>
@@ -64,14 +80,6 @@
                         <action id="-4" name="Set position to another object" sid="2170394891065112" type="LightColor">
                             <param id="0" name="Object">HAS_LIGHT</param>
                             <param id="1" name="Image point (optional)">0</param>
-                        </action>
-                        <action id="-7" name="Set size" sid="3592839963800329" type="Light">
-                            <param id="0" name="Width">HAS_LIGHT.LightSize</param>
-                            <param id="1" name="Height">HAS_LIGHT.LightSize</param>
-                        </action>
-                        <action id="-7" name="Set size" sid="9470320996497524" type="LightColor">
-                            <param id="0" name="Width">HAS_LIGHT.LightSize</param>
-                            <param id="1" name="Height">HAS_LIGHT.LightSize</param>
                         </action>
                         <action id="-28" name="Set effect parameter" sid="8062721369784812" type="LightColor">
                             <param id="0" name="Effect">&quot;SetColor&quot;</param>
@@ -117,6 +125,37 @@
             </conditions>
             <actions>
                 <action id="-24" name="Move to top" sid="6875964828938407" type="Ghost" />
+                <action id="-7" name="Set size" sid="8780864738787113" type="Light">
+                    <param id="0" name="Width">lerp(Self.Width,self.cursize,0.03)</param>
+                    <param id="1" name="Height">lerp(Self.height,self.cursize,0.03)</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="304825540654863" type="Light">
+                    <param id="0" name="Instance variable">timer</param>
+                    <param id="1" name="Value">dt</param>
+                </action>
+                <action id="-7" name="Set size" sid="2036362250039988" type="LightColor">
+                    <param id="0" name="Width">Light.Width</param>
+                    <param id="1" name="Height">Light.Height</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4039434432362455">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="9380486402328917" type="Light">
+                    <param id="0" name="Instance variable">timer</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="8124656487298354" type="Light">
+                    <param id="0" name="Instance variable">cursize</param>
+                    <param id="1" name="Value">self.size+random(-(self.size/6),(self.size/6))</param>
+                </action>
+                <action id="-10" name="Set value" sid="4685147077741903" type="Light">
+                    <param id="0" name="Instance variable">timer</param>
+                    <param id="1" name="Value">random(0.1,0.4)</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="7987441272604501">

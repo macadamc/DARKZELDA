@@ -32,4 +32,7 @@
 	<Object 
 		Name="NPC1"
 		Data="People have seen strange things going on in that cave up ahead.. I wouldn't go in there if I was you."></Object>
+	<Object 
+		Name="NPC2"
+		Data="... As you walked up to me, I felt a chill down my spine..       It is probably the wind."></Object>
 </xml>

@@ -12,7 +12,25 @@
 	<Object Name="Npc1">
 		<Sprite Name= "man"></Sprite>
 		<NpcState Name= "Npc_RandomWalk"
-			Bounds= "572"></NpcState>
+			Bounds= "640 572"></NpcState>
+		<Function Name= "ShowTextBox"
+			Params="bottom;NPC1"
+			Conditions= "!GhostPath">
+		</Function>
+	</Object>
+	<Object Name="Npc2">
+		<Sprite Name= "oldman"></Sprite>
+		<NpcState Name= "Npc_RandomWalk"
+			Bounds= "667"></NpcState>
+		<Function Name= "ShowTextBox"
+			Params="bottom;NPC2"
+			Conditions= "!GhostPath">
+		</Function>
+	</Object>
+	<Object Name="Npc3">
+		<Sprite Name= "man"></Sprite>
+		<NpcState Name= "Npc_RandomWalk"
+			Bounds= "667"></NpcState>
 		<Function Name= "ShowTextBox"
 			Params="bottom;NPC1"
 			Conditions= "!GhostPath">

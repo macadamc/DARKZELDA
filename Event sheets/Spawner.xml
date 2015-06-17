@@ -1083,6 +1083,14 @@
                                                 <action id="-16" name="Set opacity" sid="8995225917330207" type="Light">
                                                     <param id="0" name="Opacity">LIGHT_SPAWNER.LightOpacity</param>
                                                 </action>
+                                                <action id="-10" name="Set value" sid="6973926093693032" type="Light">
+                                                    <param id="0" name="Instance variable">size</param>
+                                                    <param id="1" name="Value">LIGHT_SPAWNER.Size</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="3547831620061687" type="Light">
+                                                    <param id="0" name="Instance variable">cursize</param>
+                                                    <param id="1" name="Value">LIGHT_SPAWNER.Size</param>
+                                                </action>
                                                 <action id="-26" name="Move to layer" sid="5969077659236942" type="LightColor">
                                                     <param id="0" name="Layer">&quot;LIGHTCOLOR&quot;</param>
                                                 </action>

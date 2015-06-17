@@ -408,6 +408,10 @@
                             <param id="1" name="Duration">0.3</param>
                             <param id="2" name="Mode">0</param>
                         </action>
+                        <action id="-13" name="Set boolean" sid="8231050038323124" type="NPC">
+                            <param id="0" name="Instance variable">regenMap</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="9889964440358572">
@@ -429,6 +433,10 @@
                             <param id="1" name="Parameter {n}">Breakable.X{###}Breakable.Y{###}Breakable.AnimationName</param>
                         </action>
                         <action id="-9" name="Destroy" sid="497720087405754" type="Breakable" />
+                        <action id="-13" name="Set boolean" sid="5231253575319104" type="NPC">
+                            <param id="0" name="Instance variable">regenMap</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="3729530156016999">

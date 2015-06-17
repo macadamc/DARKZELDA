@@ -69,7 +69,7 @@
         <prop name="Loader style">Progress bar only</prop>
         <prop name="Pause on unfocus">Yes</prop>
         <prop name="Physics engine">Box2D web</prop>
-        <prop name="Preview browser">(default)</prop>
+        <prop name="Preview browser">Chrome</prop>
         <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">No</prop>
         <prop name="Use iOS retina display">All devices</prop>
@@ -2871,6 +2871,8 @@
                 <instance-variables>
                     <instance-variable name="FollowUID" sid="981271062576231" type="number" />
                     <instance-variable name="size" sid="2877778926861893" type="number" />
+                    <instance-variable name="cursize" sid="7579620031198933" type="number" />
+                    <instance-variable name="timer" sid="2560567563112764" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Sine" sid="5697962313783314">
@@ -3204,39 +3206,39 @@
             </container>
             <animation-folder>
                 <animation framecount="2" loop="1" name="oldMan" pingpong="0" repeatcount="1" repeatto="0" sid="8713932927083775" speed="3">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75">
                         <image-point name="Imagepoint 1" x="0.5" y="0.833333" />
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75">
                         <image-point name="Imagepoint 1" x="0.5" y="0.833333" />
                     </frame>
                 </animation>
                 <animation framecount="2" loop="1" name="oldWoman" pingpong="0" repeatcount="1" repeatto="0" sid="6721635976733931" speed="3">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75">
                         <image-point name="Imagepoint 1" x="0.5" y="1" />
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75">
                         <image-point name="Imagepoint 1" x="0.5" y="1" />
                     </frame>
                 </animation>
                 <animation framecount="2" loop="1" name="man_Idle" pingpong="0" repeatcount="1" repeatto="0" sid="4525983942656463" speed="3">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75">
                         <image-point name="Imagepoint 1" x="0.5" y="1" />
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75">
                         <image-point name="Imagepoint 1" x="0.5" y="1" />
                     </frame>
                 </animation>
                 <animation framecount="2" loop="1" name="woman" pingpong="0" repeatcount="1" repeatto="0" sid="215946699649187" speed="3">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75">
                         <image-point name="Imagepoint 1" x="0.5" y="1" />
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75">
                         <image-point name="Imagepoint 1" x="0.5" y="1" />
                     </frame>
                 </animation>
                 <animation framecount="1" loop="1" name="cloaked" pingpong="0" repeatcount="1" repeatto="0" sid="222329204740404" speed="3">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.75">
                         <image-point name="Imagepoint 1" x="0.5" y="1" />
                     </frame>
                 </animation>
@@ -3477,6 +3479,7 @@
                 <instance-variable name="HasSprite" sid="8600657711179408" type="boolean" />
                 <instance-variable name="SpriteName" sid="7953586484358111" type="string" />
                 <instance-variable name="SpriteDir" sid="638115937759523" type="string" />
+                <instance-variable name="regenMap" sid="8381820170055637" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="NpcMovement" sid="1295308267382208">

@@ -6608,6 +6608,7 @@
                         <HasSprite>false</HasSprite>
                         <SpriteName></SpriteName>
                         <SpriteDir></SpriteDir>
+                        <regenMap>false</regenMap>
                         <HasLight>false</HasLight>
                         <LightUID>-1</LightUID>
                         <LightSize>300</LightSize>
@@ -7957,6 +7958,7 @@
                         <HasSprite>false</HasSprite>
                         <SpriteName></SpriteName>
                         <SpriteDir></SpriteDir>
+                        <regenMap>false</regenMap>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="NpcMovement">
@@ -7969,15 +7971,15 @@
                         <behavior-instance type="Pathfinding">
                             <properties>
                                 <cell-size>4</cell-size>
-                                <cell-border>1</cell-border>
+                                <cell-border>-1</cell-border>
                                 <obstacles>Custom</obstacles>
-                                <max-speed>0</max-speed>
-                                <acceleration>0</acceleration>
-                                <deceleration>0</deceleration>
-                                <rotate-speed>0</rotate-speed>
+                                <max-speed>16</max-speed>
+                                <acceleration>16</acceleration>
+                                <deceleration>16</deceleration>
+                                <rotate-speed>180</rotate-speed>
                                 <rotate-object>No</rotate-object>
                                 <diagonals>Disabled</diagonals>
-                                <initial-state>Disabled</initial-state>
+                                <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
@@ -8958,6 +8960,8 @@
                         <Destroy>true</Destroy>
                         <FollowUID>-1</FollowUID>
                         <size>1</size>
+                        <cursize>0</cursize>
+                        <timer>0.2</timer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -8965,8 +8969,8 @@
                                 <active-on-start>No</active-on-start>
                                 <movement>Size</movement>
                                 <wave>Sine</wave>
-                                <period>3</period>
-                                <period-random>0</period-random>
+                                <period>2</period>
+                                <period-random>2</period-random>
                                 <period-offset>0</period-offset>
                                 <period-offset-random>0</period-offset-random>
                                 <magnitude>8</magnitude>
@@ -9031,8 +9035,8 @@
                             <properties>
                                 <active-at-start>Yes</active-at-start>
                                 <fade-in-time>2</fade-in-time>
-                                <wait-time>2</wait-time>
-                                <fade-out-time>2</fade-out-time>
+                                <wait-time>1</wait-time>
+                                <fade-out-time>1</fade-out-time>
                                 <destroy>After fade out</destroy>
                             </properties>
                         </behavior-instance>
@@ -9746,7 +9750,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>4</x>
-                        <y>-16</y>
+                        <y>16</y>
                         <z>0</z>
                         <width>200</width>
                         <height>30</height>
@@ -9803,7 +9807,7 @@
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
-                        <character-spacing>-2</character-spacing>
+                        <character-spacing>-1</character-spacing>
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
