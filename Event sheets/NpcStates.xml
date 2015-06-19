@@ -859,13 +859,13 @@
                 </event-block>
                 <event-block sid="7517956442780479">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="8476688801063963" type="NPC">
+                        <condition id="-8" name="Is boolean instance variable set" sid="8476688801063963" type="NpcBase">
                             <param id="0" name="Instance variable">HasSprite</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="5749270052499785" type="Sprite9">
-                            <param id="0" name="Animation">NPC.SpriteName</param>
+                            <param id="0" name="Animation">NpcBase.SpriteName</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
@@ -873,8 +873,8 @@
                         <event-block sid="5473795529690852">
                             <conditions>
                                 <condition id="-39" name="Is within angle" sid="6279130564975222" type="System">
-                                    <param id="0" name="Angle 1">NPC.Pathfinding.MovingAngle</param>
-                                    <param id="1" name="Within">170</param>
+                                    <param id="0" name="Angle 1">NpcBase.Pathfinding.MovingAngle</param>
+                                    <param id="1" name="Within">175</param>
                                     <param id="2" name="Angle 2">0</param>
                                 </condition>
                             </conditions>
@@ -887,8 +887,8 @@
                         <event-block sid="18970364666737">
                             <conditions>
                                 <condition id="-39" name="Is within angle" sid="8946060298889739" type="System">
-                                    <param id="0" name="Angle 1">NPC.Pathfinding.MovingAngle</param>
-                                    <param id="1" name="Within">170</param>
+                                    <param id="0" name="Angle 1">NpcBase.Pathfinding.MovingAngle</param>
+                                    <param id="1" name="Within">175</param>
                                     <param id="2" name="Angle 2">180</param>
                                 </condition>
                             </conditions>

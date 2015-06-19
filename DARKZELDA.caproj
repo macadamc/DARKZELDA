@@ -63,7 +63,7 @@
         <prop name="Clear background">No</prop>
         <prop name="Downscaling">Low quality</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Front-to-back renderer">Enabled</prop>
+        <prop name="Front-to-back renderer">Disabled</prop>
         <prop name="Fullscreen in browser">Letterbox integer scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Fullscreen scaling quality">Low</prop>
@@ -73,7 +73,7 @@
         <prop name="Physics engine">Box2D web</prop>
         <prop name="Preview browser">Chrome</prop>
         <prop name="Sampling">Point</prop>
-        <prop name="Use high-DPI display">No</prop>
+        <prop name="Use high-DPI display">Yes</prop>
         <prop name="Use iOS retina display">All devices</prop>
     </configuration-settings>
     <object-folder>
@@ -2071,13 +2071,13 @@
                         <animation framecount="1" loop="0" name="Pot" pingpong="0" repeatcount="1" repeatto="0" sid="5183698304295948" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                 <image-point name="Imagepoint 1" x="0.5" y="0.875" />
-                                <image-point name="par" x="0.5" y="0.125" />
+                                <image-point name="par" x="0.5" y="0" />
                             </frame>
                         </animation>
                         <animation framecount="1" loop="0" name="BigPot" pingpong="0" repeatcount="1" repeatto="0" sid="1052040387176971" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                 <image-point name="Imagepoint 1" x="0.5" y="0.916667" />
-                                <image-point name="par" x="0.5" y="0.0833333" />
+                                <image-point name="par" x="0.5" y="0" />
                                 <collision-poly>
                                     <point x="0" y="0" />
                                     <point x="1" y="0" />
@@ -3303,6 +3303,7 @@
                 <instance-variable name="spawnerUID" sid="1359232653356904" type="number" />
                 <instance-variable name="Phase" sid="5453263384239798" type="string" />
                 <instance-variable name="isBoss" sid="9313676613449936" type="boolean" />
+                <instance-variable name="fireWhenHit" sid="7862589712186745" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Knockback" sid="5869555695933761">
@@ -3442,6 +3443,7 @@
             <instance-variables>
                 <instance-variable name="Zone1" sid="1642167997895468" type="number" />
                 <instance-variable comment="Destroy when not in zone" name="Destroy" sid="3000467838163762" type="boolean" />
+                <instance-variable name="isLight" sid="7822196670734761" type="boolean" />
             </instance-variables>
         </family>
         <family name="Solid" plugin-id="Sprite" sid="1112206093548328">
@@ -3521,6 +3523,7 @@
                 <member>Breakable</member>
                 <member>EnemyProjectile</member>
                 <member>Ghost</member>
+                <member>PlayerProjectile</member>
             </members>
             <instance-variables>
                 <instance-variable name="HasLight" sid="6791342183039563" type="boolean" />
@@ -3538,6 +3541,7 @@
                 <member>Breakable</member>
                 <member>EnemyProjectile</member>
                 <member>Ghost</member>
+                <member>PlayerProjectile</member>
                 <member>Sprite10</member>
             </members>
             <instance-variables>

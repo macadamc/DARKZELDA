@@ -224,13 +224,13 @@
                                 <condition id="-14" name="Compare variable" sid="6731706706604426" type="System">
                                     <param id="0" name="Variable">LerpSDP</param>
                                     <param id="1" name="Comparison">1</param>
-                                    <param id="2" name="Value">0.1</param>
+                                    <param id="2" name="Value">0.05</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="-9" name="Set value" sid="7209374760714139" type="System">
                                     <param id="0" name="Variable">LerpSDP</param>
-                                    <param id="1" name="Value">lerp(LerpSDP,0.1,0.1)</param>
+                                    <param id="1" name="Value">lerp(LerpSDP,0.05,0.05)</param>
                                 </action>
                             </actions>
                         </event-block>

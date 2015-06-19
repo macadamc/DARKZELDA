@@ -29,7 +29,7 @@
 	<Object Name="Npc2">
 		<Sprite Name= "oldMan"></Sprite>
 		<NpcState Name= "Npc_RandomWalk"
-			Bounds= "667"></NpcState>
+			Bounds= "667 640 572"></NpcState>
 		<Function Name= "ShowTextBox"
 			Params="bottom;NPC2"
 			Conditions= "!GhostPath">

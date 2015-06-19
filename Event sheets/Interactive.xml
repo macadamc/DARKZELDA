@@ -487,6 +487,42 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="1684689441935348">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="2978392320533322" type="Breakable">
+                                    <param id="0" name="Instance variable">drawlight</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="524602147653628">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="9658309912304772" type="PlayerProjectile">
+                                            <param id="0" name="Animation">&quot;left&quot;</param>
+                                        </condition>
+                                        <condition id="2" name="Is playing" sid="393009776861866" type="PlayerProjectile">
+                                            <param id="0" name="Animation">&quot;right&quot;</param>
+                                        </condition>
+                                        <condition id="2" name="Is playing" sid="2594979221525926" type="PlayerProjectile">
+                                            <param id="0" name="Animation">&quot;up&quot;</param>
+                                        </condition>
+                                        <condition id="2" name="Is playing" sid="9884884838349241" type="PlayerProjectile">
+                                            <param id="0" name="Animation">&quot;down&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="2954205972875281" type="PlayerProjectile">
+                                            <param id="0" name="Instance variable">drawlight</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="1220149974043341" type="PlayerProjectile">
+                                            <param id="0" name="Instance variable">ParticleType</param>
+                                            <param id="1" name="Value">&quot;Fire&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                     </sub-events>
                 </event-block>
                 <event-block sid="6241974018036653">

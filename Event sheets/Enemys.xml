@@ -3148,7 +3148,6 @@
                                     <param id="0" name="Instance variable">HP</param>
                                     <param id="1" name="Value">EnemyProjectile.Damage</param>
                                 </action>
-                                <action id="-9" name="Destroy" sid="3341759793684118" type="EnemyProjectile" />
                             </actions>
                             <sub-events>
                                 <event-block sid="2858467982386624">
@@ -3170,6 +3169,7 @@
                                             <param id="0" name="Name">&quot;HitCollide&quot;</param>
                                             <param id="1" name="Parameter {n}"></param>
                                         </action>
+                                        <action id="-9" name="Destroy" sid="3341759793684118" type="EnemyProjectile" />
                                     </actions>
                                 </event-block>
                             </sub-events>

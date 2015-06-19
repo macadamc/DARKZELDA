@@ -1314,6 +1314,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1344,6 +1345,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1374,6 +1376,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1404,6 +1407,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1434,6 +1438,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1464,6 +1469,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1494,6 +1500,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1524,6 +1531,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1554,6 +1562,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1584,6 +1593,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1614,6 +1624,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1644,6 +1655,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1674,6 +1686,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1704,6 +1717,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1734,6 +1748,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1764,6 +1779,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1794,6 +1810,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1824,6 +1841,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1854,6 +1872,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1884,6 +1903,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1914,6 +1934,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1944,6 +1965,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1974,6 +1996,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2004,6 +2027,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2034,6 +2058,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2064,6 +2089,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2094,6 +2120,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2124,6 +2151,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2154,6 +2182,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2184,6 +2213,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2214,6 +2244,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2244,6 +2275,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2274,6 +2306,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2304,6 +2337,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2334,6 +2368,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2364,6 +2399,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2429,8 +2465,10 @@
                         <spawnerUID>-1</spawnerUID>
                         <Phase></Phase>
                         <isBoss>false</isBoss>
+                        <fireWhenHit>false</fireWhenHit>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
+                        <isLight>false</isLight>
                         <LeaveBloodTrail>false</LeaveBloodTrail>
                         <BloodOnHit>true</BloodOnHit>
                         <BloodTrailTimer>0.2</BloodTrailTimer>
@@ -2499,6 +2537,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2529,6 +2568,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2559,6 +2599,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2589,6 +2630,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2619,6 +2661,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2649,6 +2692,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2679,6 +2723,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2709,6 +2754,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2739,6 +2785,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2769,6 +2816,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2799,6 +2847,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2829,6 +2878,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2859,6 +2909,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2889,6 +2940,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2919,6 +2971,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2949,6 +3002,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -2979,6 +3033,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3009,6 +3064,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3039,6 +3095,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3069,6 +3126,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3099,6 +3157,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3129,6 +3188,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3159,6 +3219,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3189,6 +3250,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3219,6 +3281,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3249,6 +3312,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3279,6 +3343,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3309,6 +3374,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3339,6 +3405,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3369,6 +3436,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3399,6 +3467,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3429,6 +3498,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3459,6 +3529,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3489,6 +3560,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3519,6 +3591,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3549,6 +3622,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3579,6 +3653,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3609,6 +3684,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3639,6 +3715,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3669,6 +3746,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3699,6 +3777,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3729,6 +3808,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3759,6 +3839,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3789,6 +3870,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3819,6 +3901,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3849,6 +3932,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3879,6 +3963,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3909,6 +3994,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3939,6 +4025,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3969,6 +4056,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -3999,6 +4087,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -4029,6 +4118,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -4059,6 +4149,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -4089,6 +4180,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -4119,6 +4211,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -4149,6 +4242,7 @@
                         <ShootDir></ShootDir>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -4204,6 +4298,7 @@
                         <Shadow>SmallHor</Shadow>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
@@ -4788,8 +4883,10 @@
                         <spawnerUID>-1</spawnerUID>
                         <Phase></Phase>
                         <isBoss>false</isBoss>
+                        <fireWhenHit>false</fireWhenHit>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
+                        <isLight>false</isLight>
                         <LeaveBloodTrail>false</LeaveBloodTrail>
                         <BloodOnHit>true</BloodOnHit>
                         <BloodTrailTimer>0.2</BloodTrailTimer>
@@ -4900,12 +4997,14 @@
                         <spawnerUID>-1</spawnerUID>
                         <Phase></Phase>
                         <isBoss>false</isBoss>
+                        <fireWhenHit>false</fireWhenHit>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
+                        <isLight>false</isLight>
                         <HasLight>false</HasLight>
                         <LightUID>-1</LightUID>
                         <LightSize>250</LightSize>
-                        <LightOpacity>75</LightOpacity>
+                        <LightOpacity>100</LightOpacity>
                         <R>7</R>
                         <G>2</G>
                         <B>0</B>
@@ -4980,6 +5079,7 @@
                         <Shadow>SmallHor</Shadow>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid2">
@@ -5018,6 +5118,7 @@
                         <Shadow>SmallHor</Shadow>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid2">
@@ -5088,6 +5189,7 @@
                         <Shadow>SmallHor</Shadow>
                         <Zone1>-1</Zone1>
                         <Destroy>false</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid2">
@@ -5525,8 +5627,10 @@
                         <spawnerUID>-1</spawnerUID>
                         <Phase></Phase>
                         <isBoss>false</isBoss>
+                        <fireWhenHit>false</fireWhenHit>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
+                        <isLight>false</isLight>
                         <LeaveBloodTrail>false</LeaveBloodTrail>
                         <BloodOnHit>true</BloodOnHit>
                         <BloodTrailTimer>0.2</BloodTrailTimer>
@@ -5661,6 +5765,7 @@
                         <canCut>false</canCut>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
@@ -5707,10 +5812,11 @@
                         <Shadow>SmallHor</Shadow>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
+                        <isLight>false</isLight>
                         <HasLight>false</HasLight>
                         <LightUID>-1</LightUID>
                         <LightSize>250</LightSize>
-                        <LightOpacity>75</LightOpacity>
+                        <LightOpacity>100</LightOpacity>
                         <R>7</R>
                         <G>2</G>
                         <B>0</B>
@@ -6293,6 +6399,18 @@
                         <Shadow>SmallHor</Shadow>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
+                        <isLight>false</isLight>
+                        <HasLight>false</HasLight>
+                        <LightUID>-1</LightUID>
+                        <LightSize>150</LightSize>
+                        <LightOpacity>100</LightOpacity>
+                        <R>10</R>
+                        <G>5</G>
+                        <B>0</B>
+                        <drawlight>false</drawlight>
+                        <ParticleType></ParticleType>
+                        <HasParticle>false</HasParticle>
+                        <ParticleUID>-1</ParticleUID>
                         <Knockback>0</Knockback>
                         <onHit></onHit>
                         <hitTrigger>false</hitTrigger>
@@ -6379,8 +6497,10 @@
                         <spawnerUID>-1</spawnerUID>
                         <Phase></Phase>
                         <isBoss>false</isBoss>
+                        <fireWhenHit>false</fireWhenHit>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
+                        <isLight>false</isLight>
                         <LeaveBloodTrail>false</LeaveBloodTrail>
                         <BloodOnHit>true</BloodOnHit>
                         <BloodTrailTimer>0.2</BloodTrailTimer>
@@ -6817,7 +6937,7 @@
                 </instance>
                 <instance type="FIRE_PARTICLE" uid="241">
                     <properties>
-                        <rate>8</rate>
+                        <rate>24</rate>
                         <spray-cone>360</spray-cone>
                         <type>Continuous spray</type>
                         <initial-particle-properties></initial-particle-properties>
@@ -7089,8 +7209,10 @@
                         <spawnerUID>-1</spawnerUID>
                         <Phase>Fireball</Phase>
                         <isBoss>false</isBoss>
+                        <fireWhenHit>false</fireWhenHit>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
+                        <isLight>false</isLight>
                         <LeaveBloodTrail>false</LeaveBloodTrail>
                         <BloodOnHit>true</BloodOnHit>
                         <BloodTrailTimer>0.2</BloodTrailTimer>
@@ -7169,8 +7291,10 @@
                         <spawnerUID>-1</spawnerUID>
                         <Phase></Phase>
                         <isBoss>false</isBoss>
+                        <fireWhenHit>false</fireWhenHit>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
+                        <isLight>false</isLight>
                         <LeaveBloodTrail>false</LeaveBloodTrail>
                         <BloodOnHit>true</BloodOnHit>
                         <BloodTrailTimer>0.2</BloodTrailTimer>
@@ -7281,8 +7405,10 @@
                         <spawnerUID>-1</spawnerUID>
                         <Phase>spit</Phase>
                         <isBoss>false</isBoss>
+                        <fireWhenHit>false</fireWhenHit>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
+                        <isLight>false</isLight>
                         <LeaveBloodTrail>false</LeaveBloodTrail>
                         <BloodOnHit>true</BloodOnHit>
                         <BloodTrailTimer>0.2</BloodTrailTimer>
@@ -7454,6 +7580,7 @@
                         <Shadow>SmallHor</Shadow>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
@@ -7951,6 +8078,7 @@
                         <Shadow>SmallHor</Shadow>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
+                        <isLight>false</isLight>
                         <StartState></StartState>
                         <FSM_UID>-1</FSM_UID>
                         <DataUID>-1</DataUID>
@@ -8117,8 +8245,10 @@
                         <spawnerUID>-1</spawnerUID>
                         <Phase></Phase>
                         <isBoss>false</isBoss>
+                        <fireWhenHit>false</fireWhenHit>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
+                        <isLight>false</isLight>
                         <LeaveBloodTrail>true</LeaveBloodTrail>
                         <BloodOnHit>true</BloodOnHit>
                         <BloodTrailTimer>0.2</BloodTrailTimer>
@@ -8269,8 +8399,10 @@
                         <spawnerUID>-1</spawnerUID>
                         <Phase></Phase>
                         <isBoss>false</isBoss>
+                        <fireWhenHit>false</fireWhenHit>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
+                        <isLight>false</isLight>
                         <LeaveBloodTrail>false</LeaveBloodTrail>
                         <BloodOnHit>true</BloodOnHit>
                         <BloodTrailTimer>0</BloodTrailTimer>
@@ -8958,6 +9090,7 @@
                     <instance-variables>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
+                        <isLight>false</isLight>
                         <FollowUID>-1</FollowUID>
                         <size>1</size>
                         <cursize>0</cursize>
@@ -9094,6 +9227,7 @@
                     <instance-variables>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
+                        <isLight>false</isLight>
                     </instance-variables>
                     <effect-instances>
                         <effect-instance type="SetColor">
