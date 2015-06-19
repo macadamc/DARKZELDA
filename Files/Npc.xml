@@ -7,8 +7,17 @@
 			Params="bottom;Test"
 			Conditions= "!GhostPath">
 		</Function>
+		<Text Name= ""
+			Conditions= !GhostPath
+			Data= "People have seen strange things going on in that cave up ahead.. I wouldn't go in there if I was you."></Text>
+		<Function Name= "AddData"
+			Params="Session;npc1;1"
+			Conditions= "!npc1">
+		</Function>
+		<Text Name= ""
+			Conditions= !GhostPath
+			Data= "... As you walked up to me, I felt a chill down my spine..       It is probably the wind."></Text>
 	</Object>
-	
 	<Object Name="Npc1">
 		<Sprite Name= "man"></Sprite>
 		<NpcState Name= "Npc_RandomWalk"

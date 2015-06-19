@@ -1,41 +1,29 @@
 <xml>
-	<Object
-		Name="Test"
+	<Object Name="Test"
 		Data="Heres Some Text Loaded From Xml."></Object>
-	<Object
-		Name="LongTest"
+	<Object Name="LongTest"
 		Data="mary had a little lamb, little lamb, little lamb. Mary had a little lamb whos fleece was white as snow. everywhere that mary went, mary went, mary went. everywhere mary went the lamb was sure to go..... YUP"></Object>
-  <Object 
-    Name="Saved"
+  <Object Name="Saved"
     Data="Game Data Saved"></Object>
-  <Object 
-    Name="Loaded"
+  <Object Name="Loaded"
     Data="Game Data Loaded"></Object>
 	
-	<Object 
-		Name="SwordPickup"
+	<Object Name="SwordPickup"
 		Data="You pickup a sword! Equip it in your inventory."></Object>
-	<Object 
-		Name="BowPickup"
+	<Object Name="BowPickup"
 		Data="You pickup a bow! Equip it in your inventory."></Object>
-	<Object 
-		Name="BoomerangPickup"
+	<Object Name="BoomerangPickup"
 		Data="You pickup a boomerang! Equip it in your inventory."></Object>
-	<Object 
-		Name="ShieldPickup"
+	<Object Name="ShieldPickup"
 		Data="You pickup a shield! Equip it in your inventory."></Object>
 		
-	<Object 
-		Name="SmallKeyPickup"
+	<Object Name="SmallKeyPickup"
 		Data="A small key. Use it to open locked doors that you may find."></Object>
 		
-	<Object 
-		Name="NPC1a"
+	<Object Name="NPC1a"
 		Data="People have seen strange things going on in that cave up ahead.. I wouldn't go in there if I was you."></Object>
-	<Object 
-		Name="NPC1b"
+	<Object Name="NPC1b"
 		Data="Poop"></Object>
-	<Object 
-		Name="NPC2"
+	<Object Name="NPC2"
 		Data="... As you walked up to me, I felt a chill down my spine..       It is probably the wind."></Object>
 </xml>
