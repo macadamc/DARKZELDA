@@ -14,8 +14,16 @@
 		<NpcState Name= "Npc_RandomWalk"
 			Bounds= "640 572"></NpcState>
 		<Function Name= "ShowTextBox"
-			Params="bottom;NPC1"
-			Conditions= "!GhostPath">
+			Params="bottom;NPC1a"
+			Conditions= "!GhostPath !npc1">
+		</Function>
+		<Function Name= "AddData"
+			Params="Session;npc1;1"
+			Conditions= "!npc1">
+		</Function>
+		<Function Name= "ShowTextBox"
+			Params="bottom;NPC1b"
+			Conditions= "!GhostPath npc1">
 		</Function>
 	</Object>
 	<Object Name="Npc2">

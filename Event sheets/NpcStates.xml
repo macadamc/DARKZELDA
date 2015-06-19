@@ -869,6 +869,36 @@
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="5473795529690852">
+                            <conditions>
+                                <condition id="-39" name="Is within angle" sid="6279130564975222" type="System">
+                                    <param id="0" name="Angle 1">NPC.Pathfinding.MovingAngle</param>
+                                    <param id="1" name="Within">170</param>
+                                    <param id="2" name="Angle 2">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="7481133580855106" type="Sprite9">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="18970364666737">
+                            <conditions>
+                                <condition id="-39" name="Is within angle" sid="8946060298889739" type="System">
+                                    <param id="0" name="Angle 1">NPC.Pathfinding.MovingAngle</param>
+                                    <param id="1" name="Within">170</param>
+                                    <param id="2" name="Angle 2">180</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="192031654696513" type="Sprite9">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="6379156983382026">
                     <conditions>

@@ -80,7 +80,7 @@
                                                     <sub-events>
                                                         <event-block sid="9272204183522909">
                                                             <conditions>
-                                                                <condition id="3" inverted="1" name="Has key" sid="33763007486448" type="TempData">
+                                                                <condition id="3" inverted="1" name="Has key" sid="33763007486448" type="SessionData">
                                                                     <param id="0" name="Key">str(ENEMY_SPAWNER.UID)</param>
                                                                 </condition>
                                                             </conditions>
@@ -599,7 +599,7 @@
                                                     <sub-events>
                                                         <event-block sid="4422499548078725">
                                                             <conditions>
-                                                                <condition id="3" inverted="1" name="Has key" sid="6711839849797204" type="TempData">
+                                                                <condition id="3" inverted="1" name="Has key" sid="6711839849797204" type="SessionData">
                                                                     <param id="0" name="Key">str(OBJECT_SPAWNER.UID)</param>
                                                                 </condition>
                                                             </conditions>

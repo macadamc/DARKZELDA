@@ -387,7 +387,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Add key" sid="3882582525369006" type="TempData">
+                        <action id="0" name="Add key" sid="3882582525369006" type="SessionData">
                             <param id="0" name="Key">str(Breakable.SpawnerID)</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -424,7 +424,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Add key" sid="9302215632220667" type="TempData">
+                        <action id="0" name="Add key" sid="9302215632220667" type="SessionData">
                             <param id="0" name="Key">str(Breakable.SpawnerID)</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -504,7 +504,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Add key" sid="3928592612240784" type="TempData">
+                        <action id="0" name="Add key" sid="3928592612240784" type="SessionData">
                             <param id="0" name="Key">str(Foilage.SpawnerID)</param>
                             <param id="1" name="Value">1</param>
                         </action>
@@ -525,7 +525,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Add key" sid="9864690754604495" type="TempData">
+                        <action id="0" name="Add key" sid="9864690754604495" type="SessionData">
                             <param id="0" name="Key">str(Foilage.SpawnerID)</param>
                             <param id="1" name="Value">1</param>
                         </action>

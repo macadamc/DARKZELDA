@@ -44,6 +44,7 @@
     </used-behaviors>
     <used-effects>
         <effect author="Scirra" id="grayscale">Grayscale</effect>
+        <effect author="Anata" id="hq2xl">HQ2X Layout</effect>
         <effect author="Scirra" id="setcolor">Set color</effect>
         <effect author="Scirra" id="tint">Tint</effect>
     </used-effects>
@@ -62,6 +63,7 @@
         <prop name="Clear background">No</prop>
         <prop name="Downscaling">Low quality</prop>
         <prop name="Enable WebGL">On</prop>
+        <prop name="Front-to-back renderer">Enabled</prop>
         <prop name="Fullscreen in browser">Letterbox integer scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Fullscreen scaling quality">Low</prop>
@@ -3074,7 +3076,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type global="1" name="TempData" sid="4941800187016818">
+        <object-type global="1" name="SessionData" sid="4941800187016818">
             <plugin id="Dictionary" />
         </object-type>
         <object-type name="HPGUI" sid="3924425921982152">
@@ -3708,6 +3710,5 @@
             <file name="TriggerZoneFunctions.xml" />
             <file name="Npc.xml" />
         </file-folder>
-        <file name="KNOWN_BUGS.txt" />
     </files-folder>
 </c2project>

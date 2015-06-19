@@ -7971,7 +7971,7 @@
                         <behavior-instance type="Pathfinding">
                             <properties>
                                 <cell-size>4</cell-size>
-                                <cell-border>2</cell-border>
+                                <cell-border>-1</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>16</max-speed>
                                 <acceleration>16</acceleration>
@@ -10066,7 +10066,7 @@
                 <depth>1</depth>
             </properties>
         </instance>
-        <instance type="TempData" uid="260" />
+        <instance type="SessionData" uid="260" />
         <instance type="TriggerZoneData" uid="287">
             <instance-variables>
                 <Loaded>false</Loaded>

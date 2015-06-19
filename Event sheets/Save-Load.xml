@@ -98,7 +98,7 @@
                     <param id="0" name="Name">&quot;ShowTextBox&quot;</param>
                     <param id="1" name="Parameter {n}">&quot;Bottom;Loaded&quot;</param>
                 </action>
-                <action id="3" name="Clear" sid="6491008976351273" type="TempData" />
+                <action id="3" name="Clear" sid="6491008976351273" type="SessionData" />
             </actions>
             <sub-events>
                 <event-block sid="3332786982997561">

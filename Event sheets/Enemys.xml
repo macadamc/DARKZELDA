@@ -62,7 +62,7 @@
                                     <param id="0" name="Name">&quot;Explosion&quot;</param>
                                     <param id="1" name="Parameter {n}">Enemies.X{###}Enemies.Y{###}&quot;Enemy&quot;</param>
                                 </action>
-                                <action id="0" name="Add key" sid="8060325939461937" type="TempData">
+                                <action id="0" name="Add key" sid="8060325939461937" type="SessionData">
                                     <param id="0" name="Key">str(Enemies.spawnerUID)</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
