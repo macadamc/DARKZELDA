@@ -13,6 +13,7 @@
         <include>TextBox</include>
         <include>Player</include>
         <include>Interactive</include>
+        <include>Item Functions</include>
         <include>Enemys</include>
         <include>Pausing</include>
         <include>Camara</include>
@@ -23,7 +24,6 @@
         <include>Transitions</include>
         <include>FiniteStateMachine</include>
         <include>Npc</include>
-        <include>Item Functions</include>
         <include>Spawnable Effects</include>
         <include>SOUNDMUSIC</include>
         <include>Particle</include>

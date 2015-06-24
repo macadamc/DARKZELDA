@@ -8,7 +8,7 @@
     <author-website></author-website>
     <app-id>com.shadypixel.darkzelda</app-id>
     <unique-id>2qpiupr2gjili</unique-id>
-    <saved-with-version>20700</saved-with-version>
+    <saved-with-version>20800</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
@@ -44,7 +44,6 @@
     </used-behaviors>
     <used-effects>
         <effect author="Scirra" id="grayscale">Grayscale</effect>
-        <effect author="Anata" id="hq2xl">HQ2X Layout</effect>
         <effect author="Scirra" id="setcolor">Set color</effect>
         <effect author="Scirra" id="tint">Tint</effect>
     </used-effects>
@@ -1136,6 +1135,7 @@
                 <instance-variables>
                     <instance-variable name="Knockback" sid="1518416267480848" type="number" />
                     <instance-variable name="Damage" sid="38844451426771" type="number" />
+                    <instance-variable name="shield" sid="4350175428241786" type="boolean" />
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9365454665790129" speed="5">
@@ -1970,6 +1970,69 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Firefly" sid="2600715133474691">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6682244924318935" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="1" />
+                            <collision-poly>
+                                <point x="0.166667" y="0.333333" />
+                                <point x="0.833333" y="0.333333" />
+                                <point x="0.833333" y="0.833333" />
+                                <point x="0.166667" y="0.833333" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="1" />
+                            <collision-poly>
+                                <point x="0.166667" y="0.333333" />
+                                <point x="0.833333" y="0.333333" />
+                                <point x="0.833333" y="0.833333" />
+                                <point x="0.166667" y="0.833333" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="1" />
+                            <collision-poly>
+                                <point x="0.166667" y="0.333333" />
+                                <point x="0.833333" y="0.333333" />
+                                <point x="0.833333" y="0.833333" />
+                                <point x="0.166667" y="0.833333" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="3" loop="1" name="Lit" pingpong="0" repeatcount="1" repeatto="0" sid="452255239370725" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="1" />
+                            <collision-poly>
+                                <point x="0.166667" y="0.333333" />
+                                <point x="0.833333" y="0.333333" />
+                                <point x="0.833333" y="0.833333" />
+                                <point x="0.166667" y="0.833333" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="1" />
+                            <collision-poly>
+                                <point x="0.166667" y="0.333333" />
+                                <point x="0.833333" y="0.333333" />
+                                <point x="0.833333" y="0.833333" />
+                                <point x="0.166667" y="0.833333" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="1" />
+                            <collision-poly>
+                                <point x="0.166667" y="0.333333" />
+                                <point x="0.833333" y="0.333333" />
+                                <point x="0.833333" y="0.833333" />
+                                <point x="0.166667" y="0.833333" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="LEVEL">
             <object-folder name="TileMaps">
@@ -2646,7 +2709,7 @@
                     <type>TextBox</type>
                     <type>TextBoxText</type>
                 </container>
-                <texture original-source="C:\Users\chris\Desktop\test10x14.png" />
+                <texture original-source="C:\Users\chris\Desktop\SpriteFont_KenPixel_Regular_(8)_[0,0,0]_9x11.png" />
             </object-type>
         </object-folder>
         <object-folder name="Inputs">
@@ -2745,7 +2808,7 @@
                         <effect id="setcolor" />
                     </effect-type>
                 </effects>
-                <texture original-source="C:\Users\chris\Desktop\SpriteFont_MingLiU_Regular_(12)_[0,0,0]_10x14.png" />
+                <texture original-source="C:\Users\chris\Desktop\SpriteFont_KenPixel_Regular_(8)_[0,0,0]_9x11.png" />
             </object-type>
             <object-type global="1" name="ItemDesc" sid="4828113227630351">
                 <plugin id="Dictionary" />
@@ -3096,6 +3159,9 @@
                 <animation framecount="1" loop="0" name="Bomb" pingpong="0" repeatcount="1" repeatto="0" sid="1759511921045105" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
+                <animation framecount="1" loop="0" name="Key" pingpong="0" repeatcount="1" repeatto="0" sid="865618816526615" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
             </animation-folder>
         </object-type>
         <object-type name="Tilemap" sid="8860606055427446">
@@ -3275,6 +3341,7 @@
                 <member>Bird</member>
                 <member>Bunny</member>
                 <member>EnemyProjectile</member>
+                <member>Firefly</member>
                 <member>Heart</member>
                 <member>Mage</member>
                 <member>Mage2</member>
@@ -3376,6 +3443,7 @@
                 <member>Bird</member>
                 <member>Breakable</member>
                 <member>Bunny</member>
+                <member>Firefly</member>
                 <member>Foilage</member>
                 <member>Ghost</member>
                 <member>Heart</member>
@@ -3419,6 +3487,7 @@
                 <member>Breakable</member>
                 <member>Bunny</member>
                 <member>EnemyProjectile</member>
+                <member>Firefly</member>
                 <member>Foilage</member>
                 <member>Heart</member>
                 <member>Item_Pickup</member>
@@ -3522,6 +3591,7 @@
                 <member>BASE</member>
                 <member>Breakable</member>
                 <member>EnemyProjectile</member>
+                <member>Firefly</member>
                 <member>Ghost</member>
                 <member>PlayerProjectile</member>
             </members>
@@ -3568,6 +3638,7 @@
                 <member>Bat</member>
                 <member>Bird</member>
                 <member>Bunny</member>
+                <member>Firefly</member>
                 <member>Heart</member>
                 <member>Mage</member>
                 <member>Mage2</member>

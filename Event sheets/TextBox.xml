@@ -75,7 +75,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="2267988686374381" type="TextBox">
                             <param id="0" name="Instance variable">CharsPerPage</param>
-                            <param id="1" name="Value">(TextBoxText.Width*TextBoxText.Height)/(15*14)</param>
+                            <param id="1" name="Value">(TextBoxText.Width*TextBoxText.Height)/(10*11)</param>
                         </action>
                     </actions>
                 </event-block>

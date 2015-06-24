@@ -115,6 +115,35 @@
                                                                         </action>
                                                                     </actions>
                                                                 </event-block>
+                                                                <event-block sid="2180041223575062">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="6555137335586708" type="ENEMY_SPAWNER">
+                                                                            <param id="0" name="Instance variable">Spawn</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">&quot;Firefly&quot;</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="0" name="Spawn another object" sid="6270691161683488" type="ENEMY_SPAWNER">
+                                                                            <param id="0" name="Object">Firefly</param>
+                                                                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                                            <param id="2" name="Image point">0</param>
+                                                                        </action>
+                                                                        <action id="-10" name="Set value" sid="2296980073973272" type="Firefly">
+                                                                            <param id="0" name="Instance variable">Zone1</param>
+                                                                            <param id="1" name="Value">ENEMY_SPAWNER.Zone</param>
+                                                                        </action>
+                                                                        <action behavior="LineOfSight" id="3" name="Clear obstacles" sid="6675179367850308" type="Firefly" />
+                                                                        <action id="-10" name="Set value" sid="4741507017518067" type="Firefly">
+                                                                            <param id="0" name="Instance variable">spawnerUID</param>
+                                                                            <param id="1" name="Value">ENEMY_SPAWNER.UID</param>
+                                                                        </action>
+                                                                        <action id="-13" name="Set boolean" sid="4663999793337343" type="ENEMY_SPAWNER">
+                                                                            <param id="0" name="Instance variable">Loaded</param>
+                                                                            <param id="1" name="Value">1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
                                                                 <event-block sid="905875964736211">
                                                                     <conditions>
                                                                         <condition id="-7" name="Compare instance variable" sid="7075858946630215" type="ENEMY_SPAWNER">

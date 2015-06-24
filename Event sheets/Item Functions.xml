@@ -164,6 +164,7 @@
             </actions>
             <sub-events>
                 <variable constant="0" name="knockback" sid="5514577226960186" static="0" type="number">80</variable>
+                <variable constant="0" name="scale" sid="9367961915556948" static="0" type="number">0.3</variable>
                 <event-block sid="7822335908355243">
                     <conditions>
                         <condition id="1" name="Compare parameter" sid="7278224614003335" type="Function">
@@ -183,7 +184,7 @@
                             <param id="2" name="Image point">1</param>
                         </action>
                         <action id="9" name="Set scale" sid="6756065540873005" type="Melee_Hitbox">
-                            <param id="0" name="Scale">0.5</param>
+                            <param id="0" name="Scale">scale</param>
                         </action>
                         <action id="-8" name="Set angle" sid="1417845518647622" type="Melee_Hitbox">
                             <param id="0" name="Angle">0</param>
@@ -195,6 +196,10 @@
                         <action id="-10" name="Set value" sid="7427119200602883" type="Melee_Hitbox">
                             <param id="0" name="Instance variable">Damage</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="5256906444285213" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">shield</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                         <action id="-16" name="Wait" sid="7276006167978289" type="System">
                             <param id="0" name="Seconds">0.1</param>
@@ -220,8 +225,8 @@
                             <param id="1" name="Layer">&quot;OBJECT&quot;</param>
                             <param id="2" name="Image point">1</param>
                         </action>
-                        <action id="9" name="Set scale" sid="8120048105550513" type="Melee_Hitbox">
-                            <param id="0" name="Scale">0.5</param>
+                        <action id="9" name="Set scale" sid="4195297983933158" type="Melee_Hitbox">
+                            <param id="0" name="Scale">scale</param>
                         </action>
                         <action id="-8" name="Set angle" sid="5390631819622771" type="Melee_Hitbox">
                             <param id="0" name="Angle">90</param>
@@ -233,6 +238,10 @@
                         <action id="-10" name="Set value" sid="3949326571375279" type="Melee_Hitbox">
                             <param id="0" name="Instance variable">Damage</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="3202431891632491" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">shield</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                         <action id="-16" name="Wait" sid="5053892997996797" type="System">
                             <param id="0" name="Seconds">0.1</param>
@@ -258,8 +267,8 @@
                             <param id="1" name="Layer">&quot;OBJECT&quot;</param>
                             <param id="2" name="Image point">1</param>
                         </action>
-                        <action id="9" name="Set scale" sid="3141528726374257" type="Melee_Hitbox">
-                            <param id="0" name="Scale">0.5</param>
+                        <action id="9" name="Set scale" sid="5786985239293989" type="Melee_Hitbox">
+                            <param id="0" name="Scale">scale</param>
                         </action>
                         <action id="-8" name="Set angle" sid="9573705349831955" type="Melee_Hitbox">
                             <param id="0" name="Angle">270</param>
@@ -271,6 +280,10 @@
                         <action id="-10" name="Set value" sid="216165861279214" type="Melee_Hitbox">
                             <param id="0" name="Instance variable">Damage</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="9388119594528051" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">shield</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                         <action id="-16" name="Wait" sid="8882742330834533" type="System">
                             <param id="0" name="Seconds">0.1</param>
@@ -296,8 +309,8 @@
                             <param id="1" name="Layer">&quot;OBJECT&quot;</param>
                             <param id="2" name="Image point">1</param>
                         </action>
-                        <action id="9" name="Set scale" sid="8564586046786393" type="Melee_Hitbox">
-                            <param id="0" name="Scale">0.5</param>
+                        <action id="9" name="Set scale" sid="2546248015629222" type="Melee_Hitbox">
+                            <param id="0" name="Scale">scale</param>
                         </action>
                         <action id="-8" name="Set angle" sid="5276850850765945" type="Melee_Hitbox">
                             <param id="0" name="Angle">180</param>
@@ -310,11 +323,19 @@
                             <param id="0" name="Instance variable">Damage</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action id="-13" name="Set boolean" sid="6315625709883447" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">shield</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                         <action id="-16" name="Wait" sid="2012101304801609" type="System">
                             <param id="0" name="Seconds">0.1</param>
                         </action>
                         <action id="-9" name="Destroy" sid="7982584158007215" type="Melee_Hitbox" />
                     </actions>
+                </event-block>
+                <event-block sid="8516808607886104">
+                    <conditions />
+                    <actions />
                 </event-block>
             </sub-events>
         </event-block>
@@ -751,7 +772,7 @@
             </actions>
             <sub-events>
                 <variable constant="0" name="knockback" sid="2182048283018429" static="0" type="number">112</variable>
-                <variable constant="0" name="scale" sid="7200829327988247" static="0" type="number">0.85</variable>
+                <variable constant="0" name="scale" sid="7200829327988247" static="0" type="number">0.9</variable>
                 <event-block sid="6037475033159032">
                     <conditions>
                         <condition id="1" name="Compare parameter" sid="5782588177580338" type="Function">
@@ -783,6 +804,10 @@
                         </action>
                         <action id="9" name="Set scale" sid="8942986910406097" type="Melee_Hitbox">
                             <param id="0" name="Scale">scale</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="7413219645874919" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">shield</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -818,6 +843,10 @@
                         <action id="9" name="Set scale" sid="772870321554562" type="Melee_Hitbox">
                             <param id="0" name="Scale">scale</param>
                         </action>
+                        <action id="-13" name="Set boolean" sid="6186938155233779" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">shield</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="4919134454336969">
@@ -852,6 +881,10 @@
                         <action id="9" name="Set scale" sid="6202180822646479" type="Melee_Hitbox">
                             <param id="0" name="Scale">scale</param>
                         </action>
+                        <action id="-13" name="Set boolean" sid="8821045009857275" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">shield</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="2059129917452029">
@@ -885,6 +918,10 @@
                         </action>
                         <action id="9" name="Set scale" sid="7927986671090792" type="Melee_Hitbox">
                             <param id="0" name="Scale">scale</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="6498387879189048" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">shield</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -922,7 +959,7 @@
                         </action>
                         <action id="-10" name="Set value" sid="300658347611883" type="BASE">
                             <param id="0" name="Instance variable">AttackTimer</param>
-                            <param id="1" name="Value">0.1</param>
+                            <param id="1" name="Value">0.15</param>
                         </action>
                     </actions>
                 </event-block>

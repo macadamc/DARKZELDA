@@ -26,4 +26,7 @@
 		Data="Poop"></Object>
 	<Object Name="NPC2"
 		Data="... As you walked up to me, I felt a chill down my spine..       It is probably the wind."></Object>
+		
+	<Object Name="sign1"
+		Data="This is a test. hopefully it works. I am writing out a long text to see if it gets cut off correctly and continues on a new page. I am going to write a few more words to make it longer. and. . . ... ... ..... im done."></Object>
 </xml>

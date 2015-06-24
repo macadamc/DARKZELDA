@@ -470,7 +470,7 @@
                 </instance>
                 <instance type="Melee_Hitbox" uid="432">
                     <properties>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -478,6 +478,7 @@
                     <instance-variables>
                         <Knockback>0</Knockback>
                         <Damage>0</Damage>
+                        <shield>false</shield>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1126,7 +1127,7 @@
                         <regenMap>false</regenMap>
                         <HasLight>false</HasLight>
                         <LightUID>-1</LightUID>
-                        <LightSize>300</LightSize>
+                        <LightSize>200</LightSize>
                         <LightOpacity>100</LightOpacity>
                         <R>0</R>
                         <G>0</G>

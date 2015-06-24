@@ -58,6 +58,20 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="5623652481589682">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="1035649651216799" type="SpriteFont">
+                            <param id="0" name="Instance variable">Function</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;KEYS&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="6780718546336837" type="SpriteFont">
+                            <param id="0" name="Text">GameStats.Get(&quot;keys&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
     </events>

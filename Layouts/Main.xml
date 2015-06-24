@@ -4335,7 +4335,7 @@
                 </instance>
                 <instance type="Melee_Hitbox" uid="69">
                     <properties>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -4343,6 +4343,7 @@
                     <instance-variables>
                         <Knockback>0</Knockback>
                         <Damage>0</Damage>
+                        <shield>false</shield>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -6731,7 +6732,7 @@
                         <regenMap>false</regenMap>
                         <HasLight>false</HasLight>
                         <LightUID>-1</LightUID>
-                        <LightSize>300</LightSize>
+                        <LightSize>200</LightSize>
                         <LightOpacity>100</LightOpacity>
                         <R>0</R>
                         <G>0</G>
@@ -9320,8 +9321,8 @@
                 </instance>
                 <instance type="SpriteFont" uid="179">
                     <properties>
-                        <character-width>14</character-width>
-                        <character-height>13</character-height>
+                        <character-width>9</character-width>
+                        <character-height>11</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>-PAUSE-</text>
                         <scale>1</scale>
@@ -9330,7 +9331,7 @@
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
-                        <character-spacing>-4</character-spacing>
+                        <character-spacing>0</character-spacing>
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
@@ -9496,8 +9497,8 @@
                 </instance>
                 <instance type="SpriteFont" uid="187">
                     <properties>
-                        <character-width>14</character-width>
-                        <character-height>13</character-height>
+                        <character-width>9</character-width>
+                        <character-height>11</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text></text>
                         <scale>1</scale>
@@ -9506,7 +9507,7 @@
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
-                        <character-spacing>-4</character-spacing>
+                        <character-spacing>0</character-spacing>
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
@@ -9855,17 +9856,17 @@
                 </instance>
                 <instance type="SpriteFont" uid="21">
                     <properties>
-                        <character-width>14</character-width>
-                        <character-height>13</character-height>
+                        <character-width>9</character-width>
+                        <character-height>11</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>///////////</text>
                         <scale>1</scale>
                         <initial-visibility>Visible</initial-visibility>
-                        <horizontal-alignment>Left</horizontal-alignment>
+                        <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
-                        <character-spacing>-4</character-spacing>
+                        <character-spacing>0</character-spacing>
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
@@ -9883,11 +9884,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>4</x>
-                        <y>16</y>
+                        <x>284</x>
+                        <y>4</y>
                         <z>0</z>
-                        <width>200</width>
-                        <height>30</height>
+                        <width>32</width>
+                        <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -9931,8 +9932,8 @@
                 </instance>
                 <instance type="TextBoxText" uid="211">
                     <properties>
-                        <character-width>14</character-width>
-                        <character-height>13</character-height>
+                        <character-width>9</character-width>
+                        <character-height>11</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>Text</text>
                         <scale>1</scale>
@@ -9941,7 +9942,7 @@
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
-                        <character-spacing>-1</character-spacing>
+                        <character-spacing>0</character-spacing>
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
@@ -10018,7 +10019,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-132</x>
+                        <x>-136</x>
                         <y>128</y>
                         <z>0</z>
                         <width>128</width>
@@ -10040,8 +10041,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>16</x>
-                        <y>-20</y>
+                        <x>8</x>
+                        <y>32</y>
                         <z>0</z>
                         <width>8</width>
                         <height>8</height>
@@ -10076,8 +10077,8 @@
                 </instance>
                 <instance type="SpriteFont" uid="271">
                     <properties>
-                        <character-width>14</character-width>
-                        <character-height>13</character-height>
+                        <character-width>9</character-width>
+                        <character-height>11</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>00</text>
                         <scale>1</scale>
@@ -10086,7 +10087,7 @@
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
-                        <character-spacing>-4</character-spacing>
+                        <character-spacing>0</character-spacing>
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
@@ -10118,8 +10119,8 @@
                 </instance>
                 <instance type="SpriteFont" uid="272">
                     <properties>
-                        <character-width>14</character-width>
-                        <character-height>13</character-height>
+                        <character-width>9</character-width>
+                        <character-height>11</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
                         <text>00</text>
                         <scale>1</scale>
@@ -10128,7 +10129,7 @@
                         <vertical-alignment>Center</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
-                        <character-spacing>-4</character-spacing>
+                        <character-spacing>0</character-spacing>
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
@@ -10150,7 +10151,113 @@
                         <y>-24</y>
                         <z>0</z>
                         <width>200</width>
+                        <height>20</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="GUI_ICON" uid="838">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Key</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>8</x>
+                        <y>20</y>
+                        <z>0</z>
+                        <width>8</width>
                         <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="SpriteFont" uid="841">
+                    <properties>
+                        <character-width>9</character-width>
+                        <character-height>11</character-height>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
+                        <text>0</text>
+                        <scale>1</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>0</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <Function>KEYS</Function>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="SetColor">
+                            <parameters>
+                                <blue>1</blue>
+                                <green>1</green>
+                                <red>1</red>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>16</x>
+                        <y>12</y>
+                        <z>0</z>
+                        <width>36</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="SpriteFont" uid="843">
+                    <properties>
+                        <character-width>9</character-width>
+                        <character-height>11</character-height>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
+                        <text>0</text>
+                        <scale>1</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>0</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <Function>ARROWS</Function>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="SetColor">
+                            <parameters>
+                                <blue>1</blue>
+                                <green>1</green>
+                                <red>1</red>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>16</x>
+                        <y>24</y>
+                        <z>0</z>
+                        <width>36</width>
+                        <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

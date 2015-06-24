@@ -8,110 +8,139 @@
                 <condition id="-11" name="For Each" sid="9506685311827092" type="System">
                     <param id="0" name="Object">HAS_LIGHT</param>
                 </condition>
-                <condition id="-8" name="Is boolean instance variable set" sid="2231445411484548" type="HAS_LIGHT">
-                    <param id="0" name="Instance variable">drawlight</param>
-                </condition>
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="8065506180575325">
+                <event-block sid="7871202043858658">
                     <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2584511355037176" type="HAS_LIGHT">
-                            <param id="0" name="Instance variable">HasLight</param>
+                        <condition id="-8" name="Is boolean instance variable set" sid="2231445411484548" type="HAS_LIGHT">
+                            <param id="0" name="Instance variable">drawlight</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="1032531400613215" type="HAS_LIGHT">
-                            <param id="0" name="Object">Light</param>
-                            <param id="1" name="Layer">&quot;LIGHTING&quot;</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
-                        <action id="-26" name="Move to layer" sid="5744691191311612" type="Light">
-                            <param id="0" name="Layer">&quot;LIGHTING&quot;</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="8241408378651217" type="Light">
-                            <param id="0" name="Instance variable">Zone1</param>
-                            <param id="1" name="Value">CurZone</param>
-                        </action>
-                        <action id="-7" name="Set size" sid="3592839963800329" type="Light">
-                            <param id="0" name="Width">HAS_LIGHT.LightSize</param>
-                            <param id="1" name="Height">HAS_LIGHT.LightSize</param>
-                        </action>
-                        <action id="-26" name="Move to layer" sid="2107470688150349" type="LightColor">
-                            <param id="0" name="Layer">&quot;LIGHTCOLOR&quot;</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="2975006418731574" type="LightColor">
-                            <param id="0" name="Instance variable">Zone1</param>
-                            <param id="1" name="Value">CurZone</param>
-                        </action>
-                        <action id="-7" name="Set size" sid="9470320996497524" type="LightColor">
-                            <param id="0" name="Width">HAS_LIGHT.LightSize</param>
-                            <param id="1" name="Height">HAS_LIGHT.LightSize</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="4307999532295762" type="HAS_LIGHT">
-                            <param id="0" name="Instance variable">LightUID</param>
-                            <param id="1" name="Value">Light.UID</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="601824291076417" type="HAS_LIGHT">
-                            <param id="0" name="Instance variable">HasLight</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="5728977756078224" type="Light">
-                            <param id="0" name="Instance variable">size</param>
-                            <param id="1" name="Value">HAS_LIGHT.LightSize</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="219151223017819" type="Light">
-                            <param id="0" name="Instance variable">cursize</param>
-                            <param id="1" name="Value">HAS_LIGHT.LightSize</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4637508057250424">
-                    <conditions>
-                        <condition id="-14" name="Pick by unique ID" sid="2499008808013842" type="Light">
-                            <param id="0" name="Unique ID">HAS_LIGHT.LightUID</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-4" name="Set position to another object" sid="7118471210364649" type="Light">
-                            <param id="0" name="Object">HAS_LIGHT</param>
-                            <param id="1" name="Image point (optional)">0</param>
-                        </action>
-                        <action id="-4" name="Set position to another object" sid="2170394891065112" type="LightColor">
-                            <param id="0" name="Object">HAS_LIGHT</param>
-                            <param id="1" name="Image point (optional)">0</param>
-                        </action>
-                        <action id="-28" name="Set effect parameter" sid="8062721369784812" type="LightColor">
-                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
-                            <param id="1" name="Parameter index">0</param>
-                            <param id="2" name="Value">HAS_LIGHT.R</param>
-                        </action>
-                        <action id="-28" name="Set effect parameter" sid="9642219293506361" type="LightColor">
-                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
-                            <param id="1" name="Parameter index">1</param>
-                            <param id="2" name="Value">HAS_LIGHT.G</param>
-                        </action>
-                        <action id="-28" name="Set effect parameter" sid="5666099745573176" type="LightColor">
-                            <param id="0" name="Effect">&quot;SetColor&quot;</param>
-                            <param id="1" name="Parameter index">2</param>
-                            <param id="2" name="Value">HAS_LIGHT.B</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
-                        <event-block sid="5204475337281091">
+                        <event-block sid="8065506180575325">
                             <conditions>
-                                <condition id="0" name="Compare value" sid="4801558945895561" type="GameStats">
-                                    <param id="0" name="Key">&quot;CurHP&quot;</param>
-                                    <param id="1" name="Comparison">4</param>
-                                    <param id="2" name="Value">0</param>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2584511355037176" type="HAS_LIGHT">
+                                    <param id="0" name="Instance variable">HasLight</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-16" name="Set opacity" sid="8096602710968049" type="Light">
-                                    <param id="0" name="Opacity">HAS_LIGHT.LightOpacity</param>
+                                <action id="0" name="Spawn another object" sid="1032531400613215" type="HAS_LIGHT">
+                                    <param id="0" name="Object">Light</param>
+                                    <param id="1" name="Layer">&quot;LIGHTING&quot;</param>
+                                    <param id="2" name="Image point">0</param>
                                 </action>
-                                <action id="-16" name="Set opacity" sid="3072461283483242" type="LightColor">
-                                    <param id="0" name="Opacity">HAS_LIGHT.LightOpacity</param>
+                                <action id="-26" name="Move to layer" sid="5744691191311612" type="Light">
+                                    <param id="0" name="Layer">&quot;LIGHTING&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="8241408378651217" type="Light">
+                                    <param id="0" name="Instance variable">Zone1</param>
+                                    <param id="1" name="Value">CurZone</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="3592839963800329" type="Light">
+                                    <param id="0" name="Width">HAS_LIGHT.LightSize</param>
+                                    <param id="1" name="Height">HAS_LIGHT.LightSize</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="2107470688150349" type="LightColor">
+                                    <param id="0" name="Layer">&quot;LIGHTCOLOR&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="2975006418731574" type="LightColor">
+                                    <param id="0" name="Instance variable">Zone1</param>
+                                    <param id="1" name="Value">CurZone</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="9470320996497524" type="LightColor">
+                                    <param id="0" name="Width">HAS_LIGHT.LightSize</param>
+                                    <param id="1" name="Height">HAS_LIGHT.LightSize</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="4307999532295762" type="HAS_LIGHT">
+                                    <param id="0" name="Instance variable">LightUID</param>
+                                    <param id="1" name="Value">Light.UID</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="601824291076417" type="HAS_LIGHT">
+                                    <param id="0" name="Instance variable">HasLight</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="5728977756078224" type="Light">
+                                    <param id="0" name="Instance variable">size</param>
+                                    <param id="1" name="Value">HAS_LIGHT.LightSize</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="219151223017819" type="Light">
+                                    <param id="0" name="Instance variable">cursize</param>
+                                    <param id="1" name="Value">HAS_LIGHT.LightSize</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4637508057250424">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="2499008808013842" type="Light">
+                                    <param id="0" name="Unique ID">HAS_LIGHT.LightUID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set position to another object" sid="7118471210364649" type="Light">
+                                    <param id="0" name="Object">HAS_LIGHT</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-4" name="Set position to another object" sid="2170394891065112" type="LightColor">
+                                    <param id="0" name="Object">HAS_LIGHT</param>
+                                    <param id="1" name="Image point (optional)">0</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="8062721369784812" type="LightColor">
+                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                    <param id="1" name="Parameter index">0</param>
+                                    <param id="2" name="Value">HAS_LIGHT.R</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="9642219293506361" type="LightColor">
+                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                    <param id="1" name="Parameter index">1</param>
+                                    <param id="2" name="Value">HAS_LIGHT.G</param>
+                                </action>
+                                <action id="-28" name="Set effect parameter" sid="5666099745573176" type="LightColor">
+                                    <param id="0" name="Effect">&quot;SetColor&quot;</param>
+                                    <param id="1" name="Parameter index">2</param>
+                                    <param id="2" name="Value">HAS_LIGHT.B</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="5204475337281091">
+                                    <conditions>
+                                        <condition id="0" name="Compare value" sid="4801558945895561" type="GameStats">
+                                            <param id="0" name="Key">&quot;CurHP&quot;</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-16" name="Set opacity" sid="8096602710968049" type="Light">
+                                            <param id="0" name="Opacity">HAS_LIGHT.LightOpacity</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="3072461283483242" type="LightColor">
+                                            <param id="0" name="Opacity">HAS_LIGHT.LightOpacity</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2017831930696112">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="5161984182615324" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3479407961127764">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="6205876850558999" type="Light">
+                                    <param id="0" name="Unique ID">HAS_LIGHT.LightUID</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="5844464349057762" type="Light" />
+                                <action id="-13" name="Set boolean" sid="2542606946272544" type="HAS_LIGHT">
+                                    <param id="0" name="Instance variable">HasLight</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
                         </event-block>
