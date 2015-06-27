@@ -2938,6 +2938,7 @@
                     <instance-variable name="size" sid="2877778926861893" type="number" />
                     <instance-variable name="cursize" sid="7579620031198933" type="number" />
                     <instance-variable name="timer" sid="2560567563112764" type="number" />
+                    <instance-variable name="lerpSpd" sid="5607660566602616" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Sine" sid="5697962313783314">
@@ -3604,6 +3605,7 @@
                 <instance-variable name="G" sid="12338595316935" type="number" />
                 <instance-variable name="B" sid="8176258016818749" type="number" />
                 <instance-variable name="drawlight" sid="1680413116277703" type="boolean" />
+                <instance-variable name="fade" sid="2843812957826537" type="boolean" />
             </instance-variables>
         </family>
         <family name="HAS_PARTICLE" plugin-id="Sprite" sid="768815608759117">

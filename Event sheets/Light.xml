@@ -3,6 +3,16 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Light</name>
     <events>
+        <event-block sid="4991295943998532">
+            <conditions>
+                <condition id="-18" name="On created" sid="6685652978484705" type="Light" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="2764747006124144" type="Light">
+                    <param id="0" name="Opacity">0</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="3511824986969627">
             <conditions>
                 <condition id="-11" name="For Each" sid="9506685311827092" type="System">
@@ -111,14 +121,37 @@
                                             <param id="2" name="Value">0</param>
                                         </condition>
                                     </conditions>
-                                    <actions>
-                                        <action id="-16" name="Set opacity" sid="8096602710968049" type="Light">
-                                            <param id="0" name="Opacity">HAS_LIGHT.LightOpacity</param>
-                                        </action>
-                                        <action id="-16" name="Set opacity" sid="3072461283483242" type="LightColor">
-                                            <param id="0" name="Opacity">HAS_LIGHT.LightOpacity</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="9829691455017119">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="367057812651722" type="HAS_LIGHT">
+                                                    <param id="0" name="Instance variable">fade</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-16" name="Set opacity" sid="8096602710968049" type="Light">
+                                                    <param id="0" name="Opacity">lerp(self.Opacity,HAS_LIGHT.LightOpacity,self.lerpSpd)</param>
+                                                </action>
+                                                <action id="-16" name="Set opacity" sid="3072461283483242" type="LightColor">
+                                                    <param id="0" name="Opacity">lerp(light.Opacity,HAS_LIGHT.LightOpacity,Light.lerpSpd)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="3383325126142491">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="4902794909403263" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="-16" name="Set opacity" sid="5487641841896108" type="Light">
+                                                    <param id="0" name="Opacity">HAS_LIGHT.LightOpacity</param>
+                                                </action>
+                                                <action id="-16" name="Set opacity" sid="5248949607833241" type="LightColor">
+                                                    <param id="0" name="Opacity">HAS_LIGHT.LightOpacity</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-block>

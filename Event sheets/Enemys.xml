@@ -3478,7 +3478,7 @@
                                     <param id="2" name="Value">1</param>
                                 </condition>
                                 <condition id="-6" name="Every X seconds" sid="7151259271034789" type="System">
-                                    <param id="0" name="Interval (seconds)">random(1,5)</param>
+                                    <param id="0" name="Interval (seconds)">random(1,2.5)</param>
                                 </condition>
                                 <condition id="-16" name="Pick random instance" sid="1584283670671424" type="System">
                                     <param id="0" name="Object">Firefly</param>
@@ -3500,6 +3500,10 @@
                                     <param id="0" name="Animation">choose(&quot;Default&quot;,&quot;Lit&quot;)</param>
                                     <param id="1" name="From">0</param>
                                 </action>
+                                <action id="-13" name="Set boolean" sid="3104277149796862" type="Firefly">
+                                    <param id="0" name="Instance variable">drawlight</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="9755587089606952">
@@ -3507,11 +3511,18 @@
                                 <condition id="2" name="Is playing" sid="1634418627997523" type="Firefly">
                                     <param id="0" name="Animation">&quot;Lit&quot;</param>
                                 </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="7496722751339171" type="Light">
+                                    <param id="0" name="Unique ID">Firefly.LightUID</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="-13" name="Set boolean" sid="3104277149796862" type="Firefly">
-                                    <param id="0" name="Instance variable">drawlight</param>
-                                    <param id="1" name="Value">1</param>
+                                <action id="-10" name="Set value" sid="571397054337145" type="Firefly">
+                                    <param id="0" name="Instance variable">LightOpacity</param>
+                                    <param id="1" name="Value">50</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="972348727501451" type="Light">
+                                    <param id="0" name="Instance variable">lerpSpd</param>
+                                    <param id="1" name="Value">0.1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -3520,11 +3531,18 @@
                                 <condition id="2" inverted="1" name="Is playing" sid="6543722256629208" type="Firefly">
                                     <param id="0" name="Animation">&quot;Lit&quot;</param>
                                 </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="5192911344114838" type="Light">
+                                    <param id="0" name="Unique ID">Firefly.LightUID</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="-13" name="Set boolean" sid="8458649900369987" type="Firefly">
-                                    <param id="0" name="Instance variable">drawlight</param>
+                                <action id="-10" name="Set value" sid="4547558582826274" type="Firefly">
+                                    <param id="0" name="Instance variable">LightOpacity</param>
                                     <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="8516763097481215" type="Light">
+                                    <param id="0" name="Instance variable">lerpSpd</param>
+                                    <param id="1" name="Value">0.05</param>
                                 </action>
                             </actions>
                         </event-block>

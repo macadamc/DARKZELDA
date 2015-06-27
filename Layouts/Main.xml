@@ -4552,6 +4552,7 @@
                         <G>0</G>
                         <B>0</B>
                         <drawlight>true</drawlight>
+                        <fade>false</fade>
                         <LeaveBloodTrail>false</LeaveBloodTrail>
                         <BloodOnHit>true</BloodOnHit>
                         <BloodTrailTimer>0.2</BloodTrailTimer>
@@ -5010,6 +5011,7 @@
                         <G>2</G>
                         <B>0</B>
                         <drawlight>false</drawlight>
+                        <fade>false</fade>
                         <ParticleType></ParticleType>
                         <HasParticle>false</HasParticle>
                         <ParticleUID>-1</ParticleUID>
@@ -5822,6 +5824,7 @@
                         <G>2</G>
                         <B>0</B>
                         <drawlight>false</drawlight>
+                        <fade>false</fade>
                         <ParticleType></ParticleType>
                         <HasParticle>false</HasParticle>
                         <ParticleUID>-1</ParticleUID>
@@ -6409,6 +6412,7 @@
                         <G>5</G>
                         <B>0</B>
                         <drawlight>false</drawlight>
+                        <fade>false</fade>
                         <ParticleType></ParticleType>
                         <HasParticle>false</HasParticle>
                         <ParticleUID>-1</ParticleUID>
@@ -6733,11 +6737,12 @@
                         <HasLight>false</HasLight>
                         <LightUID>-1</LightUID>
                         <LightSize>200</LightSize>
-                        <LightOpacity>100</LightOpacity>
+                        <LightOpacity>25</LightOpacity>
                         <R>0</R>
                         <G>0</G>
                         <B>12</B>
                         <drawlight>true</drawlight>
+                        <fade>false</fade>
                         <ParticleType>Ghost</ParticleType>
                         <HasParticle>false</HasParticle>
                         <ParticleUID>-1</ParticleUID>
@@ -9096,6 +9101,7 @@
                         <size>1</size>
                         <cursize>0</cursize>
                         <timer>0.2</timer>
+                        <lerpSpd>0.01</lerpSpd>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
@@ -9884,8 +9890,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>284</x>
-                        <y>4</y>
+                        <x>280</x>
+                        <y>-28</y>
                         <z>0</z>
                         <width>32</width>
                         <height>16</height>
