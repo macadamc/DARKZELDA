@@ -4548,11 +4548,12 @@
                         <LightUID>-1</LightUID>
                         <LightSize>100</LightSize>
                         <LightOpacity>25</LightOpacity>
-                        <R>0</R>
-                        <G>0</G>
+                        <R>10</R>
+                        <G>5</G>
                         <B>0</B>
                         <drawlight>true</drawlight>
-                        <fade>false</fade>
+                        <fade>true</fade>
+                        <LerpSpd>0.04</LerpSpd>
                         <LeaveBloodTrail>false</LeaveBloodTrail>
                         <BloodOnHit>true</BloodOnHit>
                         <BloodTrailTimer>0.2</BloodTrailTimer>
@@ -5012,6 +5013,7 @@
                         <B>0</B>
                         <drawlight>false</drawlight>
                         <fade>false</fade>
+                        <LerpSpd>0</LerpSpd>
                         <ParticleType></ParticleType>
                         <HasParticle>false</HasParticle>
                         <ParticleUID>-1</ParticleUID>
@@ -5825,6 +5827,7 @@
                         <B>0</B>
                         <drawlight>false</drawlight>
                         <fade>false</fade>
+                        <LerpSpd>0</LerpSpd>
                         <ParticleType></ParticleType>
                         <HasParticle>false</HasParticle>
                         <ParticleUID>-1</ParticleUID>
@@ -6413,6 +6416,7 @@
                         <B>0</B>
                         <drawlight>false</drawlight>
                         <fade>false</fade>
+                        <LerpSpd>0</LerpSpd>
                         <ParticleType></ParticleType>
                         <HasParticle>false</HasParticle>
                         <ParticleUID>-1</ParticleUID>
@@ -6736,13 +6740,14 @@
                         <regenMap>false</regenMap>
                         <HasLight>false</HasLight>
                         <LightUID>-1</LightUID>
-                        <LightSize>200</LightSize>
-                        <LightOpacity>25</LightOpacity>
+                        <LightSize>250</LightSize>
+                        <LightOpacity>75</LightOpacity>
                         <R>0</R>
                         <G>0</G>
                         <B>12</B>
                         <drawlight>true</drawlight>
                         <fade>false</fade>
+                        <LerpSpd>0</LerpSpd>
                         <ParticleType>Ghost</ParticleType>
                         <HasParticle>false</HasParticle>
                         <ParticleUID>-1</ParticleUID>
@@ -9072,7 +9077,7 @@
         </layer>
         <layer name="LIGHTING" sid="5406408772095148">
             <initially-visible>1</initially-visible>
-            <background-color>0,0,0</background-color>
+            <background-color>7,11,25</background-color>
             <transparent>0</transparent>
             <parallax>
                 <x>1</x>

@@ -339,6 +339,191 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="9431390534904324">
+            <conditions>
+                <condition id="0" name="On function" sid="5970293755150201" type="Function">
+                    <param id="0" name="Name">&quot;Holding_Lantern&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="4" name="Set max speed" sid="4074348198982197" type="BASE">
+                    <param id="0" name="Max Speed">BASE.MaxSpd/1.5</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="5979522412861506" type="BASE">
+                    <param id="0" name="Instance variable">holding</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="6645278715905343" type="BASE">
+                    <param id="0" name="Instance variable">LightOpacity</param>
+                    <param id="1" name="Value">50</param>
+                </action>
+                <action id="-10" name="Set value" sid="3978990339405929" type="BASE">
+                    <param id="0" name="Instance variable">LightSize</param>
+                    <param id="1" name="Value">350</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="6816455211883563">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="9247389428024282" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Right&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="7890430635942147" type="ARMS">
+                            <param id="0" name="Animation">&quot;LanternRight&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2663283858820323">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="3856793730622518" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Down&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1524564499726744" type="ARMS">
+                            <param id="0" name="Animation">&quot;LanternDown&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6941097477752579">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="6353029615738018" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Up&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="8542018758922527" type="ARMS">
+                            <param id="0" name="Animation">&quot;LanternUp&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4864593786176956">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="212490073858783" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Left&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="2398334457124405" type="ARMS">
+                            <param id="0" name="Animation">&quot;LanternLeft&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3218802033907225">
+            <conditions>
+                <condition id="0" name="On function" sid="7555521741769258" type="Function">
+                    <param id="0" name="Name">&quot;Released_Lantern&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="3105728201925735" type="BASE">
+                    <param id="0" name="Instance variable">LightOpacity</param>
+                    <param id="1" name="Value">25</param>
+                </action>
+                <action id="-10" name="Set value" sid="1429679405645445" type="BASE">
+                    <param id="0" name="Instance variable">LightSize</param>
+                    <param id="1" name="Value">100</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="1166937589365091" type="BASE">
+                    <param id="0" name="Instance variable">holding</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="8536370556419816">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="9605628174479627" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Right&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="2650755001932053" type="ARMS">
+                            <param id="0" name="Animation">&quot;LanternRight&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6530328407077045">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="7899464935678038" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Down&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="6409558872929932" type="ARMS">
+                            <param id="0" name="Animation">&quot;LanternDown&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7454291899341041">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="5752039495507775" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Up&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="4768446480495365" type="ARMS">
+                            <param id="0" name="Animation">&quot;LanternUp&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5557005606259413">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="7334675669575233" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Left&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="8235920640995751" type="ARMS">
+                            <param id="0" name="Animation">&quot;LanternLeft&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3038708451128109">
+                    <conditions />
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="7520350801717472" type="BASE">
+                            <param id="0" name="Instance variable">attacking</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="6" name="Set speed" sid="4662698609739143" type="ARMS">
+                            <param id="0" name="Speed">35</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7104072231895482" type="BASE">
+                            <param id="0" name="Instance variable">AttackTimer</param>
+                            <param id="1" name="Value">0.15</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
         <event-block sid="1511431570304526">
             <conditions>
                 <condition id="0" name="On function" sid="2980187469016367" type="Function">

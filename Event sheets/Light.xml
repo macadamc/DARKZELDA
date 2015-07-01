@@ -79,6 +79,10 @@
                                     <param id="0" name="Instance variable">cursize</param>
                                     <param id="1" name="Value">HAS_LIGHT.LightSize</param>
                                 </action>
+                                <action id="-10" name="Set value" sid="4512929982536902" type="Light">
+                                    <param id="0" name="Instance variable">lerpSpd</param>
+                                    <param id="1" name="Value">HAS_LIGHT.LerpSpd</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="4637508057250424">
@@ -229,6 +233,23 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="649244809720896" type="Light" />
+            </actions>
+        </event-block>
+        <event-block sid="1904144974225089">
+            <conditions>
+                <condition id="-14" name="Pick by unique ID" sid="3288678592057508" type="Light">
+                    <param id="0" name="Unique ID">base.LightUID</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-7" name="Set size" sid="4679166112007762" type="Light">
+                    <param id="0" name="Width">lerp(self.width,base.LightSize,self.lerpSpd)</param>
+                    <param id="1" name="Height">lerp(self.height,base.LightSize,self.lerpSpd)</param>
+                </action>
+                <action id="-7" name="Set size" sid="3950002497153862" type="LightColor">
+                    <param id="0" name="Width">base.LightSize</param>
+                    <param id="1" name="Height">base.LightSize</param>
+                </action>
             </actions>
         </event-block>
     </events>

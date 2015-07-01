@@ -8,7 +8,7 @@
     <author-website></author-website>
     <app-id>com.shadypixel.darkzelda</app-id>
     <unique-id>2qpiupr2gjili</unique-id>
-    <saved-with-version>20800</saved-with-version>
+    <saved-with-version>20900</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
@@ -493,6 +493,38 @@
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Imagepoint 1" x="0.208333" y="0.25" />
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="LanternRight" pingpong="0" repeatcount="1" repeatto="0" sid="4864378306602415" speed="8">
+                        <frame duration="1" hotspotX="0.208333" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.291667" y="0.583333" />
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="LanternLeft" pingpong="0" repeatcount="1" repeatto="0" sid="9988300534871949" speed="8">
+                        <frame duration="1" hotspotX="0.791667" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.708333" y="0.583333" />
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="LanternDown" pingpong="0" repeatcount="1" repeatto="0" sid="1423087016396273" speed="10">
+                        <frame duration="1" hotspotX="0.416667" hotspotY="0.208333">
+                            <image-point name="Imagepoint 1" x="0.375" y="0.458333" />
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="LanternUp" pingpong="0" repeatcount="1" repeatto="0" sid="4327398407700078" speed="8">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.583333" y="0.375" />
                         </frame>
                     </animation>
                 </animation-folder>
@@ -1863,7 +1895,27 @@
             <object-type name="Skeleton" sid="5133386522951306">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5048836095839395" speed="5">
+                    <animation framecount="2" loop="1" name="BASE" pingpong="0" repeatcount="1" repeatto="0" sid="5048836095839395" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5625" y="1" />
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5625" y="1" />
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6173870209073102" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Imagepoint 1" x="0.5625" y="1" />
                             <collision-poly>
@@ -2187,6 +2239,11 @@
                         <animation framecount="1" loop="0" name="Boomerang" pingpong="0" repeatcount="1" repeatto="0" sid="4412079736322708" speed="5">
                             <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                                 <image-point name="Imagepoint 1" x="0.5" y="1" />
+                            </frame>
+                        </animation>
+                        <animation framecount="1" loop="0" name="Lantern" pingpong="0" repeatcount="1" repeatto="0" sid="3794500330329973" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="Imagepoint 1" x="0.5" y="0.875" />
                             </frame>
                         </animation>
                     </animation-folder>
@@ -2743,6 +2800,9 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                     <animation framecount="1" loop="0" name="Boomerang" pingpong="0" repeatcount="1" repeatto="0" sid="3710699869389916" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="1" loop="0" name="Lantern" pingpong="0" repeatcount="1" repeatto="0" sid="8160496390748292" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -3588,6 +3648,7 @@
                 <instance-variable name="B" sid="8176258016818749" type="number" />
                 <instance-variable name="drawlight" sid="1680413116277703" type="boolean" />
                 <instance-variable name="fade" sid="2843812957826537" type="boolean" />
+                <instance-variable name="LerpSpd" sid="6234056452478706" type="number" />
             </instance-variables>
         </family>
         <family name="HAS_PARTICLE" plugin-id="Sprite" sid="768815608759117">
