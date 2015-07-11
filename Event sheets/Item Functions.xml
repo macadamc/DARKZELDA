@@ -3,6 +3,478 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Item Functions</name>
     <events>
+        <event-block sid="2662550932109136">
+            <conditions>
+                <condition id="0" name="On function" sid="2387910125107819" type="Function">
+                    <param id="0" name="Name">&quot;Pressed_Dagger&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="633998202548688" type="WeaponData">
+                    <param id="0" name="Key">&quot;Dagger&quot;</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8086380317222204">
+            <conditions>
+                <condition id="0" name="On function" sid="7265852914282796" type="Function">
+                    <param id="0" name="Name">&quot;Holding_Dagger&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="4" name="Set max speed" sid="505174466561872" type="BASE">
+                    <param id="0" name="Max Speed">BASE.MaxSpd/1.5</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="8007269281338811" type="BASE">
+                    <param id="0" name="Instance variable">holding</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Add key" sid="9509924620914251" type="WeaponData">
+                    <param id="0" name="Key">&quot;Dagger&quot;</param>
+                    <param id="1" name="Value">WeaponData.Get(&quot;Dagger&quot;) + (dt*400)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="7673732333918992">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="5633664155243805" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Right&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="7146808795902217" type="ARMS">
+                            <param id="0" name="Animation">&quot;DaggerRight&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5611678973581994">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="4610351962319968" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Down&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="4269385545272635" type="ARMS">
+                            <param id="0" name="Animation">&quot;DaggerDown&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5968014980852951">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="9337218612465632" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Up&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="9473793554496513" type="ARMS">
+                            <param id="0" name="Animation">&quot;DaggerUp&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9514952842514545">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="2816992364172561" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Left&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="6415710200064989" type="ARMS">
+                            <param id="0" name="Animation">&quot;DaggerLeft&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4269298173280162">
+                    <conditions>
+                        <condition id="0" name="Compare value" sid="2514817625363635" type="WeaponData">
+                            <param id="0" name="Key">&quot;Dagger&quot;</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">200</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="1938894155415883" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="6743542620266893" type="ARMS">
+                            <param id="0" name="Object">ChargePar</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="7244629439360577">
+            <conditions>
+                <condition id="0" name="On function" sid="4256509699193923" type="Function">
+                    <param id="0" name="Name">&quot;Released_Dagger&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="25" name="Play at object" sid="7200915153908221" type="Audio">
+                    <param id="0" name="Audio file">swing</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">-20+SoundFxLevel</param>
+                    <param id="3" name="Object">BASE</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;Sword&quot;</param>
+                </action>
+                <action behavior="8Direction" id="3" name="Set speed" sid="7056365926585098" type="BASE">
+                    <param id="0" name="Speed">BASE.8Direction.Speed/1.5</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="4603217405453045" type="BASE">
+                    <param id="0" name="Instance variable">holding</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <variable constant="0" name="vel" sid="8269929429798619" static="0" type="number">100</variable>
+                <variable constant="0" name="speedmod" sid="9107153889750878" static="0" type="number">2.2</variable>
+                <variable constant="0" name="speedmod2" sid="2238802384943883" static="0" type="number">1</variable>
+                <event-block sid="5883315593755737">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="4753973045144243" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Right&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="127195522117844" type="ARMS">
+                            <param id="0" name="Animation">&quot;DaggerRight&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="7691714351908746" type="BASE">
+                            <param id="0" name="Object">Melee_Hitbox</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="3677220651613659" type="Melee_Hitbox">
+                            <param id="0" name="Angle">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="718357169082806" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Knockback</param>
+                            <param id="1" name="Value">96</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="546345534865235" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="7717551235096194" type="BASE">
+                            <param id="0" name="Max Speed">BASE.MaxSpd*speedmod2</param>
+                        </action>
+                        <action behavior="8Direction" id="9" name="Set vector X" sid="4723565128913067" type="BASE">
+                            <param id="0" name="Vector X">self.8Direction.VectorX+vel</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="1231089580968145" type="Melee_Hitbox">
+                            <param id="0" name="Height">8</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="6518843118912294">
+                            <conditions>
+                                <condition id="0" name="Compare value" sid="4211365739062222" type="WeaponData">
+                                    <param id="0" name="Key">&quot;Dagger&quot;</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">200</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="5672712352522783" type="Melee_Hitbox">
+                                    <param id="0" name="Instance variable">Damage</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="6117172306992841">
+                                    <conditions>
+                                        <condition behavior="8Direction" id="0" name="Is moving" sid="8085964757702772" type="BASE" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="4" name="Set max speed" sid="5112123795462446" type="BASE">
+                                            <param id="0" name="Max Speed">BASE.MaxSpd*speedmod</param>
+                                        </action>
+                                        <action behavior="8Direction" id="3" name="Set speed" sid="4207601158857676" type="BASE">
+                                            <param id="0" name="Speed">BASE.MaxSpd*speedmod</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9585134818544309">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="6245588693787943" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Down&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="8813131539934346" type="ARMS">
+                            <param id="0" name="Animation">&quot;DaggerDown&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="2632444535246154" type="BASE">
+                            <param id="0" name="Object">Melee_Hitbox</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="6007448145555537" type="Melee_Hitbox">
+                            <param id="0" name="Angle">90</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="41018382624812" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Knockback</param>
+                            <param id="1" name="Value">96</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3949348163725743" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="1204010496550843" type="BASE">
+                            <param id="0" name="Max Speed">BASE.MaxSpd*speedmod2</param>
+                        </action>
+                        <action behavior="8Direction" id="10" name="Set vector Y" sid="9855072087063106" type="BASE">
+                            <param id="0" name="Vector Y">self.8Direction.VectorY+vel</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="2604949214125344" type="Melee_Hitbox">
+                            <param id="0" name="Height">8</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="2009840113684401">
+                            <conditions>
+                                <condition id="0" name="Compare value" sid="3175906817004736" type="WeaponData">
+                                    <param id="0" name="Key">&quot;Dagger&quot;</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">200</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="3361420968666229" type="Melee_Hitbox">
+                                    <param id="0" name="Instance variable">Damage</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="4447601155017165">
+                                    <conditions>
+                                        <condition behavior="8Direction" id="0" name="Is moving" sid="6223430351880525" type="BASE" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="4" name="Set max speed" sid="3707256269234369" type="BASE">
+                                            <param id="0" name="Max Speed">BASE.MaxSpd*speedmod</param>
+                                        </action>
+                                        <action behavior="8Direction" id="3" name="Set speed" sid="3747478360761789" type="BASE">
+                                            <param id="0" name="Speed">BASE.MaxSpd*speedmod</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9285025985001451">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="783534702822875" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Up&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="696133458877186" type="ARMS">
+                            <param id="0" name="Animation">&quot;DaggerUp&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="2490058301515775" type="BASE">
+                            <param id="0" name="Object">Melee_Hitbox</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="6080530218295954" type="Melee_Hitbox">
+                            <param id="0" name="Angle">270</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3762345962007977" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Knockback</param>
+                            <param id="1" name="Value">96</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="6022962207027615" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="1677058055246785" type="BASE">
+                            <param id="0" name="Max Speed">BASE.MaxSpd*speedmod2</param>
+                        </action>
+                        <action behavior="8Direction" id="10" name="Set vector Y" sid="2934706361762237" type="BASE">
+                            <param id="0" name="Vector Y">self.8Direction.VectorY-vel</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="6741031138700854" type="Melee_Hitbox">
+                            <param id="0" name="Height">8</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="5155105822896512">
+                            <conditions>
+                                <condition id="0" name="Compare value" sid="431208324723411" type="WeaponData">
+                                    <param id="0" name="Key">&quot;Dagger&quot;</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">200</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="9346990579910854" type="Melee_Hitbox">
+                                    <param id="0" name="Instance variable">Damage</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="7323669125686976">
+                                    <conditions>
+                                        <condition behavior="8Direction" id="0" name="Is moving" sid="8353674003059814" type="BASE" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="4" name="Set max speed" sid="9532309550843694" type="BASE">
+                                            <param id="0" name="Max Speed">BASE.MaxSpd*speedmod</param>
+                                        </action>
+                                        <action behavior="8Direction" id="3" name="Set speed" sid="5530157367017606" type="BASE">
+                                            <param id="0" name="Speed">BASE.MaxSpd*speedmod</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7423615653340293">
+                    <conditions>
+                        <condition id="1" name="Compare parameter" sid="6642642641642916" type="Function">
+                            <param id="0" name="Index">0</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Left&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="6463236961505375" type="ARMS">
+                            <param id="0" name="Animation">&quot;DaggerLeft&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="6439150052674346" type="BASE">
+                            <param id="0" name="Object">Melee_Hitbox</param>
+                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="3905006005362365" type="Melee_Hitbox">
+                            <param id="0" name="Angle">180</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5600065909706129" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Knockback</param>
+                            <param id="1" name="Value">96</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5016648728007563" type="Melee_Hitbox">
+                            <param id="0" name="Instance variable">Damage</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="8Direction" id="9" name="Set vector X" sid="8466556752268895" type="BASE">
+                            <param id="0" name="Vector X">self.8Direction.VectorX-vel</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="8318609043930668" type="Melee_Hitbox">
+                            <param id="0" name="Height">8</param>
+                        </action>
+                        <action behavior="8Direction" id="4" name="Set max speed" sid="8646708973444138" type="BASE">
+                            <param id="0" name="Max Speed">BASE.MaxSpd*speedmod2</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="7161317303050424">
+                            <conditions>
+                                <condition id="0" name="Compare value" sid="8139201333843314" type="WeaponData">
+                                    <param id="0" name="Key">&quot;Dagger&quot;</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">200</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="1144778186743379" type="Melee_Hitbox">
+                                    <param id="0" name="Instance variable">Damage</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="572826572815586">
+                                    <conditions>
+                                        <condition behavior="8Direction" id="0" name="Is moving" sid="9213302321157312" type="BASE" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="8Direction" id="4" name="Set max speed" sid="2845011703596925" type="BASE">
+                                            <param id="0" name="Max Speed">BASE.MaxSpd*speedmod</param>
+                                        </action>
+                                        <action behavior="8Direction" id="3" name="Set speed" sid="5775383552496133" type="BASE">
+                                            <param id="0" name="Speed">BASE.MaxSpd*speedmod</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4837667932287521">
+                    <conditions>
+                        <condition id="0" name="Compare value" sid="2456251480725117" type="Input">
+                            <param id="0" name="Key">&quot;Left X&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="0" name="Compare value" sid="6076565066045563" type="Input">
+                            <param id="0" name="Key">&quot;Left Y&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Set speed" sid="6158209492101013" type="BODY">
+                            <param id="0" name="Speed">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="6853840605442519" type="BODY">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6711709247807035">
+                    <conditions />
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="2340685522097099" type="BASE">
+                            <param id="0" name="Instance variable">attacking</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="6" name="Set speed" sid="5108852117578987" type="ARMS">
+                            <param id="0" name="Speed">20</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7932316354949218" type="BASE">
+                            <param id="0" name="Instance variable">AttackTimer</param>
+                            <param id="1" name="Value">0.25</param>
+                        </action>
+                        <action id="2" name="Delete key" sid="1586477189412807" type="WeaponData">
+                            <param id="0" name="Key">&quot;Dagger&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
         <event-block sid="875413795707135">
             <conditions>
                 <condition id="0" name="On function" sid="3284472386707326" type="Function">
@@ -355,11 +827,11 @@
                 </action>
                 <action id="-10" name="Set value" sid="6645278715905343" type="BASE">
                     <param id="0" name="Instance variable">LightOpacity</param>
-                    <param id="1" name="Value">50</param>
+                    <param id="1" name="Value">75</param>
                 </action>
                 <action id="-10" name="Set value" sid="3978990339405929" type="BASE">
                     <param id="0" name="Instance variable">LightSize</param>
-                    <param id="1" name="Value">350</param>
+                    <param id="1" name="Value">450</param>
                 </action>
             </actions>
             <sub-events>
@@ -644,6 +1116,7 @@
                 </action>
             </actions>
             <sub-events>
+                <variable constant="0" name="vel" sid="2676585072591852" static="0" type="number">100</variable>
                 <variable constant="0" name="speedmod" sid="1345452562681849" static="0" type="number">2.2</variable>
                 <event-block sid="8640889705487349">
                     <conditions>
@@ -673,6 +1146,9 @@
                         <action id="-10" name="Set value" sid="2353496085762227" type="Melee_Hitbox">
                             <param id="0" name="Instance variable">Damage</param>
                             <param id="1" name="Value">2</param>
+                        </action>
+                        <action behavior="8Direction" id="9" name="Set vector X" sid="8716070781210208" type="BASE">
+                            <param id="0" name="Vector X">self.8Direction.VectorX+vel</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -737,6 +1213,9 @@
                             <param id="0" name="Instance variable">Damage</param>
                             <param id="1" name="Value">2</param>
                         </action>
+                        <action behavior="8Direction" id="10" name="Set vector Y" sid="8726521428625659" type="BASE">
+                            <param id="0" name="Vector Y">self.8Direction.VectorY+vel</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="9601471304556129">
@@ -800,6 +1279,9 @@
                             <param id="0" name="Instance variable">Damage</param>
                             <param id="1" name="Value">2</param>
                         </action>
+                        <action behavior="8Direction" id="10" name="Set vector Y" sid="1226918366335618" type="BASE">
+                            <param id="0" name="Vector Y">self.8Direction.VectorY-vel</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="9228005380566747">
@@ -862,6 +1344,9 @@
                         <action id="-10" name="Set value" sid="9231323070243126" type="Melee_Hitbox">
                             <param id="0" name="Instance variable">Damage</param>
                             <param id="1" name="Value">2</param>
+                        </action>
+                        <action behavior="8Direction" id="9" name="Set vector X" sid="7867552495087156" type="BASE">
+                            <param id="0" name="Vector X">self.8Direction.VectorX-vel</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -927,11 +1412,11 @@
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="6" name="Set speed" sid="2442380822456473" type="ARMS">
-                            <param id="0" name="Speed">35</param>
+                            <param id="0" name="Speed">20</param>
                         </action>
                         <action id="-10" name="Set value" sid="1989234173755645" type="BASE">
                             <param id="0" name="Instance variable">AttackTimer</param>
-                            <param id="1" name="Value">0.35</param>
+                            <param id="1" name="Value">0.4</param>
                         </action>
                         <action id="2" name="Delete key" sid="7083897896702411" type="WeaponData">
                             <param id="0" name="Key">&quot;Sword&quot;</param>
