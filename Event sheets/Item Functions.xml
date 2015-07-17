@@ -831,7 +831,7 @@
                 </action>
                 <action id="-10" name="Set value" sid="3978990339405929" type="BASE">
                     <param id="0" name="Instance variable">LightSize</param>
-                    <param id="1" name="Value">450</param>
+                    <param id="1" name="Value">550</param>
                 </action>
             </actions>
             <sub-events>
