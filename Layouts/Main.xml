@@ -110,6 +110,7 @@
                         <Triggered>false</Triggered>
                         <ComplexTriggered>0</ComplexTriggered>
                         <RoomUID>0</RoomUID>
+                        <XmlUID>287</XmlUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -144,6 +145,7 @@
                         <Triggered>false</Triggered>
                         <ComplexTriggered>0</ComplexTriggered>
                         <RoomUID>0</RoomUID>
+                        <XmlUID>287</XmlUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -178,6 +180,7 @@
                         <Triggered>false</Triggered>
                         <ComplexTriggered>0</ComplexTriggered>
                         <RoomUID>0</RoomUID>
+                        <XmlUID>287</XmlUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -212,6 +215,7 @@
                         <Triggered>false</Triggered>
                         <ComplexTriggered>0</ComplexTriggered>
                         <RoomUID>0</RoomUID>
+                        <XmlUID>287</XmlUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -246,6 +250,7 @@
                         <Triggered>false</Triggered>
                         <ComplexTriggered>0</ComplexTriggered>
                         <RoomUID>0</RoomUID>
+                        <XmlUID>287</XmlUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -280,6 +285,7 @@
                         <Triggered>false</Triggered>
                         <ComplexTriggered>0</ComplexTriggered>
                         <RoomUID>0</RoomUID>
+                        <XmlUID>287</XmlUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -314,6 +320,7 @@
                         <Triggered>false</Triggered>
                         <ComplexTriggered>0</ComplexTriggered>
                         <RoomUID>0</RoomUID>
+                        <XmlUID>287</XmlUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -348,6 +355,7 @@
                         <Triggered>false</Triggered>
                         <ComplexTriggered>0</ComplexTriggered>
                         <RoomUID>0</RoomUID>
+                        <XmlUID>287</XmlUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -382,6 +390,7 @@
                         <Triggered>false</Triggered>
                         <ComplexTriggered>0</ComplexTriggered>
                         <RoomUID>0</RoomUID>
+                        <XmlUID>287</XmlUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -548,6 +557,7 @@
                         <Triggered>false</Triggered>
                         <ComplexTriggered>0</ComplexTriggered>
                         <RoomUID>0</RoomUID>
+                        <XmlUID>287</XmlUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -582,6 +592,7 @@
                         <Triggered>false</Triggered>
                         <ComplexTriggered>0</ComplexTriggered>
                         <RoomUID>0</RoomUID>
+                        <XmlUID>287</XmlUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -8147,7 +8158,7 @@
                     <instance-variables>
                         <Zone>24</Zone>
                         <Loaded>false</Loaded>
-                        <Spawn>NpcTestState</Spawn>
+                        <Spawn>Npc3</Spawn>
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
@@ -8374,8 +8385,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>856</x>
-                        <y>496</y>
+                        <x>895.711730957</x>
+                        <y>468.240783691</y>
                         <z>0</z>
                         <width>8</width>
                         <height>8</height>

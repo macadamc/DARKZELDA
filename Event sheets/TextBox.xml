@@ -81,6 +81,62 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="5606134545713207">
+            <conditions>
+                <condition id="0" name="On function" sid="2526151614625843" type="Function">
+                    <param id="0" name="Name">&quot;ShowTextBox_String&quot;</param>
+                </condition>
+                <condition id="-9" inverted="1" name="Is visible" sid="5338173707932441" type="TextBox" />
+            </conditions>
+            <actions>
+                <action id="-12" name="Set group active" sid="5671617500923177" type="System">
+                    <param id="0" name="Group name">&quot;TextBox Logic&quot;</param>
+                    <param id="1" name="State">1</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="7350152019244319" type="System">
+                    <param id="0" name="Time scale">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="5146671411650481" type="System">
+                    <param id="0" name="Variable">TextBoxActive</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-2" name="Set Y" sid="7428970707415799" type="TextBox">
+                    <param id="0" name="Y">100</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="9586893404359788">
+                    <conditions />
+                    <actions>
+                        <action id="-10" name="Set value" sid="2276810776702506" type="TextBox">
+                            <param id="0" name="Instance variable">Text</param>
+                            <param id="1" name="Value">Function.Param(0)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="945050835020643" type="TextBoxText">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6577968271468523" type="TextBox">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="4717433479458357" type="TextBoxText">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4563563279804658" type="TextBox">
+                            <param id="0" name="Instance variable">NumberOfChars</param>
+                            <param id="1" name="Value">len(TextBox.Text)</param>
+                        </action>
+                        <action disabled="1" id="-10" name="Set value" sid="8215974869021609" type="TextBox">
+                            <param id="0" name="Instance variable">CharsPerPage</param>
+                            <param id="1" name="Value">(TextBoxText.Width/(14*TextBoxText.CharacterScale))*((TextBoxText.Height/(13*TextBoxText.CharacterScale)))-1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="6333541697197311" type="TextBox">
+                            <param id="0" name="Instance variable">CharsPerPage</param>
+                            <param id="1" name="Value">(TextBoxText.Width*TextBoxText.Height)/(10*11)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
         <event-block sid="4735936766168199">
             <conditions>
                 <condition id="0" name="On function" sid="2228259061465625" type="Function">

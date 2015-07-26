@@ -2560,6 +2560,7 @@
                         <instance-variable name="Triggered" sid="8678362022841377" type="boolean" />
                         <instance-variable name="ComplexTriggered" sid="2393238371813638" type="number" />
                         <instance-variable name="RoomUID" sid="3217334782030308" type="number" />
+                        <instance-variable name="XmlUID" sid="8467352009022754" type="number" />
                     </instance-variables>
                     <behaviors>
                         <behavior-type name="Pin" sid="7128138540518321">
@@ -3946,6 +3947,8 @@
         <event-sheet>Transitions.xml</event-sheet>
         <event-sheet>Blood.xml</event-sheet>
         <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>TriggerZones2.xml</event-sheet>
+        <event-sheet>HelperFunctions.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="WebStorage" uid="14" />

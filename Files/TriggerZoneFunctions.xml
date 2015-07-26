@@ -14,7 +14,7 @@
 			Name="SetGhostState"
 			Params="WaitAtPOI 288 289"></Function>
 	</Object>
-	<Object Name="ShowKey1">
+	<Object Name="ShowKey1_Old">
 		<Function
 			Name="SetGhostState"
 			Params="NpcTest 214 255"
@@ -23,6 +23,14 @@
 			Name="SetGhostState"
 			Params="NpcTest 28 255"
 			Conditions="Has_Key_214 !Unlockable_28"></Function>
+	</Object>
+	<Object Name="ShowKey1">
+		<GhostState Name="NpcTest"
+			Params="214 255"
+			Conditions="!Has_Key_214"></GhostState>
+		<GhostState Name="NpcTest"
+			Params="28 255"
+			Conditions="Has_Key_214 !Unlockable_28"></GhostState>
 	</Object>
 	<Object Name="GhostStateTest">
 		<GhostState Name= "Wait"
