@@ -190,7 +190,7 @@
                             <actions>
                                 <action id="-3" name="Set position" sid="1516082152621603" type="BASE">
                                     <param id="0" name="X">Door.X</param>
-                                    <param id="1" name="Y">Door.Y-12</param>
+                                    <param id="1" name="Y">Door.Y-16</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -205,7 +205,7 @@
                             <actions>
                                 <action id="-3" name="Set position" sid="335507397198681" type="BASE">
                                     <param id="0" name="X">Door.X</param>
-                                    <param id="1" name="Y">Door.Y+12</param>
+                                    <param id="1" name="Y">Door.Y+16</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -219,7 +219,7 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="5709284084808039" type="BASE">
-                                    <param id="0" name="X">Door.X-12</param>
+                                    <param id="0" name="X">Door.X-16</param>
                                     <param id="1" name="Y">Door.Y</param>
                                 </action>
                             </actions>
@@ -234,7 +234,7 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="5008855561950864" type="BASE">
-                                    <param id="0" name="X">Door.X+12</param>
+                                    <param id="0" name="X">Door.X+16</param>
                                     <param id="1" name="Y">Door.Y</param>
                                 </action>
                             </actions>
