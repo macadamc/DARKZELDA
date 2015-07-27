@@ -2,11 +2,11 @@
 	<Object Name="NpcTestState">
 		<Sprite Name= "man"></Sprite>
 		<NpcState Name= "Npc_RandomWalk"
-			Bounds= "572"></NpcState>
+			Bounds= "room1"></NpcState>
 		<Text
 			Conditions= "!GhostPath !npc1"
 			Data= "People have seen strange things going on in that cave up ahead.. I wouldn't go in there if I was you."></Text>
-		<Function Name= "AddGameStat"
+		<Function Name= "AddSession"
 			Params= "npc1;1"
 			Conditions= "!npc1"></Function>
 		<Text

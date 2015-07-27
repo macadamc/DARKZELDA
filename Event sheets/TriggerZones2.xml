@@ -316,7 +316,7 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block any="1" disabled="1" sid="5593171300675516">
+                                        <event-block any="1" sid="5593171300675516">
                                             <conditions>
                                                 <condition id="3" name="Has key" sid="225533794483078" type="GameStats">
                                                     <param id="0" name="Key">mid(tokenat(Conditions, loopindex, &quot; &quot;), 1, len(tokenat(Conditions, loopindex, &quot; &quot;)))</param>
@@ -332,22 +332,6 @@
                                                 </action>
                                             </actions>
                                         </event-block>
-                                        <event-block sid="7274077467751865">
-                                            <conditions>
-                                                <condition id="3" name="Has key" sid="9290073683362343" type="GameStats">
-                                                    <param id="0" name="Key">mid(tokenat(Conditions, loopindex, &quot; &quot;), 1, len(tokenat(Conditions, loopindex, &quot; &quot;)))</param>
-                                                </condition>
-                                                <condition disabled="1" id="3" name="Has key" sid="2054334342004075" type="SessionData">
-                                                    <param id="0" name="Key">mid(tokenat(Conditions, loopindex, &quot; &quot;), 1, len(tokenat(Conditions, loopindex, &quot; &quot;)))</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-9" name="Set value" sid="5730332013792797" type="System">
-                                                    <param id="0" name="Variable">Return</param>
-                                                    <param id="1" name="Value">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
                                     </sub-events>
                                 </event-block>
                                 <event-block sid="5619935579759399">
@@ -356,28 +340,12 @@
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block any="1" disabled="1" sid="3612594387258012">
-                                            <conditions>
-                                                <condition id="3" inverted="1" name="Has key" sid="3255324947755854" type="GameStats">
-                                                    <param id="0" name="Key">tokenat(Conditions, loopindex, &quot; &quot;)</param>
-                                                </condition>
-                                                <condition id="3" inverted="1" name="Has key" sid="17485274723294" type="SessionData">
-                                                    <param id="0" name="Key">tokenat(Conditions, loopindex, &quot; &quot;)</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-9" name="Set value" sid="3526749774235304" type="System">
-                                                    <param id="0" name="Variable">Return</param>
-                                                    <param id="1" name="Value">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
                                         <event-block sid="7650948601376316">
                                             <conditions>
                                                 <condition id="3" inverted="1" name="Has key" sid="5881189043017579" type="GameStats">
                                                     <param id="0" name="Key">tokenat(Conditions, loopindex, &quot; &quot;)</param>
                                                 </condition>
-                                                <condition disabled="1" id="3" inverted="1" name="Has key" sid="1055924344306874" type="SessionData">
+                                                <condition id="3" inverted="1" name="Has key" sid="1055924344306874" type="SessionData">
                                                     <param id="0" name="Key">tokenat(Conditions, loopindex, &quot; &quot;)</param>
                                                 </condition>
                                             </conditions>
@@ -492,12 +460,7 @@
                                     <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="9044549044382451" type="System">
-                                    <param id="0" name="Variable">ret</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
+                            <actions />
                             <sub-events>
                                 <event-block any="1" sid="6934733404278018">
                                     <conditions>
