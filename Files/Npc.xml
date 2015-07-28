@@ -13,6 +13,20 @@
 			Conditions= "!GhostPath npc1"
 			Data= "... As you walked up to me, I felt a chill down my spine..       It is probably the wind."></Text>
 	</Object>
+	<Object Name="NpcTestState2">
+		<Sprite Name= "oldMan"></Sprite>
+		<NpcState Name= "Npc_RandomWalk"
+			Bounds= "town"></NpcState>
+		<Text
+			Conditions= "!GhostPath !test_0"
+			Data= "I am only going to say this once."></Text>
+		<Function Name= "AddSession"
+			Params= "test_0;1"
+			Conditions= "!test_0"></Function>
+		<Text
+			Conditions= "!GhostPath test_0"
+			Data= "I will repeat this though."></Text>
+	</Object>
 	<Object Name="Npc1">
 		<Sprite Name= "man"></Sprite>
 		<NpcState Name= "Npc_RandomWalk"
@@ -48,4 +62,5 @@
 			Conditions= "!GhostPath">
 		</Function>
 	</Object>
+	
 </xml>
