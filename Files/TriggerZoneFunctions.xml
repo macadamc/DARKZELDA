@@ -1,10 +1,47 @@
 <xml>
 	<Object Name="Template">
 		<Comment>Heres a spot you can write about the triggerzone functions.</Comment>
-		<Function Name="SomeFunction"
-			Params="Optional Params seperated ba a space"
-			Conditions="!Optional Flags Seperated By A Space"></Function>
-		<Function Name="SomeFuctionWithNoParamsConditions"></Function>
+		<Function Name="AddGameStat"
+			Params="NameOfKey"
+			Conditions=""></Function>
+		<Function Name="AddSession"
+			Params="NameOfKey"
+			Conditions=""></Function>
+		<Function Name="RemoveSession"
+			Params="NameOfKey"
+			Conditions=""></Function>
+		<Function Name="RemoveGameStat"
+			Params="NameOfKey"
+			Conditions=""></Function>
+		<Function Name="GhostRGB"
+			Params="R G B"
+			Conditions=""></Function>
+		<Function Name="OpenUnlockable"
+			Params="UIDofUnlockable"
+			Conditions=""></Function>
+		<Function Name="Save" Conditions=""></Function>
+		<Function Name="Load" Conditions=""></Function>
+		<Function Name="ResetSave" Conditions=""></Function>
+		<Function Name="SetGhostVariable"
+			Conditions=""
+			Params="key val"></Function>
+		<GhostState name="NpcTest"
+			Conditions=""
+			Target=""
+			TriggerUID=""></GhostState>
+		<GhostState name="WaitAtPOI"
+			Conditions=""
+			Target=""
+			TriggerUID=""></GhostState>
+		<GhostState name="MoveToPOI"
+			Conditions=""
+			Target=""
+			TriggerUID="Optional"></GhostState>
+		<GhostState name="MoveAlongPath"
+			Conditions=""
+			Path=""
+			Zones=""
+			Target=""></GhostState>
 	</Object>
 	<Object Name="TestTrigger">
 		<Function 

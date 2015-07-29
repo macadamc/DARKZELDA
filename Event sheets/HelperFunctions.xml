@@ -3,6 +3,31 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>HelperFunctions</name>
     <events>
+        <event-block sid="640693313758125">
+            <conditions>
+                <condition id="0" name="On function" sid="2584210917857766" type="Function">
+                    <param id="0" name="Name">&quot;AddGameStat&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="8456832977609844" type="GameStats">
+                    <param id="0" name="Key">tokenat(Function.Param(0),0,&quot;;&quot;)</param>
+                    <param id="1" name="Value">tokenat(Function.Param(0),1,&quot;;&quot;)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1761003783046625">
+            <conditions>
+                <condition id="0" name="On function" sid="7935919211091264" type="Function">
+                    <param id="0" name="Name">&quot;RemoveGameStat&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="2" name="Delete key" sid="9457901942443495" type="GameStats">
+                    <param id="0" name="Key">Function.Param(0)</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="9111897556416491">
             <conditions>
                 <condition id="0" name="On function" sid="9580604785304937" type="Function">
@@ -16,16 +41,15 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="640693313758125">
+        <event-block sid="5032667773160474">
             <conditions>
-                <condition id="0" name="On function" sid="2584210917857766" type="Function">
-                    <param id="0" name="Name">&quot;AddGameStat&quot;</param>
+                <condition id="0" name="On function" sid="3040564268669834" type="Function">
+                    <param id="0" name="Name">&quot;RemoveSession&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Add key" sid="8456832977609844" type="GameStats">
-                    <param id="0" name="Key">tokenat(Function.Param(0),0,&quot;;&quot;)</param>
-                    <param id="1" name="Value">tokenat(Function.Param(0),1,&quot;;&quot;)</param>
+                <action id="2" name="Delete key" sid="8650444910758074" type="SessionData">
+                    <param id="0" name="Key">Function.Param(0)</param>
                 </action>
             </actions>
         </event-block>
