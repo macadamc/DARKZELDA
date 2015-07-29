@@ -42,6 +42,45 @@
 			Path=""
 			Zones=""
 			Target=""></GhostState>
+		<Text
+			Conditions= ""
+			Data= "Text to display in textbox."></Text>
+	</Object>
+	<Object Name="SwordPickup">
+		<Text
+			Data="You pickup a sword! Equip it in your inventory."></Text>
+	</Object>
+	<Object Name="BowPickup">
+		<Text
+			Data="You pickup a bow! Equip it in your inventory."></Text>
+	</Object>
+	<Object Name="Saved">
+		<Text
+			Data="Game Data Saved."></Text>
+	</Object>
+	<Object Name="Loaded">
+		<Text
+			Data="Game Data Loaded."></Text>
+	</Object>
+	<Object Name="BoomarangPickup">
+		<Text
+			Data="You pickup a boomerang! Equip it in your inventory."></Text>
+	</Object>
+	<Object Name="ShieldPickup">
+		<Text
+			Data="You pickup a shield! Equip it in your inventory."></Text>
+	</Object>
+	<Object Name="SmallKeyPickup">
+		<Text
+			Data="A small key. Use it to open locked doors that you may find."></Text>
+	</Object>
+	<Object Name="sign1">
+		<Text
+			Data="This is a test. hopefully it works. I am writing out a long text to see if it gets cut off correctly and continues on a new page. I am going to write a few more words to make it longer. and. . . ... ... ..... im done."></Text>
+	</Object>
+	<Object Name="Test">
+		<Text
+			Data="Heres Some Text Loaded From Xml."></Text>
 	</Object>
 	<Object Name="TestTrigger">
 		<Function 
