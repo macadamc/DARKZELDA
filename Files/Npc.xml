@@ -27,6 +27,18 @@
 			Conditions= "!GhostPath test_0"
 			Data= "I will repeat this though."></Text>
 	</Object>
+	<Object Name="FollowTest">
+		<Sprite Name= "man"></Sprite>
+		<NpcState Name= "FollowTarget"
+			Target="329"
+			Bounds="town"></NpcState>
+		<Text
+			Conditions="!isDay"
+			Data= "Its Dark out...."></Text>
+		<Text
+			Conditions="isDay"
+			Data= "Its Bright out...."></Text>
+	</Object>
 	<Object Name="Npc1">
 		<Sprite Name= "man"></Sprite>
 		<NpcState Name= "Npc_RandomWalk"

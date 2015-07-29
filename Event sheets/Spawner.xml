@@ -37,6 +37,31 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-block sid="3938775053897073">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="9668805582153302" type="System">
+                                    <param id="0" name="Variable">isDay</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="6711198412854071" type="SessionData">
+                                    <param id="0" name="Key">&quot;isDay&quot;</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1864285487068112">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="9300435303283454" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Delete key" sid="4661567794242602" type="SessionData">
+                                    <param id="0" name="Key">&quot;isDay&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="9164457835178829">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="3611701416703972" type="ENEMY_SPAWNER">
@@ -1523,7 +1548,7 @@
                                                                                 </condition>
                                                                             </conditions>
                                                                             <actions>
-                                                                                <action behavior="Pin" id="0" name="Pin to object" sid="3678073123289413" type="Sprite9">
+                                                                                <action behavior="Pin" id="0" name="Pin to object" sid="3678073123289413" type="NpcSprite">
                                                                                     <param id="0" name="Pin to">NpcBase</param>
                                                                                     <param id="1" name="Mode">1</param>
                                                                                 </action>

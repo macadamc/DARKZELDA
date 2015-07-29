@@ -225,7 +225,7 @@
             <actions>
                 <action id="-9" name="Destroy" sid="9237755724013139" type="NPCData" />
                 <action id="-9" name="Destroy" sid="8385282478421919" type="FSM" />
-                <action id="-9" name="Destroy" sid="6272407811984971" type="Sprite9" />
+                <action id="-9" name="Destroy" sid="6272407811984971" type="NpcSprite" />
                 <action id="-10" name="Set value" sid="4476713515686867" type="Ghost">
                     <param id="0" name="Instance variable">SR</param>
                     <param id="1" name="Value">Ghost.R</param>

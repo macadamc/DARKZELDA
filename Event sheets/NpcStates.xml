@@ -119,12 +119,12 @@
                                 </event-block>
                                 <event-block disabled="1" sid="2888984834871787">
                                     <conditions>
-                                        <condition id="2" inverted="1" name="Is playing" sid="9884518792286366" type="Sprite9">
+                                        <condition id="2" inverted="1" name="Is playing" sid="9884518792286366" type="NpcSprite">
                                             <param id="0" name="Animation">NPC.SpriteName&amp;&quot;_Walking&quot;</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="4" name="Set animation" sid="4602428595765227" type="Sprite9">
+                                        <action id="4" name="Set animation" sid="4602428595765227" type="NpcSprite">
                                             <param id="0" name="Animation">NPC.SpriteName&amp;&quot;_Idle&quot;</param>
                                             <param id="1" name="From">1</param>
                                         </action>
@@ -139,7 +139,7 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="7" name="Set mirrored" sid="6275527570976379" type="Sprite9">
+                                        <action id="7" name="Set mirrored" sid="6275527570976379" type="NpcSprite">
                                             <param id="0" name="State">0</param>
                                         </action>
                                     </actions>
@@ -149,7 +149,7 @@
                                         <condition id="-22" name="Else" sid="8729413906036356" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="7" name="Set mirrored" sid="6184128988134506" type="Sprite9">
+                                        <action id="7" name="Set mirrored" sid="6184128988134506" type="NpcSprite">
                                             <param id="0" name="State">1</param>
                                         </action>
                                     </actions>
@@ -159,12 +159,12 @@
                         <event-block disabled="1" sid="865403089108289">
                             <conditions>
                                 <condition id="-22" name="Else" sid="6876810802999827" type="System" />
-                                <condition id="2" inverted="1" name="Is playing" sid="879526366596583" type="Sprite9">
+                                <condition id="2" inverted="1" name="Is playing" sid="879526366596583" type="NpcSprite">
                                     <param id="0" name="Animation">NPC.SpriteName&amp;&quot;_Idle&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="9370406017616721" type="Sprite9">
+                                <action id="4" name="Set animation" sid="9370406017616721" type="NpcSprite">
                                     <param id="0" name="Animation">NPC.SpriteName&amp;&quot;_Idle&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
@@ -864,7 +864,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="5749270052499785" type="Sprite9">
+                        <action id="4" name="Set animation" sid="5749270052499785" type="NpcSprite">
                             <param id="0" name="Animation">NpcBase.SpriteName</param>
                             <param id="1" name="From">1</param>
                         </action>
@@ -879,7 +879,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="7" name="Set mirrored" sid="7481133580855106" type="Sprite9">
+                                <action id="7" name="Set mirrored" sid="7481133580855106" type="NpcSprite">
                                     <param id="0" name="State">1</param>
                                 </action>
                             </actions>
@@ -893,7 +893,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="7" name="Set mirrored" sid="192031654696513" type="Sprite9">
+                                <action id="7" name="Set mirrored" sid="192031654696513" type="NpcSprite">
                                     <param id="0" name="State">0</param>
                                 </action>
                             </actions>
@@ -1080,5 +1080,48 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="7720662209762489">
+            <conditions>
+                <condition id="0" name="On function" sid="4793558065289105" type="Function">
+                    <param id="0" name="Name">&quot;FollowTarget&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="5144629104569908" type="NPC">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="6888497362861699" type="NPCData">
+                    <param id="0" name="Unique ID">NPC.DataUID</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="8577782927805419" type="FSM">
+                    <param id="0" name="Unique ID">NPC.FSM_UID</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="439694429425023">
+                    <conditions>
+                        <condition behavior="Pathfinding" id="4" inverted="1" name="Is moving along path" sid="3064614953871004" type="NPC" />
+                        <condition behavior="Pathfinding" id="3" inverted="1" name="Is calculating path" sid="3017406740179517" type="NPC" />
+                        <condition id="-14" name="Pick by unique ID" sid="6573335415499685" type="PointsOfIntrest">
+                            <param id="0" name="Unique ID">int(NPCData.Get(&quot;Target&quot;))</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="2764195977681249" type="System">
+                            <param id="0" name="Object">PathZone</param>
+                            <param id="1" name="Expression">PathZone.tag</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">NPCData.Get(&quot;Bounds&quot;)</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="9492678278803614" type="PointsOfIntrest">
+                            <param id="0" name="Object">PathZone</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="775320910399303" type="Function">
+                            <param id="0" name="Name">&quot;Npc_Move&quot;</param>
+                            <param id="1" name="Parameter {n}">PointsOfIntrest.X{###}PointsOfIntrest.Y{###}NPC.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>

@@ -28,7 +28,7 @@
 		<GhostState Name= "Template"
 			Target= "6 used in almost all the states; 6 is the playersUID"
 			SomeKey="Some String Value. this is just extra data.any keys you make will be inserted into the state"
-			RemoveOnSetState="this is used when you want this state to get overwriten by the next state added."></GhostState>
+			RemoveOnSetState="this is used when you want this state to get overwriten by the next state added. instead of being remembered."></GhostState>
 		<GhostState name="NpcTest"
 			Conditions=""
 			Target=""

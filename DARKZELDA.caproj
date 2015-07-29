@@ -2286,6 +2286,16 @@
                     <texture />
                     <tiles />
                 </object-type>
+                <object-type name="Tilemap" sid="8860606055427446">
+                    <plugin id="Tilemap" />
+                    <behaviors>
+                        <behavior-type name="Solid" sid="7160935921886368">
+                            <behavior id="solid" />
+                        </behavior-type>
+                    </behaviors>
+                    <texture />
+                    <tiles />
+                </object-type>
             </object-folder>
             <object-folder name="CreatedAtRuntime">
                 <object-type name="Explosion" sid="9197026158465519">
@@ -2793,6 +2803,25 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="PathZone" sid="9730768786849389">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="tag" sid="5657532453483982" type="string" />
+                    </instance-variables>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="204092745349606" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="POI" sid="9062685669957048">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5220308819493749" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
             </object-folder>
         </object-folder>
         <object-folder name="SPAWNER">
@@ -3074,6 +3103,9 @@
             <object-type global="1" name="TriggerZoneData" sid="5137386079439713">
                 <plugin id="XML" />
             </object-type>
+            <object-type global="1" name="NpcXML" sid="3085188535781479">
+                <plugin id="XML" />
+            </object-type>
         </object-folder>
         <object-folder name="NPC">
             <object-type name="Ghost" sid="4122861944462838">
@@ -3104,11 +3136,62 @@
                 <plugin id="Sprite" />
                 <container>
                     <type>NpcBase</type>
-                    <type>Sprite9</type>
+                    <type>NpcSprite</type>
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2484456162515479" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="NpcSprite" sid="2798654224740543">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="944919803393819">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>NpcBase</type>
+                    <type>NpcSprite</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="oldMan" pingpong="0" repeatcount="1" repeatto="0" sid="8713932927083775" speed="3">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.833333" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.833333" />
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="1" name="oldWoman" pingpong="0" repeatcount="1" repeatto="0" sid="6721635976733931" speed="3">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75">
+                            <image-point name="Imagepoint 1" x="0.5" y="1" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75">
+                            <image-point name="Imagepoint 1" x="0.5" y="1" />
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="1" name="man" pingpong="0" repeatcount="1" repeatto="0" sid="4525983942656463" speed="3">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75">
+                            <image-point name="Imagepoint 1" x="0.5" y="1" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75">
+                            <image-point name="Imagepoint 1" x="0.5" y="1" />
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="1" name="woman" pingpong="0" repeatcount="1" repeatto="0" sid="215946699649187" speed="3">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75">
+                            <image-point name="Imagepoint 1" x="0.5" y="1" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75">
+                            <image-point name="Imagepoint 1" x="0.5" y="1" />
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="1" name="cloaked" pingpong="0" repeatcount="1" repeatto="0" sid="222329204740404" speed="3">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.75">
+                            <image-point name="Imagepoint 1" x="0.5" y="1" />
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -3398,16 +3481,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Tilemap" sid="8860606055427446">
-            <plugin id="Tilemap" />
-            <behaviors>
-                <behavior-type name="Solid" sid="7160935921886368">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
-            <texture />
-            <tiles />
-        </object-type>
         <object-type name="Sprite3" sid="6452495407886295">
             <plugin id="Sprite" />
             <animation-folder>
@@ -3416,28 +3489,6 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="POI" sid="9062685669957048">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5220308819493749" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="PathZone" sid="9730768786849389">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="tag" sid="5657532453483982" type="string" />
-            </instance-variables>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="204092745349606" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type global="1" name="NpcXML" sid="3085188535781479">
-            <plugin id="XML" />
         </object-type>
         <object-type name="Blood" sid="6312864481411931">
             <plugin id="Sprite" />
@@ -3496,57 +3547,6 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite9" sid="2798654224740543">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Pin" sid="944919803393819">
-                    <behavior id="Pin" />
-                </behavior-type>
-            </behaviors>
-            <container>
-                <type>NpcBase</type>
-                <type>Sprite9</type>
-            </container>
-            <animation-folder>
-                <animation framecount="2" loop="1" name="oldMan" pingpong="0" repeatcount="1" repeatto="0" sid="8713932927083775" speed="3">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75">
-                        <image-point name="Imagepoint 1" x="0.5" y="0.833333" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75">
-                        <image-point name="Imagepoint 1" x="0.5" y="0.833333" />
-                    </frame>
-                </animation>
-                <animation framecount="2" loop="1" name="oldWoman" pingpong="0" repeatcount="1" repeatto="0" sid="6721635976733931" speed="3">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75">
-                        <image-point name="Imagepoint 1" x="0.5" y="1" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75">
-                        <image-point name="Imagepoint 1" x="0.5" y="1" />
-                    </frame>
-                </animation>
-                <animation framecount="2" loop="1" name="man" pingpong="0" repeatcount="1" repeatto="0" sid="4525983942656463" speed="3">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75">
-                        <image-point name="Imagepoint 1" x="0.5" y="1" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75">
-                        <image-point name="Imagepoint 1" x="0.5" y="1" />
-                    </frame>
-                </animation>
-                <animation framecount="2" loop="1" name="woman" pingpong="0" repeatcount="1" repeatto="0" sid="215946699649187" speed="3">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75">
-                        <image-point name="Imagepoint 1" x="0.5" y="1" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75">
-                        <image-point name="Imagepoint 1" x="0.5" y="1" />
-                    </frame>
-                </animation>
-                <animation framecount="1" loop="1" name="cloaked" pingpong="0" repeatcount="1" repeatto="0" sid="222329204740404" speed="3">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.75">
-                        <image-point name="Imagepoint 1" x="0.5" y="1" />
-                    </frame>
-                </animation>
             </animation-folder>
         </object-type>
         <object-type name="Sprite10" sid="4489451578028056">
@@ -3693,10 +3693,10 @@
                 <member>Mutant2</member>
                 <member>Mutant4</member>
                 <member>Mutant5</member>
+                <member>NpcSprite</member>
                 <member>Skeleton</member>
                 <member>Slime</member>
                 <member>Spider</member>
-                <member>Sprite9</member>
             </members>
         </family>
         <family name="DRAWSHADOW" plugin-id="Sprite" sid="9297328645158486">
@@ -3707,12 +3707,12 @@
                 <member>Item_Pickup</member>
                 <member>Mirror</member>
                 <member>NpcBase</member>
+                <member>NpcSprite</member>
                 <member>PlayerProjectile</member>
                 <member>ProjectileTrap</member>
                 <member>Rock</member>
                 <member>Sign</member>
                 <member>Sprite2</member>
-                <member>Sprite9</member>
             </members>
             <instance-variables>
                 <instance-variable name="Shadow" sid="8926569785025806" type="string" />
