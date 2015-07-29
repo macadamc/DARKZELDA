@@ -25,6 +25,10 @@
 		<Function Name="SetGhostVariable"
 			Conditions=""
 			Params="key val"></Function>
+		<GhostState Name= "Template"
+			Target= "6 used in almost all the states; 6 is the playersUID"
+			SomeKey="Some String Value. this is just extra data.any keys you make will be inserted into the state"
+			RemoveOnSetState="this is used when you want this state to get overwriten by the next state added."></GhostState>
 		<GhostState name="NpcTest"
 			Conditions=""
 			Target=""
@@ -45,6 +49,7 @@
 		<Text
 			Conditions= ""
 			Data= "Text to display in textbox."></Text>
+		<Trigger Name="An Object Name In This Xml" Conditions=""></Trigger>
 	</Object>
 	<Object Name="SwordPickup">
 		<Text
@@ -80,7 +85,8 @@
 	</Object>
 	<Object Name="Test">
 		<Text
-			Data="Heres Some Text Loaded From Xml."></Text>
+			Conditions= "!GhostPath"
+			Data= "People have seen strange things going on in that cave up ahead.. I wouldn't go in there if I was you."></Text>
 	</Object>
 	<Object Name="TestTrigger">
 		<Function 
@@ -109,7 +115,7 @@
 			Conditions="Has_Key_214 !Unlockable_28"></GhostState>
 	</Object>
 	<Object Name="GhostStateTest">
-		<GhostState Name= "Wait"
+		<GhostState Name= "Template"
 			Target= "6"
 			SomeKey="Some String Value. this is just extra data."
 			RemoveOnSetState="this is used when you want this state to get overwriten by the next state added with SetGhostState">

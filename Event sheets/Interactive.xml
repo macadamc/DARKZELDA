@@ -277,11 +277,11 @@
                                     <param id="0" name="Key">&quot;Has_Key_&quot;&amp;str(Interactive.SpawnerID)</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="0" name="Call function" sid="753872275206738" type="Function">
-                                    <param id="0" name="Name">&quot;ShowTextBox&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;bottom;&quot;&amp;Interactive.Effect&amp;&quot;Pickup&quot;</param>
-                                </action>
                                 <action id="-9" name="Destroy" sid="4721161247642757" type="Interactive" />
+                                <action id="0" name="Call function" sid="7716404139151412" type="Function">
+                                    <param id="0" name="Name">&quot;Trigger&quot;</param>
+                                    <param id="1" name="Parameter {n}">Interactive.Effect&amp;&quot;Pickup&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="118109324265255">
@@ -302,8 +302,8 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="0" name="Call function" sid="9510537095399201" type="Function">
-                                    <param id="0" name="Name">&quot;ShowTextBox&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;bottom;&quot;&amp;Interactive.Effect&amp;&quot;Pickup&quot;</param>
+                                    <param id="0" name="Name">&quot;Trigger&quot;</param>
+                                    <param id="1" name="Parameter {n}">Interactive.Effect&amp;&quot;Pickup&quot;</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="4765503668179263" type="Interactive" />
                             </actions>
