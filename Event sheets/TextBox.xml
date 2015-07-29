@@ -4,7 +4,7 @@
     <name>TextBox</name>
     <events>
         <variable constant="0" name="TextBoxActive" sid="7546086684123224" static="0" type="number">0</variable>
-        <event-block sid="4802003645009701">
+        <event-block disabled="1" sid="4802003645009701">
             <conditions>
                 <condition id="0" name="On function" sid="265245138633926" type="Function">
                     <param id="0" name="Name">&quot;ShowTextBox&quot;</param>
@@ -25,7 +25,7 @@
                 </action>
             </actions>
             <sub-events>
-                <event-block sid="9027069174513791">
+                <event-block disabled="1" sid="9027069174513791">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="5403315586174456" type="System">
                             <param id="0" name="First value">lowercase(tokenat(Function.Param(0),0,TextBox.ParamaterDelimiter))</param>
@@ -39,7 +39,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="1350886640766786">
+                <event-block disabled="1" sid="1350886640766786">
                     <conditions>
                         <condition id="-22" name="Else" sid="4535637090560202" type="System" />
                     </conditions>
@@ -49,7 +49,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="7931584995962677">
+                <event-block disabled="1" sid="7931584995962677">
                     <conditions />
                     <actions>
                         <action id="-10" name="Set value" sid="9446186382841145" type="TextBox">
@@ -84,7 +84,7 @@
         <event-block sid="5606134545713207">
             <conditions>
                 <condition id="0" name="On function" sid="2526151614625843" type="Function">
-                    <param id="0" name="Name">&quot;ShowTextBox_String&quot;</param>
+                    <param id="0" name="Name">&quot;ShowTextBox&quot;</param>
                 </condition>
                 <condition id="-9" inverted="1" name="Is visible" sid="5338173707932441" type="TextBox" />
             </conditions>

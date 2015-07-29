@@ -40,8 +40,8 @@
                             <param id="1" name="Value">INV.AsJSON</param>
                         </action>
                         <action id="0" name="Call function" sid="5424758661180969" type="Function">
-                            <param id="0" name="Name">&quot;ShowTextBox&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;Bottom;Saved&quot;</param>
+                            <param id="0" name="Name">&quot;Trigger&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;Saved&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -94,9 +94,9 @@
                     <param id="0" name="Variable">ZoneLoaded</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="0" name="Call function" sid="43015504743504" type="Function">
-                    <param id="0" name="Name">&quot;ShowTextBox&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;Bottom;Loaded&quot;</param>
+                <action id="0" name="Call function" sid="3728705458470576" type="Function">
+                    <param id="0" name="Name">&quot;Trigger&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;Loaded&quot;</param>
                 </action>
                 <action id="3" name="Clear" sid="6491008976351273" type="SessionData" />
             </actions>

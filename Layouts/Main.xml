@@ -185,7 +185,7 @@
                         <TriggeredBy>Buttons</TriggeredBy>
                         <Conditions></Conditions>
                         <FunctionName>ShowTextBox</FunctionName>
-                        <Params>bottom;Test</Params>
+                        <Params>Heres How to Call the TextBox Directly!</Params>
                         <Triggered>false</Triggered>
                         <ComplexTriggered>0</ComplexTriggered>
                         <RoomUID>0</RoomUID>
@@ -8192,7 +8192,7 @@
                     <instance-variables>
                         <Zone>24</Zone>
                         <Loaded>false</Loaded>
-                        <Spawn>Npc3</Spawn>
+                        <Spawn>NpcTestState</Spawn>
                         <DontSpawnIF></DontSpawnIF>
                         <TriggerOnce>false</TriggerOnce>
                         <Triggered>false</Triggered>
