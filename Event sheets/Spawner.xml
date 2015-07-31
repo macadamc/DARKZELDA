@@ -1381,6 +1381,12 @@
                                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9981502227330898" type="Npc_Spawner">
                                             <param id="0" name="Instance variable">Loaded</param>
                                         </condition>
+                                        <condition id="3" inverted="1" name="Has key" sid="7151942977845858" type="SessionData">
+                                            <param id="0" name="Key">Npc_Spawner.DontSpawnIF</param>
+                                        </condition>
+                                        <condition id="3" inverted="1" name="Has key" sid="6497401847106603" type="GameStats">
+                                            <param id="0" name="Key">Npc_Spawner.DontSpawnIF</param>
+                                        </condition>
                                     </conditions>
                                     <actions />
                                     <sub-events>

@@ -109,6 +109,12 @@
                     <param id="0" name="Object">TextBox</param>
                     <param id="1" name="Time scale">1.0</param>
                 </action>
+                <action id="0" name="Play" sid="6757376880556694" type="Audio">
+                    <param id="0" name="Audio file">click3</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">random(-15,-10)</param>
+                    <param id="1" name="Tag (optional)">&quot;textbox&quot;</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="9586893404359788">
@@ -186,6 +192,12 @@
                 <action id="-14" name="Set object time scale" sid="5256970266114038" type="System">
                     <param id="0" name="Object">TextBox</param>
                     <param id="1" name="Time scale">1.0</param>
+                </action>
+                <action id="0" name="Play" sid="124714301456772" type="Audio">
+                    <param id="0" name="Audio file">click3</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">random(-15,-10)</param>
+                    <param id="1" name="Tag (optional)">&quot;textbox&quot;</param>
                 </action>
                 <action id="-16" name="Wait" sid="8286731356884437" type="System">
                     <param id="0" name="Seconds">0.3</param>

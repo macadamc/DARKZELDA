@@ -83,16 +83,16 @@
 			Bounds= "zone1"></NpcState>
 		<Text
 			Conditions= "!quest1"
-			Data= "Hey, you. Will you tell my husband that I love him."></Text>
+			Data= "If you see my husband around, please tell him I am looking for him. He is an old man so he couldn't have gone far."></Text>
 		<Function Name= "AddGameStat"
 			Params= "quest1;1"
 			Conditions= "!quest1"></Function>
 		<Text
 			Conditions= "quest1 !quest1_finished"
-			Data= "Will you tell him that please? He lives in the house north of me."></Text>
+			Data= "Please tell him I am looking for him.. He couldn't have wandered far."></Text>
 		<Text
 			Conditions= "quest1_finished"
-			Data= "Thanks for that. I owe you one."></Text>
+			Data= "Thanks for helping me, I was getting worried before."></Text>
 	</Object>
 	<Object Name="OldMan_1">
 		<Sprite Name= "oldMan"></Sprite>
@@ -100,15 +100,15 @@
 			Bounds= "zone2"></NpcState>
 		<Text
 			Conditions= "quest1 !quest1_finished"
-			Data= "Oh thanks. I don't know why that bitch couldn't come here herself and tell me."></Text>
+			Data= "My wife is looking for me? ... I don't even know how I got here. Let me catch my breath and I will head home."></Text>
 		<Function Name= "AddGameStat"
 			Params= "quest1_finished;1"
 			Conditions= "quest1 !quest1_finished"></Function>
 		<Text
 			Conditions= "quest1_finished"
-			Data= "You can leave my house now."></Text>
+			Data= "I don't even know how I got here. Let me catch my breath and I will head home."></Text>
 		<Text
 			Conditions= "!quest1 !quest1_finished"
-			Data= "You can leave my house now."></Text>
+			Data= "I can't remember what I am doing here."></Text>
 	</Object>
 </xml>
