@@ -77,7 +77,7 @@
                                         <action id="25" name="Play at object" sid="2050038149160772" type="Audio">
                                             <param id="0" name="Audio file">stepdirt_7</param>
                                             <param id="1" name="Loop">0</param>
-                                            <param id="2" name="Volume">random(-45,-40)+SoundFxLevel</param>
+                                            <param id="2" name="Volume">random(-35,-30)+SoundFxLevel</param>
                                             <param id="3" name="Object">BASE</param>
                                             <param id="4" name="Inner angle">360</param>
                                             <param id="5" name="Outer angle">360</param>
@@ -123,7 +123,7 @@
                                         <action id="25" name="Play at object" sid="4915769344752728" type="Audio">
                                             <param id="0" name="Audio file">38874__swuing__footstep-grass</param>
                                             <param id="1" name="Loop">0</param>
-                                            <param id="2" name="Volume">random(-20,-15)+SoundFxLevel</param>
+                                            <param id="2" name="Volume">random(-5,0)+SoundFxLevel</param>
                                             <param id="3" name="Object">BASE</param>
                                             <param id="4" name="Inner angle">360</param>
                                             <param id="5" name="Outer angle">360</param>
@@ -151,7 +151,7 @@
                                         <action id="25" name="Play at object" sid="3774283195696502" type="Audio">
                                             <param id="0" name="Audio file">stepwood_1</param>
                                             <param id="1" name="Loop">0</param>
-                                            <param id="2" name="Volume">random(-45,-40)+SoundFxLevel</param>
+                                            <param id="2" name="Volume">random(-25,-20)+SoundFxLevel</param>
                                             <param id="3" name="Object">BASE</param>
                                             <param id="4" name="Inner angle">360</param>
                                             <param id="5" name="Outer angle">360</param>
@@ -179,7 +179,7 @@
                                         <action id="25" name="Play at object" sid="5888024711654601" type="Audio">
                                             <param id="0" name="Audio file">stepstone_5</param>
                                             <param id="1" name="Loop">0</param>
-                                            <param id="2" name="Volume">random(-45,-40)+SoundFxLevel</param>
+                                            <param id="2" name="Volume">random(-25,-20)+SoundFxLevel</param>
                                             <param id="3" name="Object">BASE</param>
                                             <param id="4" name="Inner angle">360</param>
                                             <param id="5" name="Outer angle">360</param>

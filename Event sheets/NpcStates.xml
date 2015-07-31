@@ -838,9 +838,6 @@
                         <condition behavior="Pathfinding" id="1" name="On failed to find path" sid="836993569073456" type="NPC" />
                     </conditions>
                     <actions>
-                        <action id="-16" name="Wait" sid="8393294952240641" type="System">
-                            <param id="0" name="Seconds">random(1,4)</param>
-                        </action>
                         <action id="2" name="Delete key" sid="5623742773955754" type="NPCData">
                             <param id="0" name="Key">&quot;walkToX&quot;</param>
                         </action>
@@ -872,10 +869,10 @@
                     <sub-events>
                         <event-block sid="5473795529690852">
                             <conditions>
-                                <condition id="-39" name="Is within angle" sid="6279130564975222" type="System">
-                                    <param id="0" name="Angle 1">NpcBase.Pathfinding.MovingAngle</param>
-                                    <param id="1" name="Within">175</param>
-                                    <param id="2" name="Angle 2">0</param>
+                                <condition id="-8" name="Compare two values" sid="6279130564975222" type="System">
+                                    <param id="0" name="First value">npcBase.pathfinding.NodeXAt(npcBase.pathfinding.CurrentNode)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">npcBase.X</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -886,10 +883,10 @@
                         </event-block>
                         <event-block sid="18970364666737">
                             <conditions>
-                                <condition id="-39" name="Is within angle" sid="8946060298889739" type="System">
-                                    <param id="0" name="Angle 1">NpcBase.Pathfinding.MovingAngle</param>
-                                    <param id="1" name="Within">175</param>
-                                    <param id="2" name="Angle 2">180</param>
+                                <condition id="-8" name="Compare two values" sid="5747505683559774" type="System">
+                                    <param id="0" name="First value">npcBase.pathfinding.NodeXAt(npcBase.pathfinding.CurrentNode)</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">npcBase.X</param>
                                 </condition>
                             </conditions>
                             <actions>

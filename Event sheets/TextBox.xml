@@ -4,6 +4,8 @@
     <name>TextBox</name>
     <events>
         <variable constant="0" name="TextBoxActive" sid="7546086684123224" static="0" type="number">0</variable>
+        <variable constant="0" name="textbox_counter" sid="1694797106278985" static="0" type="number">0.1</variable>
+        <variable constant="0" name="textbox_wait" sid="8178882000156711" static="0" type="number">0.025</variable>
         <event-block disabled="1" sid="4802003645009701">
             <conditions>
                 <condition id="0" name="On function" sid="265245138633926" type="Function">
@@ -103,6 +105,10 @@
                 <action id="-2" name="Set Y" sid="7428970707415799" type="TextBox">
                     <param id="0" name="Y">100</param>
                 </action>
+                <action id="-14" name="Set object time scale" sid="4950265136590682" type="System">
+                    <param id="0" name="Object">TextBox</param>
+                    <param id="1" name="Time scale">1.0</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="9586893404359788">
@@ -177,6 +183,10 @@
                 <action id="0" name="Set text" sid="470567317735391" type="TextBoxText">
                     <param id="0" name="Text">&quot;&quot;</param>
                 </action>
+                <action id="-14" name="Set object time scale" sid="5256970266114038" type="System">
+                    <param id="0" name="Object">TextBox</param>
+                    <param id="1" name="Time scale">1.0</param>
+                </action>
                 <action id="-16" name="Wait" sid="8286731356884437" type="System">
                     <param id="0" name="Seconds">0.3</param>
                 </action>
@@ -212,6 +222,38 @@
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block any="1" sid="8400114807547437">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="2283036523248551" type="System">
+                                    <param id="0" name="First value">right(TextBoxText.Text, 1)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;.&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="7316179484747358" type="System">
+                                    <param id="0" name="First value">right(TextBoxText.Text, 1)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;,&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="5364926697301828" type="System">
+                                    <param id="0" name="First value">right(TextBoxText.Text, 1)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;?&quot;</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="2917439349339543" type="System">
+                                    <param id="0" name="First value">right(TextBoxText.Text, 1)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;!&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="2170372794804076" type="System">
+                                    <param id="0" name="Variable">textbox_counter</param>
+                                    <param id="1" name="Value">0.2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="5781365232984212">
                     <conditions>
@@ -266,9 +308,9 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="0" name="Call function" sid="7525271156692535" type="Function">
-                                            <param id="0" name="Name">&quot;Next&quot;</param>
-                                            <param id="1" name="Parameter {n}"></param>
+                                        <action id="-11" name="Subtract from" sid="9194888894630683" type="System">
+                                            <param id="0" name="Variable">textbox_counter</param>
+                                            <param id="1" name="Value">TextBox.dt</param>
                                         </action>
                                     </actions>
                                     <sub-events>
@@ -296,13 +338,9 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
-                                                        <action id="0" name="Call function" sid="2940822850657712" type="Function">
-                                                            <param id="0" name="Name">&quot;Next&quot;</param>
-                                                            <param id="1" name="Parameter {n}"></param>
-                                                        </action>
-                                                        <action id="0" name="Call function" sid="8150221192698324" type="Function">
-                                                            <param id="0" name="Name">&quot;Next&quot;</param>
-                                                            <param id="1" name="Parameter {n}"></param>
+                                                        <action id="-11" name="Subtract from" sid="4017937271053072" type="System">
+                                                            <param id="0" name="Variable">textbox_counter</param>
+                                                            <param id="1" name="Value">TextBox.dt</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -342,6 +380,25 @@
                                     </sub-events>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                        <event-block sid="9862598838681857">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6965116207725082" type="System">
+                                    <param id="0" name="Variable">textbox_counter</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="5016018425937497" type="System">
+                                    <param id="0" name="Variable">textbox_counter</param>
+                                    <param id="1" name="Value">textbox_wait</param>
+                                </action>
+                                <action id="0" name="Call function" sid="3757894457678287" type="Function">
+                                    <param id="0" name="Name">&quot;Next&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>

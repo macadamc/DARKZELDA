@@ -8131,7 +8131,6 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Shadow>SmallHor</Shadow>
                         <Zone1>-1</Zone1>
                         <Destroy>true</Destroy>
                         <isLight>false</isLight>

@@ -3706,7 +3706,6 @@
                 <member>Ghost</member>
                 <member>Item_Pickup</member>
                 <member>Mirror</member>
-                <member>NpcBase</member>
                 <member>NpcSprite</member>
                 <member>PlayerProjectile</member>
                 <member>ProjectileTrap</member>

@@ -74,5 +74,41 @@
 			Conditions= "!GhostPath">
 		</Function>
 	</Object>
-	
+
+
+
+	<Object Name="OldWoman_1">
+		<Sprite Name= "oldWoman"></Sprite>
+		<NpcState Name= "Npc_RandomWalk"
+			Bounds= "zone1"></NpcState>
+		<Text
+			Conditions= "!quest1"
+			Data= "Hey, you. Will you tell my husband that I love him."></Text>
+		<Function Name= "AddGameStat"
+			Params= "quest1;1"
+			Conditions= "!quest1"></Function>
+		<Text
+			Conditions= "quest1 !quest1_finished"
+			Data= "Will you tell him that please? He lives in the house north of me."></Text>
+		<Text
+			Conditions= "quest1_finished"
+			Data= "Thanks for that. I owe you one."></Text>
+	</Object>
+	<Object Name="OldMan_1">
+		<Sprite Name= "oldMan"></Sprite>
+		<NpcState Name= "Npc_RandomWalk"
+			Bounds= "zone2"></NpcState>
+		<Text
+			Conditions= "quest1 !quest1_finished"
+			Data= "Oh thanks. I don't know why that bitch couldn't come here herself and tell me."></Text>
+		<Function Name= "AddGameStat"
+			Params= "quest1_finished;1"
+			Conditions= "quest1 !quest1_finished"></Function>
+		<Text
+			Conditions= "quest1_finished"
+			Data= "You can leave my house now."></Text>
+		<Text
+			Conditions= "!quest1 !quest1_finished"
+			Data= "You can leave my house now."></Text>
+	</Object>
 </xml>
