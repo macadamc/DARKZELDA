@@ -221,7 +221,7 @@
                         <event-block sid="4728277004502836">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="2703566797961593" type="System">
-                                    <param id="0" name="First value">mid(TextBox.Text,TextBox.FilePos, 2)</param>
+                                    <param id="0" name="First value">mid(TextBox.Text,TextBox.FilePos, 1)</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Second value">&quot;%&quot;</param>
                                 </condition>
