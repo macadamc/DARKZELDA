@@ -34,20 +34,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="1883568078945592">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="415766235713065" type="SpriteFont">
-                            <param id="0" name="Instance variable">Function</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;gui2&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="9627221239207439" type="SpriteFont">
-                            <param id="0" name="Text">Consumable.Get(GameStats.Get(&quot;Item2&quot;))</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="5623652481589682">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="1035649651216799" type="SpriteFont">
@@ -64,224 +50,243 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="1873932127983208">
+        <event-block sid="5523289450523242">
             <conditions>
-                <condition id="3" name="Has key" sid="5250554304120499" type="Consumable">
-                    <param id="0" name="Key">GameStats.Get(&quot;Item1&quot;)</param>
+                <condition id="0" name="On function" sid="5627024600486184" type="Function">
+                    <param id="0" name="Name">&quot;setGUI&quot;</param>
                 </condition>
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="5484307084280826">
+                <event-block sid="1873932127983208">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="8021542870865803" type="SpriteFont">
-                            <param id="0" name="Instance variable">Function</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;gui1&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="8953443802611838" type="SpriteFont">
-                            <param id="0" name="Text">Consumable.Get(GameStats.Get(&quot;Item1&quot;))</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="5043275962245943">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="6658407626588653" type="GUI_ICON">
-                            <param id="0" name="Instance variable">function</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;gui1&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="8251449025579054" type="GUI_ICON">
-                            <param id="0" name="Animation">GameStats.Get(&quot;Item1&quot;)</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="2186258165964752" type="GUI_ICON">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="408006820136479">
-            <conditions>
-                <condition id="-22" name="Else" sid="7896291452730276" type="System" />
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="8526748160150931">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="9371183733719799" type="GUI_ICON">
-                            <param id="0" name="Instance variable">function</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;gui1&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="8002913994226466" type="GUI_ICON">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3144724802437056">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="1931262247626734" type="SpriteFont">
-                            <param id="0" name="Instance variable">Function</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;gui1&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="8421316656032876" type="SpriteFont">
-                            <param id="0" name="Text">&quot;&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="4006781635286042">
-            <conditions>
-                <condition id="3" name="Has key" sid="1813726201782036" type="Consumable">
-                    <param id="0" name="Key">GameStats.Get(&quot;Item2&quot;)</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="3536252736285555">
-                    <conditions>
-                        <condition id="3" inverted="1" name="Has key" sid="110973726409177" type="Consumable">
+                        <condition id="3" name="Has key" sid="5250554304120499" type="Consumable">
                             <param id="0" name="Key">GameStats.Get(&quot;Item1&quot;)</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="3124709524697412">
+                        <event-block sid="5484307084280826">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="6140289188048673" type="SpriteFont">
+                                <condition id="-7" name="Compare instance variable" sid="8021542870865803" type="SpriteFont">
                                     <param id="0" name="Instance variable">Function</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;gui1&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Set text" sid="2632096701812276" type="SpriteFont">
-                                    <param id="0" name="Text">Consumable.Get(GameStats.Get(&quot;Item2&quot;))</param>
+                                <action id="0" name="Set text" sid="8953443802611838" type="SpriteFont">
+                                    <param id="0" name="Text">Consumable.Get(GameStats.Get(&quot;Item1&quot;))</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="6246506743119744">
+                        <event-block sid="5043275962245943">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="2502179052018695" type="GUI_ICON">
+                                <condition id="-7" name="Compare instance variable" sid="6658407626588653" type="GUI_ICON">
                                     <param id="0" name="Instance variable">function</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">&quot;gui1&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="6592374542883668" type="GUI_ICON">
-                                    <param id="0" name="Animation">GameStats.Get(&quot;Item2&quot;)</param>
+                                <action id="4" name="Set animation" sid="8251449025579054" type="GUI_ICON">
+                                    <param id="0" name="Animation">GameStats.Get(&quot;Item1&quot;)</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="2488595913559812">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="2715879959422835" type="SpriteFont">
-                                    <param id="0" name="Instance variable">Function</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;gui2&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Set text" sid="9703914433451969" type="SpriteFont">
-                                    <param id="0" name="Text">&quot;&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="9856960155066882">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="8029676532959257" type="GUI_ICON">
-                                    <param id="0" name="Instance variable">function</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;gui2&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="6585027107277371" type="GUI_ICON">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="87507999590856">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="7704596226044803" type="System" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="4051274332024698">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="7111579679948814" type="SpriteFont">
-                                    <param id="0" name="Instance variable">Function</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;gui2&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Set text" sid="6561619023580526" type="SpriteFont">
-                                    <param id="0" name="Text">Consumable.Get(GameStats.Get(&quot;Item2&quot;))</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="8598266658129783">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="6664262684917327" type="GUI_ICON">
-                                    <param id="0" name="Instance variable">function</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">&quot;gui2&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="5412673332117675" type="GUI_ICON">
+                                <action id="-15" name="Set visible" sid="2186258165964752" type="GUI_ICON">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="2140813310216602">
-            <conditions>
-                <condition id="-22" name="Else" sid="9906939314699167" type="System" />
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="3329464831828147">
+                <event-block sid="408006820136479">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="5861425202978715" type="SpriteFont">
-                            <param id="0" name="Instance variable">Function</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;gui2&quot;</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="2493123846456955" type="GUI_ICON">
-                            <param id="0" name="Instance variable">function</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">&quot;gui2&quot;</param>
+                        <condition id="-22" name="Else" sid="7896291452730276" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8526748160150931">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="9371183733719799" type="GUI_ICON">
+                                    <param id="0" name="Instance variable">function</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;gui1&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="8002913994226466" type="GUI_ICON">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3144724802437056">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1931262247626734" type="SpriteFont">
+                                    <param id="0" name="Instance variable">Function</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;gui1&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="8421316656032876" type="SpriteFont">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4006781635286042">
+                    <conditions>
+                        <condition id="3" name="Has key" sid="1813726201782036" type="Consumable">
+                            <param id="0" name="Key">GameStats.Get(&quot;Item2&quot;)</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Set text" sid="3119197113052593" type="SpriteFont">
-                            <param id="0" name="Text">&quot;&quot;</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="4560177783590223" type="GUI_ICON">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3536252736285555">
+                            <conditions>
+                                <condition id="3" inverted="1" name="Has key" sid="110973726409177" type="Consumable">
+                                    <param id="0" name="Key">GameStats.Get(&quot;Item1&quot;)</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3124709524697412">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="6140289188048673" type="SpriteFont">
+                                            <param id="0" name="Instance variable">Function</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;gui1&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="2632096701812276" type="SpriteFont">
+                                            <param id="0" name="Text">Consumable.Get(GameStats.Get(&quot;Item2&quot;))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6246506743119744">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="2502179052018695" type="GUI_ICON">
+                                            <param id="0" name="Instance variable">function</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;gui1&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="6592374542883668" type="GUI_ICON">
+                                            <param id="0" name="Animation">GameStats.Get(&quot;Item2&quot;)</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="4018318457759256" type="GUI_ICON">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2488595913559812">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="2715879959422835" type="SpriteFont">
+                                            <param id="0" name="Instance variable">Function</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;gui2&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="9703914433451969" type="SpriteFont">
+                                            <param id="0" name="Text">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9856960155066882">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="8029676532959257" type="GUI_ICON">
+                                            <param id="0" name="Instance variable">function</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;gui2&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="6585027107277371" type="GUI_ICON">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="87507999590856">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="7704596226044803" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4051274332024698">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="7111579679948814" type="SpriteFont">
+                                            <param id="0" name="Instance variable">Function</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;gui2&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="6561619023580526" type="SpriteFont">
+                                            <param id="0" name="Text">Consumable.Get(GameStats.Get(&quot;Item2&quot;))</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8598266658129783">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="6664262684917327" type="GUI_ICON">
+                                            <param id="0" name="Instance variable">function</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;gui2&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="5412673332117675" type="GUI_ICON">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2140813310216602">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="9906939314699167" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3329464831828147">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5861425202978715" type="SpriteFont">
+                                    <param id="0" name="Instance variable">Function</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;gui2&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="3119197113052593" type="SpriteFont">
+                                    <param id="0" name="Text">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4848919657178661">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="9313095697745411" type="GUI_ICON">
+                                    <param id="0" name="Instance variable">function</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;gui2&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="3152535513702151" type="GUI_ICON">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
