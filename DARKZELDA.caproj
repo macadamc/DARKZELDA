@@ -3092,6 +3092,9 @@
                 </effects>
                 <texture original-source="C:\Users\chris\Desktop\SpriteFont_MingLiU_Regular_(12)_[0,0,0]_10x14.png" />
             </object-type>
+            <object-type global="1" name="Consumable" sid="3786782510104496">
+                <plugin id="Dictionary" />
+            </object-type>
         </object-folder>
         <object-folder name="XML">
             <object-type global="1" name="TextData" sid="5789260471769958">

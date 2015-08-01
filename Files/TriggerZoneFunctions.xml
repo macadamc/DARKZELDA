@@ -58,6 +58,8 @@
 	<Object Name="BowPickup">
 		<Text
 			Data="You pickup a bow! Equip it in your inventory."></Text>
+		<Function Name="SetConsumable"
+			Params="Bow 25"></Function>
 	</Object>
 	<Object Name="Saved">
 		<Text

@@ -594,5 +594,18 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="6381782812401005">
+            <conditions>
+                <condition id="0" name="On function" sid="9541099505745934" type="Function">
+                    <param id="0" name="Name">&quot;SetConsumable&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="1597747617327066" type="Consumable">
+                    <param id="0" name="Key">tokenat(function.Param(0),0,&quot; &quot;)</param>
+                    <param id="1" name="Value">tokenat(function.Param(0),1,&quot; &quot;)</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

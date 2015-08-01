@@ -203,6 +203,31 @@
                                                 </action>
                                             </actions>
                                         </event-block>
+                                        <event-block sid="6401354574308977">
+                                            <conditions>
+                                                <condition id="3" name="Has key" sid="2466071084691372" type="Consumable">
+                                                    <param id="0" name="Key">inv.CurValue</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Create object" sid="6095658912179532" type="System">
+                                                    <param id="0" name="Object to create">SpriteFont</param>
+                                                    <param id="1" name="Layer">&quot;PAUSE&quot;</param>
+                                                    <param id="2" name="X">INV_Slot.X-12</param>
+                                                    <param id="3" name="Y">INV_Slot.Y</param>
+                                                </action>
+                                                <action id="-5" name="Set width" sid="9397127027505385" type="SpriteFont">
+                                                    <param id="0" name="Width">24</param>
+                                                </action>
+                                                <action id="-6" name="Set height" sid="8933810466787506" type="SpriteFont">
+                                                    <param id="0" name="Height">12</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="3137187792389762" type="SpriteFont">
+                                                    <param id="0" name="Instance variable">Function</param>
+                                                    <param id="1" name="Value">INV_Slot.Item</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
                                     </sub-events>
                                 </event-block>
                             </sub-events>
@@ -654,5 +679,20 @@
                 </event-group>
             </sub-events>
         </event-group>
+        <event-block sid="5717761121096842">
+            <conditions>
+                <condition id="1" name="For each key" sid="8707540730709294" type="Consumable" />
+                <condition id="-7" name="Compare instance variable" sid="9910196478286243" type="SpriteFont">
+                    <param id="0" name="Instance variable">Function</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">Consumable.CurrentKey</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="9789768108818309" type="SpriteFont">
+                    <param id="0" name="Text">Consumable.CurrentValue</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

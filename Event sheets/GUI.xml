@@ -40,7 +40,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="8953443802611838" type="SpriteFont">
-                            <param id="0" name="Text">GameStats.Get(&quot;ARROWS&quot;)</param>
+                            <param id="0" name="Text">Consumable.Get(&quot;Bow&quot;)</param>
                         </action>
                     </actions>
                 </event-block>
