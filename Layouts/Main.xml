@@ -10022,6 +10022,7 @@
                         <PagePos>0</PagePos>
                         <NumberOfChars>0</NumberOfChars>
                         <CharsPerPage>0</CharsPerPage>
+                        <PageBreak>false</PageBreak>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

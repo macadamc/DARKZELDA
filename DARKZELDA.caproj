@@ -2944,6 +2944,7 @@
                     <instance-variable name="PagePos" sid="8541264383807106" type="number" />
                     <instance-variable name="NumberOfChars" sid="8924852780743961" type="number" />
                     <instance-variable name="CharsPerPage" sid="794940432231451" type="number" />
+                    <instance-variable name="PageBreak" sid="2983388659029335" type="boolean" />
                 </instance-variables>
                 <container>
                     <type>TextBox</type>

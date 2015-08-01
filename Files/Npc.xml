@@ -83,7 +83,7 @@
 			Bounds= "zone1"></NpcState>
 		<Text
 			Conditions= "!quest1"
-			Data= "If you see my husband around, please tell him I am looking for him. He is an old man so he couldn't have gone far."></Text>
+			Data= "If you see my husband around, please%tell him I am looking for him. He is an old man so he couldn't have gone far."></Text>
 		<Function Name= "AddGameStat"
 			Params= "quest1;1"
 			Conditions= "!quest1"></Function>
