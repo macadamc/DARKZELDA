@@ -1835,25 +1835,27 @@
                                     <param id="1" name="Value">2</param>
                                 </action>
                             </actions>
-                        </event-block>
-                        <event-block sid="7928650475720892">
-                            <conditions>
-                                <condition id="0" name="Compare value" sid="9459287581019098" type="WeaponData">
-                                    <param id="0" name="Key">&quot;BowStr&quot;</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">200</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="1959843992411218" type="PlayerProjectile">
-                                    <param id="0" name="Instance variable">PierceAMT</param>
-                                    <param id="1" name="Value">5</param>
-                                </action>
-                                <action behavior="Movement" id="2" name="Set speed" sid="2598630456591406" type="PlayerProjectile">
-                                    <param id="0" name="Which">1</param>
-                                    <param id="1" name="Speed">300+(BASE.8Direction.VectorX/2)</param>
-                                </action>
-                            </actions>
+                            <sub-events>
+                                <event-block sid="7928650475720892">
+                                    <conditions>
+                                        <condition id="0" name="Compare value" sid="9459287581019098" type="WeaponData">
+                                            <param id="0" name="Key">&quot;BowStr&quot;</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">200</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="1959843992411218" type="PlayerProjectile">
+                                            <param id="0" name="Instance variable">PierceAMT</param>
+                                            <param id="1" name="Value">5</param>
+                                        </action>
+                                        <action behavior="Movement" id="2" name="Set speed" sid="2598630456591406" type="PlayerProjectile">
+                                            <param id="0" name="Which">1</param>
+                                            <param id="1" name="Speed">300+(BASE.8Direction.VectorX/2)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -1919,25 +1921,27 @@
                                     <param id="1" name="Value">2</param>
                                 </action>
                             </actions>
-                        </event-block>
-                        <event-block sid="7704487699669695">
-                            <conditions>
-                                <condition id="0" name="Compare value" sid="8449254666168018" type="WeaponData">
-                                    <param id="0" name="Key">&quot;BowStr&quot;</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">200</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="1879682313187641" type="PlayerProjectile">
-                                    <param id="0" name="Instance variable">PierceAMT</param>
-                                    <param id="1" name="Value">5</param>
-                                </action>
-                                <action behavior="Movement" id="2" name="Set speed" sid="5570319208141865" type="PlayerProjectile">
-                                    <param id="0" name="Which">2</param>
-                                    <param id="1" name="Speed">300+(BASE.8Direction.VectorY/2)</param>
-                                </action>
-                            </actions>
+                            <sub-events>
+                                <event-block sid="7704487699669695">
+                                    <conditions>
+                                        <condition id="0" name="Compare value" sid="8449254666168018" type="WeaponData">
+                                            <param id="0" name="Key">&quot;BowStr&quot;</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">200</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="1879682313187641" type="PlayerProjectile">
+                                            <param id="0" name="Instance variable">PierceAMT</param>
+                                            <param id="1" name="Value">5</param>
+                                        </action>
+                                        <action behavior="Movement" id="2" name="Set speed" sid="5570319208141865" type="PlayerProjectile">
+                                            <param id="0" name="Which">2</param>
+                                            <param id="1" name="Speed">300+(BASE.8Direction.VectorY/2)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -2003,25 +2007,27 @@
                                     <param id="1" name="Value">2</param>
                                 </action>
                             </actions>
-                        </event-block>
-                        <event-block sid="134789189496377">
-                            <conditions>
-                                <condition id="0" name="Compare value" sid="7817649286732594" type="WeaponData">
-                                    <param id="0" name="Key">&quot;BowStr&quot;</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">200</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="1532565306300266" type="PlayerProjectile">
-                                    <param id="0" name="Instance variable">PierceAMT</param>
-                                    <param id="1" name="Value">5</param>
-                                </action>
-                                <action behavior="Movement" id="2" name="Set speed" sid="3472270898739577" type="PlayerProjectile">
-                                    <param id="0" name="Which">2</param>
-                                    <param id="1" name="Speed">-300+(BASE.8Direction.VectorY/2)</param>
-                                </action>
-                            </actions>
+                            <sub-events>
+                                <event-block sid="134789189496377">
+                                    <conditions>
+                                        <condition id="0" name="Compare value" sid="7817649286732594" type="WeaponData">
+                                            <param id="0" name="Key">&quot;BowStr&quot;</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">200</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="1532565306300266" type="PlayerProjectile">
+                                            <param id="0" name="Instance variable">PierceAMT</param>
+                                            <param id="1" name="Value">5</param>
+                                        </action>
+                                        <action behavior="Movement" id="2" name="Set speed" sid="3472270898739577" type="PlayerProjectile">
+                                            <param id="0" name="Which">2</param>
+                                            <param id="1" name="Speed">-300+(BASE.8Direction.VectorY/2)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -2087,25 +2093,27 @@
                                     <param id="1" name="Value">2</param>
                                 </action>
                             </actions>
-                        </event-block>
-                        <event-block sid="4841916773477135">
-                            <conditions>
-                                <condition id="0" name="Compare value" sid="5712606013552842" type="WeaponData">
-                                    <param id="0" name="Key">&quot;BowStr&quot;</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Value">200</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="2206763943283799" type="PlayerProjectile">
-                                    <param id="0" name="Instance variable">PierceAMT</param>
-                                    <param id="1" name="Value">5</param>
-                                </action>
-                                <action behavior="Movement" id="2" name="Set speed" sid="5093951290161436" type="PlayerProjectile">
-                                    <param id="0" name="Which">1</param>
-                                    <param id="1" name="Speed">-300+(BASE.8Direction.VectorX/2)</param>
-                                </action>
-                            </actions>
+                            <sub-events>
+                                <event-block sid="4841916773477135">
+                                    <conditions>
+                                        <condition id="0" name="Compare value" sid="5712606013552842" type="WeaponData">
+                                            <param id="0" name="Key">&quot;BowStr&quot;</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">200</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="2206763943283799" type="PlayerProjectile">
+                                            <param id="0" name="Instance variable">PierceAMT</param>
+                                            <param id="1" name="Value">5</param>
+                                        </action>
+                                        <action behavior="Movement" id="2" name="Set speed" sid="5093951290161436" type="PlayerProjectile">
+                                            <param id="0" name="Which">1</param>
+                                            <param id="1" name="Speed">-300+(BASE.8Direction.VectorX/2)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>

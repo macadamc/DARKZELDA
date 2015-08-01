@@ -270,6 +270,14 @@
                                     <param id="0" name="Key">&quot;FireCracker&quot;</param>
                                     <param id="1" name="Value">&quot;A small firework. Who knows if it still works...&quot;</param>
                                 </action>
+                                <action id="0" name="Add key" sid="9979762693981485" type="GameStats">
+                                    <param id="0" name="Key">&quot;Item1&quot;</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
+                                <action id="0" name="Add key" sid="7048531730115205" type="GameStats">
+                                    <param id="0" name="Key">&quot;Item2&quot;</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="5503859324552874">
@@ -486,18 +494,30 @@
                                         </condition>
                                         <condition id="-4" name="Trigger once while true" sid="5998456706371666" type="System" />
                                     </conditions>
-                                    <actions>
-                                        <action id="0" name="Add key" sid="772103576513657" type="GameStats">
-                                            <param id="0" name="Key">&quot;Item1&quot;</param>
-                                            <param id="1" name="Value">Sprite.Selected</param>
-                                        </action>
-                                        <action id="0" name="Play" sid="8170413528380579" type="Audio">
-                                            <param id="0" name="Audio file">click3</param>
-                                            <param id="2" name="Loop">0</param>
-                                            <param id="3" name="Volume">SoundFxLevel-15</param>
-                                            <param id="1" name="Tag (optional)">&quot;move&quot;</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="5608540981725333">
+                                            <conditions>
+                                                <condition id="0" name="Compare value" sid="1099091203428364" type="GameStats">
+                                                    <param id="0" name="Key">&quot;Item2&quot;</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Value">Sprite.Selected</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Add key" sid="772103576513657" type="GameStats">
+                                                    <param id="0" name="Key">&quot;Item1&quot;</param>
+                                                    <param id="1" name="Value">Sprite.Selected</param>
+                                                </action>
+                                                <action id="0" name="Play" sid="8170413528380579" type="Audio">
+                                                    <param id="0" name="Audio file">click3</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">SoundFxLevel-15</param>
+                                                    <param id="1" name="Tag (optional)">&quot;move&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-block sid="5308543289179979">
                                     <conditions>
@@ -508,18 +528,30 @@
                                         </condition>
                                         <condition id="-4" name="Trigger once while true" sid="9327706016545009" type="System" />
                                     </conditions>
-                                    <actions>
-                                        <action id="0" name="Add key" sid="4456238793935827" type="GameStats">
-                                            <param id="0" name="Key">&quot;Item2&quot;</param>
-                                            <param id="1" name="Value">Sprite.Selected</param>
-                                        </action>
-                                        <action id="0" name="Play" sid="214751591065861" type="Audio">
-                                            <param id="0" name="Audio file">click3</param>
-                                            <param id="2" name="Loop">0</param>
-                                            <param id="3" name="Volume">SoundFxLevel-15</param>
-                                            <param id="1" name="Tag (optional)">&quot;move&quot;</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="7921099966290554">
+                                            <conditions>
+                                                <condition id="0" name="Compare value" sid="7663249794027957" type="GameStats">
+                                                    <param id="0" name="Key">&quot;Item1&quot;</param>
+                                                    <param id="1" name="Comparison">1</param>
+                                                    <param id="2" name="Value">Sprite.Selected</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Add key" sid="4456238793935827" type="GameStats">
+                                                    <param id="0" name="Key">&quot;Item2&quot;</param>
+                                                    <param id="1" name="Value">Sprite.Selected</param>
+                                                </action>
+                                                <action id="0" name="Play" sid="214751591065861" type="Audio">
+                                                    <param id="0" name="Audio file">click3</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">SoundFxLevel-15</param>
+                                                    <param id="1" name="Tag (optional)">&quot;move&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-block sid="8172672867974788">
                                     <conditions>
