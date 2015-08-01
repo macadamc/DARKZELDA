@@ -9427,6 +9427,7 @@
                         <SlotNUM>0</SlotNUM>
                         <Item></Item>
                         <Function>INV</Function>
+                        <hasConsumable>false</hasConsumable>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -9454,6 +9455,7 @@
                         <SlotNUM>1</SlotNUM>
                         <Item></Item>
                         <Function>INV</Function>
+                        <hasConsumable>false</hasConsumable>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -9481,6 +9483,7 @@
                         <SlotNUM>2</SlotNUM>
                         <Item></Item>
                         <Function>INV</Function>
+                        <hasConsumable>false</hasConsumable>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -9508,6 +9511,7 @@
                         <SlotNUM>3</SlotNUM>
                         <Item></Item>
                         <Function>INV</Function>
+                        <hasConsumable>false</hasConsumable>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -9603,6 +9607,7 @@
                         <SlotNUM>4</SlotNUM>
                         <Item></Item>
                         <Function>INV</Function>
+                        <hasConsumable>false</hasConsumable>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -9630,6 +9635,7 @@
                         <SlotNUM>5</SlotNUM>
                         <Item></Item>
                         <Function>INV</Function>
+                        <hasConsumable>false</hasConsumable>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -9657,6 +9663,7 @@
                         <SlotNUM>6</SlotNUM>
                         <Item></Item>
                         <Function>INV</Function>
+                        <hasConsumable>false</hasConsumable>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -9684,6 +9691,7 @@
                         <SlotNUM>7</SlotNUM>
                         <Item></Item>
                         <Function>INV</Function>
+                        <hasConsumable>false</hasConsumable>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -9783,6 +9791,7 @@
                         <SlotNUM>-1</SlotNUM>
                         <Item></Item>
                         <Function>Item1</Function>
+                        <hasConsumable>false</hasConsumable>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -9836,6 +9845,7 @@
                         <SlotNUM>-1</SlotNUM>
                         <Item></Item>
                         <Function>Item2</Function>
+                        <hasConsumable>false</hasConsumable>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

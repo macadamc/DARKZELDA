@@ -2996,6 +2996,7 @@
                     <instance-variable name="SlotNUM" sid="2316583391100559" type="number" />
                     <instance-variable name="Item" sid="7806510420067778" type="string" />
                     <instance-variable name="Function" sid="6510978231173219" type="string" />
+                    <instance-variable name="hasConsumable" sid="5264357547378138" type="boolean" />
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="none" pingpong="0" repeatcount="1" repeatto="0" sid="3671552681363094" speed="5">

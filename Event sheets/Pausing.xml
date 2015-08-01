@@ -202,31 +202,40 @@
                                                     <param id="1" name="From">1</param>
                                                 </action>
                                             </actions>
-                                        </event-block>
-                                        <event-block sid="6401354574308977">
-                                            <conditions>
-                                                <condition id="3" name="Has key" sid="2466071084691372" type="Consumable">
-                                                    <param id="0" name="Key">inv.CurValue</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="-3" name="Create object" sid="6095658912179532" type="System">
-                                                    <param id="0" name="Object to create">SpriteFont</param>
-                                                    <param id="1" name="Layer">&quot;PAUSE&quot;</param>
-                                                    <param id="2" name="X">INV_Slot.X-12</param>
-                                                    <param id="3" name="Y">INV_Slot.Y</param>
-                                                </action>
-                                                <action id="-5" name="Set width" sid="9397127027505385" type="SpriteFont">
-                                                    <param id="0" name="Width">24</param>
-                                                </action>
-                                                <action id="-6" name="Set height" sid="8933810466787506" type="SpriteFont">
-                                                    <param id="0" name="Height">12</param>
-                                                </action>
-                                                <action id="-10" name="Set value" sid="3137187792389762" type="SpriteFont">
-                                                    <param id="0" name="Instance variable">Function</param>
-                                                    <param id="1" name="Value">INV_Slot.Item</param>
-                                                </action>
-                                            </actions>
+                                            <sub-events>
+                                                <event-block sid="6401354574308977">
+                                                    <conditions>
+                                                        <condition id="3" name="Has key" sid="2466071084691372" type="Consumable">
+                                                            <param id="0" name="Key">inv.CurValue</param>
+                                                        </condition>
+                                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8265811059247528" type="INV_Slot">
+                                                            <param id="0" name="Instance variable">hasConsumable</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Create object" sid="6095658912179532" type="System">
+                                                            <param id="0" name="Object to create">SpriteFont</param>
+                                                            <param id="1" name="Layer">&quot;PAUSE&quot;</param>
+                                                            <param id="2" name="X">INV_Slot.X-12</param>
+                                                            <param id="3" name="Y">INV_Slot.Y</param>
+                                                        </action>
+                                                        <action id="-5" name="Set width" sid="9397127027505385" type="SpriteFont">
+                                                            <param id="0" name="Width">24</param>
+                                                        </action>
+                                                        <action id="-6" name="Set height" sid="8933810466787506" type="SpriteFont">
+                                                            <param id="0" name="Height">12</param>
+                                                        </action>
+                                                        <action id="-10" name="Set value" sid="3137187792389762" type="SpriteFont">
+                                                            <param id="0" name="Instance variable">Function</param>
+                                                            <param id="1" name="Value">INV_Slot.Item</param>
+                                                        </action>
+                                                        <action id="-13" name="Set boolean" sid="7233979210058696" type="INV_Slot">
+                                                            <param id="0" name="Instance variable">hasConsumable</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
                                         </event-block>
                                     </sub-events>
                                 </event-block>
