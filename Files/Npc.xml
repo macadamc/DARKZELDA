@@ -79,14 +79,15 @@
 
 	<Object Name="OldWoman_1">
 		<Sprite Name= "oldWoman"></Sprite>
-		<NpcState Name= "Npc_RandomWalk"
-			Bounds= "zone1"></NpcState>
+		<StartState Name= "Npc_RandomWalk"
+			Bounds= "zone1"></StartState>
 		<Text
 			Conditions= "!quest1"
 			Data= "If you see my husband around, please%tell him I am looking for him. He is an old man so he couldn't have gone far."></Text>
 		<Function Name= "AddGameStat"
 			Params= "quest1;1"
 			Conditions= "!quest1"></Function>
+		<NpcState Name="MoveToPOI" Target="1197" Conditions="quest1"></NpcState>
 		<Text
 			Conditions= "quest1 !quest1_finished"
 			Data= "Please tell him I am looking for him.. He couldn't have wandered far."></Text>
@@ -96,8 +97,8 @@
 	</Object>
 	<Object Name="OldMan_1">
 		<Sprite Name= "oldMan"></Sprite>
-		<NpcState Name= "Npc_RandomWalk"
-			Bounds= "zone2"></NpcState>
+		<StartState Name= "Npc_RandomWalk"
+			Bounds= "zone2"></StartState>
 		<Text
 			Conditions= "quest1 !quest1_finished"
 			Data= "My wife is looking for me? ... I don't even know how I got here. Let me catch my breath and I will head home."></Text>

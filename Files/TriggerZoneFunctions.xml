@@ -53,7 +53,9 @@
 	</Object>
 	<Object Name="SwordPickup">
 		<Text
-			Data="You pickup a sword! Equip it in your inventory."></Text>
+			Data="You pickup a sword! Equip it in your inventory."
+			Image="test"
+			Name="Pickup"></Text>
 	</Object>
 	<Object Name="BowPickup">
 		<Text

@@ -1485,6 +1485,10 @@
                                                                     <param id="0" name="Instance variable">Conditions</param>
                                                                     <param id="1" name="Value">XmlData.StringValue(&quot;@Conditions&quot;)</param>
                                                                 </action>
+                                                                <action id="-10" name="Set value" sid="6079155042160519" type="TriggerZone">
+                                                                    <param id="0" name="Instance variable">NpcUID</param>
+                                                                    <param id="1" name="Value">NpcBase.UID</param>
+                                                                </action>
                                                             </actions>
                                                             <sub-events>
                                                                 <event-block sid="2053722501569297">
@@ -1503,7 +1507,7 @@
                                                                                 <condition id="-8" name="Compare two values" sid="9552381868914108" type="System">
                                                                                     <param id="0" name="First value">XmlData.StringValue(&quot;name(.)&quot;)</param>
                                                                                     <param id="1" name="Comparison">0</param>
-                                                                                    <param id="2" name="Second value">&quot;NpcState&quot;</param>
+                                                                                    <param id="2" name="Second value">&quot;StartState&quot;</param>
                                                                                 </condition>
                                                                             </conditions>
                                                                             <actions>

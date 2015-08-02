@@ -1120,5 +1120,53 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="3379416507632001">
+            <conditions>
+                <condition id="0" name="On function" sid="6273194692049088" type="Function">
+                    <param id="0" name="Name">&quot;MoveToPOI&quot;</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="3636812219674373" type="NPC">
+                    <param id="0" name="Unique ID">Function.Param(0)</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="2908250264510067" type="FSM">
+                    <param id="0" name="Unique ID">NPC.FSM_UID</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="5615364971176236" type="NPCData">
+                    <param id="0" name="Unique ID">NPC.DataUID</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="8076874315098777" type="PointsOfIntrest">
+                    <param id="0" name="Unique ID">int(NPCData.Get(&quot;Target&quot;))</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="9441524763093823">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="3052671490175968" type="System">
+                            <param id="0" name="First value">distance(PointsOfIntrest.X, PointsOfIntrest.Y, NPC.X, NPC.Y)</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="4374049950609452" type="Function">
+                            <param id="0" name="Name">&quot;Npc_Move&quot;</param>
+                            <param id="1" name="Parameter {n}">PointsOfIntrest.X{###}PointsOfIntrest.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8170361539859799">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="9736872370940475" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="2875902853541424" type="Function">
+                            <param id="0" name="Name">&quot;PopState&quot;</param>
+                            <param id="1" name="Parameter {n}">NPC.UID</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
     </events>
 </c2eventsheet>

@@ -117,6 +117,105 @@
                 </action>
             </actions>
             <sub-events>
+                <event-block sid="8694771728869764">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3706904671807916" type="MenuBorder">
+                            <param id="0" name="Instance variable">function</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;textbox&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6760927884270561">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Compare two values" sid="5409162039700948" type="System">
+                                    <param id="0" name="First value">Function.Param(2)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;&quot;</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="694860941451964" type="SpriteFont">
+                                    <param id="0" name="Instance variable">Function</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;textbox&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="4762473698371275" type="MenuBorder">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="8516603017817616" type="SpriteFont">
+                                    <param id="0" name="Text">Function.Param(2)</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="513762393644045" type="SpriteFont">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5058592413786095">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="1913562755087916" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="4750419580513555" type="SpriteFont">
+                                    <param id="0" name="Instance variable">Function</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;textbox&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="2808836022627997" type="MenuBorder">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="4597582969834656" type="SpriteFont">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3039656828318">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="8551367848500584" type="Sprite5">
+                            <param id="0" name="Instance variable">function</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;textbox&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3951970870561646">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Compare two values" sid="8102500110783657" type="System">
+                                    <param id="0" name="First value">Function.Param(1)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="7078347585301871" type="Sprite5">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="436695705920887" type="Sprite5">
+                                    <param id="0" name="Animation">Function.Param(1)</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4626521092898917">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="6862927560558573" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="792374172888595" type="Sprite5">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="1269548271766529" type="Sprite5">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="9586893404359788">
                     <conditions />
                     <actions>
@@ -199,14 +298,57 @@
                     <param id="3" name="Volume">random(-15,-10)</param>
                     <param id="1" name="Tag (optional)">&quot;textbox&quot;</param>
                 </action>
-                <action id="-16" name="Wait" sid="8286731356884437" type="System">
-                    <param id="0" name="Seconds">0.3</param>
-                </action>
-                <action id="-9" name="Set value" sid="1203619906315874" type="System">
-                    <param id="0" name="Variable">TextBoxActive</param>
-                    <param id="1" name="Value">0</param>
-                </action>
             </actions>
+            <sub-events>
+                <event-block sid="438333657013213">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2424385396915849" type="MenuBorder">
+                            <param id="0" name="Instance variable">function</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;textbox&quot;</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="1524063551730955" type="SpriteFont">
+                            <param id="0" name="Instance variable">Function</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;textbox&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="2013483658181195" type="MenuBorder">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="393494625033959" type="SpriteFont">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="891826512462813">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="231617663356949" type="Sprite5">
+                            <param id="0" name="Instance variable">function</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;textbox&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="6055738574463496" type="Sprite5">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7309458582857502">
+                    <conditions />
+                    <actions>
+                        <action id="-16" name="Wait" sid="8286731356884437" type="System">
+                            <param id="0" name="Seconds">0.3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1203619906315874" type="System">
+                            <param id="0" name="Variable">TextBoxActive</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-group description="" inactive="1" sid="1971498408542362" title="TextBox Logic">
             <sub-events>
@@ -236,6 +378,22 @@
                                     <param id="1" name="Value">TextBox.CharsPerPage</param>
                                 </action>
                             </actions>
+                        </event-block>
+                        <event-block sid="4414106138655484">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="6440146362197322" type="System">
+                                    <param id="0" name="First value">mid(TextBox.Text,TextBox.FilePos, 2)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;\n&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="234017566583029">
+                                    <conditions />
+                                    <actions />
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="4022648059196603">
                             <conditions>
@@ -346,37 +504,29 @@
                                         </action>
                                     </actions>
                                     <sub-events>
-                                        <event-block sid="3440766391425715">
+                                        <event-block any="1" sid="5589387610975577">
                                             <conditions>
-                                                <condition id="-7" name="Compare instance variable" sid="3455462707090613" type="TextBox">
-                                                    <param id="0" name="Instance variable">PagePos</param>
-                                                    <param id="1" name="Comparison">2</param>
-                                                    <param id="2" name="Value">TextBox.CharsPerPage</param>
+                                                <condition id="-7" name="Compare instance variable" sid="1640727556190687" type="Input">
+                                                    <param id="0" name="Instance variable">Button1</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Holding&quot;</param>
+                                                </condition>
+                                                <condition id="-7" name="Compare instance variable" sid="2925220927438273" type="Input">
+                                                    <param id="0" name="Instance variable">Button2</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">&quot;Holding&quot;</param>
                                                 </condition>
                                             </conditions>
-                                            <actions />
-                                            <sub-events>
-                                                <event-block any="1" sid="5589387610975577">
-                                                    <conditions>
-                                                        <condition id="-7" name="Compare instance variable" sid="1640727556190687" type="Input">
-                                                            <param id="0" name="Instance variable">Button1</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;Holding&quot;</param>
-                                                        </condition>
-                                                        <condition id="-7" name="Compare instance variable" sid="2925220927438273" type="Input">
-                                                            <param id="0" name="Instance variable">Button2</param>
-                                                            <param id="1" name="Comparison">0</param>
-                                                            <param id="2" name="Value">&quot;Holding&quot;</param>
-                                                        </condition>
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-11" name="Subtract from" sid="4017937271053072" type="System">
-                                                            <param id="0" name="Variable">textbox_counter</param>
-                                                            <param id="1" name="Value">TextBox.dt</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                            </sub-events>
+                                            <actions>
+                                                <action id="0" name="Call function" sid="9008504123804697" type="Function">
+                                                    <param id="0" name="Name">&quot;Next&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                                <action id="0" name="Call function" sid="8368827152453859" type="Function">
+                                                    <param id="0" name="Name">&quot;Next&quot;</param>
+                                                    <param id="1" name="Parameter {n}"></param>
+                                                </action>
+                                            </actions>
                                         </event-block>
                                     </sub-events>
                                 </event-block>

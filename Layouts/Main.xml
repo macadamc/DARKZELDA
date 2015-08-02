@@ -120,6 +120,7 @@
                         <ComplexTriggered>0</ComplexTriggered>
                         <RoomUID>0</RoomUID>
                         <XmlUID>287</XmlUID>
+                        <NpcUID>-1</NpcUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -155,6 +156,7 @@
                         <ComplexTriggered>0</ComplexTriggered>
                         <RoomUID>0</RoomUID>
                         <XmlUID>287</XmlUID>
+                        <NpcUID>-1</NpcUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -190,6 +192,7 @@
                         <ComplexTriggered>0</ComplexTriggered>
                         <RoomUID>0</RoomUID>
                         <XmlUID>287</XmlUID>
+                        <NpcUID>-1</NpcUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -225,6 +228,7 @@
                         <ComplexTriggered>0</ComplexTriggered>
                         <RoomUID>0</RoomUID>
                         <XmlUID>287</XmlUID>
+                        <NpcUID>-1</NpcUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -260,6 +264,7 @@
                         <ComplexTriggered>0</ComplexTriggered>
                         <RoomUID>0</RoomUID>
                         <XmlUID>287</XmlUID>
+                        <NpcUID>-1</NpcUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -295,6 +300,7 @@
                         <ComplexTriggered>0</ComplexTriggered>
                         <RoomUID>0</RoomUID>
                         <XmlUID>287</XmlUID>
+                        <NpcUID>-1</NpcUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -330,6 +336,7 @@
                         <ComplexTriggered>0</ComplexTriggered>
                         <RoomUID>0</RoomUID>
                         <XmlUID>287</XmlUID>
+                        <NpcUID>-1</NpcUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -365,6 +372,7 @@
                         <ComplexTriggered>0</ComplexTriggered>
                         <RoomUID>0</RoomUID>
                         <XmlUID>287</XmlUID>
+                        <NpcUID>-1</NpcUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -400,6 +408,7 @@
                         <ComplexTriggered>0</ComplexTriggered>
                         <RoomUID>0</RoomUID>
                         <XmlUID>287</XmlUID>
+                        <NpcUID>-1</NpcUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -567,6 +576,7 @@
                         <ComplexTriggered>0</ComplexTriggered>
                         <RoomUID>0</RoomUID>
                         <XmlUID>287</XmlUID>
+                        <NpcUID>-1</NpcUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -602,6 +612,7 @@
                         <ComplexTriggered>0</ComplexTriggered>
                         <RoomUID>0</RoomUID>
                         <XmlUID>287</XmlUID>
+                        <NpcUID>-1</NpcUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
@@ -9360,6 +9371,9 @@
                         <hotspot>Top-left</hotspot>
                         <seams>Exact</seams>
                     </properties>
+                    <instance-variables>
+                        <function></function>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -9540,6 +9554,9 @@
                         <hotspot>Top-left</hotspot>
                         <seams>Exact</seams>
                     </properties>
+                    <instance-variables>
+                        <function></function>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -9766,6 +9783,9 @@
                         <hotspot>Top-left</hotspot>
                         <seams>Exact</seams>
                     </properties>
+                    <instance-variables>
+                        <function></function>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -9820,6 +9840,9 @@
                         <hotspot>Top-left</hotspot>
                         <seams>Exact</seams>
                     </properties>
+                    <instance-variables>
+                        <function></function>
+                    </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -10262,7 +10285,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>24</x>
-                        <y>-24</y>
+                        <y>-20</y>
                         <z>0</z>
                         <width>200</width>
                         <height>20</height>
@@ -10441,6 +10464,102 @@
                         <y>36</y>
                         <z>0</z>
                         <width>36</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Sprite5" uid="1214">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <function>textbox</function>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>164</x>
+                        <y>52</y>
+                        <z>0</z>
+                        <width>120</width>
+                        <height>96</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="MenuBorder" uid="1213">
+                    <properties>
+                        <left-margin>4</left-margin>
+                        <right-margin>4</right-margin>
+                        <top-margin>4</top-margin>
+                        <bottom-margin>4</bottom-margin>
+                        <edges>Tile</edges>
+                        <fill>Tile</fill>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                        <seams>Exact</seams>
+                    </properties>
+                    <instance-variables>
+                        <function>textbox</function>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>24</x>
+                        <y>84</y>
+                        <z>0</z>
+                        <width>72</width>
+                        <height>20</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="SpriteFont" uid="1215">
+                    <properties>
+                        <character-width>9</character-width>
+                        <character-height>11</character-height>
+                        <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
+                        <text></text>
+                        <scale>1</scale>
+                        <initial-visibility>Visible</initial-visibility>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Bottom</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <character-spacing>0</character-spacing>
+                        <line-height>0</line-height>
+                    </properties>
+                    <instance-variables>
+                        <Function>textbox</Function>
+                    </instance-variables>
+                    <effect-instances>
+                        <effect-instance type="SetColor">
+                            <parameters>
+                                <blue>1</blue>
+                                <green>1</green>
+                                <red>1</red>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>28</x>
+                        <y>84</y>
+                        <z>0</z>
+                        <width>64</width>
                         <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>

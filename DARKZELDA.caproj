@@ -2571,6 +2571,7 @@
                         <instance-variable name="ComplexTriggered" sid="2393238371813638" type="number" />
                         <instance-variable name="RoomUID" sid="3217334782030308" type="number" />
                         <instance-variable name="XmlUID" sid="8467352009022754" type="number" />
+                        <instance-variable name="NpcUID" sid="8936785048873783" type="number" />
                     </instance-variables>
                     <behaviors>
                         <behavior-type name="Pin" sid="7128138540518321">
@@ -2968,6 +2969,19 @@
                 </container>
                 <texture original-source="C:\Users\chris\Desktop\SpriteFont_KenPixel_Regular_(8)_[0,0,0]_9x11.png" />
             </object-type>
+            <object-type name="TextBox2" sid="4165783384283353">
+                <plugin id="NinePatch" />
+                <instance-variables>
+                    <instance-variable name="ParamaterDelimiter" sid="5070535249625236" type="string" />
+                    <instance-variable name="Text" sid="8542036152836396" type="string" />
+                    <instance-variable name="FilePos" sid="3812616531339967" type="number" />
+                    <instance-variable name="PagePos" sid="455509481358045" type="number" />
+                    <instance-variable name="NumberOfChars" sid="170726602815574" type="number" />
+                    <instance-variable name="CharsPerPage" sid="4698179439660322" type="number" />
+                    <instance-variable name="PageBreak" sid="3217552533958738" type="boolean" />
+                </instance-variables>
+                <texture />
+            </object-type>
         </object-folder>
         <object-folder name="Inputs">
             <object-type name="Gamepad" sid="996683554706134">
@@ -3031,6 +3045,9 @@
             </object-type>
             <object-type name="MenuBorder" sid="9378224878360479">
                 <plugin id="NinePatch" />
+                <instance-variables>
+                    <instance-variable name="function" sid="7859360185518048" type="string" />
+                </instance-variables>
                 <texture />
             </object-type>
             <object-type name="Sprite" sid="2302754732289512">
@@ -3562,6 +3579,47 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3950671914831849" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite5" sid="2633618675258846">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="function" sid="7427892554598325" type="string" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="test" pingpong="0" repeatcount="1" repeatto="0" sid="3426197922531109" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0.125" />
+                            <point x="1" y="0.125" />
+                            <point x="1" y="0.875" />
+                            <point x="0" y="0.875" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5925544183271496" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="3189145113942645" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0.125" />
+                            <point x="1" y="0.125" />
+                            <point x="1" y="0.875" />
+                            <point x="0" y="0.875" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="oldLady" pingpong="0" repeatcount="1" repeatto="0" sid="7825205466152429" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0.125" />
+                            <point x="1" y="0.125" />
+                            <point x="1" y="0.875" />
+                            <point x="0" y="0.875" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>

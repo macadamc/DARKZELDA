@@ -728,7 +728,7 @@
                                                                     <actions>
                                                                         <action id="0" name="Call function" sid="173438138779361" type="Function">
                                                                             <param id="0" name="Name">&quot;ShowTextBox&quot;</param>
-                                                                            <param id="1" name="Parameter {n}">XmlData.StringValue(&quot;@Data&quot;)</param>
+                                                                            <param id="1" name="Parameter {n}">XmlData.StringValue(&quot;@Data&quot;){###}XmlData.StringValue(&quot;@Image&quot;){###}XmlData.StringValue(&quot;@Name&quot;)</param>
                                                                         </action>
                                                                     </actions>
                                                                     <sub-events>
@@ -768,6 +768,12 @@
                                                                             <param id="1" name="Comparison">0</param>
                                                                             <param id="2" name="Second value">&quot;GhostState&quot;</param>
                                                                         </condition>
+                                                                        <condition id="-14" name="Pick by unique ID" sid="7894882064415214" type="NPC">
+                                                                            <param id="0" name="Unique ID">Ghost.UID</param>
+                                                                        </condition>
+                                                                        <condition id="-14" name="Pick by unique ID" sid="6742657620534306" type="NPCData">
+                                                                            <param id="0" name="Unique ID">NPC.DataUID</param>
+                                                                        </condition>
                                                                     </conditions>
                                                                     <actions>
                                                                         <action id="0" name="Call function" sid="1640292425136197" type="Function">
@@ -799,6 +805,60 @@
                                                                                     </conditions>
                                                                                     <actions>
                                                                                         <action id="0" name="Add key" sid="1270014080867606" type="NPCData">
+                                                                                            <param id="0" name="Key">XmlData.StringValue(&quot;name(@*[&quot;&amp;loopindex+1&amp;&quot;])&quot;)</param>
+                                                                                            <param id="1" name="Value">XmlData.StringValue(&quot;@*[&quot;&amp;loopindex+1&amp;&quot;]&quot;)</param>
+                                                                                        </action>
+                                                                                    </actions>
+                                                                                </event-block>
+                                                                            </sub-events>
+                                                                        </event-block>
+                                                                    </sub-events>
+                                                                </event-block>
+                                                                <event-block sid="9671545249698421">
+                                                                    <conditions>
+                                                                        <condition id="-22" name="Else" sid="6266461368304067" type="System" />
+                                                                        <condition id="-8" name="Compare two values" sid="1752000697057028" type="System">
+                                                                            <param id="0" name="First value">XmlData.StringValue(&quot;name(.)&quot;)</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Second value">&quot;NpcState&quot;</param>
+                                                                        </condition>
+                                                                        <condition id="-14" name="Pick by unique ID" sid="9267764753676099" type="NpcBase">
+                                                                            <param id="0" name="Unique ID">TriggerZone.NpcUID</param>
+                                                                        </condition>
+                                                                        <condition id="-14" name="Pick by unique ID" sid="6842437278275884" type="NPCData">
+                                                                            <param id="0" name="Unique ID">NPC.DataUID</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="0" name="Call function" sid="1892498601166824" type="Function">
+                                                                            <param id="0" name="Name">&quot;SetState&quot;</param>
+                                                                            <param id="1" name="Parameter {n}">TriggerZone.NpcUID{###}XmlData.StringValue(&quot;@Name&quot;)&amp;&quot; &quot;&amp;XmlData.StringValue(&quot;@Params&quot;){###}Count</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                    <sub-events>
+                                                                        <event-block sid="9868400145675442">
+                                                                            <conditions>
+                                                                                <condition id="-12" name="Repeat" sid="5932857195013521" type="System">
+                                                                                    <param id="0" name="Count">XmlData.NodeCount(&quot;@*&quot;)</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions />
+                                                                            <sub-events>
+                                                                                <event-block sid="2275770140810354">
+                                                                                    <conditions>
+                                                                                        <condition disabled="1" id="-8" name="Compare two values" sid="2073028386979944" type="System">
+                                                                                            <param id="0" name="First value">TriggerZoneData.StringValue(&quot;name(@*[&quot;&amp;loopindex+1&amp;&quot;])&quot;)</param>
+                                                                                            <param id="1" name="Comparison">1</param>
+                                                                                            <param id="2" name="Second value">&quot;Name&quot;</param>
+                                                                                        </condition>
+                                                                                        <condition disabled="1" id="-8" name="Compare two values" sid="4466342208962037" type="System">
+                                                                                            <param id="0" name="First value">TriggerZoneData.StringValue(&quot;name(@*[&quot;&amp;loopindex+1&amp;&quot;])&quot;)</param>
+                                                                                            <param id="1" name="Comparison">1</param>
+                                                                                            <param id="2" name="Second value">&quot;Conditions&quot;</param>
+                                                                                        </condition>
+                                                                                    </conditions>
+                                                                                    <actions>
+                                                                                        <action id="0" name="Add key" sid="1565261508367811" type="NPCData">
                                                                                             <param id="0" name="Key">XmlData.StringValue(&quot;name(@*[&quot;&amp;loopindex+1&amp;&quot;])&quot;)</param>
                                                                                             <param id="1" name="Value">XmlData.StringValue(&quot;@*[&quot;&amp;loopindex+1&amp;&quot;]&quot;)</param>
                                                                                         </action>
