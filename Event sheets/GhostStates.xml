@@ -417,7 +417,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="9279557719117645">
+        <event-block disabled="1" sid="9279557719117645">
             <conditions>
                 <condition id="0" name="On function" sid="2216476170200606" type="Function">
                     <param id="0" name="Name">&quot;MoveToPOI&quot;</param>
@@ -437,7 +437,7 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="1176854958974191">
+                <event-block disabled="1" sid="1176854958974191">
                     <conditions>
                         <condition id="3" inverted="1" name="Has key" sid="9571518324194531" type="GameStats">
                             <param id="0" name="Key">&quot;GhostWait&quot;</param>
@@ -459,7 +459,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="6059061001518677">
+                <event-block disabled="1" sid="6059061001518677">
                     <conditions>
                         <condition disabled="1" id="-22" name="Else" sid="5614722774069503" type="System" />
                         <condition id="-8" name="Compare two values" sid="8140833794002596" type="System">
@@ -475,7 +475,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="8550488343465241">
+                <event-block disabled="1" sid="8550488343465241">
                     <conditions>
                         <condition id="-22" name="Else" sid="7665827179931774" type="System" />
                     </conditions>

@@ -969,7 +969,10 @@
                                     </actions>
                                 </event-block>
                                 <event-block sid="3556499906088691">
-                                    <conditions />
+                                    <conditions>
+                                        <condition behavior="Pathfinding" id="3" inverted="1" name="Is calculating path" sid="4152134446140468" type="NPC" />
+                                        <condition behavior="Pathfinding" id="4" inverted="1" name="Is moving along path" sid="2021983609741286" type="NPC" />
+                                    </conditions>
                                     <actions>
                                         <action behavior="Pathfinding" id="0" name="Find path" sid="9213442787217203" type="NPC">
                                             <param id="0" name="X">function.Param(0)</param>
@@ -1145,13 +1148,13 @@
                         <condition id="-8" name="Compare two values" sid="3052671490175968" type="System">
                             <param id="0" name="First value">distance(PointsOfIntrest.X, PointsOfIntrest.Y, NPC.X, NPC.Y)</param>
                             <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Second value">2</param>
+                            <param id="2" name="Second value">32</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="4374049950609452" type="Function">
                             <param id="0" name="Name">&quot;Npc_Move&quot;</param>
-                            <param id="1" name="Parameter {n}">PointsOfIntrest.X{###}PointsOfIntrest.Y</param>
+                            <param id="1" name="Parameter {n}">PointsOfIntrest.X{###}PointsOfIntrest.Y{###}npc.UID</param>
                         </action>
                     </actions>
                 </event-block>

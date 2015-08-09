@@ -1,8 +1,8 @@
 <xml>
 	<Object Name="NpcTestState">
 		<Sprite Name= "man"></Sprite>
-		<NpcState Name= "Npc_RandomWalk"
-			Bounds= "room1"></NpcState>
+		<NpcState Name= "MoveToPOI"
+			Target="1197"></NpcState>
 		<Text
 			Conditions= "!GhostPath !npc1"
 			Data= "People have seen strange things going on in that cave up ahead.. I wouldn't go in there if I was you."></Text>
@@ -79,37 +79,46 @@
 
 	<Object Name="OldWoman_1">
 		<Sprite Name= "oldWoman"></Sprite>
-		<StartState Name= "Npc_RandomWalk"
-			Bounds= "zone1"></StartState>
+		<StartState Name= "MoveToPOI"
+			Target="1197"></StartState>
 		<Text
 			Conditions= "!quest1"
-			Data= "If you see my husband around, please%tell him I am looking for him. He is an old man so he couldn't have gone far."></Text>
+			Data= "Please help me find my husband! I don't know where he is..Hopefully he is okay.
+					%Ever since we had people go missing, I just am so scared something is going to happen."
+			Image="oldLady"
+			Name="Old Lady"></Text>
 		<Function Name= "AddGameStat"
 			Params= "quest1;1"
 			Conditions= "!quest1"></Function>
-		<NpcState Name="MoveToPOI" Target="1197" Conditions="quest1"></NpcState>
 		<Text
 			Conditions= "quest1 !quest1_finished"
-			Data= "Please tell him I am looking for him.. He couldn't have wandered far."></Text>
+			Data= "Please help me find him.. He couldn't have wandered far. I just hope he is okay."
+			Image="oldLady"
+			Name="Old Lady"></Text>
 		<Text
 			Conditions= "quest1_finished"
-			Data= "Thanks for helping me, I was getting worried before."></Text>
+			Data= "Thanks for helping me.. Ever since we had people go missing, I am scared something is going to happen."
+			Image="oldLady"
+			Name="Old Lady"></Text>
+		
 	</Object>
 	<Object Name="OldMan_1">
 		<Sprite Name= "oldMan"></Sprite>
-		<StartState Name= "Npc_RandomWalk"
-			Bounds= "zone2"></StartState>
+		<StartState Name= ""
+			Bounds= ""></StartState>
 		<Text
 			Conditions= "quest1 !quest1_finished"
-			Data= "My wife is looking for me? ... I don't even know how I got here. Let me catch my breath and I will head home."></Text>
+			Data= "..Oh! You say my wife is worried and searching for me? I will be home soon, I just want one more moment here alone please.
+					%I come here to speak to my dead relatives..
+					%Im not sure if they can hear me. It is comforting to me to think they can though."></Text>
 		<Function Name= "AddGameStat"
 			Params= "quest1_finished;1"
 			Conditions= "quest1 !quest1_finished"></Function>
 		<Text
 			Conditions= "quest1_finished"
-			Data= "I don't even know how I got here. Let me catch my breath and I will head home."></Text>
+			Data= "Please give me a moment alone, I will be home right away."></Text>
 		<Text
 			Conditions= "!quest1 !quest1_finished"
-			Data= "I can't remember what I am doing here."></Text>
+			Data= "I come here to speak to my dead relatives.. I hope somehow they can hear me.."></Text>
 	</Object>
 </xml>
