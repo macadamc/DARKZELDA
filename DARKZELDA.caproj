@@ -3839,6 +3839,7 @@
                 <instance-variable name="TriggerOnce" sid="1217948454065899" type="boolean" />
                 <instance-variable name="Triggered" sid="6690942413300868" type="boolean" />
                 <instance-variable name="TimeofDay" sid="7614763959599517" type="number" />
+                <instance-variable name="SpawnIf" sid="1907304332925748" type="string" />
             </instance-variables>
         </family>
         <family name="ZORDERING" plugin-id="Sprite" sid="8361506382556622">

@@ -8,18 +8,53 @@
                 <event-block sid="6420539968257238">
                     <conditions>
                         <condition behavior="Pathfinding" id="5" name="On arrived" sid="2262432558795798" type="NPC" />
+                        <condition id="-14" name="Pick by unique ID" sid="375765421704153" type="NPCData">
+                            <param id="0" name="Unique ID">NPC.DataUID</param>
+                        </condition>
                     </conditions>
-                    <actions>
-                        <action id="-16" name="Wait" sid="2944936756172569" type="System">
-                            <param id="0" name="Seconds">random(1,4)</param>
-                        </action>
-                        <action id="2" name="Delete key" sid="7461366667343992" type="NPCData">
-                            <param id="0" name="Key">&quot;walkToX&quot;</param>
-                        </action>
-                        <action id="2" name="Delete key" sid="2958068179601654" type="NPCData">
-                            <param id="0" name="Key">&quot;walkToY&quot;</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7728437657344882">
+                            <conditions>
+                                <condition id="3" name="Has key" sid="644696990836454" type="NPCData">
+                                    <param id="0" name="Key">&quot;Flag&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Add key" sid="5736702105495919" type="GameStats">
+                                    <param id="0" name="Key">npcdata.Get(&quot;Flag&quot;)</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="2" name="Delete key" sid="8277271431092865" type="NPCData">
+                                    <param id="0" name="Key">&quot;Flag&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6126044243023437">
+                            <conditions>
+                                <condition id="3" name="Has key" sid="9508043983697824" type="NPCData">
+                                    <param id="0" name="Key">&quot;DestroyNPC&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="7500263756268574" type="NPC" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="5602498591504502">
+                            <conditions />
+                            <actions>
+                                <action id="-16" name="Wait" sid="2944936756172569" type="System">
+                                    <param id="0" name="Seconds">random(1,4)</param>
+                                </action>
+                                <action id="2" name="Delete key" sid="7461366667343992" type="NPCData">
+                                    <param id="0" name="Key">&quot;walkToX&quot;</param>
+                                </action>
+                                <action id="2" name="Delete key" sid="2958068179601654" type="NPCData">
+                                    <param id="0" name="Key">&quot;walkToY&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="2419818586270047">
                     <conditions>

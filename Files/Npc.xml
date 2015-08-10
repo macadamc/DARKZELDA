@@ -119,7 +119,7 @@
 			Data= "I come here to speak to my dead relatives.. I hope somehow they can hear me.."></Text>
 	</Object>
 	<Object Name="Man_1" TriggeredBy="">
-		<Sprite Name= "man"></Sprite>
+	<Sprite Name= "man"></Sprite>
 		<NpcState Name= "OpenDoor"
 			Conditions= "!Flag"
 			Target= "1197"></NpcState>
@@ -130,4 +130,28 @@
 			Conditions= "!Flag"
 			Params= "Flag;1"></Function>
 	</Object>
+	
+	<Object Name="OldWoman_2" TriggeredBy="Buttons">
+		<Sprite Name= "oldWoman"></Sprite>
+		<StartState Name= "MoveToPOI"
+			Target="1245"
+			Flag="OldWoman_2"
+			DestroyNPC="true"></StartState>
+		<Text
+			Conditions= ""
+			Data= "I am an NPC"
+			Image="oldLady"
+			Name="Old Lady"></Text>
+			</Object>
+	<Object Name="OldWoman_3" TriggeredBy="Buttons">
+		<Sprite Name= "oldWoman"></Sprite>
+		<NpcState Name= "Npc_RandomWalk"
+			Bounds= "zone3"></NpcState>
+		<Text
+			Conditions= ""
+			Data= "I am an NPC"
+			Image="oldLady"
+			Name="Old Lady"></Text>
+	
+	
 </xml>
