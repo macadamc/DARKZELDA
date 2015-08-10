@@ -1608,10 +1608,6 @@
                                                                     <param id="0" name="Instance variable">XmlUID</param>
                                                                     <param id="1" name="Value">410</param>
                                                                 </action>
-                                                                <action id="-10" name="Set value" sid="5198899648075673" type="TriggerZone">
-                                                                    <param id="0" name="Instance variable">TriggeredBy</param>
-                                                                    <param id="1" name="Value">&quot;Buttons&quot;</param>
-                                                                </action>
                                                                 <action id="-10" name="Set value" sid="5742806454544705" type="TriggerZone">
                                                                     <param id="0" name="Instance variable">FunctionName</param>
                                                                     <param id="1" name="Value">&quot;ComplexTrigger&quot;</param>
@@ -1630,82 +1626,94 @@
                                                                 </action>
                                                             </actions>
                                                             <sub-events>
-                                                                <event-block sid="2053722501569297">
+                                                                <event-block sid="3518172791906533">
                                                                     <conditions>
-                                                                        <condition id="-14" name="Pick by unique ID" sid="1474304069394403" type="XmlData">
+                                                                        <condition id="-14" name="Pick by unique ID" sid="1271979689647626" type="XmlData">
                                                                             <param id="0" name="Unique ID">410</param>
                                                                         </condition>
-                                                                        <condition id="0" name="For each node" sid="4575453015623117" type="XmlData">
-                                                                            <param id="0" name="XPath">&quot;//xml/Object[@Name=&apos;&quot;&amp;Npc_Spawner.Spawn&amp;&quot;&apos;]/*&quot;</param>
-                                                                        </condition>
                                                                     </conditions>
-                                                                    <actions />
+                                                                    <actions>
+                                                                        <action id="-10" name="Set value" sid="5198899648075673" type="TriggerZone">
+                                                                            <param id="0" name="Instance variable">TriggeredBy</param>
+                                                                            <param id="1" name="Value">XmlData.StringValue(&quot;//xml/Object[@Name=&apos;&quot;&amp;Npc_Spawner.Spawn&amp;&quot;&apos;]/@TriggeredBy&quot;)</param>
+                                                                        </action>
+                                                                    </actions>
                                                                     <sub-events>
-                                                                        <event-block sid="7341245040907328">
+                                                                        <event-block sid="2053722501569297">
                                                                             <conditions>
-                                                                                <condition id="-8" name="Compare two values" sid="9552381868914108" type="System">
-                                                                                    <param id="0" name="First value">XmlData.StringValue(&quot;name(.)&quot;)</param>
-                                                                                    <param id="1" name="Comparison">0</param>
-                                                                                    <param id="2" name="Second value">&quot;StartState&quot;</param>
+                                                                                <condition id="0" name="For each node" sid="4575453015623117" type="XmlData">
+                                                                                    <param id="0" name="XPath">&quot;//xml/Object[@Name=&apos;&quot;&amp;Npc_Spawner.Spawn&amp;&quot;&apos;]/*&quot;</param>
                                                                                 </condition>
                                                                             </conditions>
-                                                                            <actions>
-                                                                                <action id="0" name="Call function" sid="7363489751941145" type="Function">
-                                                                                    <param id="0" name="Name">&quot;SetState&quot;</param>
-                                                                                    <param id="1" name="Parameter {n}">NpcBase.UID{###}XmlData.StringValue(&quot;@Name&quot;)</param>
-                                                                                </action>
-                                                                            </actions>
+                                                                            <actions />
                                                                             <sub-events>
-                                                                                <event-block sid="595738163098757">
+                                                                                <event-block sid="7341245040907328">
                                                                                     <conditions>
-                                                                                        <condition id="-12" name="Repeat" sid="7883378943895096" type="System">
-                                                                                            <param id="0" name="Count">XmlData.NodeCount(&quot;@*&quot;)</param>
+                                                                                        <condition id="-8" name="Compare two values" sid="9552381868914108" type="System">
+                                                                                            <param id="0" name="First value">XmlData.StringValue(&quot;name(.)&quot;)</param>
+                                                                                            <param id="1" name="Comparison">0</param>
+                                                                                            <param id="2" name="Second value">&quot;StartState&quot;</param>
                                                                                         </condition>
                                                                                     </conditions>
-                                                                                    <actions />
+                                                                                    <actions>
+                                                                                        <action id="0" name="Call function" sid="7363489751941145" type="Function">
+                                                                                            <param id="0" name="Name">&quot;SetState&quot;</param>
+                                                                                            <param id="1" name="Parameter {n}">NpcBase.UID{###}XmlData.StringValue(&quot;@Name&quot;)</param>
+                                                                                        </action>
+                                                                                    </actions>
                                                                                     <sub-events>
-                                                                                        <comment>..</comment>
-                                                                                        <event-block sid="1176191612661814">
+                                                                                        <event-block sid="595738163098757">
                                                                                             <conditions>
-                                                                                                <condition id="-8" name="Compare two values" sid="4974157272828744" type="System">
-                                                                                                    <param id="0" name="First value">XmlData.StringValue(&quot;name(@*[&quot;&amp;loopindex+1&amp;&quot;])&quot;)</param>
-                                                                                                    <param id="1" name="Comparison">1</param>
-                                                                                                    <param id="2" name="Second value">&quot;Name&quot;</param>
+                                                                                                <condition id="-12" name="Repeat" sid="7883378943895096" type="System">
+                                                                                                    <param id="0" name="Count">XmlData.NodeCount(&quot;@*&quot;)</param>
                                                                                                 </condition>
                                                                                             </conditions>
-                                                                                            <actions>
-                                                                                                <action id="0" name="Add key" sid="2525615971396269" type="NPCData">
-                                                                                                    <param id="0" name="Key">XmlData.StringValue(&quot;name(@*[&quot;&amp;loopindex+1&amp;&quot;])&quot;)</param>
-                                                                                                    <param id="1" name="Value">XmlData.StringValue(&quot;@*[&quot;&amp;loopindex+1&amp;&quot;]&quot;)</param>
-                                                                                                </action>
-                                                                                            </actions>
+                                                                                            <actions />
+                                                                                            <sub-events>
+                                                                                                <comment>..</comment>
+                                                                                                <event-block sid="1176191612661814">
+                                                                                                    <conditions>
+                                                                                                        <condition id="-8" name="Compare two values" sid="4974157272828744" type="System">
+                                                                                                            <param id="0" name="First value">XmlData.StringValue(&quot;name(@*[&quot;&amp;loopindex+1&amp;&quot;])&quot;)</param>
+                                                                                                            <param id="1" name="Comparison">1</param>
+                                                                                                            <param id="2" name="Second value">&quot;Name&quot;</param>
+                                                                                                        </condition>
+                                                                                                    </conditions>
+                                                                                                    <actions>
+                                                                                                        <action id="0" name="Add key" sid="2525615971396269" type="NPCData">
+                                                                                                            <param id="0" name="Key">XmlData.StringValue(&quot;name(@*[&quot;&amp;loopindex+1&amp;&quot;])&quot;)</param>
+                                                                                                            <param id="1" name="Value">XmlData.StringValue(&quot;@*[&quot;&amp;loopindex+1&amp;&quot;]&quot;)</param>
+                                                                                                        </action>
+                                                                                                    </actions>
+                                                                                                </event-block>
+                                                                                            </sub-events>
                                                                                         </event-block>
                                                                                     </sub-events>
                                                                                 </event-block>
+                                                                                <event-block sid="7710552704881386">
+                                                                                    <conditions>
+                                                                                        <condition id="-22" name="Else" sid="5515377822274918" type="System" />
+                                                                                        <condition id="-8" name="Compare two values" sid="9809214913966131" type="System">
+                                                                                            <param id="0" name="First value">XmlData.StringValue(&quot;name(.)&quot;)</param>
+                                                                                            <param id="1" name="Comparison">0</param>
+                                                                                            <param id="2" name="Second value">&quot;Sprite&quot;</param>
+                                                                                        </condition>
+                                                                                        <condition id="-8" name="Is boolean instance variable set" sid="475536307409618" type="NpcBase">
+                                                                                            <param id="0" name="Instance variable">HasSprite</param>
+                                                                                        </condition>
+                                                                                    </conditions>
+                                                                                    <actions>
+                                                                                        <action behavior="Pin" id="0" name="Pin to object" sid="3678073123289413" type="NpcSprite">
+                                                                                            <param id="0" name="Pin to">NpcBase</param>
+                                                                                            <param id="1" name="Mode">1</param>
+                                                                                        </action>
+                                                                                        <action id="-10" name="Set value" sid="9893715181481698" type="NpcBase">
+                                                                                            <param id="0" name="Instance variable">SpriteName</param>
+                                                                                            <param id="1" name="Value">XmlData.StringValue(&quot;@Name&quot;)</param>
+                                                                                        </action>
+                                                                                    </actions>
+                                                                                </event-block>
                                                                             </sub-events>
-                                                                        </event-block>
-                                                                        <event-block sid="7710552704881386">
-                                                                            <conditions>
-                                                                                <condition id="-22" name="Else" sid="5515377822274918" type="System" />
-                                                                                <condition id="-8" name="Compare two values" sid="9809214913966131" type="System">
-                                                                                    <param id="0" name="First value">XmlData.StringValue(&quot;name(.)&quot;)</param>
-                                                                                    <param id="1" name="Comparison">0</param>
-                                                                                    <param id="2" name="Second value">&quot;Sprite&quot;</param>
-                                                                                </condition>
-                                                                                <condition id="-8" name="Is boolean instance variable set" sid="475536307409618" type="NpcBase">
-                                                                                    <param id="0" name="Instance variable">HasSprite</param>
-                                                                                </condition>
-                                                                            </conditions>
-                                                                            <actions>
-                                                                                <action behavior="Pin" id="0" name="Pin to object" sid="3678073123289413" type="NpcSprite">
-                                                                                    <param id="0" name="Pin to">NpcBase</param>
-                                                                                    <param id="1" name="Mode">1</param>
-                                                                                </action>
-                                                                                <action id="-10" name="Set value" sid="9893715181481698" type="NpcBase">
-                                                                                    <param id="0" name="Instance variable">SpriteName</param>
-                                                                                    <param id="1" name="Value">XmlData.StringValue(&quot;@Name&quot;)</param>
-                                                                                </action>
-                                                                            </actions>
                                                                         </event-block>
                                                                     </sub-events>
                                                                 </event-block>

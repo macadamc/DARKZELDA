@@ -3961,6 +3961,7 @@
                 <member>NpcBase</member>
             </members>
             <instance-variables>
+                <instance-variable name="MoveType" sid="8621747049708278" type="string" />
                 <instance-variable name="StartState" sid="5150051160699273" type="string" />
                 <instance-variable name="FSM_UID" sid="2978882145063888" type="number" />
                 <instance-variable name="DataUID" sid="3759315192729319" type="number" />
@@ -4103,6 +4104,7 @@
         <event-folder name="NPC States">
             <event-sheet>GhostStates.xml</event-sheet>
             <event-sheet>NpcStates.xml</event-sheet>
+            <event-sheet>NewStates.xml</event-sheet>
         </event-folder>
         <event-sheet>Main.xml</event-sheet>
         <event-sheet>Spawnable Effects.xml</event-sheet>

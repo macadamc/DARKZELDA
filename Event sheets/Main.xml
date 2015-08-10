@@ -29,6 +29,9 @@
         <include>Particle</include>
         <include>Light</include>
         <include>HelperFunctions</include>
+        <include>NpcStates</include>
+        <include>GhostStates</include>
+        <include>NewStates</include>
         <variable constant="0" name="MusicLevel" sid="3164353652461014" static="0" type="number">0</variable>
         <variable constant="0" name="SoundFxLevel" sid="6430990122069912" static="0" type="number">0</variable>
         <variable constant="0" name="Quality" sid="693304184002963" static="0" type="text">low</variable>

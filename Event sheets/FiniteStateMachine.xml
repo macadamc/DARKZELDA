@@ -3,8 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>FiniteStateMachine</name>
     <events>
-        <include>GhostStates</include>
-        <include>NpcStates</include>
         <comment>Call The Currect State for All NPC&apos;s and the ghosts light color</comment>
         <event-block sid="319932826086733">
             <conditions>

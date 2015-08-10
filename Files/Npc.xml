@@ -75,12 +75,12 @@
 		</Function>
 	</Object>
 
-
-
-	<Object Name="OldWoman_1">
+	<Object Name="OldWoman_1" TriggeredBy="Buttons">
 		<Sprite Name= "oldWoman"></Sprite>
+		<StartState Name= "Npc_RandomWalk"
+			Bounds="zone1"></StartState>
 		<StartState Name= "MoveToPOI"
-			Target="1197"></StartState>
+			Target="1245"></StartState>
 		<Text
 			Conditions= "!quest1"
 			Data= "Please help me find my husband! I don't know where he is..Hopefully he is okay.
@@ -100,12 +100,9 @@
 			Data= "Thanks for helping me.. Ever since we had people go missing, I am scared something is going to happen."
 			Image="oldLady"
 			Name="Old Lady"></Text>
-		
 	</Object>
-	<Object Name="OldMan_1">
+	<Object Name="OldMan_1" TriggeredBy="Buttons">
 		<Sprite Name= "oldMan"></Sprite>
-		<StartState Name= ""
-			Bounds= ""></StartState>
 		<Text
 			Conditions= "quest1 !quest1_finished"
 			Data= "..Oh! You say my wife is worried and searching for me? I will be home soon, I just want one more moment here alone please.
@@ -120,5 +117,17 @@
 		<Text
 			Conditions= "!quest1 !quest1_finished"
 			Data= "I come here to speak to my dead relatives.. I hope somehow they can hear me.."></Text>
+	</Object>
+	<Object Name="Man_1" TriggeredBy="">
+		<Sprite Name= "man"></Sprite>
+		<NpcState Name= "OpenDoor"
+			Conditions= "!Flag"
+			Target= "1197"></NpcState>
+		<NpcState Name="MoveToPOI"
+			Conditions= "!Flag"
+			Target= "1245"></NpcState>
+		<Function Name="AddGameStat"
+			Conditions= "!Flag"
+			Params= "Flag;1"></Function>
 	</Object>
 </xml>
