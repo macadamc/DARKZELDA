@@ -1557,17 +1557,189 @@
                                                             </conditions>
                                                             <actions />
                                                             <sub-events>
-                                                                <event-block any="1" sid="3984877999832556">
+                                                                <event-block sid="339173782953413">
                                                                     <conditions>
-                                                                        <condition id="0" name="Compare value" sid="889928341006822" type="GameStats">
-                                                                            <param id="0" name="Key">Npc_Spawner.SpawnIf</param>
-                                                                            <param id="1" name="Comparison">4</param>
-                                                                            <param id="2" name="Value">0</param>
-                                                                        </condition>
                                                                         <condition id="-7" name="Compare instance variable" sid="1874429163622557" type="Npc_Spawner">
                                                                             <param id="0" name="Instance variable">SpawnIf</param>
                                                                             <param id="1" name="Comparison">0</param>
                                                                             <param id="2" name="Value">&quot;&quot;</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="0" name="Spawn another object" sid="6070169815022542" type="Npc_Spawner">
+                                                                            <param id="0" name="Object">NpcBase</param>
+                                                                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                                            <param id="2" name="Image point">0</param>
+                                                                        </action>
+                                                                        <action id="-10" name="Set value" sid="7592502943421376" type="NpcBase">
+                                                                            <param id="0" name="Instance variable">Zone1</param>
+                                                                            <param id="1" name="Value">Npc_Spawner.Zone</param>
+                                                                        </action>
+                                                                        <action id="-13" name="Set boolean" sid="891415925397772" type="NpcBase">
+                                                                            <param id="0" name="Instance variable">HasSprite</param>
+                                                                            <param id="1" name="Value">1</param>
+                                                                        </action>
+                                                                        <action behavior="Pathfinding" disabled="1" id="13" name="Set diagonals enabled" sid="401196723095317" type="NpcBase">
+                                                                            <param id="0" name="Diagonals">0</param>
+                                                                        </action>
+                                                                        <action behavior="Pathfinding" disabled="1" id="16" name="Regenerate region around object" sid="8226876266704343" type="NpcBase">
+                                                                            <param id="0" name="Object">CameraZone</param>
+                                                                        </action>
+                                                                        <action id="-13" name="Set boolean" sid="8004162518415436" type="Npc_Spawner">
+                                                                            <param id="0" name="Instance variable">Loaded</param>
+                                                                            <param id="1" name="Value">1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                    <sub-events>
+                                                                        <event-block sid="6133491957183361">
+                                                                            <conditions>
+                                                                                <condition id="-8" name="Is boolean instance variable set" sid="6722643455213498" type="Npc_Spawner">
+                                                                                    <param id="0" name="Instance variable">NPC_Has_Triggerzone</param>
+                                                                                </condition>
+                                                                                <condition id="-14" name="Pick by unique ID" sid="5214943030304921" type="NPCData">
+                                                                                    <param id="0" name="Unique ID">NpcBase.DataUID</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action id="-3" name="Create object" sid="9786207254313024" type="System">
+                                                                                    <param id="0" name="Object to create">TriggerZone</param>
+                                                                                    <param id="1" name="Layer">&quot;TRIGGERZONES&quot;</param>
+                                                                                    <param id="2" name="X">NpcBase.X</param>
+                                                                                    <param id="3" name="Y">NpcBase.Y</param>
+                                                                                </action>
+                                                                                <action id="-10" name="Set value" sid="3907506994226275" type="NpcBase">
+                                                                                    <param id="0" name="Instance variable">TriggerUID</param>
+                                                                                    <param id="1" name="Value">TriggerZone.UID</param>
+                                                                                </action>
+                                                                                <action behavior="Pin" id="0" name="Pin to object" sid="249520167519677" type="TriggerZone">
+                                                                                    <param id="0" name="Pin to">NpcBase</param>
+                                                                                    <param id="1" name="Mode">1</param>
+                                                                                </action>
+                                                                                <action id="-7" name="Set size" sid="4930045546204049" type="TriggerZone">
+                                                                                    <param id="0" name="Width">NpcBase.Width+4</param>
+                                                                                    <param id="1" name="Height">NpcBase.Height+4</param>
+                                                                                </action>
+                                                                                <action id="-10" name="Set value" sid="6300307565650607" type="TriggerZone">
+                                                                                    <param id="0" name="Instance variable">XmlUID</param>
+                                                                                    <param id="1" name="Value">410</param>
+                                                                                </action>
+                                                                                <action id="-10" name="Set value" sid="8430562939540061" type="TriggerZone">
+                                                                                    <param id="0" name="Instance variable">FunctionName</param>
+                                                                                    <param id="1" name="Value">&quot;ComplexTrigger&quot;</param>
+                                                                                </action>
+                                                                                <action id="-10" name="Set value" sid="5903318886895587" type="TriggerZone">
+                                                                                    <param id="0" name="Instance variable">Params</param>
+                                                                                    <param id="1" name="Value">Npc_Spawner.Spawn</param>
+                                                                                </action>
+                                                                                <action disabled="1" id="-10" name="Set value" sid="2192686759673061" type="TriggerZone">
+                                                                                    <param id="0" name="Instance variable">Conditions</param>
+                                                                                    <param id="1" name="Value">XmlData.StringValue(&quot;@Conditions&quot;)</param>
+                                                                                </action>
+                                                                                <action id="-10" name="Set value" sid="2558234500706545" type="TriggerZone">
+                                                                                    <param id="0" name="Instance variable">NpcUID</param>
+                                                                                    <param id="1" name="Value">NpcBase.UID</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                            <sub-events>
+                                                                                <event-block sid="4762552845017943">
+                                                                                    <conditions>
+                                                                                        <condition id="-14" name="Pick by unique ID" sid="7890318814148608" type="XmlData">
+                                                                                            <param id="0" name="Unique ID">410</param>
+                                                                                        </condition>
+                                                                                    </conditions>
+                                                                                    <actions>
+                                                                                        <action id="-10" name="Set value" sid="9513834924527206" type="TriggerZone">
+                                                                                            <param id="0" name="Instance variable">TriggeredBy</param>
+                                                                                            <param id="1" name="Value">XmlData.StringValue(&quot;//xml/Object[@Name=&apos;&quot;&amp;Npc_Spawner.Spawn&amp;&quot;&apos;]/@TriggeredBy&quot;)</param>
+                                                                                        </action>
+                                                                                    </actions>
+                                                                                    <sub-events>
+                                                                                        <event-block sid="6971344207249572">
+                                                                                            <conditions>
+                                                                                                <condition id="0" name="For each node" sid="7391159817151096" type="XmlData">
+                                                                                                    <param id="0" name="XPath">&quot;//xml/Object[@Name=&apos;&quot;&amp;Npc_Spawner.Spawn&amp;&quot;&apos;]/*&quot;</param>
+                                                                                                </condition>
+                                                                                            </conditions>
+                                                                                            <actions />
+                                                                                            <sub-events>
+                                                                                                <event-block sid="3420042557026523">
+                                                                                                    <conditions>
+                                                                                                        <condition id="-8" name="Compare two values" sid="5483631804475015" type="System">
+                                                                                                            <param id="0" name="First value">XmlData.StringValue(&quot;name(.)&quot;)</param>
+                                                                                                            <param id="1" name="Comparison">0</param>
+                                                                                                            <param id="2" name="Second value">&quot;StartState&quot;</param>
+                                                                                                        </condition>
+                                                                                                    </conditions>
+                                                                                                    <actions>
+                                                                                                        <action id="0" name="Call function" sid="8998305717103055" type="Function">
+                                                                                                            <param id="0" name="Name">&quot;SetState&quot;</param>
+                                                                                                            <param id="1" name="Parameter {n}">NpcBase.UID{###}XmlData.StringValue(&quot;@Name&quot;)</param>
+                                                                                                        </action>
+                                                                                                    </actions>
+                                                                                                    <sub-events>
+                                                                                                        <event-block sid="6926341582153028">
+                                                                                                            <conditions>
+                                                                                                                <condition id="-12" name="Repeat" sid="9748381591594833" type="System">
+                                                                                                                    <param id="0" name="Count">XmlData.NodeCount(&quot;@*&quot;)</param>
+                                                                                                                </condition>
+                                                                                                            </conditions>
+                                                                                                            <actions />
+                                                                                                            <sub-events>
+                                                                                                                <comment>..</comment>
+                                                                                                                <event-block sid="8146302136273854">
+                                                                                                                    <conditions>
+                                                                                                                        <condition id="-8" name="Compare two values" sid="8222680830612277" type="System">
+                                                                                                                            <param id="0" name="First value">XmlData.StringValue(&quot;name(@*[&quot;&amp;loopindex+1&amp;&quot;])&quot;)</param>
+                                                                                                                            <param id="1" name="Comparison">1</param>
+                                                                                                                            <param id="2" name="Second value">&quot;Name&quot;</param>
+                                                                                                                        </condition>
+                                                                                                                    </conditions>
+                                                                                                                    <actions>
+                                                                                                                        <action id="0" name="Add key" sid="9096179337369498" type="NPCData">
+                                                                                                                            <param id="0" name="Key">XmlData.StringValue(&quot;name(@*[&quot;&amp;loopindex+1&amp;&quot;])&quot;)</param>
+                                                                                                                            <param id="1" name="Value">XmlData.StringValue(&quot;@*[&quot;&amp;loopindex+1&amp;&quot;]&quot;)</param>
+                                                                                                                        </action>
+                                                                                                                    </actions>
+                                                                                                                </event-block>
+                                                                                                            </sub-events>
+                                                                                                        </event-block>
+                                                                                                    </sub-events>
+                                                                                                </event-block>
+                                                                                                <event-block sid="1311636202705505">
+                                                                                                    <conditions>
+                                                                                                        <condition id="-22" name="Else" sid="5147462290660116" type="System" />
+                                                                                                        <condition id="-8" name="Compare two values" sid="5936130032446739" type="System">
+                                                                                                            <param id="0" name="First value">XmlData.StringValue(&quot;name(.)&quot;)</param>
+                                                                                                            <param id="1" name="Comparison">0</param>
+                                                                                                            <param id="2" name="Second value">&quot;Sprite&quot;</param>
+                                                                                                        </condition>
+                                                                                                        <condition id="-8" name="Is boolean instance variable set" sid="1942417180005177" type="NpcBase">
+                                                                                                            <param id="0" name="Instance variable">HasSprite</param>
+                                                                                                        </condition>
+                                                                                                    </conditions>
+                                                                                                    <actions>
+                                                                                                        <action behavior="Pin" id="0" name="Pin to object" sid="2302085714306789" type="NpcSprite">
+                                                                                                            <param id="0" name="Pin to">NpcBase</param>
+                                                                                                            <param id="1" name="Mode">1</param>
+                                                                                                        </action>
+                                                                                                        <action id="-10" name="Set value" sid="932511839464341" type="NpcBase">
+                                                                                                            <param id="0" name="Instance variable">SpriteName</param>
+                                                                                                            <param id="1" name="Value">XmlData.StringValue(&quot;@Name&quot;)</param>
+                                                                                                        </action>
+                                                                                                    </actions>
+                                                                                                </event-block>
+                                                                                            </sub-events>
+                                                                                        </event-block>
+                                                                                    </sub-events>
+                                                                                </event-block>
+                                                                            </sub-events>
+                                                                        </event-block>
+                                                                    </sub-events>
+                                                                </event-block>
+                                                                <event-block sid="3984877999832556">
+                                                                    <conditions>
+                                                                        <condition id="3" name="Has key" sid="889928341006822" type="GameStats">
+                                                                            <param id="0" name="Key">str(Npc_Spawner.SpawnIf)</param>
                                                                         </condition>
                                                                     </conditions>
                                                                     <actions>

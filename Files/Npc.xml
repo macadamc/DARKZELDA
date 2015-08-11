@@ -135,23 +135,26 @@
 		<Sprite Name= "oldWoman"></Sprite>
 		<StartState Name= "MoveToPOI"
 			Target="1245"
-			Flag="OldWoman_2"
+			AddFlag="OldWoman2"
 			DestroyNPC="true"></StartState>
 		<Text
 			Conditions= ""
-			Data= "I am an NPC"
+			Data= "I am OUTSIDE"
 			Image="oldLady"
 			Name="Old Lady"></Text>
 			</Object>
 	<Object Name="OldWoman_3" TriggeredBy="Buttons">
 		<Sprite Name= "oldWoman"></Sprite>
-		<NpcState Name= "Npc_RandomWalk"
-			Bounds= "zone3"></NpcState>
+		<StartState Name= "MoveToPOI"
+			Target="1196"
+			DeleteFlag="OldWoman2"
+			DestroyNPC="true"></StartState>
 		<Text
 			Conditions= ""
-			Data= "I am an NPC"
+			Data= "I am INSIDE"
 			Image="oldLady"
 			Name="Old Lady"></Text>
+			</Object>
 	
 	
 </xml>

@@ -17,16 +17,31 @@
                         <event-block sid="7728437657344882">
                             <conditions>
                                 <condition id="3" name="Has key" sid="644696990836454" type="NPCData">
-                                    <param id="0" name="Key">&quot;Flag&quot;</param>
+                                    <param id="0" name="Key">&quot;AddFlag&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="0" name="Add key" sid="5736702105495919" type="GameStats">
-                                    <param id="0" name="Key">npcdata.Get(&quot;Flag&quot;)</param>
+                                    <param id="0" name="Key">npcdata.Get(&quot;AddFlag&quot;)</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="2" name="Delete key" sid="8277271431092865" type="NPCData">
-                                    <param id="0" name="Key">&quot;Flag&quot;</param>
+                                    <param id="0" name="Key">&quot;AddFlag&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8274613814208896">
+                            <conditions>
+                                <condition id="3" name="Has key" sid="9614381986741636" type="NPCData">
+                                    <param id="0" name="Key">&quot;DeleteFlag&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Delete key" sid="6134889950467024" type="GameStats">
+                                    <param id="0" name="Key">npcdata.Get(&quot;DeleteFlag&quot;)</param>
+                                </action>
+                                <action id="2" name="Delete key" sid="8667523444625452" type="NPCData">
+                                    <param id="0" name="Key">&quot;DeleteFlag&quot;</param>
                                 </action>
                             </actions>
                         </event-block>

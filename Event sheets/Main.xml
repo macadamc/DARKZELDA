@@ -119,10 +119,6 @@
                     <param id="0" name="Instance variable">Button2</param>
                     <param id="1" name="Value">&quot;&quot;</param>
                 </action>
-                <action id="0" name="Add key" sid="8208731708120687" type="GameStats">
-                    <param id="0" name="Key">&quot;&quot;</param>
-                    <param id="1" name="Value">1</param>
-                </action>
             </actions>
             <sub-events>
                 <event-block sid="2423298807149933">
