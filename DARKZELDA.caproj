@@ -8,7 +8,7 @@
     <author-website></author-website>
     <app-id>com.shadypixel.darkzelda</app-id>
     <unique-id>2qpiupr2gjili</unique-id>
-    <saved-with-version>21100</saved-with-version>
+    <saved-with-version>21202</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
@@ -2242,17 +2242,41 @@
                     <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4321688621923491" speed="3">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Imagepoint 1" x="0.5" y="0.833333" />
+                            <collision-poly>
+                                <point x="0.166667" y="0.166667" />
+                                <point x="0.833333" y="0.166667" />
+                                <point x="0.833333" y="0.916667" />
+                                <point x="0.166667" y="0.916667" />
+                            </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Imagepoint 1" x="0.5" y="0.833333" />
+                            <collision-poly>
+                                <point x="0.166667" y="0.166667" />
+                                <point x="0.833333" y="0.166667" />
+                                <point x="0.833333" y="0.916667" />
+                                <point x="0.166667" y="0.916667" />
+                            </collision-poly>
                         </frame>
                     </animation>
                     <animation framecount="2" loop="1" name="Walking" pingpong="0" repeatcount="1" repeatto="0" sid="6640895480064234" speed="3">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Imagepoint 1" x="0.5" y="0.833333" />
+                            <collision-poly>
+                                <point x="0.166667" y="0.166667" />
+                                <point x="0.833333" y="0.166667" />
+                                <point x="0.833333" y="0.916667" />
+                                <point x="0.166667" y="0.916667" />
+                            </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="Imagepoint 1" x="0.5" y="0.833333" />
+                            <collision-poly>
+                                <point x="0.166667" y="0.166667" />
+                                <point x="0.833333" y="0.166667" />
+                                <point x="0.833333" y="0.916667" />
+                                <point x="0.166667" y="0.916667" />
+                            </collision-poly>
                         </frame>
                     </animation>
                 </animation-folder>
@@ -3212,6 +3236,10 @@
             </object-type>
             <object-type global="1" name="Consumable" sid="3786782510104496">
                 <plugin id="Dictionary" />
+            </object-type>
+            <object-type name="Transition" sid="3608646783293532">
+                <plugin id="TiledBg" />
+                <texture />
             </object-type>
         </object-folder>
         <object-folder name="XML">

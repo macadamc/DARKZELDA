@@ -5,6 +5,7 @@
     <events>
         <variable constant="0" name="fadeeffect" sid="3530672365678706" static="0" type="text"></variable>
         <variable constant="0" name="fadespeed" sid="4022446593269227" static="0" type="number">0</variable>
+        <variable constant="0" name="TransitionOpacity" sid="8415960972703063" static="0" type="number">0</variable>
         <event-block sid="4872935875293135">
             <conditions>
                 <condition id="0" name="On function" sid="2038280451934395" type="Function">
@@ -59,9 +60,12 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-18" name="Set layer opacity" sid="4758749719892666" type="System">
-                    <param id="0" name="Layer">&quot;TRANSITION&quot;</param>
-                    <param id="1" name="Opacity">clamp(LayerOpacity(&quot;TRANSITION&quot;)-(dt*fadespeed),0,100)</param>
+                <action id="-9" name="Set value" sid="7332440805890948" type="System">
+                    <param id="0" name="Variable">TransitionOpacity</param>
+                    <param id="1" name="Value">int(clamp(TransitionOpacity-dt*fadespeed,0,100))</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="4337875396108667" type="Transition">
+                    <param id="0" name="Opacity">TransitionOpacity</param>
                 </action>
             </actions>
         </event-block>
@@ -74,9 +78,12 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-18" name="Set layer opacity" sid="2847563526086386" type="System">
-                    <param id="0" name="Layer">&quot;TRANSITION&quot;</param>
-                    <param id="1" name="Opacity">clamp(LayerOpacity(&quot;TRANSITION&quot;)+(dt*fadespeed),0,100)</param>
+                <action id="-9" name="Set value" sid="5303151810662826" type="System">
+                    <param id="0" name="Variable">TransitionOpacity</param>
+                    <param id="1" name="Value">int(clamp(TransitionOpacity+dt*fadespeed,0,100))</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="4103154213074245" type="Transition">
+                    <param id="0" name="Opacity">TransitionOpacity</param>
                 </action>
             </actions>
         </event-block>
@@ -93,7 +100,7 @@
                 <event-block any="1" sid="1259905052153122">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="1100009288508862" type="System">
-                            <param id="0" name="First value">LayerOpacity(&quot;TRANSITION&quot;)</param>
+                            <param id="0" name="First value">TransitionOpacity</param>
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Second value">100</param>
                         </condition>
@@ -127,7 +134,7 @@
                 <event-block any="1" sid="1534299720466438">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="5689729561496459" type="System">
-                            <param id="0" name="First value">LayerOpacity(&quot;TRANSITION&quot;)</param>
+                            <param id="0" name="First value">TransitionOpacity</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Second value">0</param>
                         </condition>
