@@ -9166,7 +9166,7 @@
                         <behavior-instance type="Pathfinding">
                             <properties>
                                 <cell-size>4</cell-size>
-                                <cell-border>2</cell-border>
+                                <cell-border>-1</cell-border>
                                 <obstacles>Custom</obstacles>
                                 <max-speed>16</max-speed>
                                 <acceleration>16</acceleration>
