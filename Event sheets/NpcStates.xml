@@ -210,6 +210,7 @@
                                     <conditions>
                                         <condition behavior="Pathfinding" id="3" inverted="1" name="Is calculating path" sid="4152134446140468" type="NPC" />
                                         <condition behavior="Pathfinding" id="4" inverted="1" name="Is moving along path" sid="2021983609741286" type="NPC" />
+                                        <condition id="-4" name="Trigger once while true" sid="8680631026920521" type="System" />
                                     </conditions>
                                     <actions>
                                         <action behavior="Pathfinding" id="0" name="Find path" sid="9213442787217203" type="NPC">

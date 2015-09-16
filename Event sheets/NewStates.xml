@@ -64,6 +64,7 @@
                 <event-block sid="2177747768331628">
                     <conditions>
                         <condition id="-22" name="Else" sid="468718120039463" type="System" />
+                        <condition id="-4" name="Trigger once while true" sid="7591873048580838" type="System" />
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="240670238974386" type="Function">

@@ -333,6 +333,40 @@
                                                                         </action>
                                                                     </actions>
                                                                 </event-block>
+                                                                <event-block sid="8825923689686232">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="1053163872750702" type="ENEMY_SPAWNER">
+                                                                            <param id="0" name="Instance variable">Spawn</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">&quot;Assasin&quot;</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="0" name="Spawn another object" sid="1640221105583751" type="ENEMY_SPAWNER">
+                                                                            <param id="0" name="Object">Assasin</param>
+                                                                            <param id="1" name="Layer">&quot;OBJECT&quot;</param>
+                                                                            <param id="2" name="Image point">0</param>
+                                                                        </action>
+                                                                        <action id="-10" name="Set value" sid="1996990940607645" type="Assasin">
+                                                                            <param id="0" name="Instance variable">Zone1</param>
+                                                                            <param id="1" name="Value">ENEMY_SPAWNER.Zone</param>
+                                                                        </action>
+                                                                        <action behavior="LineOfSight" id="2" name="Add obstacle" sid="6484331871123409" type="Assasin">
+                                                                            <param id="0" name="Obstacle">ObstacleTilemap</param>
+                                                                        </action>
+                                                                        <action behavior="LineOfSight" id="2" name="Add obstacle" sid="9515620937041942" type="Assasin">
+                                                                            <param id="0" name="Obstacle">Solid</param>
+                                                                        </action>
+                                                                        <action id="-10" name="Set value" sid="2791060109591232" type="Assasin">
+                                                                            <param id="0" name="Instance variable">spawnerUID</param>
+                                                                            <param id="1" name="Value">ENEMY_SPAWNER.UID</param>
+                                                                        </action>
+                                                                        <action id="-13" name="Set boolean" sid="2437793439481234" type="ENEMY_SPAWNER">
+                                                                            <param id="0" name="Instance variable">Loaded</param>
+                                                                            <param id="1" name="Value">1</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
                                                                 <event-block sid="7238885444840532">
                                                                     <conditions>
                                                                         <condition id="-7" name="Compare instance variable" sid="157871511660483" type="ENEMY_SPAWNER">

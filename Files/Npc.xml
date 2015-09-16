@@ -142,6 +142,7 @@
 			Data= "I am OUTSIDE"
 			Image="oldLady"
 			Name="Old Lady"></Text>
+		
 			</Object>
 	<Object Name="OldWoman_3" TriggeredBy="Buttons">
 		<Sprite Name= "oldWoman"></Sprite>

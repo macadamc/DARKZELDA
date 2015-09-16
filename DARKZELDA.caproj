@@ -8,7 +8,7 @@
     <author-website></author-website>
     <app-id>com.shadypixel.darkzelda</app-id>
     <unique-id>2qpiupr2gjili</unique-id>
-    <saved-with-version>21202</saved-with-version>
+    <saved-with-version>21300</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
@@ -2302,6 +2302,51 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Assasin" sid="5048416890814559">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6570853097115323" speed="3">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.9375" />
+                            <collision-poly>
+                                <point x="0" y="0.1875" />
+                                <point x="1" y="0.1875" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.9375" />
+                            <collision-poly>
+                                <point x="0" y="0.1875" />
+                                <point x="1" y="0.1875" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="0" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="8145543816334589" speed="3">
+                        <frame duration="0.5" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.9375" />
+                            <collision-poly>
+                                <point x="0" y="0.1875" />
+                                <point x="1" y="0.1875" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.5" y="0.9375" />
+                            <collision-poly>
+                                <point x="0.125" y="0.1875" />
+                                <point x="0.875" y="0.1875" />
+                                <point x="0.875" y="1" />
+                                <point x="0.125" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="LEVEL">
             <object-folder name="TileMaps">
@@ -2372,6 +2417,50 @@
                                 <point x="1" y="0" />
                                 <point x="1" y="0.5" />
                                 <point x="0" y="0.5" />
+                            </collision-poly>
+                        </tile>
+                        <tile id="198">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.5" />
+                                <point x="0.5" y="0.5" />
+                                <point x="0.5" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </tile>
+                        <tile id="199">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.5" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </tile>
+                        <tile id="200">
+                            <collision-poly>
+                                <point x="0" y="0.5" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0.5" y="1" />
+                                <point x="0.5" y="0.5" />
+                            </collision-poly>
+                        </tile>
+                        <tile id="204">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.5" y="0" />
+                                <point x="0.5" y="1" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </tile>
+                        <tile id="206">
+                            <collision-poly>
+                                <point x="0.5" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0.5" y="1" />
                             </collision-poly>
                         </tile>
                     </tiles>
@@ -3322,6 +3411,14 @@
                         </frame>
                     </animation>
                     <animation framecount="2" loop="1" name="man" pingpong="0" repeatcount="1" repeatto="0" sid="4525983942656463" speed="3">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.833333">
+                            <image-point name="Imagepoint 1" x="0.5" y="1" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.833333">
+                            <image-point name="Imagepoint 1" x="0.5" y="1" />
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="1" name="cloaked" pingpong="0" repeatcount="1" repeatto="0" sid="222329204740404" speed="3">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.75">
                             <image-point name="Imagepoint 1" x="0.5" y="1" />
                         </frame>
@@ -3329,15 +3426,10 @@
                             <image-point name="Imagepoint 1" x="0.5" y="1" />
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="1" name="woman" pingpong="0" repeatcount="1" repeatto="0" sid="215946699649187" speed="3">
+                    <animation framecount="2" loop="1" name="woman" pingpong="0" repeatcount="1" repeatto="0" sid="3503584963142046" speed="3">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.75">
                             <image-point name="Imagepoint 1" x="0.5" y="1" />
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.75">
-                            <image-point name="Imagepoint 1" x="0.5" y="1" />
-                        </frame>
-                    </animation>
-                    <animation framecount="1" loop="1" name="cloaked" pingpong="0" repeatcount="1" repeatto="0" sid="222329204740404" speed="3">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.75">
                             <image-point name="Imagepoint 1" x="0.5" y="1" />
                         </frame>
@@ -3765,6 +3857,7 @@
         </family>
         <family name="Enemies" plugin-id="Sprite" sid="1584005452366334">
             <members>
+                <member>Assasin</member>
                 <member>Bat</member>
                 <member>Bird</member>
                 <member>Bunny</member>
@@ -3872,6 +3965,7 @@
         </family>
         <family name="ZORDERING" plugin-id="Sprite" sid="8361506382556622">
             <members>
+                <member>Assasin</member>
                 <member>BASE</member>
                 <member>Bat</member>
                 <member>Bird</member>
@@ -3920,6 +4014,7 @@
         </family>
         <family name="Zone" plugin-id="Sprite" sid="5679059934981115">
             <members>
+                <member>Assasin</member>
                 <member>BarrierTrap</member>
                 <member>Bat</member>
                 <member>Bird</member>
@@ -4084,6 +4179,7 @@
         </family>
         <family name="CanBleed" plugin-id="Sprite" sid="5685418196120473">
             <members>
+                <member>Assasin</member>
                 <member>BASE</member>
                 <member>Bat</member>
                 <member>Bird</member>
